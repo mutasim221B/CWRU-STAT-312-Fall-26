@@ -1,0 +1,18 @@
+---
+title: "Practice Problems"
+sidebar: false
+---
+
+
+Please review the [Practice Problems Policies](https://docs.google.com/document/d/1blw99F3L2WYTpfjvkRwOcmW8uGBAZvrzQPuyIVZtnxQ/edit?usp=sharing) document before proceeding!
+
+**...due at 11:59 pm Central on Moodle!**
+
+- [Practice Sets 1](assignments/ps1.qmd), due 02/04
+- [Practice Sets 2](assignments/ps2.qmd), due 02/09
+- [Practice Sets 3](assignments/ps3.qmd), due 02/23
+- [Practice Sets 4](assignments/ps4.qmd), due 03/09
+- [Practice Sets 5](assignments/ps5.qmd), due 03/24
+- [Practice Sets 6](assignments/ps6.qmd), due 04/13
+- [Practice Sets 7](assignments/ps7.qmd), due 04/22
+- [Practice Sets 8](assignments/ps8.qmd), due 04/27
