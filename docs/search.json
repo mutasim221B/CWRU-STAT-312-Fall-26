@@ -2,240 +2,163 @@
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "",
-    "text": "Section 06: M/W/F 09:40-10:40am, THTR 203\nSection 07: M/W/F 10:50-11:50pm, THTR 203\nWelcome to STAT 155! Whether in life or research, we’re often interested in relationships between 2+ variables. For example, how is one’s commute time to class related to their distance from campus and mode of transportation? Or, how is voter participation related to a person’s age and political affiliation? Statistical modeling is the art and science of turning data into information about such relationships of interest.\nBeing able to summarize, interpret, and communicate about data are crucial for navigating today’s information landscape, and these are precisely the skills that we’ll build in this class. Throughout the semester, we’ll study the fundamental methods that statisticians use to extract knowledge from data, emphasizing statistical literacy & intuition, real data applications, and modern computing over memorizing facts and formulas."
+    "text": "Section 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\nWelcome to STAT 312! Engineers and scientists routinely work with data that contain variability and uncertainty. For example, how can we determine whether a change in a manufacturing process actually improves product quality? How can we use measurements from a sample to draw conclusions about a larger population? How can we quantify uncertainty when comparing two designs, estimating an unknown quantity, or predicting future performance?\nStatistics and probability provide a framework for answering these questions. They allow us to collect and summarize data, understand variability, quantify uncertainty, draw meaningful conclusions, and make informed decisions.\nThroughout the semester, we will develop the fundamental statistical and probabilistic tools used in engineering and scientific problem solving. Topics will include probability and probability distributions, descriptive statistics, sampling distributions, estimation, confidence intervals, hypothesis testing, and regression analysis. Our emphasis will be on developing statistical reasoning and intuition, understanding when and why particular methods are appropriate, and applying those methods to real-world problems. Rather than simply memorizing formulas, you will learn to select appropriate statistical methods, carry out analyses, interpret results, evaluate assumptions, and communicate conclusions in the context of the problem being studied."
   },
   {
     "objectID": "syllabus.html#important-technical-concepts",
     "href": "syllabus.html#important-technical-concepts",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Important technical concepts",
-    "text": "Important technical concepts\nUpon completion of this course, students should be able to:\n\nBuild, use, and interpret graphical and numerical summaries of data.\nGiven a research question: identify an appropriate model, use sample data to fit the model in RStudio (free!), evaluate the model’s quality, and quantify our uncertainty in the model’s coefficients and predictions.\nUse a sample model to make predictions & inferences about a population, using prediction/confidence intervals & hypothesis tests.\nInterpret & communicate an analysis in context & using appropriate notation, argumentation, & evidence.\nDescribe potential advantages, limitations, and ethical considerations of a data set and statistical analysis.\nIdentify common pitfalls in statistical analyses (e.g., spurious correlation vs. causal relationships, extrapolation, multicollinearity, multiple testing, practical vs. statistical significance).\nAccurately describe methods and results in a way that is scientifically sound and widely accessible.\nWork productively and effectively in a group setting."
+    "text": "Important technical concepts\nUpon completion of this course, students should be able to:\n\nBuild, use, and interpret graphical and numerical summaries of data.\nApply fundamental concepts of probability, including conditional probability, independence, random variables, and probability distributions, to engineering and scientific problems.\nIdentify and work with commonly used discrete and continuous probability distributions, and recognize situations in which they provide appropriate models.\nUnderstand sampling variability and sampling distributions, including the role of the Central Limit Theorem in statistical inference.\nUse sample data to estimate unknown population parameters and quantify uncertainty using standard errors and confidence intervals.\nFormulate appropriate statistical hypotheses, conduct hypothesis tests, interpret p-values, and draw conclusions in the context of an engineering or scientific problem.\nBuild, interpret, and evaluate simple linear regression and correlation models, and use regression models for estimation and prediction.\nUse appropriate statistical tools and software, when needed, to support statistical calculations, data analysis, and interpretation.\nInterpret and communicate statistical results clearly using appropriate terminology, notation, reasoning, and evidence."
   },
   {
-    "objectID": "syllabus.html#important-statistical-skills",
-    "href": "syllabus.html#important-statistical-skills",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Important statistical skills",
-    "text": "Important statistical skills\nThe following skills are essential both within and beyond Statistics, and demonstrably improve your own learning and the learning of those around you:\n\nMove beyond a “homework only” study approach. Develop a deeper understanding of the material through continued review, reflection, and practice.\nThink creatively, and build confidence, applying course concepts in open-ended, novel settings.\nBe comfortable working through challenges and mistakes.\nContribute to a welcoming and engaged learning environment.\nWork effectively in a group setting."
+    "objectID": "syllabus.html#important-statistical-and-problem-solving-skills",
+    "href": "syllabus.html#important-statistical-and-problem-solving-skills",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "Important statistical and problem-solving skills",
+    "text": "Important statistical and problem-solving skills\nThe following skills are essential both within and beyond Statistics, and demonstrably improve your own learning:\n\nMove beyond a “homework only” study approach. Develop a deeper understanding of the material through continued review, reflection, and practice.\nDevelop the ability to translate an engineering or scientific question into an appropriate statistical problem.\nThink critically about data and determine which statistical method is appropriate and why.\nDevelop statistical intuition rather than relying solely on memorized formulas.\nThink creatively and build confidence when applying course concepts in unfamiliar or open-ended settings.\nBe comfortable working through challenges and mistakes, and use them as opportunities to refine your understanding.\nClearly explain and justify your approach, calculations, and conclusions.\nConnect statistical concepts to real-world engineering and scientific applications.\nContribute to a welcoming, respectful, and engaged learning environment."
   },
   {
     "objectID": "syllabus.html#about-your-professor",
     "href": "syllabus.html#about-your-professor",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "About your professor",
-    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Olin-Rice 234\nEmail: mbillah@macalester.edu\n\n\n\n\n\n\nNotes from “your professor”\n\n\n\nGreetings! You can call me Bill or Professor Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat—those courses often emphasized formulas over real understanding. That experience has shaped my teaching—I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 155 and to create a more meaningful experience—one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nOffice hours:\n\nLocation: My office (OLRI 234) and over zoom, password: 123456\nTimes: M/W: 12:00pm - 12:30pm (in-person), T/TR: 2pm - 3pm (Over zoom, password: 123456)\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in/virtual hours don’t work for you. Shoot me an email and we can arrange it in-person or over zoom, password: 123456.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response."
+    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Sears 569\nEmail: mdmutasim.billah@case.edu\n\n\n\n\n\n\nNotes from “your professor”\n\n\n\nGreetings! You can call me Bill or Dr. Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat - those courses often emphasized formulas over real understanding. That experience has shaped my teaching - I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 312 and to create a more meaningful experience - one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nOffice hours:\n\nLocation: My office (Sears 569) and over zoom, password: 123678\nTimes: M/W: 1:00pm - 1:30pm and 3pm - 4pm\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123678.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response."
   },
   {
-    "objectID": "syllabus.html#about-your-preceptors",
-    "href": "syllabus.html#about-your-preceptors",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "About your preceptors",
-    "text": "About your preceptors\nWe have several wonderful STAT 155 preceptors this semester! Their role is to help students with content questions, assist in the navigation of available resources, advise on studying approaches, and assist with concepts, tools, and skills. Students are accountable for their own learning; as such, preceptors are not allowed to share answers to assignments (unless specifically directed by the instructor), they are not expected to immediately know the right approach to an exercise, and they do not provide assistance outside of office hours.\nIn hiring preceptors, we prioritize and emphasize kindness and respect. I expect the same of students in their interactions with the preceptors. Please utilize and respect their experience and commitment to supporting you in this course. Please check out some additional guidelines and expectations on how to interact with preceptors."
+    "objectID": "syllabus.html#about-your-graders",
+    "href": "syllabus.html#about-your-graders",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "About your Graders",
+    "text": "About your Graders\nWe have three wonderful STAT 312 graders this semester! Their primary role is to assist with the assessment and grading of course assignments and, when appropriate, portions of exams and other course assessments.\nThe graders will follow grading guidelines established by the instructor to help ensure that student work is evaluated consistently and fairly. Please keep in mind that graders do not determine course policies, assignment requirements, grading schemes, or final course grades.\nIf you have any questions or concerns about how your work was graded, please contact me directly rather than contacting the graders. I will review your question and, if necessary, communicate with the appropriate grader on your behalf. All questions regarding grading decisions, grading policies, regrade requests, or other assessment-related concerns should be directed to me.\nIn selecting and working with our graders, we emphasize fairness, professionalism, kindness, and respect. I expect the same from students in all interactions with them. Please respect the time, effort, and important contribution of our graders in supporting STAT 312 throughout the semester."
   },
   {
-    "objectID": "syllabus.html#textbook-online-course-manual",
-    "href": "syllabus.html#textbook-online-course-manual",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Textbook & Online Course Manual",
-    "text": "Textbook & Online Course Manual\nThere is no required textbook for this course. Throughout the course, readings may be assigned from these notes, or other sources.\nThe online course manual includes all in-class activities (with solutions).\nSee the rough schedule of the course, which is subject to change as needed."
+    "objectID": "syllabus.html#textbooks-online-course-manual",
+    "href": "syllabus.html#textbooks-online-course-manual",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "Textbooks & Online Course Manual",
+    "text": "Textbooks & Online Course Manual\n\nApplied Statistics and Probability for Engineers, 7th edition, by Montgomery and Runger. You can download an e-Book from Canvas (Files).\nStatistical Methods for Engineers, by Vining and Kowalski. You can download an e-Book from Canvas (Files).\nThe online course manual includes all the course resources.\nSee the rough schedule of the course, which will be updated throughout the semester."
   },
   {
-    "objectID": "syllabus.html#moodle",
-    "href": "syllabus.html#moodle",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Moodle",
-    "text": "Moodle\nMoodle includes announcements, general resources, a broad course calendar, submission links, feedback, and a forum for student questions."
+    "objectID": "syllabus.html#canvas",
+    "href": "syllabus.html#canvas",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "Canvas",
+    "text": "Canvas\nCanvas includes announcements, general resources, submission links, feedback, and a discussion forum for student questions."
   },
   {
     "objectID": "syllabus.html#statistical-software",
     "href": "syllabus.html#statistical-software",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Statistical software",
-    "text": "Statistical software\nWe will use the (completely free and open source) R programming language extensively throughout this course. RStudio (an interface for R) will facilitate our use of R. You may use RStudio in one of two ways:\n\nDesktop version: Download for Windows or Mac at https://posit.co/downloads/. Note: You first need to download and install R on your computer in order to use the desktop version of RStudio\nOnline: Go to https://rstudio.macalester.edu, and log in with your full Mac email address and your usual Mac password to get access. (Note that this is a shared resource across MSCS, and you may experience performance issues due to high traffic, server outages, etc.)\n\nMore detailed instructions on downloading, installing, and getting started with R, and RStudio are available on the R Resources tab."
-  },
-  {
-    "objectID": "syllabus.html#office-hours-oh-and-r-support",
-    "href": "syllabus.html#office-hours-oh-and-r-support",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Office hours (OH) and R Support",
-    "text": "Office hours (OH) and R Support\nOH: Across the instructor and preceptors, there are several office hours each week. Names, times, and locations are on the Moodle course calendar. IMPORTANT: Always check the calendar before attending OH.\nData & R Support: In addition to the course preceptors, there is support on campus for working with data and R / RStudio. This is a great resource for R setup and troubleshooting throughout the semester. See https://www.macalester.edu/mscs/data-support for more information."
+    "text": "Statistical software\nWe will use the (completely free and open source) R programming language for some data analysis in this course. RStudio (an interface for R) facilitates the use of R.\n\nDesktop version: Download for Windows or Mac at https://posit.co/downloads/. Note: You first need to download and install R on your computer in order to use the desktop version of RStudio\nLibrary: Resources offered by Kelvin Smith Library are available here\n\nMore detailed instructions on downloading, installing, and getting started with R, and RStudio are available on the R Resources tab."
   },
   {
     "objectID": "syllabus.html#asking-questionscommunicating",
     "href": "syllabus.html#asking-questionscommunicating",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Asking questions/communicating",
-    "text": "Asking questions/communicating\n\nOffice Hours\nOH are a great place to chat about the course, career planning, life,… Please visit us!!\n\nOH times & locations are on the Moodle course calendar.\nOH are oriented around group discussion. They are not first come, first served appointments.\nSince it’s not an effective way to deepen your learning, OH are not a place to sit and do assignments with me or preceptors. It’s an opportunity to discuss concepts & specific questions.\n\n\n\nMoodle Forum: STAT 155 Discussion Board\nThis forum is where we’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 9am & 5pm."
+    "text": "Asking questions/communicating\n\nOffice Hours\nOH are a great place to chat about the course, career planning, life,… Please visit me!!\n\nOH are oriented around group discussion. They are not first come, first served appointments.\nSince it’s not an effective way to deepen your learning, OH are not a place to sit and do assignments with me. It’s an opportunity to discuss concepts & specific questions.\n\n\n\nCanvas Discussion Forum: STAT 312 Discussion Board\nThis forum is where you’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 8am & 4pm."
   },
   {
     "objectID": "syllabus.html#what-to-do-when-you-have-a-question-for-me",
     "href": "syllabus.html#what-to-do-when-you-have-a-question-for-me",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "What to do when you have a question for me?",
-    "text": "What to do when you have a question for me?\n\nIf it’s non-private (e.g. about policies, homework (Practice Problems), class activities, etc), you should post it on STAT 155 Discussion Board in Moodle. Remember- collaboration is the KEY!\nIf it’s personal (e.g. about an absence), email me.\nIt’s good, professional practice to check whether your question is already answered in the provided resources. For example:\n\nInfo (what to do if you miss class): syllabus\nDue dates: course calendar at the top of Moodle + course schedule in the online manual\nQuiz dates: syllabus + course calendar at the top of Moodle + announcement on Moodle\nHomework policies & grading: homework policies & grading doc\nFinals week: syllabus + course calendar at the top of Moodle + announcement on Moodle"
+    "text": "What to do when you have a question for me?\n\nIf it’s non-private (e.g. about policies, homework, practice problems, etc), you should post it on STAT 312 Discussion Board in Canvas. Remember- collaboration is the KEY!\nIf it’s personal (e.g. about an absence, concept understanding, etc), email me.\nIt’s good, professional practice to check whether your question is already answered in the provided resources. For example:\n\nInfo (what to do if you miss class): syllabus\nDue dates: course schedule in the online manual\nExam dates: course schedule in the online manual + announcement email\nHomework policies: STAT 312 HW Assignment policies doc"
   },
   {
-    "objectID": "syllabus.html#thriving-in-stat-155",
-    "href": "syllabus.html#thriving-in-stat-155",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Thriving in STAT 155",
-    "text": "Thriving in STAT 155\n\n\n\n\n\n\n🗓️ Plan Ahead\n\n\n\nYou should plan to spend ~10-12 hours on any 4-credit course, including class time.1 Stay up-to-date on the course calendar and carve out time for studying & doing homework.\n\n\n\n\n\n\n\n\n✅ Do the Things\n\n\n\nAt minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, regularly attend & engage in class, complete in-class activities (which might mean completing work outside of class), and check the activity solutions.\n\n\n\n\n\n\n\n\n🏗️ Build a Foundation\n\n\n\nIf your main focus is on checking off some boxes, you won’t get much out of this course (or college in general). Deeper, enduring learning requires more. Carve out time to rewrite, reflect upon, & review your notes. Summarize concepts in your own words.\n\n\n\n\n\n\n\n\n🎉 Engage, Ask Questions, Have Fun\n\n\n\nActively participate in the class & take ownership of your learning. PLEASE: Don’t be afraid to ask for help, make mistakes, and ask questions! These skills are critical to your well-being & learning. Finally, have some fun, be curious, and reflect upon what surprises you about the material and yourself"
+    "objectID": "syllabus.html#thriving-in-stat-312",
+    "href": "syllabus.html#thriving-in-stat-312",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "Thriving in STAT 312",
+    "text": "Thriving in STAT 312\n\n\n\n\n\n\n🗓️ Plan Ahead\n\n\n\nYou should plan to spend ~6-9 hours on any 3-credit course, including class time. Stay up-to-date on the course schedule and carve out time for studying & doing homework.\n\n\n\n\n\n\n\n\n✅ Do the Things\n\n\n\nAt minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, regularly attend & engage in class, complete practice problems (PP), and check the PP solutions.\n\n\n\n\n\n\n\n\n🏗️ Build a Foundation\n\n\n\nIf your main focus is on checking off some boxes, you won’t get much out of this course (or college in general). Deeper, enduring learning requires more. Carve out time to rewrite, reflect upon, & review your notes. Summarize concepts in your own words.\n\n\n\n\n\n\n\n\n🎉 Engage, Ask Questions, Have Fun\n\n\n\nActively participate in the class & take ownership of your learning. PLEASE: Don’t be afraid to ask for help, make mistakes, and ask questions! These skills are critical to your well-being & learning. Finally, have some fun, be curious, and reflect upon what surprises you about the material and yourself"
   },
   {
     "objectID": "syllabus.html#flexibility",
     "href": "syllabus.html#flexibility",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Flexibility",
-    "text": "Flexibility\nI provide transparent accommodations to all students. It helps reduce stress and the “hidden curriculum” (not everybody feels comfortable asking for flexibility).\n\nMissed Class: It’s okay to miss class in the case of an emergency. Please see the ‘Absences’ tab below for details.\nPractice Sets (PS): Limited extensions and limited mistakes without penalty. Please carefully go through all the sections from STAT 155 PS Policies & Grading doc.\nCheckpoints: Some class periods will have course videos and readings assigned ahead of time. For each class period where this is the case, a checkpoint quiz (on Moodle) must be completed by 09:00 am. Checkpoints may be attempted as many times as you’d like, but to earn completion credit for a given checkpoint you must score 100% by your final attempt. These short quizzes are designed to ensure that you stay on top of course material, since much of the content in this course builds on itself.\nQuizzes: Limited revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact).\n\n\n\n\n\n\n\n🤝 PLEASE REACH OUT WHEN YOU NEED HELP."
+    "text": "Flexibility\nI provide transparent accommodations to all students. It helps reduce stress and the “hidden curriculum” (not everybody feels comfortable asking for flexibility).\n\nMissed Class: It’s okay to miss class in the case of an emergency. However, regular attendance is strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.\nHomework: Limited extensions and limited mistakes without penalty. Please carefully go through all the sections from STAT 312 HW Assignment policies doc.\nExams: No revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact).\n\n\n\n\n\n\n\n🤝 PLEASE REACH OUT WHEN YOU NEED HELP."
   },
   {
     "objectID": "syllabus.html#absences",
     "href": "syllabus.html#absences",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Absences",
-    "text": "Absences\nIt’s okay to miss the occasional class. Except in rare extenuating circumstances (which must be discussed in advance): - 3 or fewer absences will not impact your grade - 4-6 absences will impact your grade (see Calculating Final Grades section) - you cannot pass the course if you accrue 7+ absences (more than 25% of class sessions)\n\n\n\n\n\n\nWhat to Do If You Miss Class\n\n\n\n\n📧 Send me a quick email. You do not need to share a reason for your absence, especially if it’s personal. It’s just a simple courtesy & keeps communication lines open.\n📅 Check the Course Schedule in the online manual for what is happening in class that day.\n📝 Complete the in-class activity on your own & check the solutions posted in the online manual.\n💬 Ask any follow-up questions on the Moodle forum or in office hours (OH)."
+    "text": "Absences\n\n\n\n\n\n\nWhat to Do If You Miss Class\n\n\n\n\n📧 Send me a quick email. You do not need to share a reason for your absence, especially if it’s personal. It’s just a simple courtesy & keeps communication lines open.\n📅 Check the Course Schedule in the online manual for what is happening in class that day.\n📝 Go through the lecture and class notes on your own & check the solutions posted in the online manual.\n💬 Ask any follow-up questions on the Canvas forum or in office hours (OH)."
   },
   {
     "objectID": "syllabus.html#artificial-intelligence-ai",
     "href": "syllabus.html#artificial-intelligence-ai",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Artificial Intelligence (AI)",
-    "text": "Artificial Intelligence (AI)\nUsing AI tools is an emerging skill. You may use AI (ChatGPT, Gemini, Grok, etc), with some caveats & limitations:\n\nAI is often wrong, thus is not a good resource on topics for which you don’t yet have expertise. Relatedly, though AI can be helpful with parts of a statistical analysis (eg: getting unstuck on code, checking grammar), you have to guide that process (eg: what questions are we trying to answer? what’s a reasonable approach?).\nWork on an exercise for at least 30 minutes before even thinking about AI. You will learn very little if you overly rely on AI, hence be unprepared for other interactions with the material (eg: in-class discussions, quizzes, future courses that build upon 155, etc). Learning comes from you doing the puzzling, not from you producing a correct answer.\nWhether or not you use AI, you must be able to defend/explain any code/discussion you hand in. You cannot simply use AI to bypass your own learning.\nYou may not use AI to generate entire arguments or discussions. Putting code and discussions into your own words is critical for your own deeper learning, independent thinking, and creativity. (For example, imagine how little you’d learn in a language course if you simply used AI to translate all text for you!!)\nAny use of AI must be cited, just like any other resource."
+    "text": "Artificial Intelligence (AI)\nRead the Use of AI sub-section from STAT 312 HW Assignment policies doc."
   },
   {
     "objectID": "syllabus.html#community-academic-integrity",
     "href": "syllabus.html#community-academic-integrity",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Community & Academic Integrity",
-    "text": "Community & Academic Integrity\nMSCS strives to provide a learning environment that is equitable, inclusive, welcoming, mutually respectful, and free of discrimination. You’re expected to follow the MSCS Community Guidelines. You’re also required to be familiar with & follow the college’s academic integrity & other academic policies. In addition to the examples listed there, academic violations in this course include but are not limited to the following:\n\nUsing any materials from any past STAT 155 course, at Mac or elsewhere. Relatedly, you should not provide any materials to any future 155 students.\nGaining access to, using, or distributing solution sets.\nPassing off others’ work as your own. You must be able to defend / explain all work you hand in.\nUsing AI without citation, to generate entire discussions / code blocks, or without being able to defend the results. Policy violations will result in a score of 0 on the work & be reported to the Asst. Dean of Academic Programs & Advising."
+    "text": "Community & Academic Integrity\nRead the Academic integrity policies from STAT 312 HW Assignment policies doc. In addition to the examples listed there, academic violations in this course include but are not limited to the following:\n\nUsing any materials from any past STAT 312 course, at CWRU or elsewhere. Relatedly, you should not provide any materials to any future 312 students.\nGaining access to, using, or distributing solution sets.\nPassing off others’ work (including AI) as your own. You must be able to defend / explain all work you hand in.\nPolicy violations will result in a score of 0 on the work & be reported to the Academic Integrity Board."
   },
   {
     "objectID": "syllabus.html#engagement",
     "href": "syllabus.html#engagement",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "(1) Engagement",
-    "text": "(1) Engagement\nEngagement is important to your own learning & to fostering a supportive learning community.\n\n\n\n\n\n\n📌 Expectations\n\n\n\n\nDo not miss more than 3 in-person class sessions. (4–6 absences will lower your grade. 7+ absences will result in a D/NC.)\nWhen attending class:\n\nBe on time & don’t leave early\n\nDo not use your phone (phones must be put away when you enter the course, even if class hasn’t started)\n\nDo not use your laptop for anything other than taking notes and in-class activities (e.g., no videos, no email, no messaging apps, etc.)\n\nBe actively present (e.g., don’t work alone, don’t work on other courses, etc.)\n\nOutside class:\n\nCheck your email for announcements (sent via Moodle) and stay updated on the Moodle forum\n\nWhen you have questions, or just want to chat, please stop by OH!"
+    "text": "(1) Engagement\nEngagement is important to your own learning & to fostering a supportive learning community.\n\n\n\n\n\n\n📌 Expectations\n\n\n\n\nDo not miss in-person class sessions (except emergency situation).\nWhen attending class:\n\nBe on time & don’t leave early\n\nDo not use your phone (phones must be put away when you enter the course, even if class hasn’t started)\n\nDo not use your laptop for anything other than taking notes and in-class activities (e.g., no videos, no email, no messaging apps, etc.)\n\nBe actively present (e.g., don’t work alone, don’t work on other courses, etc.)\n\nOutside class:\n\nCheck your email for announcements and stay updated on the Canvas HW Discussion forum\n\nWhen you have questions, or just want to chat, please stop by OH!"
   },
   {
-    "objectID": "syllabus.html#collaboration",
-    "href": "syllabus.html#collaboration",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "(2) Collaboration",
-    "text": "(2) Collaboration\nCollaboration improves higher-level thinking, confidence, communication, community, & more. You will work in groups in and outside class. These groups may occasionally switch & may sometimes be assigned.\n\n\n\n\n\n\n🤝 Expectations\n\n\n\n\nFollow the MSCS Community Guidelines\nIn group settings, both in and outside class, you:\n\nUse your group members’ correct names and pronouns\n\nActively contribute to discussions\n\nActively include all other group members in discussion\n\nCreate a space where others feel comfortable making mistakes & sharing their ideas\n\nEffectively communicate with your group about meeting times, etc."
+    "objectID": "syllabus.html#practice-problems",
+    "href": "syllabus.html#practice-problems",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "(2) Practice Problems",
+    "text": "(2) Practice Problems\nFinish the practice problems before attempting the HW! Working through the practice problems alongside the lecture notes and class materials will deepen your understanding of the core concepts and help you feel more confident when tackling homework problems. Consistent practice will also make your exam preparation much easier and more effective."
   },
   {
-    "objectID": "syllabus.html#preparation-checkpoints",
-    "href": "syllabus.html#preparation-checkpoints",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "(3) Preparation (Checkpoints)",
-    "text": "(3) Preparation (Checkpoints)\nRoughly half of our class sessions will require some prep work. Before class you will watch videos which introduce new concepts, then take a low-stakes checkpoint quiz (CP). This will help us prepare for class, build a common foundation, & maximize our time together – just how readings & reading reflections might be used in another class!\n\n\n\n\n\n\n📊 Expectations\n\n\n\nComplete at least 13 (out of 17) CPs (≈80%) without affecting your final grades!\n\n\n\n\n\n\n\n\n📜 Policies\n\n\n\n\nCPs may be attempted as many times as you’d like, but to earn completion credit for a given checkpoint you must score 100% by your final attempt.\nIf you complete less than 13 (out of 17) CPs (≈80%) before the time they are due, your overall course grade will be lowered by 1/3 of a letter grade (i.e. B –&gt; B-, A- –&gt; B+, etc.).\n\nIf you complete less than 8 (out of 17) CPs (≈50%) before the time they are due, your overall course grade will be lowered by 1 of a letter grade (i.e. A –&gt; B, etc.).\n\nCPs are due 09:00am on the assigned date. There are no extensions for CPs, as they are important preparation for the relevant class session."
+    "objectID": "syllabus.html#hw-assignments",
+    "href": "syllabus.html#hw-assignments",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "(3) HW Assignments",
+    "text": "(3) HW Assignments\nIn 12 HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here."
   },
   {
-    "objectID": "syllabus.html#practice-practice-sets",
-    "href": "syllabus.html#practice-practice-sets",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "(4) Practice (Practice Sets)",
-    "text": "(4) Practice (Practice Sets)\nIn 8 practice sets (PS), you will practice and explore the course material in more depth. The following flexibility is built in to help reduce stress and to facilitate deeper learning. Detailed directions and policies are here.\n\nGrading: PP grades will be based on Exercises & Presentation. You can make some mistakes without it chipping away at your score (e.g. you will earn 5/5 points on an exercise if it’s at least 90% correct & complete).\nExtensions: Limited extensions will be provided.\nSTAT 155 Discussion Board: Use the Moodle board as your first stop for Practice Sets (PS):\n\nAsk first: Post questions about PP on Moodle. Include the problem number, a brief summary of your approach, and where you’re stuck. For coding, share the entire code chunk for the related problem.\nHelp each other: If you know (or suspect) the answer, reply! Explaining your reasoning helps everyone learn.\nShare alternatives: Multiple correct methods are welcome—post yours with explanation.\nShow your work: To earn full collaboration credit, provide complete, well-explained solutions/steps. Partial or unexplained answers may lose points.\nBe professional: Be respectful, cite any resources you used, and write solutions in your own words.\nGoal: work together as a class so everyone can earn the PP points while learning deeply."
-  },
-  {
-    "objectID": "syllabus.html#project-independence-application",
-    "href": "syllabus.html#project-independence-application",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "(5) Project (Independence & Application)",
-    "text": "(5) Project (Independence & Application)\nMore details will be provided later in the semester. Here are some basics:\n\nWe’ll start working on projects in ~week 6, with the majority of the work happening later in the semester.\nThe projects are collaborative. You will be working in groups. Though you will work in assigned groups at various points throughout the semester, you will pick your own group for the project. This is something to think about as you meet other students in class and learn about common interests.\nProject grades will be based upon a final group written report (no oral presentation), multiple group and individual checkpoints, and individual contributions to the project (thus it’s possible for different group members to earn different grades)."
-  },
-  {
-    "objectID": "syllabus.html#quizzes-content-expertise",
-    "href": "syllabus.html#quizzes-content-expertise",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "(6) Quizzes (Content Expertise)",
-    "text": "(6) Quizzes (Content Expertise)\nYour course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person quizzes. You must schedule all travel and other commitments around them — there will not be any alternative quiz times.\n\nQuiz 1: Monday, 02/16 in class\nQuiz 2: March, 03/30 in class\nQuiz 3: Finals week\n\nThe exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.\n\n09:40–10:40 am section 06: Sat. 5/9, 8:00am-10:00am in class\n10:50–11:50 pm section 07: Sat. 5/9, 10:30am-12:30pm in class\n\n\n\n\n\n\n\n\n\n📜 Quiz Policies\n\n\n\n\nAll quizzes will have the following format:\n\nTaken individually, using pen/pencil & paper\n\nYou will not need to write code or use a calculator, but you will need to read & interpret R output\n\nClosed notes, but you may use a 3x5 index card with writing on both sides. These can be handwritten or typed, but you may not include screenshots or share note cards. Making your own card is important to the review process- as you are required to submit the index card along with the answer paper.\n\nQuizzes 2 & 3 will be cumulative. This is unavoidable as the material builds upon itself.\nQuiz corrections:\nYou can earn up to 33% of missed points back on Quizzes 1 & 2 if you:\n\nWrite a reflection of how you prepared for the quiz and where you felt strongest or more uncertain in your understanding before taking the quiz; and\n\nSubmit your quiz corrections along with your reflection to the instructor, no later than one week after quizzes have been handed back.\nNote: Quiz 3 corrections are not allowed due to time constraints at the end of the semester."
+    "objectID": "syllabus.html#exams-content-expertise",
+    "href": "syllabus.html#exams-content-expertise",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "(4) Exams (Content Expertise)",
+    "text": "(4) Exams (Content Expertise)\nYour course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.\n\nMidterm Exam 1: TBD\nMidterm Exam 2: TBD\nFinal Exam (Comprehensive): Finals week\n\nThe final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.\n\n10:25–11:15am section 103: Dec 14, 8:00-10:00am in class\n11:30am–12:20pm section 104: Dec 9, 8:00-10:00am in class\n2:05–2:55pm section 105: Dec 16, 12:00-2:00pm in class\n\n\n\n\n\n\n\n\n\n📜 Quiz Policies\n\n\n\n\nAll Exams will have the following format:\n\nTaken individually, using pen/pencil & paper\n\nYou may use a physical calculator (not the calculator in your phone) in the exam\nClosed notes, but you may use a 3x5 index card with writing on both sides. These can be handwritten or typed, but you may not include screenshots or share note cards. Making your own card is important to the review process- as you are required to submit the index card along with the answer paper.\n\nFinal Exam will be comprehensive."
   },
   {
     "objectID": "syllabus.html#grading-system",
     "href": "syllabus.html#grading-system",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Grading system",
-    "text": "Grading system\nThe grading system in this course is designed to help you achieve the learning objectives while allowing space to make and learn from mistakes along the way. Your final course grade will consist of three, evenly-weighted components (Quizzes, Practice Problems, and the Project), modified by your progress toward the Engagement, Collaboration, and Preparation (Checkpoint) goals:\n\n\n\nCourse Percentage\n25% Practice Sets +\n50% Quizzes +\n25% Project\n\n\n\nGrade\nCourse percentage\n\n\n\n\nA\n&gt; 93%\n\n\nA-\n87–93%\n\n\nB+\n84–87%\n\n\nB\n81–84%\n\n\nB-\n78–81%\n\n\nC+\n75–78%\n\n\nC\n72–75%\n\n\nC-\n69–72%\n\n\nD/NC\n&lt; 69% or 7+ absences\n\n\n\n\n\n  \n\n\nGrade Modifiers\nEngagement (including attendance) +\nPreparation (checkpoints)\n\n\n\n\n\n\n\nModifier\nScenario\n\n\n\n\nnone (e.g. A → A)\nMeets expectations in all two areas (Engagement and Preparation)\n\n\n⅓ lower grade (e.g. A → A-)\nDemonstrates strong progress (e.g., 4 absences OR less than 11 (out of 15) CPs (≈80%))\n\n\n1 lower grade (e.g. A → B)\nDemonstrates moderate progress (e.g., 5–6 absences OR less than 8 (out of 17) CPs (≈50%))\n\n\n&gt;1 lower grade\nDemonstrates little progress toward expectations in two areas\n\n\nDrop to D/NC\nHas 7+ absences\n\n\n\nNOTE: The table presents general scenarios. Please reach out if you want to discuss progress in Engagement and/or Preparation.\n\n\n\n\n\n\n\n\n\n📊 Grading Caveats\n\n\n\n\nThe goal of sharing this specific information is to provide transparency around final grades, hence clear goals to work toward. That said, assigning grades is much more nuanced than any grading rubric / framework might suggest (for good reasons). What’s shared here is a worst case scenario – it represents the lowest a grade might be if you meet the corresponding goals.\nMoodle does NOT correctly weight your grades, thus should not be used alone to monitor your progress."
-  },
-  {
-    "objectID": "syllabus.html#what-to-do-if-you-miss-class",
-    "href": "syllabus.html#what-to-do-if-you-miss-class",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "What to Do If You Miss Class",
-    "text": "What to Do If You Miss Class\nIf you do miss class, I expect you to complete any in-class activities on your own. Check the solutions in the online manual and come to office hours with any follow-up questions."
-  },
-  {
-    "objectID": "syllabus.html#late-work-on-practice-problems-pps",
-    "href": "syllabus.html#late-work-on-practice-problems-pps",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Late work on Practice Problems (PPs)",
-    "text": "Late work on Practice Problems (PPs)\nThroughout the semester, you may use up to three, three-day extensions. These three extensions can be used on Practice Problems only, not quizzes. The purpose of deadlines (and extensions) are to keep you accountable for your own learning, to keep you on track with the pace of the course (which builds upon itself throughout the semester), and to provide preceptors and myself with the ability to provide you with timely feedback on assignments. Since the Problem Sets are due roughly every two weeks, you must begin working on them early if you want to succeed.\nExtensions can be used automatically, without letting me know in advance. The Moodle dropboxes for assignments will close exactly 3 days after the original deadline (i.e. Mondays at 11:59pm), and I will not accept work submitted after that point unless there are extenuating circumstances that you have communicated with me about ahead of the original deadline. If you email me a completed assignment after a 3-day extension is up, I may have the preceptors provide you with feedback, but you will not receive credit for the assignment (equivalent to “Needs Improvement” on every question of the relevant assignment).\nI expect you to keep track of how many extensions you’ve used. I will do my best to email you a reminder if you have used all three of your extensions and have none remaining.\nIf you have run out of extensions and/or an extenuating circumstance occurs that impacts your ability to submit assignments on time, please email me to discuss the situation. I am happy to be flexible as long as you communicate!"
+    "text": "Grading system\nThe grading system in this course is designed to help you achieve the learning objectives while allowing space to make and learn from mistakes along the way. Your final course grade will be determined by your performance on HW assignments, two midterm exams, and a comprehensive final exam, according to the weights shown below.\n\n\n\nCourse Percentage\n25% HW Assignments +\n40% Midterm Exams (20% each) +\n35% Final Exam (Comprehensive)\n\n\n\nFinal Grade Scale\n\n\n\nGrade\nCourse percentage\n\n\n\n\nA\n90–100%\n\n\nB\n80–89.99%\n\n\nC\n70–79.99%\n\n\nD\n60–69.99%\n\n\nF\n59.99% and below"
   },
   {
     "objectID": "syllabus.html#religious-observance",
     "href": "syllabus.html#religious-observance",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Religious Observance",
     "text": "Religious Observance\nStudents may wish to take part in religious observances that occur during the semester. If you have a religious observance/practice that conflicts with your participation in the course, please contact me before the end of the second week of the semester to discuss appropriate accommodations.\nIn an effort to respect religious diversity, I request that students who plan to observe a religious holiday during scheduled class meetings/class requirements talk to me about reasonable consideration by the end of the second week of the course."
   },
   {
     "objectID": "syllabus.html#well-being",
     "href": "syllabus.html#well-being",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Well-being",
-    "text": "Well-being\nI want you to succeed. Both here at Macalester and beyond. To help make this happen, I am committed to the following.\nRespect: Everyone comes from a different path through life, and it is our moral duty as human beings to listen to each other without judgment and to respect one another. I have no tolerance for discrimination of any kind, in and out of the classroom. If you are seeking campus resources regarding discrimination, the Department of Multicultural Life and the Center for Religious and Spiritual Life are wonderful resources. We will also respect the MSCS Community Guidelines.\nSensitive Topics: Applications in this course span issues in science, policy, and society. As such, we may sometimes address sensitive topics. I will try to announce in class if an assignment or activity involves a potentially sensitive topic. If you have reservations about a particular topic, please come talk to me to discuss possible options.\nAccommodations: If you need accommodations for any reason, please contact Disability Services to discuss your needs, and speak with me as soon as possible afterwards so that we can discuss your accommodation plan. If you already have official accommodations, please discuss these with me within the first week of class so that you get off to a great start. Contact me if you have other special circumstances. I will find resources for you.\nTitle IX: You deserve a community free from discrimination, sexual harassment, hostility, sexual assault, domestic violence, dating violence, and stalking. If you or anyone you know has experienced harassment or discrimination, know that you are not alone. Macalester provides staff and resources to help you find support. Please be aware that as a faculty member, it is my responsibility to report disclosure about sexual harassment, sexual misconduct, relationship violence, and stalking to the Title IX Office. The purpose of this report is to ensure that anyone experiencing harm receives the resources and support they need. I will keep this information private, and it will not be shared beyond this required report.\nYou may also contact Macalester’s Title IX Coordinator directly (phone: 651-696-6258; e-mail: titleixcordinator@macalester.edu); they will provide you with supportive measures, resources, and referrals. Additional information about how to file a report (including anonymously) is available on the Title IX website.\nGeneral Health and Well-being: I care that you prioritize your well-being in this semester and beyond. Investing time into taking care of yourself will have profound impacts on all aspects of your life. Remember that beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities. It is important to acknowledge any stressors you may be facing, which can be mental, emotional, physical, cultural, financial, etc., and how they can have an impact on you. I encourage you to remember that you have a body with needs. In the classroom, eat when you are hungry, drink water, use the restroom, and step out if you are upset and need some air. Please do what is necessary so long as it does not impede your or others’ ability to be mentally and emotionally present in the course. Outside of the classroom, sleeping well, moving your body, and connecting with others can be strategies can help nourish you. If you are having difficulties maintaining your well-being, please don’t hesitate to contact me and/or find support from physical and mental health resources here, here, and here."
+    "text": "Well-being\nI want you to succeed. Both here at CWRU and beyond. To help make this happen, I am committed to the following.\nRespect: Everyone comes from a different path through life, and it is our moral duty as human beings to listen to each other without judgment and to respect one another. I have no tolerance for discrimination of any kind, in and out of the classroom. If you are seeking campus resources regarding discrimination, the Office of Equity and the Division of Student Affairs are wonderful resources.\nAccommodations: If you need accommodations for any reason, please contact Disability Resources to discuss your needs, and speak with me as soon as possible afterwards so that we can discuss your accommodation plan. If you already have official accommodations, please discuss these with me within the first week of class so that you get off to a great start. Contact me if you have other special circumstances. I will find resources for you.\nTitle IX: You deserve a community free from discrimination, sexual harassment, hostility, sexual assault, domestic violence, dating violence, and stalking. If you or anyone you know has experienced harassment or discrimination, know that you are not alone. CWRU provides staff and resources to help you find support. Please be aware that as a faculty member, it is my responsibility to report disclosure about sexual harassment, sexual misconduct, relationship violence, and stalking to the Title IX Office. The purpose of this report is to ensure that anyone experiencing harm receives the resources and support they need. I will keep this information private, and it will not be shared beyond this required report.\nYou may also contact CWRU’s Title IX Coordinator directly (phone: 216-368-3066; e-mail: rachel.lutner@case.edu); they will provide you with supportive measures, resources, and referrals. Additional information about how to file a report (including anonymously) is available on the Title IX website.\nGeneral Health and Well-being: I care that you prioritize your well-being in this semester and beyond. Investing time into taking care of yourself will have profound impacts on all aspects of your life. Remember that beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities. It is important to acknowledge any stressors you may be facing, which can be mental, emotional, physical, cultural, financial, etc., and how they can have an impact on you. I encourage you to remember that you have a body with needs. In the classroom, eat when you are hungry, drink water, use the restroom, and step out if you are upset and need some air. Please do what is necessary so long as it does not impede your or others’ ability to be mentally and emotionally present in the course. Outside of the classroom, sleeping well, moving your body, and connecting with others can be strategies can help nourish you. If you are having difficulties maintaining your well-being, please don’t hesitate to contact me and/or find support from physical and mental health resources hereand here."
   },
   {
-    "objectID": "syllabus.html#footnotes",
-    "href": "syllabus.html#footnotes",
-    "title": "STAT 155: Introduction to Statistical Modeling",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nMacalester Academic Advising – High School Preparation↩︎"
-  },
-  {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Project",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "",
-    "text": "Please download and go through the Project Instructions in details.\nThe Rubrics for grading are here."
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Practice Problems",
-    "section": "",
-    "text": "Please review the Practice Problems Policies document before proceeding!\n…due at 11:59 pm Central on Moodle!\n\nPractice Sets 1, due 02/04\nPractice Sets 2, due 02/09\nPractice Sets 3, due 02/23\nPractice Sets 4, due 03/09\nPractice Sets 5, due 03/24\nPractice Sets 6, due 04/13\nPractice Sets 7, due 04/22\nPractice Sets 8, due 04/27"
-  },
-  {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R and RStudio Resources",
-    "section": "",
-    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R and RStudio Resources",
-    "section": "",
-    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R and RStudio Resources",
-    "section": "Getting Started",
-    "text": "Getting Started\nThe videos below introduce R and RStudio and show how to install them on your computer. Start with the overview, then watch the step-by-step video for your operating system.\nDownload links (mentioned in the videos): - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nVersion numbers in the videos are out-of-date. Please download the latest versions of both R and RStudio. As of January 19, 2026, the latest versions are: R 4.5.2 and RStudio RStudio-2026.01.0-392.\n\n\n\nInstallation / Overview\n\nInstalling R and RStudio (Overview) (Length: 4:30)\n\nPick one of the following: - Mac — Installing R and RStudio Step-by-Step (Length: 3:24) - Windows — Installing R and RStudio Step-by-Step (Length: 5:43)\nIf you run into installation issues, contact me right away. If we can’t get RStudio working locally, you can use Macalester’s online RStudio server:\nQuick intro video"
-  },
-  {
-    "objectID": "R_Resources.html#intro-videos-to-r-watch-in-order",
-    "href": "R_Resources.html#intro-videos-to-r-watch-in-order",
-    "title": "R and RStudio Resources",
-    "section": "Intro Videos to R (watch in order)",
-    "text": "Intro Videos to R (watch in order)\n\nIntro to R and RStudio (11:31)\nR Data Types (8:05)\nR Error Messages and Troubleshooting (Optional) (7:52)\nIntro to RMarkdown / Quarto (9:33)\nFile Structure & Organization (Optional)\n\nMac (5:13)\nWindows (7:44)\n\nTips on File Naming & Organization (Optional)\nR Packages (7:30)\n\n\nYou can adjust video speed and pause as needed. If anything doesn’t work, please let me know so we can fix it quickly."
+    "text": "STAT 312. Basic Statistics for Engineering and Science\nCase Western Reserve University, Fall 2026\nWelcome to the world of Statistics! Statistics is not just about theories & numbers — it’s about making sense of the world.\n\n\n\n\n\n\n📖 A Thought from H. G. Wells\n\n\n\n\n“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”\n\n\n\nInstructor: Md Mutasim Billah  Class meeting times:\n\nSection 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\n\nInstructor’s drop-in (office) hours:\n\nLocation: My office (Sears 569)\nTimes: M/W: 1:00pm - 1:30pm and 3pm - 4pm\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123678.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.\n\n\nThis course website will be updated throughout the semester with new activities, assignments, and announcements, so please bookmark this page if you are enrolled in the course!\nIf you find any typos, bugs, dead links, or have other questions, please email mdmutasim.billah@case.edu"
   },
   {
     "objectID": "activities/01_foundations_welcome.html",
@@ -358,11 +281,32 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STAT 155: Introduction to Statistical Modeling",
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R and RStudio Resources",
     "section": "",
-    "text": "STAT 155: Introduction to Statistical Modeling\nMacalester College, Spring 2026\nStatistics is not just about theories & numbers — it’s about making sense of the world.\n\n\n\n\n\n\n📖 A Thought from H. G. Wells\n\n\n\n\n“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”\n\n\n\nWelcome to the world of Statistics! In this course, you’ll learn how to analyze data, test research hypotheses, and make predictions in ways that matter.\nInstructor: Md Mutasim Billah  Class meeting times:\n\nSection 06: M/W/F 09:40-10:40am, THTR 203\nSection 07: M/W/F 10:50-11:50pm, THTR 203\n\nInstructor’s drop-in (office) hours:\n\nLocation: My office (OLRI 234)\nTimes: M/W: 12:00pm - 12:30pm (in-person), Tuesday/Thursday: 2pm - 3pm (Over zoom, password: 123456)\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123456.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response.\n\n\nSTAT 155 Preceptor Office Hours: There is a link to a Google Calendar containing all preceptor office hours available at the top of the course Moodle page!\nR/RStudio Preceptor Office Hours: Available on the MSCS Events google calendar (not to be used for questions about course content, only Data and R-related things!)\n\nThis course website will be updated throughout the semester with new activities, assignments, and announcements, so please bookmark this page if you are enrolled in the course!\nIf you find any typos, bugs, dead links, or have other questions, please email mbillah@macalester.edu"
+    "text": "Crowd-sourced R functions\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R and RStudio Resources",
+    "section": "",
+    "text": "Crowd-sourced R functions\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R and RStudio Resources",
+    "section": "Getting Started",
+    "text": "Getting Started\nDownload links: - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Practice Problems",
+    "section": "",
+    "text": "Please review the STAT 312 HW Assignment policies document before proceeding!\n…due at 11:59 pm on Canvas!"
   },
   {
     "objectID": "schedule.html",

@@ -3,34 +3,30 @@ title: ""
 sidebar: false
 ---
 
-# STAT 155: Introduction to Statistical Modeling  
-Macalester College, Spring 2026
+# STAT 312. Basic Statistics for Engineering and Science  
+Case Western Reserve University, Fall 2026
 
-Statistics is not just about theories & numbers — it’s about making sense of the world.  
+Welcome to the world of Statistics! Statistics is not just about theories & numbers — it’s about making sense of the world.  
 
 ::: {.callout-tip title="📖 A Thought from H. G. Wells"}  
 > “Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”  
 :::  
 
-Welcome to the world of Statistics! In this course, you’ll learn how to analyze data, test research hypotheses, and make predictions in ways that matter.  
+
 
 **Instructor:** Md Mutasim Billah <br> **Class meeting times:**
 
--   **Section 06**: M/W/F 09:40-10:40am, THTR 203
--   **Section 07**: M/W/F 10:50-11:50pm, THTR 203
+-   **Section 103**: M/W/F 10:25-11:15am, White Building 411
+-   **Section 104**: M/W/F 11:30-12:20pm, White Building 411
+-   **Section 105**: M/W/F 02:05-02:55pm, Nord Hall 410
 
 **Instructor's drop-in (office) hours:**
 
--   **Location:** My office (OLRI 234)
--   **Times:** M/W: 12:00pm - 12:30pm (in-person), Tuesday/Thursday: 2pm - 3pm (Over [zoom](https://macalester.zoom.us/j/99762878654?pwd=gt7VvSNT0ubKsV2icMV3z8J0GyHKMy.1), password: 123456)
--   **By Appointment:** I'm also happy to meet one-on-one if my normal drop-in hours don't work for you. Shoot me an email and we can arrange it over [zoom](https://macalester.zoom.us/j/99762878654?pwd=gt7VvSNT0ubKsV2icMV3z8J0GyHKMy.1), password: 123456.
--   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response.
+-   **Location:** My office (Sears 569)
+-   **Times:** M/W: 1:00pm - 1:30pm and 3pm - 4pm
+-   **By Appointment:** I'm also happy to meet one-on-one if my normal drop-in hours don't work for you. Shoot me an email and we can arrange it over [zoom](https://cwru.zoom.us/j/95414621032?pwd=EqqJ4cKBk9widsemXzefkbuBXQTRRH.1), password: 123678.
+-   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.
 
-------------------------------------------------------------------------
-
-[**STAT 155 Preceptor Office Hours:**]{.underline} There is a link to a Google Calendar containing *all* preceptor office hours available at the top of the course Moodle page!
-
-[**R/RStudio Preceptor Office Hours:**]{.underline} Available on the [MSCS Events google calendar](https://www.macalester.edu/mscs/data-support/) (*not* to be used for questions about course content, only Data and R-related things!)
 
 
 
@@ -38,4 +34,4 @@ Welcome to the world of Statistics! In this course, you’ll learn how to analyz
 
 This course website will be updated throughout the semester with new activities, assignments, and announcements, so please bookmark this page if you are enrolled in the course!
 
-If you find any typos, bugs, dead links, or have other questions, please email [mbillah@macalester.edu](mailto:mbillah@macalester.edu){.email}
+If you find any typos, bugs, dead links, or have other questions, please email [mdmutasim.billah@case.edu](mailto:mdmutasim.billah@case.edu){.email}

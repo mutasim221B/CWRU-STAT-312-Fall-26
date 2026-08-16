@@ -14,10 +14,10 @@ project:
     - .nojekyll
 
 website:
-  title: "STAT 155"
+  title: "STAT 312"
   site-url: https://mutasim221B.github.io/CWRU-STAT-312-Fall-26/
   repo-url:  https://github.com/mutasim221b/CWRU-STAT-312-Fall-26
-  favicon: favicon-32x32.png
+  favicon: STAT-312.png
   navbar:
     background: primary
     search: true
@@ -30,9 +30,7 @@ website:
         text: "Schedule"
       - sidebar:activities
       - file: assignments.qmd
-        text: "Practice Sets"
-      - file: project.qmd
-        text: "Project"
+        text: "HW Assignment"
       - file: R_Resources.qmd
         text: "R Resources"
 
@@ -46,7 +44,7 @@ website:
   
   page-footer:
     left: |
-      &copy; Md Mutasim Billah, 2025<br>
+      &copy; Md Mutasim Billah, 2026<br>
       All content licensed under ![](https://static.thenounproject.com/png/70967-200.png){height=20px} ([CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/))
     right: |
       Site built with [Quarto](https://quarto.org/)
