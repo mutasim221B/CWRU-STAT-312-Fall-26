@@ -83,8 +83,8 @@ width="150" style="float: right; padding-right: 20px; padding-bottom: 20px;"/>
 
 **Email:** [mdmutasim.billah@case.edu](mailto:mdmutasim.billah@case.edu){.email}
 
-::: {.callout-note title="Notes from \"your professor\""}
-Greetings! You can call me *Bill* or *Dr. Billah* & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat - those courses often emphasized formulas over real understanding. That experience has shaped my teaching - I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 312 and to create a more meaningful experience - one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. 
+::: {.callout-note title="Notes from \"your instructor\""}
+Greetings! You can call me *Bill* or *Dr. Billah* or *Professor Billah* & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat - those courses often emphasized formulas over real understanding. That experience has shaped my teaching - I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 312 and to create a more meaningful experience - one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. 
 Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!
 :::
 
@@ -266,8 +266,8 @@ In 12 HW assignments, you will practice and explore the course material in more 
 
 Your course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.
 
-- **Midterm Exam 1:** TBD
-- **Midterm Exam 2:** TBD 
+- **Midterm Exam 1:** Monday, Oct 5
+- **Midterm Exam 2:** Monday, Nov 9
 - **Final Exam (Comprehensive):** *Finals week*  
   - The final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.  
     - 10:25–11:15am section 103: Dec 14, 8:00-10:00am in class
