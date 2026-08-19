@@ -161,124 +161,60 @@
     "text": "STAT 312. Basic Statistics for Engineering and Science\nCase Western Reserve University, Fall 2026\nWelcome to the world of Statistics! Statistics is not just about theories & numbers — it’s about making sense of the world.\n\n\n\n\n\n\n📖 A Thought from H. G. Wells\n\n\n\n\n“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”\n\n\n\nInstructor: Md Mutasim Billah  Class meeting times:\n\nSection 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\n\nInstructor’s drop-in (office) hours:\n\nLocation: My office (Sears 569)\nTimes: M/W: 1:00pm - 1:30pm and 3pm - 4pm\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123678.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.\n\n\nThis course website will be updated throughout the semester with new activities, assignments, and announcements, so please bookmark this page if you are enrolled in the course!\nIf you find any typos, bugs, dead links, or have other questions, please email mdmutasim.billah@case.edu"
   },
   {
-    "objectID": "activities/01_foundations_welcome.html",
-    "href": "activities/01_foundations_welcome.html",
+    "objectID": "activities/Intro-Descriptive.html",
+    "href": "activities/Intro-Descriptive.html",
     "title": "Collecting and Summarizing Data",
     "section": "",
-    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "text": "Statistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.\n\n\n\n\n\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.\n\n\n\n\n\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.\n\n\n\n\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.\n\n\n\n\n\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.\n\n\n\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed\n\n\n\n\n\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#see-class-notes",
-    "href": "activities/01_foundations_welcome.html#see-class-notes",
+    "objectID": "activities/Intro-Descriptive.html#what-is-statistics",
+    "href": "activities/Intro-Descriptive.html#what-is-statistics",
     "title": "Collecting and Summarizing Data",
-    "section": "See class notes",
-    "text": "See class notes\nGo to your class-notes to see what we covered in live-note taking!\n\n\n\nEXAMPLE 1: Tidy data \nRefering to the questions from the Fun Survey!\n\nHow many hours of sleep did you get last night?\nHow many cups of coffee did you drink this morning?\nWhat is your declared or potential major? (If you are a double major, just pick whichever one you think of first.)\nWhat is your anticipated graduation year?\nHow many stats/data science courses have you taken in the past?\nOn a scale of 1 (get me out of here) to 10 (yay!), how excited are you about this course?\nIs it your birthday this semester? (yes/no)\nHow many unread emails do you have in your inbox right now?",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "Statistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-1-use-r-as-a-calculator",
-    "href": "activities/01_foundations_welcome.html#example-1-use-r-as-a-calculator",
+    "objectID": "activities/Intro-Descriptive.html#example-manufacturing-bolts",
+    "href": "activities/Intro-Descriptive.html#example-manufacturing-bolts",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 1: Use R as a calculator",
-    "text": "Example 1: Use R as a calculator\nType the following lines in the console (bottom left), one by one, hitting Return/Enter after each line. In some cases you might even get an error! This error is important to learning how R code does and doesn’t work.\n\n4 + 2\n\n\n4^2\n\n\n4*2\n\n\n4(2)",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "A factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-2-functions-and-arguments",
-    "href": "activities/01_foundations_welcome.html#example-2-functions-and-arguments",
+    "objectID": "activities/Intro-Descriptive.html#population-and-sample",
+    "href": "activities/Intro-Descriptive.html#population-and-sample",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 2: Functions and arguments",
-    "text": "Example 2: Functions and arguments\nWe can also use built-in functions to perform common tasks. These functions have names and require information about arguments in order to run:\nfunction(argument) Cheatcode: RiceCooker(Rice)\nTry out the following functions one by one in the RStudio console. For each function, note its…\n\nname\nthe argument or information it needs to run\nwhat output it produces (what the function does)\nhow the name connects to what the function does\n\n\nsqrt(9)\n\n\nnchar(\"macalester\")\n\n\nsqrt(nchar(\"snow\"))\n\nSome functions have more than 1 argument, separated by commas:\nfunction(argument1 = ___, argument2 = ___) Cheatcode: RiceCooker(Rice,Chicken)\nTry out the following, one by one.\n\nrep(x = 2, times = 5)\n\n\nrep(times = 5, x = 2)\n\n\nrep(2, 5)\n\n\nrep(5, 2)\n\nFinally, R is case sensitive. Try using Rep() instead of rep(). Take time to read the error message!\n\nRep(5, 2)",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "A random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-3-save-it-for-later",
-    "href": "activities/01_foundations_welcome.html#example-3-save-it-for-later",
+    "objectID": "activities/Intro-Descriptive.html#variability",
+    "href": "activities/Intro-Descriptive.html#variability",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 3: Save it for later",
-    "text": "Example 3: Save it for later\nWe’ll often want to store some R output for later use. In R:\nname &lt;- output\nwhere name is the name under which to store a result, output is the result we wish to store, and &lt;- is the assignment operator (I think of this as an arrow pointing the output into the name).\nIMPORTANT: Try out each line one at a time. Why doesn’t the first line produce any output?\n\ndegrees_c &lt;- -13\n\n\ndegrees_c\n\n\ndegrees_c * (9/5) + 32",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "Consider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-4-import-data",
-    "href": "activities/01_foundations_welcome.html#example-4-import-data",
+    "objectID": "activities/Intro-Descriptive.html#additional-information-machines",
+    "href": "activities/Intro-Descriptive.html#additional-information-machines",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 4: Import data",
-    "text": "Example 4: Import data\nNext, let’s work with some data!! The first step is importing our data into RStudio. How we do this depends on:\n\nfile format (eg: .xls Excel spreadsheet, .csv, .txt)\nfile location (eg: online, on your desktop, built into RStudio itself).\n\nThe data from the similar survey collected in fall 2024 stored as a .csv file online. Import this data using the read_csv() function, and store it as survey using the code below:\nFirst, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):\ninstall.packages(\"tidyverse\")\n\n# Load the \"tidyverse\" package which contains the read_csv() function\nlibrary(tidyverse)\n\n# Import the data\nsurvey &lt;- read_csv(\"https://mac-stat.github.io/data/112_fall_2024_survey.csv\")\n\n\n\nCheck out the data\nIn the Environment tab in the upper right pane of RStudio, click on survey. What happens?!\n\n\nIn the modern era, datasets often contain hundreds of variables and millions of observations. We need more effective ways to explore such data.",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "The bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length."
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-5-get-to-know-the-data",
-    "href": "activities/01_foundations_welcome.html#example-5-get-to-know-the-data",
+    "objectID": "activities/Intro-Descriptive.html#additional-information-production-speed",
+    "href": "activities/Intro-Descriptive.html#additional-information-production-speed",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 5: Get to know the data",
-    "text": "Example 5: Get to know the data\nPAUSE: Make sure you’re sync with your group.\nBefore we can learn anything from our data, we must understand its structure. For each function below:\n\ntry it out\ndiscuss with your group what the function does\ndiscuss with your group how the function’s name connects to what it does\n\n\ndim(survey) # (Number of row (case/obs.), Number of column (variable))\n\n\nnrow(survey) # Number of case/obs.\n\n\nncol(survey) # Number of variables\n\n\nhead(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nhead(survey, 3) # Controlling the view of first few rows of the dataset\n\n\ntail(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nnames(survey) # Get all column (variable) names\n\n\nstr(survey) # Overall info about data",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "Each machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed"
   },
   {
-    "objectID": "activities/01_foundations_welcome.html#example-6-code-communication",
-    "href": "activities/01_foundations_welcome.html#example-6-code-communication",
+    "objectID": "activities/Intro-Descriptive.html#how-should-we-collect-the-data",
+    "href": "activities/Intro-Descriptive.html#how-should-we-collect-the-data",
     "title": "Collecting and Summarizing Data",
-    "section": "Example 6 : Code = communication",
-    "text": "Example 6 : Code = communication\nIt’s important to recognize from day 1 that code is a form of communication, both to yourself and others!!!!! Code structure and details are important to readability and clarity, just as grammar, punctuation, spelling, paragraphs, and line spacing are important in written essays. All of the code below works, but has bad structure. With your group, discuss what is unfortunate about each line, then make it better.\n\nseq(from=1, to=9, by=2)\nseq(from = 1, to=9, by=2)\ntemp_cel &lt;- -13\nthisisthetemperaturetodayincelsius &lt;- -13\nthis_is_the_temperature_today_in_celsius &lt;- -13",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#example-7-you-will-make-so-many-mistakes",
-    "href": "activities/01_foundations_welcome.html#example-7-you-will-make-so-many-mistakes",
-    "title": "Collecting and Summarizing Data",
-    "section": "Example 7: You will make so many mistakes!",
-    "text": "Example 7: You will make so many mistakes!\nMistakes are common when, and even important to, learning any new language. You’ll get better and better at interpreting error messages, finding help, and fixing errors. In addition to finding help online, R has built-in help files. For example:\n\nIn the console, type ?rep and press Return/Enter.\nCheck out the documentation file that pops up in the Help tab (lower right).\nQuickly scroll through, noting the type of information provided.\nPause at the “Examples” section at the bottom – perhaps the most useful section! Try out a couple of the provided examples in your console.",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#example-8-make-a-cheat-sheet",
-    "href": "activities/01_foundations_welcome.html#example-8-make-a-cheat-sheet",
-    "title": "Collecting and Summarizing Data",
-    "section": "Example 8: Make a “cheat sheet”",
-    "text": "Example 8: Make a “cheat sheet”\nYou will continue to pick up new R code and ideas. You’re highly encouraged to start tracking this in a cheat sheet (eg: in a Google doc). The cheat sheet will be a handy reference for you, and the act of making it will help deepen your understanding and retention.",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#exercise-complete-this-after-the-class",
-    "href": "activities/01_foundations_welcome.html#exercise-complete-this-after-the-class",
-    "title": "Collecting and Summarizing Data",
-    "section": "Exercise: Complete this after the class",
-    "text": "Exercise: Complete this after the class\nComplete this exercise after class. First, try it on your own (or with your group), and then check your work against the solution provided at the end of this .qmd file.\nUse R code to do the following:\n\nImport & name data on different Himalayan peaks from the url below:\nhttps://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv NOTE: A codebook, i.e. a description of the data, is here.\nUse a function to show which variables are recorded on each peak.\nHow many peaks are included in the dataset? Answer this using a function, not by counting up the rows yourself.\nShow the first 6 rows of the dataset. NOTE: This gives us a quick glimpse without having to print out the entire dataset!",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#exercise-your-turn",
-    "href": "activities/01_foundations_welcome.html#exercise-your-turn",
-    "title": "Collecting and Summarizing Data",
-    "section": "Exercise: Your turn",
-    "text": "Exercise: Your turn\n\n# a\npeaks &lt;- read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\")\n## Error in read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\"): could not find function \"read_csv\"\n\n# b\nnames(peaks)\n## Error: object 'peaks' not found\n\n# c\ndim(peaks)\n## Error: object 'peaks' not found\nnrow(peaks)\n## Error: object 'peaks' not found\n\n# d\nhead(peaks)\n## Error: object 'peaks' not found",
-    "crumbs": [
-      "Collecting and Summarizing Data"
-    ]
+    "section": "",
+    "text": "There are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected."
   },
   {
     "objectID": "R_Resources.html",
@@ -300,6 +236,27 @@
     "title": "R and RStudio Resources",
     "section": "Getting Started",
     "text": "Getting Started\nDownload links: - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html",
+    "href": "activities/01_foundations_welcome.html",
+    "title": "Collecting and Summarizing Data",
+    "section": "",
+    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html#data-principles",
+    "href": "activities/01_foundations_welcome.html#data-principles",
+    "title": "Collecting and Summarizing Data",
+    "section": "",
+    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html#exercise-your-turn",
+    "href": "activities/01_foundations_welcome.html#exercise-your-turn",
+    "title": "Collecting and Summarizing Data",
+    "section": "Exercise: Your turn",
+    "text": "Exercise: Your turn\nDo this, do that!"
   },
   {
     "objectID": "assignments.html",

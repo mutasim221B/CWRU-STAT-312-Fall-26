@@ -1,0 +1,183 @@
+---
+title: "Collecting and Summarizing Data"
+subtitle: "Md Mutasim Billah,"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+
+format-links:
+  - format: pptx
+    text: "Download PowerPoint"
+    icon: file-ppt
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+
+
+::: {.content-visible when-format="html"}
+
+# Why Engineers Need Statistics {-}
+
+:::
+
+
+## Why should engineers study statistics? {-}
+
+```{r echo = FALSE}
+knitr::include_graphics("../images/stat-need.png")
+```
+
+
+## What is statistics? {-}
+
+**Statistics** is the science of **collecting, analyzing, and interpreting data**.
+
+::: {.incremental}
+
+- Engineers collect data from experiments, manufacturing processes, and systems.
+
+- Engineers analyze data to understand patterns and relationships.
+
+- Engineers interpret data to make decisions and improve processes.
+
+:::
+
+
+## Example: Manufacturing bolts {-}
+
+A factory is manufacturing bolts that should be exactly **2 inches long**.
+
+::: {.incremental}
+
+- Measuring the length of **all** bolts (a census) may be:
+    - too time consuming,
+    - too expensive,
+    - or impossible.
+
+- Instead, we can collect a **sample** of bolts.
+
+:::
+
+
+## Population and sample {-}
+
+A random sample of 5 bolts yields the following measurements, in inches:
+
+\[
+\{2.003, 1.999, 2.006, 1.996, 2.001\}
+\]
+
+
+::: {.incremental}
+
+**Population:** The set of all people or things being studied, i.e., all possible observations.
+
+
+**Sample:** The subset of the population from which information is actually collected.
+
+:::
+
+
+## Variability {-}
+
+Consider again the measurements:
+
+\[
+\{2.003, 1.999, 2.006, 1.996, 2.001\}
+\]
+
+The data have **variability**.
+
+
+::: {.incremental}
+
+- Identify the source(s) of the variation.
+
+- Reduce the variation.
+
+:::
+
+
+## Additional information: Machines {-}
+
+The bolts are being produced by two different machines:
+
+::: {.incremental}
+
+- **Machine A**
+
+- **Machine B**
+
+:::
+
+
+This gives us one possible source of variation in bolt length.
+
+
+## Additional information: Production speed {-}
+
+Each machine has three speed settings:
+
+::: {.incremental}
+
+- **Slow:** 500 bolts/minute
+
+- **Medium:** 1000 bolts/minute
+
+- **Fast:** 2000 bolts/minute
+
+:::
+
+
+Now we have two possible sources of variation:
+
+::: {.incremental}
+
+1. Machine
+
+2. Production speed
+
+:::
+
+
+## How should we collect the data? {-}
+
+There are several options.
+
+::: {.incremental}
+
+- **Retrospective Study**
+
+  Use data that have been collected in the past.
+
+
+- **Observational Study**
+
+  Observe the process in the present and collect data.
+
+
+- **Designed Experiment**
+
+  Exhibit maximum control over **when, where, and how** the data are collected.
+
+:::

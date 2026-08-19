@@ -38,7 +38,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
-          - "activities/01_foundations_welcome.qmd"
+          - "!activities/Intro-Descriptive.qmd"
 
 
   
