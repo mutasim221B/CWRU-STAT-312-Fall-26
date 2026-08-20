@@ -4,7 +4,36 @@ sidebar: false
 ---
 
 
-Please review the [STAT 312 HW Assignment policies ](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) document before proceeding!
+Please review the [STAT 312 HW Assignment & Quiz policies ](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) document before proceeding!
 
-**...due at 11:59 pm on Canvas!**
+## Homework Submission Guidelines {-}
+
+- Submit all homework assignments through **Canvas**:
+  - Go to **Assignments**
+  - Open **HW Assignment**
+  - Click the corresponding homework, for example **HW 1**
+
+- If you prefer to work with **pen and pencil**:
+  - Download the homework assignment from the link provided below
+  - Print the assignment
+  - Complete your work by hand
+  - Scan your completed work as a **PDF**
+  - Upload the PDF to Canvas
+
+- If you prefer to use a **writing device** or type your solutions, you may complete the homework electronically and submit the final work directly as a **PDF**.
+
+- You may also need to submit a .R file if the HW involves programming task
+
+- Your work must be **clear, organized, and legible**. Follow these presentation guidelines:
+  - Clearly **circle or otherwise mark your final answer** so it can be easily located on the page.
+  - Show all necessary work for **nontrivial calculations**. Answers without sufficient supporting work may lose points.
+  - Keep your work in the same order as the assigned problems whenever possible.
+
+- Name your submitted PDF using the following format:
+
+  `firstname_lastname_HW#.pdf`
+
+  Example: `john_smith_HW1.pdf`
+
+**HW Assignments are due at 11:59 pm on Canvas in the due date**
 

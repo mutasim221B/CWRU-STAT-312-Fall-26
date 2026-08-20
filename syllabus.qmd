@@ -15,11 +15,10 @@ format:
 
 **Statistics and probability** provide a framework for answering these questions. They allow us to collect and summarize data, understand variability, quantify uncertainty, draw meaningful conclusions, and make informed decisions.
 
-Throughout the semester, we will develop the fundamental statistical and probabilistic tools used in **engineering and scientific problem solving**. Topics will include probability and probability distributions, descriptive statistics, sampling distributions, estimation, confidence intervals, hypothesis testing, and regression analysis. Our emphasis will be on developing statistical reasoning and intuition, understanding when and why particular methods are appropriate, and applying those methods to real-world problems. Rather than simply memorizing formulas, you will learn to select appropriate statistical methods, carry out analyses, interpret results, evaluate assumptions, and communicate conclusions in the context of the problem being studied.
+Throughout the semester, we will develop the fundamental statistical and probabilistic tools used in **engineering and scientific problem solving**. Topics will include descriptive statistics, probability and probability distributions, sampling distributions, estimation, confidence intervals, hypothesis testing, and regression analysis. Our emphasis will be on developing statistical reasoning and intuition, understanding when and why particular methods are appropriate, and applying those methods to real-world problems. Rather than simply memorizing formulas, you will learn to select appropriate statistical methods, carry out analyses, interpret results, evaluate assumptions, and communicate conclusions in the context of the problem being studied.
 
 # Learning Objectives
 
-## Important technical concepts
 
 Upon completion of this course, students should be able to:
 
@@ -42,28 +41,6 @@ Upon completion of this course, students should be able to:
 - **Interpret and communicate statistical results** clearly using appropriate terminology, notation, reasoning, and evidence.
 
 
-
-## Important statistical and problem-solving skills
-
-The following skills are essential both within and beyond Statistics, and demonstrably improve your own learning:
-
-- Move beyond a “homework only” study approach. Develop a deeper understanding of the material through **continued review, reflection, and practice**.
-
-- Develop the ability to translate an **engineering or scientific question into an appropriate statistical problem**.
-
-- Think critically about data and determine **which statistical method is appropriate and why**.
-
-- Develop **statistical intuition** rather than relying solely on memorized formulas.
-
-- Think **creatively and build confidence** when applying course concepts in unfamiliar or open-ended settings.
-
-- Be comfortable working through **challenges and mistakes**, and use them as opportunities to refine your understanding.
-
-- Clearly **explain and justify your approach, calculations, and conclusions**.
-
-- Connect statistical concepts to **real-world engineering and scientific applications**.
-
-- Contribute to a **welcoming, respectful, and engaged learning environment**.
 
 
 <br><br><br><br>
@@ -91,9 +68,10 @@ Outside of my academic work, I enjoy spending time outdoors with family and frie
 **Office hours:**
 
 -   **Location:** My office (Sears 569) and over [zoom](https://cwru.zoom.us/j/95414621032?pwd=EqqJ4cKBk9widsemXzefkbuBXQTRRH.1), password: 123678
--   **Times:** M/W: 1:00pm - 1:30pm and 3pm - 4pm
--    **By Appointment:** I'm also happy to meet one-on-one if my normal drop-in hours don't work for you. Shoot me an email and we can arrange it over [zoom](https://cwru.zoom.us/j/95414621032?pwd=EqqJ4cKBk9widsemXzefkbuBXQTRRH.1), password: 123678.
+-   **Times:** M/W: 1:00 - 1:30pm and 3 - 4:30pm
 -   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.
+
+
 
 ## About your Graders
 
@@ -150,29 +128,40 @@ Please visit me!!
 - OH are oriented around group discussion. They are not first come, first served appointments.
 - Since it’s not an effective way to deepen your learning, OH are not a place to sit and do assignments with me. It’s an opportunity to discuss concepts & specific questions.
 
-### Canvas Discussion Forum: STAT 312 Discussion Board
+### Canvas Discussion: STAT 312 Discussion Forum
 
 This forum is where you’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 8am & 4pm.
 
+### Peer Tutors
+
+In addition to your office hours, students have free access to peer tutors. Appointments can be scheduled through [tutortrac](https://tutortrac.case.edu)
+
+### Math Tutoring Center
+
+More information about this will be shared in the class later.
+
+
+
+
 ## What to do when you have a question for me?
 
-- If it’s non-private (e.g. about policies, homework, practice problems, etc), you should post it on STAT 312 Discussion Board in Canvas. Remember- collaboration is the KEY!
+- If it’s non-private (e.g. about policies, HW assignments, practice problems, etc), you should post it on STAT 312 Discussion Forum on Canvas. Remember- collaboration is the KEY!
 - If it’s personal (e.g. about an absence, concept understanding, etc), email me.
 - It’s good, professional practice to check whether your question is already answered in the provided resources. For example:
   - **Info** (what to do if you miss class): syllabus
-  - **Due dates**: course schedule in the online manual
+  - **Due dates**: course schedule in the online manual + announcement email 
   - **Exam dates**: course schedule in the online manual + announcement email 
-  - **Homework policies**: [STAT 312 HW Assignment policies ](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc
+  - **Homework & Quiz policies**: [STAT 312 HW Assignment & Quiz policies ](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing)
 
 
 ## Thriving in STAT 312
 
 ::: {.callout-note title="🗓️ Plan Ahead"}
-You should plan to spend ~6-9 hours on any 3-credit course, including class time. Stay up-to-date on the course schedule and carve out time for studying & doing homework.
+You should plan to spend ~6-9 hours on any 3-credit course, including class time. Stay up-to-date on the course schedule and carve out time for studying, doing homework, & participate in quizzes.
 :::
 
 ::: {.callout-important title="✅ Do the Things"}
-At minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, regularly attend & engage in class, complete practice problems (PP), and check the PP solutions.
+At minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, participate in the quizzes, regularly attend & engage in class, complete practice problems (PP), and check the PP solutions.
 :::
 
 ::: {.callout-caution title="🏗️ Build a Foundation"}
@@ -190,10 +179,9 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 
 ## Flexibility
 
-I provide transparent accommodations to all students. It helps reduce stress and the “hidden curriculum” (not everybody feels comfortable asking for flexibility).
 
-- **Missed Class**: It’s okay to miss class in the case of an emergency. However, regular attendance is strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.
-- **Homework**: Limited extensions and limited mistakes without penalty. Please *carefully* go through all the sections from [STAT 312 HW Assignment policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc.
+- **Missed Class**: Regular attendance & active participation are strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.
+- **Homework Assignments & Quiz**: Please *carefully* go through all the sections from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc.
 - **Exams**: No revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact). 
 
 ::: {.callout-tip title="🤝 **PLEASE REACH OUT WHEN YOU NEED HELP.**"}
@@ -205,30 +193,25 @@ I provide transparent accommodations to all students. It helps reduce stress and
 ::: {.callout-tip title="What to Do If You Miss Class"}
 1. 📧 **Send me a quick email.** You do not need to share a reason for your absence, especially if it’s personal. It’s just a simple courtesy & keeps communication lines open.
 
-2. 📅 **Check the Course Schedule** in the online manual for what is happening in class that day.
+2. 📅 **Check the Course Schedule** in the course website for what is happening in class that day.
 
-3. 📝 **Go through the lecture and class notes on your own** & check the solutions posted in the online manual.
+3. 📝 **Go through the lecture and class notes on your own** & check the course resources posted in the course website.
 
-4. 💬 **Ask any follow-up questions** on the Canvas forum or in office hours (OH).
+4. 💬 **Ask any follow-up questions** on the Canvas Discussion forum or come in office hours (OH).
 :::
 
 ## Artificial Intelligence (AI)
 
-Read the Use of AI sub-section from [STAT 312 HW Assignment policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc. 
+Read the Use of AI sub-section from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc. 
 
 
 ## Community & Academic Integrity
-Read the Academic integrity policies from [STAT 312 HW Assignment policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc.
-In addition to the examples listed there, academic violations in this course include but are not limited to the following:
+Read the Academic integrity policies from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
 
-- Using **any** materials from **any** past STAT 312 course, at CWRU or elsewhere. Relatedly, you should not provide any materials to any future 312 students. 
-- Gaining access to, using, or distributing solution sets.
-- Passing off others’ work (including AI) as your own. You must be able to defend / explain all work you hand in.
-- Policy violations will result in a score of 0 on the work & be reported to the Academic Integrity Board.
 
 <br><br><br><br>
 
-# The 4 Core Components 
+# The 5 Core Components 
 
 ## (1) Engagement
 
@@ -243,22 +226,41 @@ Engagement is important to your own learning & to fostering a supportive learnin
   - Be actively present (e.g., don’t work alone, don’t work on other courses, etc.)  
 
 - **Outside class:**
-  - Check your email for announcements and stay updated on the Canvas HW Discussion forum  
+  - Check your email for canvas announcements and stay updated on the Canvas Discussion forum  
   - When you have questions, or just want to chat, please stop by OH!
   
 :::
 
 
+## (2) Practice Problems (PP) {-}
 
-## (2) Practice Problems
+Complete the **Practice Problems (PP)** before attempting the HW assignments. Working through the PP alongside the lecture notes and class materials will deepen your understanding of the core concepts and help you feel more confident when tackling homework problems. Consistent practice will also make your exam preparation easier and more effective.
 
-Finish the practice problems before attempting the HW! Working through the practice problems alongside the lecture notes and class materials will deepen your understanding of the core concepts and help you feel more confident when tackling homework problems. Consistent practice will also make your exam preparation much easier and more effective.
+There are two types of Practice Problems:
 
+### Required Practice Problems {-}
+
+Complete the **Required Practice Problems** throughout the unit as we cover the corresponding topics in class.
+
+These problems reinforce the concepts discussed in the lecture notes, handouts, and other course resources.
+
+Before attempting the HW assignments and preparing for exams, make sure you have completed and reviewed all Required Practice Problems from the unit.
+
+### Supplemental Practice Problems {-}
+
+The **Supplemental Practice Problems** provide additional practice opportunities for students who would like more practice with the concepts covered in the unit.
+
+Complete the Required Practice Problems first, and then use the Supplemental Practice Problems as needed for additional review and practice.
+
+
+## (3) Quizzes
+
+Each quiz assesses your general understanding of the topics covered during the corresponding unit. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
 
 
 ## (3) HW Assignments
 
-In 12 HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are [here](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
+In the HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
 
 
 
@@ -266,8 +268,8 @@ In 12 HW assignments, you will practice and explore the course material in more 
 
 Your course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.
 
-- **Midterm Exam 1:** Monday, Oct 5
-- **Midterm Exam 2:** Monday, Nov 9
+- **Midterm Exam 1:** Monday, Oct 5 (Tentative Date)
+- **Midterm Exam 2:** Monday, Nov 9 (Tentative Date)
 - **Final Exam (Comprehensive):** *Finals week*  
   - The final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.  
     - 10:25–11:15am section 103: Dec 14, 8:00-10:00am in class
@@ -275,12 +277,12 @@ Your course engagement, collaboration, preparation, practice, and application wi
     - 2:05–2:55pm section 105: Dec 16, 12:00-2:00pm in class
 
 
-::: {.callout-warning title="📜 Quiz Policies"}
+::: {.callout-warning title="📜 Exam Policies"}
 - **All Exams will have the following format:**
   - Taken individually, using pen/pencil & paper  
   - You may use a physical calculator (not the calculator in your phone) in the exam
-  - Closed notes, but you may use a 3x5 index card with writing on both sides. These can be handwritten or typed, but you may not include screenshots or share note cards. Making your own card is important to the review process- as you are required to submit the index card along with the answer paper.
-- **Final Exam will be comprehensive.** 
+  - Closed notes, but you may use one sheet of paper, with writing on one side (two sided writing is NOT permitted) for the midterm exams. These can be handwritten or typed, but you cannot include screenshots or share formula sheet. Making your own Formula Sheet is important to the review process - as you are required to submit the Formula Sheet along with the answer paper.
+- **Final Exam will be comprehensive.** For the final exam, you may use one sheet of paper, with writing in both sides.
 
 :::
 
@@ -288,9 +290,6 @@ Your course engagement, collaboration, preparation, practice, and application wi
 
 # Calculating Final Grades
 
-## Grading system
-
-The grading system in this course is designed to help you achieve the learning objectives while allowing space to make and learn from mistakes along the way. Your final course grade will be determined by your performance on **HW assignments, two midterm exams, and a comprehensive final exam**, according to the weights shown below.
 
 
 ::: {.columns}
@@ -299,9 +298,10 @@ The grading system in this course is designed to help you achieve the learning o
 
 ### Course Percentage
 
-25% HW Assignments +  
+20% HW Assignments +  
+10% Quizzes +
 40% Midterm Exams (20% each) +  
-35% Final Exam (Comprehensive)
+30% Final Exam (Comprehensive)
 
 :::
 
@@ -352,24 +352,24 @@ You may also contact CWRU’s Title IX Coordinator directly (phone: 216-368-3066
 # Want 'A' in this course? Read!
 
 ::: {.callout-tip title="❓ Ask Questions"}
-When you have questions, please stop me during class, ask your neighbor, email me and come to office hours. Saying *"I don't understand"* is an important part of learning and it helps others around you.
+When you have questions, please stop me during class, ask your neighbor, post question to the Discussion Forum on canvas, email me and come to office hours. Saying *"I don't understand"* is an important part of learning and it helps others around you.
 :::
 
-::: {.callout-note title="🤝 Come to Office Hours or Join over Zoom"}
+::: {.callout-note title="🤝 Come to Office Hours"}
 Office hours are a great time to talk about course material, study strategies, selecting courses, declaring a major, grad school and/or career planning, or life in general. You don’t need to have a specific question in order to attend: it can also be a space to review concepts, talk through examples, or just chat!
 :::
 
 ::: {.callout-important title="⏳ Make Time"}
 Performing a thoughtful statistical analysis requires time: to plan, to implement, to interpret, and to revise.  
 
-- Start your assignments early. It is very hard to be creative or to debug R code when you are in a rush.  
-- In addition to the 3 hours we spend together during class, expect to spend about **6-9 hours per week** on this class.  
-- Don’t miss any practice problems—they are designed to give you a core understanding of the subject matter!
+- Start your assignments early. It is very hard to be creative when you are in a rush.  
+- In addition to the roughly 3 hours we spend together during class, expect to spend about **6-9 hours per week** on this class.  
+- Don’t miss any practice problems - they are designed to give you a core understanding of the subject matter!
 :::
 
 ::: {.callout-note title="🏫 Attend Class"}
 Active participation in this class will be key to your learning. To ensure the best learning experience for you and your classmates:  
-- Come prepared  
+- Come prepared, review the previous class resources as required
 - Engage in class by taking notes, group works, asking and answering questions
 - Make full use of the entire class period  
 
@@ -381,13 +381,13 @@ If you can’t attend:
 :::
 
 ::: {.callout-tip title="💚 Prioritize Your Well-Being"}
-Investing time into taking care of yourself will help you engage more fully in your academic experience. Remember: beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities with you.  If you are having difficulties maintaining your well-being, please contact me and/or check out available campus resources (mentioned in the 'Other Policies' part of the syllabus. As part of prioritizing your well-being (and others’), **please stay home if you are feeling sick.** Follow the recommendations above (*Attend Class*) and below (*Communicate*) if you miss class or need extra time on an assignment.
+Investing time into taking care of yourself will help you engage more fully in your academic experience. Remember: beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities with you.  If you are having difficulties maintaining your well-being, please contact me and/or check out available campus resources (mentioned in the 'Other Policies' part of the syllabus. As part of prioritizing your well-being (and others’), **please stay home if you are feeling sick.** Follow the recommendations above (*Attend Class*) and below (*Communicate*) if you miss class.
 :::
 
 ::: {.callout-note title="📢 Communicate"}
 I will do my best to clearly communicate changes to expectations, deadlines, office hours, or class meetings due to instructor illness or unexpected life issues.  
 
-Please check email and Canvas regularly so you don’t miss announcements.  
+Please check Canvas announcement regularly so you don’t miss announcements.  
 
 I also ask that you check in with me as soon as possible if:  
 - You need to miss multiple classes in a row  
@@ -401,15 +401,15 @@ Here are some comments from previous students in my **Engineering Statistics** c
 
 - Pay attention to the class lectures, and take notes. Makes the entire class 10x easier.
 - Go to the office hours. He is a really kind professor, and will help so much during the course...getting to know professor Billah is just a joy and can make the course so much more fun, not to mention he will definitely make your day.
-- Class is easy to follow along, content is easy to follow, homework helps prepare you for the exam. 
-- Homework discussion page will help you to secure maximum points, don't hesitate to ask questions there; also if you know the answer, let others know as well!
+- Class is easy to follow along, content is easy to follow, homework and quiz help prepare you for the exam. 
+- Discussion forum on canvas will help you to secure maximum points, don't hesitate to ask questions there; also if you know the answer, let others know as well!
 - I liked the way the class was setup as a whole. The discussions were helpful. 
 - Discussions were helpful to see that you had a similar understanding as your classmates.
 - My advice would be to attend office hours! Dr Bill gives great feedback. The meetings are short too, so no need to worry about allocating a significant amount of time. 
-- Personally, this was my favorite class of the semester. More as how accessible the assignments and lectures were. I could re-watch lectures and with the required discussion boards, I was able to get help by others in the class if I didn't get the right answer, or faced a problem.
-- The emails to keep students on track as well as other call outs were nice throughout the semester. I think overall, work and requirements were well done and distributed.
+- Personally, this was my favorite class of the semester. More as how accessible the assignments and lectures were. I could re-watch lectures and with the required discussion forum, I was able to get help by others in the class if I didn't get the right answer, or faced a problem.
+- The announcement emails to keep students on track as well as other call outs were nice throughout the semester. I think overall, work and requirements were well done and distributed.
 - Continue with the discussion posts because they made problems easier to solve and when you get the same answer as another student in the class, you feel more confident in yourself.
-- I really liked the handouts and the notes that you had us take to better understand the material. Hearing different things from other classes, it seemed like this class was the most prepared and I knew and could explain more topics better than other students in other classes. The lecture videos of the class were great too to go back and review certain things if I was confused. Overall the class was great!
+- I really liked the handouts and the notes that you had us take to better understand the material. Hearing different things from other classes, it seemed like this class was the most prepared and I knew and could explain more topics better than other students in other classes. The live lecture videos of the class were great too to go back and review certain things if I was confused. Overall the class was great!
 - Thank you for teaching the course! I like how organized your lecture notes were. They were easy to read and allowed me to easily copy them down for my own reference. You were also very great to talk with and were enthusiastic about the course. Please keep that incredible attitude, as students will appreciate that very much! 
 - I like how you tell us what the material is with very detailed information. Then, we jump to exercises to further understand the concept. I personally have found that you bring a lot of life into the subject matter by giving funny but relevant examples and problems to solve in class. I enjoyed the way that you taught the subject matter and you were knowledgeable enough to answer questions that students had. I recommend keeping playing music at the beginning of class especially because I personally feel more interested in the class because of it and I think others do too. 
 - I think my experience in this class was so good because of the high level of engagement with students. The class was made fun and the material was applicable. Notes were very neat and well organized, which also helped to make learning the material a lot easier. The pace of the course was perfect too in order to really learn the first time without always having to look back at the Huskycast. Again, I liked the personal interaction with the class a lot, it made me want to come to class more than out of pure obligation. Thank you for a great semester!
@@ -418,4 +418,4 @@ Here are some comments from previous students in my **Engineering Statistics** c
 
 # Note
 
-This syllabus is subject to change at any time! Announcements of changes will be made in class or via email and Canvas.
+This syllabus is subject to change at any time! Announcements of changes will be made in class or via announcement on Canvas.

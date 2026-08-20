@@ -5,7 +5,7 @@ sidebar: false
 
 ## Getting Help
 
-- [Crowd-sourced R functions](https://docs.google.com/document/d/17wWDIspZuTvL6qA4xR6ZQYrzGEOLxVRw/edit?usp=sharing&ouid=112186136058000189533&rtpof=true&sd=true)
+
 - [RStudio cheatsheets](https://posit.co/resources/cheatsheets/)
 - **Google it!** If you have a question about R, someone else probably asked it. Add **“R tidyverse”** to your search term.  
   Example: *scatterplot R tidyverse*

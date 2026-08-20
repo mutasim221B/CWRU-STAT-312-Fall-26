@@ -4,28 +4,14 @@
     "href": "syllabus.html",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "",
-    "text": "Section 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\nWelcome to STAT 312! Engineers and scientists routinely work with data that contain variability and uncertainty. For example, how can we determine whether a change in a manufacturing process actually improves product quality? How can we use measurements from a sample to draw conclusions about a larger population? How can we quantify uncertainty when comparing two designs, estimating an unknown quantity, or predicting future performance?\nStatistics and probability provide a framework for answering these questions. They allow us to collect and summarize data, understand variability, quantify uncertainty, draw meaningful conclusions, and make informed decisions.\nThroughout the semester, we will develop the fundamental statistical and probabilistic tools used in engineering and scientific problem solving. Topics will include probability and probability distributions, descriptive statistics, sampling distributions, estimation, confidence intervals, hypothesis testing, and regression analysis. Our emphasis will be on developing statistical reasoning and intuition, understanding when and why particular methods are appropriate, and applying those methods to real-world problems. Rather than simply memorizing formulas, you will learn to select appropriate statistical methods, carry out analyses, interpret results, evaluate assumptions, and communicate conclusions in the context of the problem being studied."
-  },
-  {
-    "objectID": "syllabus.html#important-technical-concepts",
-    "href": "syllabus.html#important-technical-concepts",
-    "title": "STAT 312. Basic Statistics for Engineering and Science",
-    "section": "Important technical concepts",
-    "text": "Important technical concepts\nUpon completion of this course, students should be able to:\n\nBuild, use, and interpret graphical and numerical summaries of data.\nApply fundamental concepts of probability, including conditional probability, independence, random variables, and probability distributions, to engineering and scientific problems.\nIdentify and work with commonly used discrete and continuous probability distributions, and recognize situations in which they provide appropriate models.\nUnderstand sampling variability and sampling distributions, including the role of the Central Limit Theorem in statistical inference.\nUse sample data to estimate unknown population parameters and quantify uncertainty using standard errors and confidence intervals.\nFormulate appropriate statistical hypotheses, conduct hypothesis tests, interpret p-values, and draw conclusions in the context of an engineering or scientific problem.\nBuild, interpret, and evaluate simple linear regression and correlation models, and use regression models for estimation and prediction.\nUse appropriate statistical tools and software, when needed, to support statistical calculations, data analysis, and interpretation.\nInterpret and communicate statistical results clearly using appropriate terminology, notation, reasoning, and evidence."
-  },
-  {
-    "objectID": "syllabus.html#important-statistical-and-problem-solving-skills",
-    "href": "syllabus.html#important-statistical-and-problem-solving-skills",
-    "title": "STAT 312. Basic Statistics for Engineering and Science",
-    "section": "Important statistical and problem-solving skills",
-    "text": "Important statistical and problem-solving skills\nThe following skills are essential both within and beyond Statistics, and demonstrably improve your own learning:\n\nMove beyond a “homework only” study approach. Develop a deeper understanding of the material through continued review, reflection, and practice.\nDevelop the ability to translate an engineering or scientific question into an appropriate statistical problem.\nThink critically about data and determine which statistical method is appropriate and why.\nDevelop statistical intuition rather than relying solely on memorized formulas.\nThink creatively and build confidence when applying course concepts in unfamiliar or open-ended settings.\nBe comfortable working through challenges and mistakes, and use them as opportunities to refine your understanding.\nClearly explain and justify your approach, calculations, and conclusions.\nConnect statistical concepts to real-world engineering and scientific applications.\nContribute to a welcoming, respectful, and engaged learning environment."
+    "text": "Section 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\nWelcome to STAT 312! Engineers and scientists routinely work with data that contain variability and uncertainty. For example, how can we determine whether a change in a manufacturing process actually improves product quality? How can we use measurements from a sample to draw conclusions about a larger population? How can we quantify uncertainty when comparing two designs, estimating an unknown quantity, or predicting future performance?\nStatistics and probability provide a framework for answering these questions. They allow us to collect and summarize data, understand variability, quantify uncertainty, draw meaningful conclusions, and make informed decisions.\nThroughout the semester, we will develop the fundamental statistical and probabilistic tools used in engineering and scientific problem solving. Topics will include descriptive statistics, probability and probability distributions, sampling distributions, estimation, confidence intervals, hypothesis testing, and regression analysis. Our emphasis will be on developing statistical reasoning and intuition, understanding when and why particular methods are appropriate, and applying those methods to real-world problems. Rather than simply memorizing formulas, you will learn to select appropriate statistical methods, carry out analyses, interpret results, evaluate assumptions, and communicate conclusions in the context of the problem being studied."
   },
   {
     "objectID": "syllabus.html#about-your-professor",
     "href": "syllabus.html#about-your-professor",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "About your professor",
-    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Sears 569\nEmail: mdmutasim.billah@case.edu\n\n\n\n\n\n\nNotes from “your instructor”\n\n\n\nGreetings! You can call me Bill or Dr. Billah or Professor Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat - those courses often emphasized formulas over real understanding. That experience has shaped my teaching - I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 312 and to create a more meaningful experience - one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nOffice hours:\n\nLocation: My office (Sears 569) and over zoom, password: 123678\nTimes: M/W: 1:00pm - 1:30pm and 3pm - 4pm\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123678.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response."
+    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Sears 569\nEmail: mdmutasim.billah@case.edu\n\n\n\n\n\n\nNotes from “your instructor”\n\n\n\nGreetings! You can call me Bill or Dr. Billah or Professor Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat - those courses often emphasized formulas over real understanding. That experience has shaped my teaching - I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 312 and to create a more meaningful experience - one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nOffice hours:\n\nLocation: My office (Sears 569) and over zoom, password: 123678\nTimes: M/W: 1:00 - 1:30pm and 3 - 4:30pm\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response."
   },
   {
     "objectID": "syllabus.html#about-your-graders",
@@ -60,84 +46,84 @@
     "href": "syllabus.html#asking-questionscommunicating",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Asking questions/communicating",
-    "text": "Asking questions/communicating\n\nOffice Hours\nOH are a great place to chat about the course, career planning, life,… Please visit me!!\n\nOH are oriented around group discussion. They are not first come, first served appointments.\nSince it’s not an effective way to deepen your learning, OH are not a place to sit and do assignments with me. It’s an opportunity to discuss concepts & specific questions.\n\n\n\nCanvas Discussion Forum: STAT 312 Discussion Board\nThis forum is where you’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 8am & 4pm."
+    "text": "Asking questions/communicating\n\nOffice Hours\nOH are a great place to chat about the course, career planning, life,… Please visit me!!\n\nOH are oriented around group discussion. They are not first come, first served appointments.\nSince it’s not an effective way to deepen your learning, OH are not a place to sit and do assignments with me. It’s an opportunity to discuss concepts & specific questions.\n\n\n\nCanvas Discussion: STAT 312 Discussion Forum\nThis forum is where you’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 8am & 4pm.\n\n\nPeer Tutors\nIn addition to your office hours, students have free access to peer tutors. Appointments can be scheduled through tutortrac\n\n\nMath Tutoring Center\nMore information about this will be shared in the class later."
   },
   {
     "objectID": "syllabus.html#what-to-do-when-you-have-a-question-for-me",
     "href": "syllabus.html#what-to-do-when-you-have-a-question-for-me",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "What to do when you have a question for me?",
-    "text": "What to do when you have a question for me?\n\nIf it’s non-private (e.g. about policies, homework, practice problems, etc), you should post it on STAT 312 Discussion Board in Canvas. Remember- collaboration is the KEY!\nIf it’s personal (e.g. about an absence, concept understanding, etc), email me.\nIt’s good, professional practice to check whether your question is already answered in the provided resources. For example:\n\nInfo (what to do if you miss class): syllabus\nDue dates: course schedule in the online manual\nExam dates: course schedule in the online manual + announcement email\nHomework policies: STAT 312 HW Assignment policies doc"
+    "text": "What to do when you have a question for me?\n\nIf it’s non-private (e.g. about policies, HW assignments, practice problems, etc), you should post it on STAT 312 Discussion Forum on Canvas. Remember- collaboration is the KEY!\nIf it’s personal (e.g. about an absence, concept understanding, etc), email me.\nIt’s good, professional practice to check whether your question is already answered in the provided resources. For example:\n\nInfo (what to do if you miss class): syllabus\nDue dates: course schedule in the online manual + announcement email\nExam dates: course schedule in the online manual + announcement email\nHomework & Quiz policies: STAT 312 HW Assignment & Quiz policies"
   },
   {
     "objectID": "syllabus.html#thriving-in-stat-312",
     "href": "syllabus.html#thriving-in-stat-312",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Thriving in STAT 312",
-    "text": "Thriving in STAT 312\n\n\n\n\n\n\n🗓️ Plan Ahead\n\n\n\nYou should plan to spend ~6-9 hours on any 3-credit course, including class time. Stay up-to-date on the course schedule and carve out time for studying & doing homework.\n\n\n\n\n\n\n\n\n✅ Do the Things\n\n\n\nAt minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, regularly attend & engage in class, complete practice problems (PP), and check the PP solutions.\n\n\n\n\n\n\n\n\n🏗️ Build a Foundation\n\n\n\nIf your main focus is on checking off some boxes, you won’t get much out of this course (or college in general). Deeper, enduring learning requires more. Carve out time to rewrite, reflect upon, & review your notes. Summarize concepts in your own words.\n\n\n\n\n\n\n\n\n🎉 Engage, Ask Questions, Have Fun\n\n\n\nActively participate in the class & take ownership of your learning. PLEASE: Don’t be afraid to ask for help, make mistakes, and ask questions! These skills are critical to your well-being & learning. Finally, have some fun, be curious, and reflect upon what surprises you about the material and yourself"
+    "text": "Thriving in STAT 312\n\n\n\n\n\n\n🗓️ Plan Ahead\n\n\n\nYou should plan to spend ~6-9 hours on any 3-credit course, including class time. Stay up-to-date on the course schedule and carve out time for studying, doing homework, & participate in quizzes.\n\n\n\n\n\n\n\n\n✅ Do the Things\n\n\n\nAt minimum, thriving in this course requires the completion of some concrete tasks. Complete all assignments, participate in the quizzes, regularly attend & engage in class, complete practice problems (PP), and check the PP solutions.\n\n\n\n\n\n\n\n\n🏗️ Build a Foundation\n\n\n\nIf your main focus is on checking off some boxes, you won’t get much out of this course (or college in general). Deeper, enduring learning requires more. Carve out time to rewrite, reflect upon, & review your notes. Summarize concepts in your own words.\n\n\n\n\n\n\n\n\n🎉 Engage, Ask Questions, Have Fun\n\n\n\nActively participate in the class & take ownership of your learning. PLEASE: Don’t be afraid to ask for help, make mistakes, and ask questions! These skills are critical to your well-being & learning. Finally, have some fun, be curious, and reflect upon what surprises you about the material and yourself"
   },
   {
     "objectID": "syllabus.html#flexibility",
     "href": "syllabus.html#flexibility",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Flexibility",
-    "text": "Flexibility\nI provide transparent accommodations to all students. It helps reduce stress and the “hidden curriculum” (not everybody feels comfortable asking for flexibility).\n\nMissed Class: It’s okay to miss class in the case of an emergency. However, regular attendance is strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.\nHomework: Limited extensions and limited mistakes without penalty. Please carefully go through all the sections from STAT 312 HW Assignment policies doc.\nExams: No revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact).\n\n\n\n\n\n\n\n🤝 PLEASE REACH OUT WHEN YOU NEED HELP."
+    "text": "Flexibility\n\nMissed Class: Regular attendance & active participation are strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.\nHomework Assignments & Quiz: Please carefully go through all the sections from STAT 312 HW Assignment & Quiz policies doc.\nExams: No revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact).\n\n\n\n\n\n\n\n🤝 PLEASE REACH OUT WHEN YOU NEED HELP."
   },
   {
     "objectID": "syllabus.html#absences",
     "href": "syllabus.html#absences",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Absences",
-    "text": "Absences\n\n\n\n\n\n\nWhat to Do If You Miss Class\n\n\n\n\n📧 Send me a quick email. You do not need to share a reason for your absence, especially if it’s personal. It’s just a simple courtesy & keeps communication lines open.\n📅 Check the Course Schedule in the online manual for what is happening in class that day.\n📝 Go through the lecture and class notes on your own & check the solutions posted in the online manual.\n💬 Ask any follow-up questions on the Canvas forum or in office hours (OH)."
+    "text": "Absences\n\n\n\n\n\n\nWhat to Do If You Miss Class\n\n\n\n\n📧 Send me a quick email. You do not need to share a reason for your absence, especially if it’s personal. It’s just a simple courtesy & keeps communication lines open.\n📅 Check the Course Schedule in the course website for what is happening in class that day.\n📝 Go through the lecture and class notes on your own & check the course resources posted in the course website.\n💬 Ask any follow-up questions on the Canvas Discussion forum or come in office hours (OH)."
   },
   {
     "objectID": "syllabus.html#artificial-intelligence-ai",
     "href": "syllabus.html#artificial-intelligence-ai",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Artificial Intelligence (AI)",
-    "text": "Artificial Intelligence (AI)\nRead the Use of AI sub-section from STAT 312 HW Assignment policies doc."
+    "text": "Artificial Intelligence (AI)\nRead the Use of AI sub-section from STAT 312 HW Assignment & Quiz policies doc."
   },
   {
     "objectID": "syllabus.html#community-academic-integrity",
     "href": "syllabus.html#community-academic-integrity",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "Community & Academic Integrity",
-    "text": "Community & Academic Integrity\nRead the Academic integrity policies from STAT 312 HW Assignment policies doc. In addition to the examples listed there, academic violations in this course include but are not limited to the following:\n\nUsing any materials from any past STAT 312 course, at CWRU or elsewhere. Relatedly, you should not provide any materials to any future 312 students.\nGaining access to, using, or distributing solution sets.\nPassing off others’ work (including AI) as your own. You must be able to defend / explain all work you hand in.\nPolicy violations will result in a score of 0 on the work & be reported to the Academic Integrity Board."
+    "text": "Community & Academic Integrity\nRead the Academic integrity policies from STAT 312 HW Assignment & Quiz policies."
   },
   {
     "objectID": "syllabus.html#engagement",
     "href": "syllabus.html#engagement",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "(1) Engagement",
-    "text": "(1) Engagement\nEngagement is important to your own learning & to fostering a supportive learning community.\n\n\n\n\n\n\n📌 Expectations\n\n\n\n\nDo not miss in-person class sessions (except emergency situation).\nWhen attending class:\n\nBe on time & don’t leave early\n\nDo not use your phone (phones must be put away when you enter the course, even if class hasn’t started)\n\nDo not use your laptop for anything other than taking notes and in-class activities (e.g., no videos, no email, no messaging apps, etc.)\n\nBe actively present (e.g., don’t work alone, don’t work on other courses, etc.)\n\nOutside class:\n\nCheck your email for announcements and stay updated on the Canvas HW Discussion forum\n\nWhen you have questions, or just want to chat, please stop by OH!"
+    "text": "(1) Engagement\nEngagement is important to your own learning & to fostering a supportive learning community.\n\n\n\n\n\n\n📌 Expectations\n\n\n\n\nDo not miss in-person class sessions (except emergency situation).\nWhen attending class:\n\nBe on time & don’t leave early\n\nDo not use your phone (phones must be put away when you enter the course, even if class hasn’t started)\n\nDo not use your laptop for anything other than taking notes and in-class activities (e.g., no videos, no email, no messaging apps, etc.)\n\nBe actively present (e.g., don’t work alone, don’t work on other courses, etc.)\n\nOutside class:\n\nCheck your email for canvas announcements and stay updated on the Canvas Discussion forum\n\nWhen you have questions, or just want to chat, please stop by OH!"
   },
   {
-    "objectID": "syllabus.html#practice-problems",
-    "href": "syllabus.html#practice-problems",
+    "objectID": "syllabus.html#practice-problems-pp",
+    "href": "syllabus.html#practice-problems-pp",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
-    "section": "(2) Practice Problems",
-    "text": "(2) Practice Problems\nFinish the practice problems before attempting the HW! Working through the practice problems alongside the lecture notes and class materials will deepen your understanding of the core concepts and help you feel more confident when tackling homework problems. Consistent practice will also make your exam preparation much easier and more effective."
+    "section": "(2) Practice Problems (PP)",
+    "text": "(2) Practice Problems (PP)\nComplete the Practice Problems (PP) before attempting the HW assignments. Working through the PP alongside the lecture notes and class materials will deepen your understanding of the core concepts and help you feel more confident when tackling homework problems. Consistent practice will also make your exam preparation easier and more effective.\nThere are two types of Practice Problems:\n\nRequired Practice Problems\nComplete the Required Practice Problems throughout the unit as we cover the corresponding topics in class.\nThese problems reinforce the concepts discussed in the lecture notes, handouts, and other course resources.\nBefore attempting the HW assignments and preparing for exams, make sure you have completed and reviewed all Required Practice Problems from the unit.\n\n\nSupplemental Practice Problems\nThe Supplemental Practice Problems provide additional practice opportunities for students who would like more practice with the concepts covered in the unit.\nComplete the Required Practice Problems first, and then use the Supplemental Practice Problems as needed for additional review and practice."
+  },
+  {
+    "objectID": "syllabus.html#quizzes",
+    "href": "syllabus.html#quizzes",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "section": "(3) Quizzes",
+    "text": "(3) Quizzes\nEach quiz assesses your general understanding of the topics covered during the corresponding unit. Detailed directions and policies are here: STAT 312 HW Assignment & Quiz policies."
   },
   {
     "objectID": "syllabus.html#hw-assignments",
     "href": "syllabus.html#hw-assignments",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "(3) HW Assignments",
-    "text": "(3) HW Assignments\nIn 12 HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here."
+    "text": "(3) HW Assignments\nIn the HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here: STAT 312 HW Assignment & Quiz policies."
   },
   {
     "objectID": "syllabus.html#exams-content-expertise",
     "href": "syllabus.html#exams-content-expertise",
     "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "(4) Exams (Content Expertise)",
-    "text": "(4) Exams (Content Expertise)\nYour course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.\n\nMidterm Exam 1: Monday, Oct 5\nMidterm Exam 2: Monday, Nov 9\nFinal Exam (Comprehensive): Finals week\n\nThe final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.\n\n10:25–11:15am section 103: Dec 14, 8:00-10:00am in class\n11:30am–12:20pm section 104: Dec 9, 8:00-10:00am in class\n2:05–2:55pm section 105: Dec 16, 12:00-2:00pm in class\n\n\n\n\n\n\n\n\n\n📜 Quiz Policies\n\n\n\n\nAll Exams will have the following format:\n\nTaken individually, using pen/pencil & paper\n\nYou may use a physical calculator (not the calculator in your phone) in the exam\nClosed notes, but you may use a 3x5 index card with writing on both sides. These can be handwritten or typed, but you may not include screenshots or share note cards. Making your own card is important to the review process- as you are required to submit the index card along with the answer paper.\n\nFinal Exam will be comprehensive."
-  },
-  {
-    "objectID": "syllabus.html#grading-system",
-    "href": "syllabus.html#grading-system",
-    "title": "STAT 312. Basic Statistics for Engineering and Science",
-    "section": "Grading system",
-    "text": "Grading system\nThe grading system in this course is designed to help you achieve the learning objectives while allowing space to make and learn from mistakes along the way. Your final course grade will be determined by your performance on HW assignments, two midterm exams, and a comprehensive final exam, according to the weights shown below.\n\n\n\nCourse Percentage\n25% HW Assignments +\n40% Midterm Exams (20% each) +\n35% Final Exam (Comprehensive)\n\n\n\nFinal Grade Scale\n\n\n\nGrade\nCourse percentage\n\n\n\n\nA\n90–100%\n\n\nB\n80–89.99%\n\n\nC\n70–79.99%\n\n\nD\n60–69.99%\n\n\nF\n59.99% and below"
+    "text": "(4) Exams (Content Expertise)\nYour course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.\n\nMidterm Exam 1: Monday, Oct 5 (Tentative Date)\nMidterm Exam 2: Monday, Nov 9 (Tentative Date)\nFinal Exam (Comprehensive): Finals week\n\nThe final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.\n\n10:25–11:15am section 103: Dec 14, 8:00-10:00am in class\n11:30am–12:20pm section 104: Dec 9, 8:00-10:00am in class\n2:05–2:55pm section 105: Dec 16, 12:00-2:00pm in class\n\n\n\n\n\n\n\n\n\n📜 Exam Policies\n\n\n\n\nAll Exams will have the following format:\n\nTaken individually, using pen/pencil & paper\n\nYou may use a physical calculator (not the calculator in your phone) in the exam\nClosed notes, but you may use one sheet of paper, with writing on one side (two sided writing is NOT permitted) for the midterm exams. These can be handwritten or typed, but you cannot include screenshots or share formula sheet. Making your own Formula Sheet is important to the review process - as you are required to submit the Formula Sheet along with the answer paper.\n\nFinal Exam will be comprehensive. For the final exam, you may use one sheet of paper, with writing in both sides."
   },
   {
     "objectID": "syllabus.html#religious-observance",
@@ -154,11 +140,67 @@
     "text": "Well-being\nI want you to succeed. Both here at CWRU and beyond. To help make this happen, I am committed to the following.\nRespect: Everyone comes from a different path through life, and it is our moral duty as human beings to listen to each other without judgment and to respect one another. I have no tolerance for discrimination of any kind, in and out of the classroom. If you are seeking campus resources regarding discrimination, the Office of Equity and the Division of Student Affairs are wonderful resources.\nAccommodations: If you need accommodations for any reason, please contact Disability Resources to discuss your needs, and speak with me as soon as possible afterwards so that we can discuss your accommodation plan. If you already have official accommodations, please discuss these with me within the first week of class so that you get off to a great start. Contact me if you have other special circumstances. I will find resources for you.\nTitle IX: You deserve a community free from discrimination, sexual harassment, hostility, sexual assault, domestic violence, dating violence, and stalking. If you or anyone you know has experienced harassment or discrimination, know that you are not alone. CWRU provides staff and resources to help you find support. Please be aware that as a faculty member, it is my responsibility to report disclosure about sexual harassment, sexual misconduct, relationship violence, and stalking to the Title IX Office. The purpose of this report is to ensure that anyone experiencing harm receives the resources and support they need. I will keep this information private, and it will not be shared beyond this required report.\nYou may also contact CWRU’s Title IX Coordinator directly (phone: 216-368-3066; e-mail: rachel.lutner@case.edu); they will provide you with supportive measures, resources, and referrals. Additional information about how to file a report (including anonymously) is available on the Title IX website.\nGeneral Health and Well-being: I care that you prioritize your well-being in this semester and beyond. Investing time into taking care of yourself will have profound impacts on all aspects of your life. Remember that beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities. It is important to acknowledge any stressors you may be facing, which can be mental, emotional, physical, cultural, financial, etc., and how they can have an impact on you. I encourage you to remember that you have a body with needs. In the classroom, eat when you are hungry, drink water, use the restroom, and step out if you are upset and need some air. Please do what is necessary so long as it does not impede your or others’ ability to be mentally and emotionally present in the course. Outside of the classroom, sleeping well, moving your body, and connecting with others can be strategies can help nourish you. If you are having difficulties maintaining your well-being, please don’t hesitate to contact me and/or find support from physical and mental health resources hereand here."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STAT 312. Basic Statistics for Engineering and Science",
+    "objectID": "pp.html",
+    "href": "pp.html",
+    "title": "Practice Problems",
     "section": "",
-    "text": "STAT 312. Basic Statistics for Engineering and Science\nCase Western Reserve University, Fall 2026\nWelcome to the world of Statistics! Statistics is not just about theories & numbers — it’s about making sense of the world.\n\n\n\n\n\n\n📖 A Thought from H. G. Wells\n\n\n\n\n“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”\n\n\n\nInstructor: Md Mutasim Billah  Class meeting times:\n\nSection 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\n\nInstructor’s drop-in (office) hours:\n\nLocation: My office (Sears 569)\nTimes: M/W: 1:00pm - 1:30pm and 3pm - 4pm\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in hours don’t work for you. Shoot me an email and we can arrange it over zoom, password: 123678.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.\n\n\nThis course website will be updated throughout the semester with new activities, assignments, and announcements, so please bookmark this page if you are enrolled in the course!\nIf you find any typos, bugs, dead links, or have other questions, please email mdmutasim.billah@case.edu"
+    "text": "Solve practice problems (PP) throughout the unit as we cover the corresponding topics in class. These problems reinforce the concepts discussed in the lecture notes, handouts, and course resources. Before attempting the homework assignments and preparing for exams, make sure you have completed and reviewed all practice problems from the unit.\nYou don’t need to submit the PP. Once posted, the solutions will be available on Canvas (Files)."
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Practice Problems",
+    "section": "",
+    "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!"
+  },
+  {
+    "objectID": "assignments.html#homework-submission-guidelines",
+    "href": "assignments.html#homework-submission-guidelines",
+    "title": "Practice Problems",
+    "section": "Homework Submission Guidelines",
+    "text": "Homework Submission Guidelines\n\nSubmit all homework assignments through Canvas:\n\nGo to Assignments\nOpen HW Assignment\nClick the corresponding homework, for example HW 1\n\nIf you prefer to work with pen and pencil:\n\nDownload the homework assignment from the link provided below\nPrint the assignment\nComplete your work by hand\nScan your completed work as a PDF\nUpload the PDF to Canvas\n\nIf you prefer to use a writing device or type your solutions, you may complete the homework electronically and submit the final work directly as a PDF.\nYou may also need to submit a .R file if the HW involves programming task\nYour work must be clear, organized, and legible. Follow these presentation guidelines:\n\nClearly circle or otherwise mark your final answer so it can be easily located on the page.\nShow all necessary work for nontrivial calculations. Answers without sufficient supporting work may lose points.\nKeep your work in the same order as the assigned problems whenever possible.\n\nName your submitted PDF using the following format:\nfirstname_lastname_HW#.pdf\nExample: john_smith_HW1.pdf\n\nHW Assignments are due at 11:59 pm on Canvas in the due date"
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html",
+    "href": "activities/01_foundations_welcome.html",
+    "title": "Collecting and Summarizing Data",
+    "section": "",
+    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html#data-principles",
+    "href": "activities/01_foundations_welcome.html#data-principles",
+    "title": "Collecting and Summarizing Data",
+    "section": "",
+    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
+  },
+  {
+    "objectID": "activities/01_foundations_welcome.html#exercise-your-turn",
+    "href": "activities/01_foundations_welcome.html#exercise-your-turn",
+    "title": "Collecting and Summarizing Data",
+    "section": "Exercise: Your turn",
+    "text": "Exercise: Your turn\nDo this, do that!"
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R and RStudio Resources",
+    "section": "",
+    "text": "RStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R and RStudio Resources",
+    "section": "",
+    "text": "RStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R and RStudio Resources",
+    "section": "Getting Started",
+    "text": "Getting Started\nDownload links: - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
   },
   {
     "objectID": "activities/Intro-Descriptive.html",
@@ -217,53 +259,11 @@
     "text": "There are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected."
   },
   {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R and RStudio Resources",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STAT 312. Basic Statistics for Engineering and Science",
     "section": "",
-    "text": "Crowd-sourced R functions\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R and RStudio Resources",
-    "section": "",
-    "text": "Crowd-sourced R functions\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R and RStudio Resources",
-    "section": "Getting Started",
-    "text": "Getting Started\nDownload links: - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html",
-    "href": "activities/01_foundations_welcome.html",
-    "title": "Collecting and Summarizing Data",
-    "section": "",
-    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#data-principles",
-    "href": "activities/01_foundations_welcome.html#data-principles",
-    "title": "Collecting and Summarizing Data",
-    "section": "",
-    "text": "Links to related reading(s):\n\nWhat is Data?\nData Context\n\n\n\nGo to your class-notes to see what we covered in live-note taking!"
-  },
-  {
-    "objectID": "activities/01_foundations_welcome.html#exercise-your-turn",
-    "href": "activities/01_foundations_welcome.html#exercise-your-turn",
-    "title": "Collecting and Summarizing Data",
-    "section": "Exercise: Your turn",
-    "text": "Exercise: Your turn\nDo this, do that!"
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Practice Problems",
-    "section": "",
-    "text": "Please review the STAT 312 HW Assignment policies document before proceeding!\n…due at 11:59 pm on Canvas!"
+    "text": "STAT 312. Basic Statistics for Engineering and Science\nCase Western Reserve University, Fall 2026\nWelcome to the world of Statistics! Statistics is not just about theories & numbers — it’s about making sense of the world.\n\n\n\n\n\n\n📖 A Thought from H. G. Wells\n\n\n\n\n“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.”\n\n\n\nInstructor: Md Mutasim Billah  Class meeting times:\n\nSection 103: M/W/F 10:25-11:15am, White Building 411\nSection 104: M/W/F 11:30-12:20pm, White Building 411\nSection 105: M/W/F 02:05-02:55pm, Nord Hall 410\n\nInstructor’s drop-in (office) hours:\n\nLocation: My office (Sears 569)\nTimes: M/W: 1:00 - 1:30pm and 3 - 4:30pm\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.\n\n\nThis course website will be updated throughout the semester with new activities, assignments, schedule, etc so please bookmark this page if you are enrolled in the course!\nIf you find any typos, bugs, dead links, or have other questions, please email mdmutasim.billah@case.edu"
   },
   {
     "objectID": "schedule.html",

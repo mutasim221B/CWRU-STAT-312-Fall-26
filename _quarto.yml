@@ -29,6 +29,8 @@ website:
       - file: schedule.qmd
         text: "Schedule"
       - sidebar:activities
+      - file: pp.qmd
+        text: "Practice Problems"
       - file: assignments.qmd
         text: "HW Assignment"
       - file: R_Resources.qmd
