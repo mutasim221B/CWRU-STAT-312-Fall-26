@@ -149,16 +149,9 @@
   {
     "objectID": "assignments.html",
     "href": "assignments.html",
-    "title": "Practice Problems",
+    "title": "HW Assignments",
     "section": "",
-    "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!"
-  },
-  {
-    "objectID": "assignments.html#homework-submission-guidelines",
-    "href": "assignments.html#homework-submission-guidelines",
-    "title": "Practice Problems",
-    "section": "Homework Submission Guidelines",
-    "text": "Homework Submission Guidelines\n\nSubmit all homework assignments through Canvas:\n\nGo to Assignments\nOpen HW Assignment\nClick the corresponding homework, for example HW 1\n\nIf you prefer to work with pen and pencil:\n\nDownload the homework assignment from the link provided below\nPrint the assignment\nComplete your work by hand\nScan your completed work as a PDF\nUpload the PDF to Canvas\n\nIf you prefer to use a writing device or type your solutions, you may complete the homework electronically and submit the final work directly as a PDF.\nYou may also need to submit a .R file if the HW involves programming task\nYour work must be clear, organized, and legible. Follow these presentation guidelines:\n\nClearly circle or otherwise mark your final answer so it can be easily located on the page.\nShow all necessary work for nontrivial calculations. Answers without sufficient supporting work may lose points.\nKeep your work in the same order as the assigned problems whenever possible.\n\nName your submitted PDF using the following format:\nfirstname_lastname_HW#.pdf\nExample: john_smith_HW1.pdf\n\nHW Assignments are due at 11:59 pm on Canvas in the due date"
+    "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!\nHW Assignments are due at 11:59 pm on Canvas in the due date"
   },
   {
     "objectID": "activities/01_foundations_welcome.html",
