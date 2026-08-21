@@ -218,17 +218,27 @@ Read the Academic integrity policies from [STAT 312 HW Assignment & Quiz policie
 Engagement is important to your own learning & to fostering a supportive learning community.
 
 ::: {.callout-important title="📌 Expectations"}
-- **Do not miss in-person class sessions (except emergency situation).** 
+
+- **Do not miss in-person class sessions (except in emergency situations).**
+
 - **When attending class:**
-  - Be on time & don’t leave early  
-  - Do not use your phone (phones must be put away when you enter the course, even if class hasn’t started)  
-  - [Do not use your laptop for anything other than taking notes and in-class activities](https://www.sciencedirect.com/science/article/pii/S0360131512002254) (e.g., no videos, no email, no messaging apps, etc.)  
-  - Be actively present (e.g., don’t work alone, don’t work on other courses, etc.)  
+  - Be on time & don’t leave early
+  - Do not use your phone (phones must be put away when you enter the classroom, even if class hasn’t started)
+  - [Do not use your laptop for anything other than taking notes and in-class activities](https://www.sciencedirect.com/science/article/pii/S0360131512002254) (e.g., no videos, no email, no messaging apps, etc.)
+  - Be actively present (e.g., don’t work on other courses, etc.)
+
+- **Course handouts:**
+  - Handouts are available for most units in this course and will be posted throughout the course in the course website.
+  - You can download the handouts from the **Activities** tab by going to the corresponding unit in the Course Website.
+  - These handouts include examples that we will work through together in class after discussing and writing down the related concepts, rules, and theories.
+  - If you use **paper and pencil**, you are **REQUIRED to print the handout and bring it to class**.
+  - If you use a **tablet, iPad, or other writing device**, you may download the handout directly to your device.
+  - I strongly recommend creating a folder named **STAT 312** on your device and organizing the handouts into separate folders for each unit (e.g., `Unit 01`, `Unit 02`, etc.).
 
 - **Outside class:**
-  - Check your email for canvas announcements and stay updated on the Canvas Discussion forum  
+  - Check your email for Canvas announcements and stay updated on the Canvas Discussion Forum.
   - When you have questions, or just want to chat, please stop by OH!
-  
+
 :::
 
 
@@ -294,28 +304,28 @@ Your course engagement, collaboration, preparation, practice, and application wi
 
 ::: {.columns}
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 
 ### Course Percentage
 
 20% HW Assignments +  
-10% Quizzes +
+10% Quizzes +  
 40% Midterm Exams (20% each) +  
 30% Final Exam (Comprehensive)
 
 :::
 
-::: {.column width="55%"}
+::: {.column width="45%"}
 
 ### Final Grade Scale
 
 | Grade | Course percentage |
 |------:|:------------------|
-| A     | 90–100%           |
-| B     | 80–89.99%         |
-| C     | 70–79.99%         |
-| D     | 60–69.99%         |
-| F     | 59.99% and below  |
+| A | 90–100% |
+| B | 80–89.99% |
+| C | 70–79.99% |
+| D | 60–69.99% |
+| F | 59.99% and below |
 
 :::
 

@@ -1,28 +1,162 @@
 ---
-title: "R and RStudio Resources"
-sidebar: false
+title: "R & RStudio Resource"
+subtitle: "Dr. Md Mutasim Billah"
+format: 
+  html:
+    embed-resources: true
+    toc: true
 ---
 
-## Getting Help
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
 
 
-- [RStudio cheatsheets](https://posit.co/resources/cheatsheets/)
-- **Google it!** If you have a question about R, someone else probably asked it. Add **“R tidyverse”** to your search term.  
-  Example: *scatterplot R tidyverse*
-- **Note about AI for code**: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving.
-
----
 
 ## Getting Started
 
+"Doing" statistical modeling and working with data in general requires statistical software -- calculators, spreadsheet functionality, etc don't cut it.
+We'll exclusively use **R** and **RStudio**:
 
-**Download links:**
-- R: <http://cran.r-project.org/>
-- RStudio: <https://www.rstudio.com/products/rstudio/download/#download>
+```{r echo = FALSE, fig.cap = "Figure 1.1 from [A ModernDive into R and the Tidyverse](https://moderndive.com/1-getting-started.html)."}
+knitr::include_graphics("images/r_vs_rstudio.png")
+```
+
+
 
 ::: {.callout-warning}
 ### Important
 Please download the *latest* versions of both R and RStudio. As of August 16, 2026, the latest versions are: R **4.6.1** and RStudio **RStudio-2026.08.0-187**.  
 :::
 
+
+## Installing R and RStudio {-}
+
+You will need both **R** and **RStudio** for this course.
+
+- **R** is the software that performs the statistical computations.
+- **RStudio** is the interface we will use to write and run R code.
+
+Install **R first**, and then install **RStudio**.
+
+### Windows {-}
+
+#### Step 1: Install R
+
+1. Go to the CRAN website:  
+   [https://cran.r-project.org/](https://cran.r-project.org/)
+
+2. Click **Download R for Windows**.
+
+3. Click **base**.
+
+4. Click **Download R for Windows** and download the installer.
+
+5. Open the downloaded `.exe` file.
+
+6. Follow the installation instructions. The default installation options are appropriate for this course.
+
+#### Step 2: Install RStudio
+
+1. Go to the RStudio Desktop download page:  
+   [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+2. Download the free **RStudio Desktop** installer for Windows.
+
+3. Open the downloaded `.exe` file.
+
+4. Follow the installation instructions.
+
+5. Open **RStudio** after installation.
+
+
+### macOS {-}
+
+#### Step 1: Install R
+
+1. Go to the CRAN website:  
+   [https://cran.r-project.org/](https://cran.r-project.org/)
+
+2. Click **Download R for macOS**.
+
+3. Download the current R installer appropriate for your Mac.
+
+   - Most newer Macs use **Apple Silicon** processors (M1, M2, M3, M4, etc.).
+   - Older Macs may use an **Intel** processor.
+
+4. Open the downloaded `.pkg` file.
+
+5. Follow the installation instructions. The default options are appropriate for this course.
+
+#### Step 2: Install RStudio
+
+1. Go to the RStudio Desktop download page:  
+   [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+2. Download the free **RStudio Desktop** installer for macOS.
+
+3. Open the downloaded `.dmg` file.
+
+4. Drag **RStudio** into the **Applications** folder.
+
+5. Open **RStudio** from Applications.
+
+
+### Choosing a CRAN mirror {-}
+
+When you install an R package for the first time, R may ask you to select a **CRAN mirror**.
+
+Choose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.
+
+If you are unsure which mirror to choose, you may select:
+
+**0-Cloud [https]**
+
+The Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.
+
+
+### Check your installation {-}
+
+After installing both R and RStudio:
+
+1. Open **RStudio**.
+2. Find the **Console** pane.
+3. Type:
+
+```{r eval = FALSE}
+2 + 2
+```
+
+4. Press **Enter**.
+
+You should see:
+
+```text
+[1] 4
+```
+
+If you see this result, R and RStudio are working correctly.
+
+
+
+## Getting Help
+
+
+- [RStudio cheatsheets](https://opensource.posit.co/resources/cheatsheets/rstudio-ide/)
+- **Google it!** If you have a question about R, someone else probably asked it. Add **“R tidyverse”** to your search term.  
+  Example: *scatterplot R tidyverse*
+- **Note about AI for code**: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving.
+
+---
 
