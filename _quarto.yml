@@ -40,7 +40,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
-          - "!activities/Intro-Descriptive.qmd"
+          - "activities/Unit-01-02-Intro-Descriptive.qmd"
 
 
   
