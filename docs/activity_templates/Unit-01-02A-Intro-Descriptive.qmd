@@ -1,6 +1,6 @@
 ---
 title: "Unit 01-02.A: Intro & Descriptive Statistics "
-subtitle: "Instructor: Md Mutasim Billah, PhD"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
 
 format:
   html:
