@@ -11,6 +11,8 @@ project:
     - "data/*.csv"
     # - "activity_templates/*.qmd"
     - "assignments/*.qmd"
+    - "practice/**"
+    - "handout/**"
     - .nojekyll
 
 website:
@@ -40,7 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
-          - "activities/Unit-01-02-Intro-Descriptive.qmd"
+          - "activities/Unit-01-02A-Intro-Descriptive.qmd"
 
 
   

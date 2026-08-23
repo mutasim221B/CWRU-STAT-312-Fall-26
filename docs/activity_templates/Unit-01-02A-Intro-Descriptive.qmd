@@ -1,5 +1,5 @@
 ---
-title: "Unit 01-02: Descriptive Statistics"
+title: "Unit 01-02.A: Intro & Descriptive Statistics "
 subtitle: "Instructor: Md Mutasim Billah, PhD"
 
 format:
@@ -91,7 +91,7 @@ knitr::opts_chunk$set(
 
 
 
-## Class Notes, Slides, and Handouts {-}
+## Class Notes vs Slides {-}
 
 ::: {.incremental}
 
@@ -140,7 +140,7 @@ knitr::opts_chunk$set(
 
 ::: {.incremental}
 
-- Download the [Unit 02A Handout: Visualization](../handout/Unit-02_A_Handout.pdf) before class and bring it with you.
+- Download the [Unit 02A Handout: Visualization](/handout/Unit-02_A_Handout.pdf) before class and bring it with you.
 
 - I will continue to post additional handouts as we progress through the course. Please watch for **Canvas Announcements** when a new handout becomes available.
 
@@ -197,6 +197,11 @@ knitr::include_graphics("../images/r_vs_rstudio.png")
 
 :::
 
+
+## Communcation {-}
+
+
+- Syllabus
 
 
 
