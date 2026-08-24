@@ -156,7 +156,7 @@ This forum is where you’ll communicate outside class. Students can post and an
   - **Info** (what to do if you miss class): syllabus
   - **Due dates**: course schedule in the online manual + announcement email 
   - **Exam dates**: course schedule in the online manual + announcement email 
-  - **Homework & Quiz policies**: [STAT 312 HW Assignment & Quiz policies ](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing)
+  - **Homework & Quiz policies**: [STAT 312 HW Assignment & Quiz policies ](practice/STAT 312 HW Assignment & Quiz policies.pdf)
 
 
 ## Thriving in STAT 312
@@ -186,7 +186,7 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 
 
 - **Missed Class**: Regular attendance & active participation are strongly encouraged and expected. In my experience, students who attend STAT classes consistently tend to finish the course with a deeper understanding of the material, greater satisfaction with their learning, and stronger academic performance.
-- **Homework Assignments & Quiz**: Please *carefully* go through all the sections from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc.
+- **Homework Assignments & Quiz**: Please *carefully* go through all the sections from [STAT 312 HW Assignment & Quiz policies](practice/STAT 312 HW Assignment & Quiz policies.pdf) doc.
 - **Exams**: No revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact). 
 
 ::: {.callout-tip title="🤝 **PLEASE REACH OUT WHEN YOU NEED HELP.**"}
@@ -207,11 +207,11 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 
 ## Artificial Intelligence (AI)
 
-Read the Use of AI sub-section from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing) doc. 
+Read the Use of AI sub-section from [STAT 312 HW Assignment & Quiz policies](practice/STAT 312 HW Assignment & Quiz policies.pdf) doc. 
 
 
 ## Community & Academic Integrity
-Read the Academic integrity policies from [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
+Read the Academic integrity policies from [STAT 312 HW Assignment & Quiz policies](practice/STAT 312 HW Assignment & Quiz policies.pdf).
 
 
 <br><br><br><br>
@@ -270,12 +270,12 @@ Complete the Required Practice Problems first, and then use the Supplemental Pra
 
 ## (3) Quizzes
 
-Each quiz assesses your general understanding of the topics covered during the corresponding unit. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
+Each quiz assesses your general understanding of the topics covered during the corresponding unit. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](practice/STAT 312 HW Assignment & Quiz policies.pdf).
 
 
 ## (3) HW Assignments
 
-In the HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](https://docs.google.com/document/d/10uit5Ei_a8cuqM8pVsNkqBOny6KRLkjTkLocBhI7nFA/edit?usp=sharing).
+In the HW assignments, you will practice and explore the course material in more depth. Detailed directions and policies are here: [STAT 312 HW Assignment & Quiz policies](practice/STAT 312 HW Assignment & Quiz policies.pdf).
 
 
 
