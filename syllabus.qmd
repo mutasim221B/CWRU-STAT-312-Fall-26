@@ -68,7 +68,7 @@ Outside of my academic work, I enjoy spending time outdoors with family and frie
 **Office hours:**
 
 -   **Location:** My office (Sears 569) and over [zoom](https://cwru.zoom.us/j/95414621032?pwd=EqqJ4cKBk9widsemXzefkbuBXQTRRH.1), password: 123678
--   **Times:** M/W: 1:00 - 1:30pm and 3 - 4:30pm
+-   **Times:** M/W: 12:45 - 1:45pm and 3 - 4:00pm
 -   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.
 
 
@@ -132,15 +132,20 @@ Please visit me!!
 
 This forum is where you’ll communicate outside class. Students can post and answer comments / questions there. This is an informal way to converse, ask questions, share info, & connect. Do not rely on receiving responses outside weekdays between 8am & 4pm.
 
-### Peer Tutors
-
-In addition to your office hours, students have free access to peer tutors. Appointments can be scheduled through [tutortrac](https://tutortrac.case.edu)
-
-### Stat Tutoring Center
-
-- Yiming Chen (Sears 543), Hours: Mon (9:30-11am), Tue (4-5pm), Wed (9:30-11am), Thur (4-5pm)
 
 
+### STAT 312 Tutor - Walk-in
+
+- Offered by the Department of Mathematics, Applied Mathematics, and Statistics
+- **Fall 2026 Tutor:** Yiming Chen (Sears 543)
+   - **Hours:** Mon (9:30–11:00 AM), Tue (4:00–5:00 PM), Wed (9:30–11:00 AM), Thu (4:00–5:00 PM)
+
+
+### Peer Tutors - One-on-one
+
+- Offered by the School
+- Students have free access to peer tutors. 
+- Appointments can be scheduled through [tutortrac](https://tutortrac.case.edu)
 
 
 ## What to do when you have a question for me?
