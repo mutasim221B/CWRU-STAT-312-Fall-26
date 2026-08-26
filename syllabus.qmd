@@ -144,8 +144,8 @@ This forum is where you’ll communicate outside class. Students can post and an
 ### Peer Tutors - One-on-one
 
 - Offered by the School
-- Students have free access to peer tutors. 
-- Appointments can be scheduled through [tutortrac](https://tutortrac.case.edu)
+- Students have free access to peer tutors for STAT 312. 
+- Appointments can be scheduled through [tutortrac](https://tutortrac.case.edu). Click [here](https://docs.google.com/document/d/1SGEbt63_nDfFiSTPOiPIX2Fsh_IARBDK6cQT7JCzfwc/edit?usp=sharing) for more instruction
 
 
 ## What to do when you have a question for me?
@@ -200,9 +200,9 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 
 2. 📅 **Check the Course Schedule** in the course website for what is happening in class that day.
 
-3. 📝 **Go through the lecture and class notes on your own** & check the course resources posted in the course website.
+3. 📝 **Go through the lecture and class notes on your own** & check the course resources posted in the course website. Also, be sure to review the related topics in the **textbooks**, as some details discussed in class may not appear in the class notes. For example, I may work through additional examples on the board or explain certain concepts verbally. **You are responsible for these materials as well, and usually they appear on quizzes, HW Assignments, or Exams.**
 
-4. 💬 **Ask any follow-up questions** on the Canvas Discussion forum or come in office hours (OH).
+4. 💬 **Ask any follow-up questions** on the Canvas Discussion forum or come to office hours (OH).
 :::
 
 ## Artificial Intelligence (AI)
