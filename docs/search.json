@@ -158,7 +158,7 @@
     "href": "activities/Unit-01-02A-Intro-Descriptive.html",
     "title": "Unit 01-02.A: Intro & Descriptive Statistics",
     "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
     "crumbs": [
       "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
@@ -188,7 +188,7 @@
     "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
     "title": "Unit 01-02.A: Intro & Descriptive Statistics",
     "section": "",
-    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
       "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
@@ -304,11 +304,21 @@
     ]
   },
   {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#settling-in",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#settling-in",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
     "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Settling in",
-    "text": "Settling in\n\n💻 Put away your laptop and mobile phone, and take out your notebook or preferred writing device.\n💬 Chat with your neighbors and share one thing you plan to do this weekend.\n🎵 Enjoy the music! CWRU playlist was created from your responses to the Early Course Survey and I will continue to add more songs from your replies.\n⏳ We’ll get started shortly!\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)",
+    "section": "Example: Sample Variance and Standard Deviation",
+    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
     "crumbs": [
       "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
@@ -482,51 +492,51 @@
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-8-rendering-your-work",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-8-rendering-your-work",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-7-rendering-your-work",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-7-rendering-your-work",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 8: Rendering your work",
-    "text": "Exercise 8: Rendering your work\nSave this file, and then click the “Render” button in the menu bar for this pane (blue arrow pointing right). This will create an HTML file containing all of the directions, code, and responses from this activity. A preview of the HTML will appear in the browser.\n\nScroll through and inspect the document to see how your work was translated into this HTML format. Neat!\nClose the browser tab.\nNavigate to your “Activities” subfolder within your “STAT312” folder and locate the HTML file. You can open it again in your browser to double check.",
+    "section": "Exercise 7: Rendering your work",
+    "text": "Exercise 7: Rendering your work\nSave this file, and then click the “Render” button in the menu bar for this pane (blue arrow pointing right). This will create an HTML file containing all of the directions, code, and responses from this activity. A preview of the HTML will appear in the browser.\n\nScroll through and inspect the document to see how your work was translated into this HTML format. Neat!\nClose the browser tab.\nNavigate to your “Activities” subfolder within your “STAT312” folder and locate the HTML file. You can open it again in your browser to double check.",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-9-read-in-and-get-to-know-the-weather-data",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-9-read-in-and-get-to-know-the-weather-data",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-8-read-in-and-get-to-know-the-weather-data",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-8-read-in-and-get-to-know-the-weather-data",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 9: Read in and get to know the weather data",
-    "text": "Exercise 9: Read in and get to know the weather data\nDaily weather data are available for 3 locations in Perth, Australia.\n\nView the codebook here.\nComplete the code below to read in the data.\n\n\n# Replace the ??? with your own name for the weather data\n# Replace the ___ with the correct function\n??? &lt;- ___(\"https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/weather_3_locations.csv\")\n## Error in parse(text = input): &lt;text&gt;:3:5: unexpected assignment\n## 2: # Replace the ___ with the correct function\n## 3: ??? &lt;-\n##        ^",
+    "section": "Exercise 8: Read in and get to know the weather data",
+    "text": "Exercise 8: Read in and get to know the weather data\nDaily weather data are available for 3 locations in Perth, Australia.\n\nView the codebook here.\nComplete the code below to read in the data.\n\n\n# Replace the ??? with your own name for the weather data\n# Replace the ___ with the correct function\n??? &lt;- ___(\"https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/weather_3_locations.csv\")\n## Error in parse(text = input): &lt;text&gt;:3:5: unexpected assignment\n## 2: # Replace the ___ with the correct function\n## 3: ??? &lt;-\n##        ^",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-the-data-structure",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-the-data-structure",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-9-exploring-the-data-structure",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-9-exploring-the-data-structure",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 10: Exploring the data structure",
-    "text": "Exercise 10: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\n\n# Find the dimensions of the data\n\nWhat does a case represent in this data?",
+    "section": "Exercise 9: Exploring the data structure",
+    "text": "Exercise 9: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\n\n# Find the dimensions of the data\n\nWhat does a case represent in this data?",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-rainfall",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-rainfall",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-rainfall",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-rainfall",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 11: Exploring rainfall",
-    "text": "Exercise 11: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about rainfall in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
+    "section": "Exercise 10: Exploring rainfall",
+    "text": "Exercise 10: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about rainfall in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-12-exploring-temperature",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-12-exploring-temperature",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 12: Exploring temperature",
-    "text": "Exercise 12: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about high temperatures in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
+    "section": "Exercise 11: Exploring temperature",
+    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about high temperatures in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
@@ -552,71 +562,41 @@
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-4-exploring-sentiment-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-4-exploring-sentiment-1",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-8-read-in-and-get-to-know-the-weather-data-1",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-8-read-in-and-get-to-know-the-weather-data-1",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 4: Exploring sentiment",
-    "text": "Exercise 4: Exploring sentiment\n\n\n\n\nggplot(abby, aes(x = bing_pos)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\n\nWe replace geom_boxplot() with geom_histogram() and geom_density().\n\n\n# Histogram\nggplot(abby, aes(x = bing_pos)) +\n    geom_histogram()\n\n\n\n\n\n\n\n\n# Density plot\nggplot(abby, aes(x = bing_pos)) +\n    geom_density()\n\n\n\n\n\n\n\n\n\n\nBoxplot shows min, max, median, 1st and 3rd quartile easily. (It shows median, 1st and 3rd quartile directly as lines)\nHistogram and density plot show min and max but the mean and median aren’t shown directly–we have to roughly guess based on the peak of the distribution\n\n\n\n# Summary statistics\nabby %&gt;% \n    select(bing_pos) %&gt;% \n    summary()\n##     bing_pos     \n##  Min.   :0.0000  \n##  1st Qu.:0.1667  \n##  Median :0.3333  \n##  Mean   :0.3650  \n##  3rd Qu.:0.5000  \n##  Max.   :1.0000  \n##  NA's   :19\n\nabby %&gt;% \n    summarize(mean(bing_pos, na.rm = TRUE), median(bing_pos, na.rm = TRUE), sd(bing_pos, na.rm = TRUE))\n## # A tibble: 1 × 3\n##   `mean(bing_pos, na.rm = TRUE)` median(bing_pos, na.rm…¹ sd(bing_pos, na.rm =…²\n##                            &lt;dbl&gt;                    &lt;dbl&gt;                  &lt;dbl&gt;\n## 1                          0.365                    0.333                  0.279\n## # ℹ abbreviated names: ¹​`median(bing_pos, na.rm = TRUE)`,\n## #   ²​`sd(bing_pos, na.rm = TRUE)`\n\n\nThe distribution of sentiment scores is roughly tri-modal, ranging from 0 to 1. There’s a group of very negative letters (with roughly 0% of words being positive), a group of very positive letters (with roughly 100% of words being positive), and a group of mostly negative letters. The typical sentiment is around 0.34.",
+    "section": "Exercise 8: Read in and get to know the weather data",
+    "text": "Exercise 8: Read in and get to know the weather data\n\nweather &lt;- read_csv(\"https://raw.githubusercontent.com/Mac-STAT/data/main/weather_3_locations.csv\")",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots-1",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-9-exploring-the-data-structure-1",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-9-exploring-the-data-structure-1",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 5: Box plots vs. histograms vs. density plots",
-    "text": "Exercise 5: Box plots vs. histograms vs. density plots\n\nBoxplots very clearly show key summary statistics like median, 1st and 3rd quartile\nBoxplots can oversimplify by not showing the shape of the distribution.",
+    "section": "Exercise 9: Exploring the data structure",
+    "text": "Exercise 9: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\nhead(weather)\n## # A tibble: 6 × 24\n##   date       location  mintemp maxtemp rainfall evaporation sunshine windgustdir\n##   &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;      \n## 1 2020-01-01 Wollongo…    17.1    23.1        0          NA       NA SSW        \n## 2 2020-01-02 Wollongo…    17.7    24.2        0          NA       NA SSW        \n## 3 2020-01-03 Wollongo…    19.7    26.8        0          NA       NA NE         \n## 4 2020-01-04 Wollongo…    20.4    35.5        0          NA       NA SSW        \n## 5 2020-01-05 Wollongo…    19.8    21.4        0          NA       NA SSW        \n## 6 2020-01-06 Wollongo…    18.3    22.9        0          NA       NA NE         \n## # ℹ 16 more variables: windgustspeed &lt;dbl&gt;, winddir9am &lt;chr&gt;, winddir3pm &lt;chr&gt;,\n## #   windspeed9am &lt;dbl&gt;, windspeed3pm &lt;dbl&gt;, humidity9am &lt;dbl&gt;,\n## #   humidity3pm &lt;dbl&gt;, pressure9am &lt;dbl&gt;, pressure3pm &lt;dbl&gt;, cloud9am &lt;dbl&gt;,\n## #   cloud3pm &lt;dbl&gt;, temp9am &lt;dbl&gt;, temp3pm &lt;dbl&gt;, raintoday &lt;chr&gt;,\n## #   risk_mm &lt;dbl&gt;, raintomorrow &lt;chr&gt;\n\n# Find the dimensions of the data\ndim(weather)\n## [1] 2367   24\n\nA case represents a day of the year in a particular area (Hobart, Uluru, Wollongong as seen by the location variable).",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-6-returning-to-our-context-looking-ahead",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-6-returning-to-our-context-looking-ahead",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-rainfall-1",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-rainfall-1",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 6: Returning to our context, looking ahead",
-    "text": "Exercise 6: Returning to our context, looking ahead\n\nAnswers will vary",
+    "section": "Exercise 10: Exploring rainfall",
+    "text": "Exercise 10: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nraintoday is categorical (No, Yes)\nIt is more common to have no rain.\n\n\n# Visualization\nggplot(weather, aes(x = raintoday)) +\n    geom_bar()\n\n\n\n\n\n\n\n\n# Numerical summaries\nweather %&gt;% \n    count(raintoday)\n## # A tibble: 3 × 2\n##   raintoday     n\n##   &lt;chr&gt;     &lt;int&gt;\n## 1 No         1864\n## 2 Yes         446\n## 3 &lt;NA&gt;         57",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-9-read-in-and-get-to-know-the-weather-data-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-9-read-in-and-get-to-know-the-weather-data-1",
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature-1",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature-1",
     "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 9: Read in and get to know the weather data",
-    "text": "Exercise 9: Read in and get to know the weather data\n\nweather &lt;- read_csv(\"https://raw.githubusercontent.com/Mac-STAT/data/main/weather_3_locations.csv\")",
-    "crumbs": [
-      "Unit 02.B: Intro to R and RStudio"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-the-data-structure-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-10-exploring-the-data-structure-1",
-    "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 10: Exploring the data structure",
-    "text": "Exercise 10: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\nhead(weather)\n## # A tibble: 6 × 24\n##   date       location  mintemp maxtemp rainfall evaporation sunshine windgustdir\n##   &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;      \n## 1 2020-01-01 Wollongo…    17.1    23.1        0          NA       NA SSW        \n## 2 2020-01-02 Wollongo…    17.7    24.2        0          NA       NA SSW        \n## 3 2020-01-03 Wollongo…    19.7    26.8        0          NA       NA NE         \n## 4 2020-01-04 Wollongo…    20.4    35.5        0          NA       NA SSW        \n## 5 2020-01-05 Wollongo…    19.8    21.4        0          NA       NA SSW        \n## 6 2020-01-06 Wollongo…    18.3    22.9        0          NA       NA NE         \n## # ℹ 16 more variables: windgustspeed &lt;dbl&gt;, winddir9am &lt;chr&gt;, winddir3pm &lt;chr&gt;,\n## #   windspeed9am &lt;dbl&gt;, windspeed3pm &lt;dbl&gt;, humidity9am &lt;dbl&gt;,\n## #   humidity3pm &lt;dbl&gt;, pressure9am &lt;dbl&gt;, pressure3pm &lt;dbl&gt;, cloud9am &lt;dbl&gt;,\n## #   cloud3pm &lt;dbl&gt;, temp9am &lt;dbl&gt;, temp3pm &lt;dbl&gt;, raintoday &lt;chr&gt;,\n## #   risk_mm &lt;dbl&gt;, raintomorrow &lt;chr&gt;\n\n# Find the dimensions of the data\ndim(weather)\n## [1] 2367   24\n\nA case represents a day of the year in a particular area (Hobart, Uluru, Wollongong as seen by the location variable).",
-    "crumbs": [
-      "Unit 02.B: Intro to R and RStudio"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-rainfall-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-rainfall-1",
-    "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 11: Exploring rainfall",
-    "text": "Exercise 11: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nraintoday is categorical (No, Yes)\nIt is more common to have no rain.\n\n\n# Visualization\nggplot(weather, aes(x = raintoday)) +\n    geom_bar()\n\n\n\n\n\n\n\n\n# Numerical summaries\nweather %&gt;% \n    count(raintoday)\n## # A tibble: 3 × 2\n##   raintoday     n\n##   &lt;chr&gt;     &lt;int&gt;\n## 1 No         1864\n## 2 Yes         446\n## 3 &lt;NA&gt;         57",
-    "crumbs": [
-      "Unit 02.B: Intro to R and RStudio"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-02B-Intro-R.html#exercise-12-exploring-temperature-1",
-    "href": "activities/Unit-02B-Intro-R.html#exercise-12-exploring-temperature-1",
-    "title": "Unit 02.B: Intro to R and RStudio",
-    "section": "Exercise 12: Exploring temperature",
-    "text": "Exercise 12: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
+    "section": "Exercise 11: Exploring temperature",
+    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]

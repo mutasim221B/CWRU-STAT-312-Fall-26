@@ -564,7 +564,7 @@ c.  In this example, which plot do you prefer and why?
 
 
 
-## Exercise 8: Rendering your work
+## Exercise 7: Rendering your work
 
 Save this file, and then click the "Render" button in the menu bar for this pane (blue arrow pointing right). This will create an HTML file containing all of the directions, code, and responses from this activity. A preview of the HTML will appear in the browser.
 
@@ -583,7 +583,7 @@ If you have time and want additional practice, try out the following exercises.
 
 
 
-## Exercise 9: Read in and get to know the weather data
+## Exercise 8: Read in and get to know the weather data
 
 Daily weather data are available for 3 locations in Perth, Australia.
 
@@ -599,7 +599,7 @@ Daily weather data are available for 3 locations in Perth, Australia.
 
 
 
-## Exercise 10: Exploring the data structure
+## Exercise 9: Exploring the data structure
 
 Check out the basic features of the weather data.
 
@@ -615,7 +615,7 @@ What does a case represent in this data?
 
 
 
-## Exercise 11: Exploring rainfall
+## Exercise 10: Exploring rainfall
 
 The `raintoday` variable contains information about rainfall.
 
@@ -633,7 +633,7 @@ The `raintoday` variable contains information about rainfall.
 
 
 
-## Exercise 12: Exploring temperature
+## Exercise 11: Exploring temperature
 
 The `maxtemp` variable contains information on the daily high temperature.
 
@@ -778,65 +778,9 @@ ggplot(abby, aes(x = themes)) +
 
 
 
-## Exercise 4: Exploring sentiment
 
 
-a.  
-
-```{r eval = TRUE}
-ggplot(abby, aes(x = bing_pos)) +
-    geom_boxplot()
-```
-
-b.  We replace `geom_boxplot()` with `geom_histogram()` and `geom_density()`.
-    
-```{r eval = TRUE}
-# Histogram
-ggplot(abby, aes(x = bing_pos)) +
-    geom_histogram()
-
-# Density plot
-ggplot(abby, aes(x = bing_pos)) +
-    geom_density()
-```
-
-c.  
-
-    -   Boxplot shows min, max, median, 1st and 3rd quartile easily. (It shows median, 1st and 3rd quartile directly as lines)
-    -   Histogram and density plot show min and max but the mean and median aren't shown directly--we have to roughly guess based on the peak of the distribution
-
-```{r eval = TRUE}
-# Summary statistics
-abby %>% 
-    select(bing_pos) %>% 
-    summary()
-
-abby %>% 
-    summarize(mean(bing_pos, na.rm = TRUE), median(bing_pos, na.rm = TRUE), sd(bing_pos, na.rm = TRUE))
-```
-
-d.  The distribution of sentiment scores is roughly tri-modal, ranging from 0 to 1. There's a group of very negative letters (with roughly 0\% of words being positive), a group of very positive letters (with roughly 100\% of words being positive), and a group of mostly negative letters. The typical sentiment is around 0.34.
-
-
-
-
-
-## Exercise 5: Box plots vs. histograms vs. density plots
-
-a.  Boxplots very clearly show key summary statistics like median, 1st and 3rd quartile
-b.  Boxplots can oversimplify by not showing the shape of the distribution.
-
-
-
-
-## Exercise 6: Returning to our context, looking ahead
-
--   Answers will vary
-
-
-
-
-## Exercise 9: Read in and get to know the weather data
+## Exercise 8: Read in and get to know the weather data
 
 ```{r eval = TRUE}
 weather <- read_csv("https://raw.githubusercontent.com/Mac-STAT/data/main/weather_3_locations.csv")
@@ -845,7 +789,7 @@ weather <- read_csv("https://raw.githubusercontent.com/Mac-STAT/data/main/weathe
 
 
 
-## Exercise 10: Exploring the data structure
+## Exercise 9: Exploring the data structure
 
 Check out the basic features of the weather data.
 
@@ -862,7 +806,7 @@ A case represents a day of the year in a particular area (Hobart, Uluru, Wollong
 
 
 
-## Exercise 11: Exploring rainfall
+## Exercise 10: Exploring rainfall
 
 The `raintoday` variable contains information about rainfall.
 
@@ -882,7 +826,7 @@ weather %>%
 
 
 
-## Exercise 12: Exploring temperature
+## Exercise 11: Exploring temperature
 
 The `maxtemp` variable contains information on the daily high temperature.
 

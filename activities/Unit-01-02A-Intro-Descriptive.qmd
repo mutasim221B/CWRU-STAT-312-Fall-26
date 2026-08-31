@@ -142,6 +142,8 @@ knitr::opts_chunk$set(
 
 - Download the [Unit 02A Handout: Visualization](/handout/Unit-02_A_Handout.pdf) before class and bring it with you.
 
+- Download additional Handout on [Boxplot](/handout/Boxplot-Example-Handout.pdf) (no need to print and bring it in the class though!)
+
 - I will continue to post additional handouts as we progress through the course. Please watch for **Canvas Announcements** when a new handout becomes available.
 
 - It is very important that you **bring the appropriate handout to class regularly**, either as a printed copy or on your writing device.
@@ -361,20 +363,134 @@ There are several options.
 
 
 
-## Settling in {-}
+
+## Example: Sample Variance and Standard Deviation {-}
 
 
-- 💻 Put away your laptop and mobile phone, and take out your notebook or preferred writing device.
+Suppose we have collected the following random sample of $n=5$ observations:
 
-- 💬 Chat with your neighbors and share one thing you plan to do this weekend.
+$$
+\{3, 7, 10, 11, 14\}
+$$
 
-- 🎵 Enjoy the music! CWRU playlist was created from your responses to the Early Course Survey and I will continue to add more songs from your replies.
+Find the **sample variance** and **sample standard deviation**.
 
-- ⏳ We’ll get started shortly!
+### Step 1: Calculate the sample mean
 
-- Download additional Handout on [Boxplot](/handout/Boxplot-Example-Handout.pdf) (no need to print and bring it in the class though!)
+$$
+\begin{aligned}
+\bar{x}
+&= \frac{\sum_{i=1}^{n}x_i}{n} \\[4pt]
+&= \frac{3+7+10+11+14}{5} \\[4pt]
+&= \frac{45}{5} \\[4pt]
+&= 9.
+\end{aligned}
+$$
 
-\
+### Step 2: Complete the table
+
+| $x_i$ | $x_i-\bar{x}$ | $(x_i-\bar{x})^2$ | $x_i^2$ |
+|:---:|:---:|:---:|:---:|
+| 3  | $-6$ | 36 | 9 |
+| 7  | $-2$ | 4  | 49 |
+| 10 | 1    | 1  | 100 |
+| 11 | 2    | 4  | 121 |
+| 14 | 5    | 25 | 196 |
+| **Total: 45** | **0** | **70** | **475** |
+
+### Step 3: Calculate the sample variance
+
+Using the deviations from the sample mean:
+
+$$
+s^2
+=
+\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}.
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+s^2
+&= \frac{70}{5-1} \\[4pt]
+&= \frac{70}{4} \\[4pt]
+&= 17.5.
+\end{aligned}
+$$
+
+### Step 4: Verify using the convenient formula
+
+The convenient formula for the sample variance is
+
+$$
+s^2
+=
+\frac{
+\displaystyle\sum_{i=1}^{n}x_i^2
+-
+\frac{\left(\displaystyle\sum_{i=1}^{n}x_i\right)^2}{n}
+}{n-1}.
+$$
+
+Substituting the values from the table:
+
+$$
+\begin{aligned}
+s^2
+&=
+\frac{
+475-\dfrac{45^2}{5}
+}{5-1} \\[6pt]
+&=
+\frac{475-405}{4} \\[6pt]
+&=
+\frac{70}{4} \\[6pt]
+&=
+17.5.
+\end{aligned}
+$$
+
+Both methods give the same sample variance:
+
+$$
+\boxed{s^2=17.5}
+$$
+
+### Step 5: Calculate the sample standard deviation
+
+$$
+\begin{aligned}
+s
+&= \sqrt{s^2} \\[4pt]
+&= \sqrt{17.5} \\[4pt]
+&\approx 4.18.
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\boxed{s\approx 4.18}
+$$
+
+
+
+## Quiz 01 {-}
+
+- We have now covered all the topics included in **Quiz 01**, which covers **Units 01 and 02**.
+
+- Before attempting the quiz, carefully review the course material covered since the first day of class, including:
+
+  - Class notes
+  - Whiteboard notes
+  - Handouts
+  - Relevant textbook sections, especially if you missed a class
+
+- Quiz 01 is designed to assess your general understanding of the course material covered so far.
+
+- **Due:** Thursday, September 3, at 11:59 p.m. on Canvas.
+
 \
 \
 \
