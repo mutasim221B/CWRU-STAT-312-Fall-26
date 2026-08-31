@@ -42,6 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
+          - "activities/Unit-02B-Intro-R.qmd"
           - "activities/Unit-01-02A-Intro-Descriptive.qmd"
 
 

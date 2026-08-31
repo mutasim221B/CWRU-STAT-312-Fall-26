@@ -154,34 +154,6 @@
     "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!\nHW Assignments are due at 11:59 pm on Canvas in the due date\n…due at 11:59 pm Central on Moodle!\n\nHW Assignment 1, due 9/04"
   },
   {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#installing-r-and-rstudio",
-    "href": "R_Resources.html#installing-r-and-rstudio",
-    "title": "R & RStudio Resource",
-    "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R & RStudio Resource",
-    "section": "Getting Help",
-    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
-  },
-  {
     "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
     "href": "activities/Unit-01-02A-Intro-Descriptive.html",
     "title": "Unit 01-02.A: Intro & Descriptive Statistics",
@@ -339,6 +311,144 @@
     "text": "Settling in\n\n💻 Put away your laptop and mobile phone, and take out your notebook or preferred writing device.\n💬 Chat with your neighbors and share one thing you plan to do this weekend.\n🎵 Enjoy the music! CWRU playlist was created from your responses to the Early Course Survey and I will continue to add more songs from your replies.\n⏳ We’ll get started shortly!\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)",
     "crumbs": [
       "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#installing-r-and-rstudio",
+    "href": "R_Resources.html#installing-r-and-rstudio",
+    "title": "R & RStudio Resource",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R & RStudio Resource",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html",
+    "href": "activities/Unit-02B-Intro-R.html",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-1-use-r-as-a-calculator",
+    "href": "activities/Unit-02B-Intro-R.html#example-1-use-r-as-a-calculator",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 1: Use R as a calculator",
+    "text": "Example 1: Use R as a calculator\nType the following lines in the console (bottom left), one by one, hitting Return/Enter after each line. In some cases you might even get an error! This error is important to learning how R code does and doesn’t work.\n\n4 + 2\n\n\n4^2\n\n\n4*2\n\n\n4(2)",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-2-functions-and-arguments",
+    "href": "activities/Unit-02B-Intro-R.html#example-2-functions-and-arguments",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 2: Functions and arguments",
+    "text": "Example 2: Functions and arguments\nWe can also use built-in functions to perform common tasks. These functions have names and require information about arguments in order to run:\nfunction(argument) Cheatcode: RiceCooker(Rice)\nTry out the following functions one by one in the RStudio console. For each function, note its…\n\nname\nthe argument or information it needs to run\nwhat output it produces (what the function does)\nhow the name connects to what the function does\n\n\nsqrt(9)\n\n\nnchar(\"casewesternreserve\")\n\n\nsqrt(nchar(\"snow\"))\n\nSome functions have more than 1 argument, separated by commas:\nfunction(argument1 = ___, argument2 = ___) Cheatcode: RiceCooker(Rice,Chicken)\nTry out the following, one by one.\n\nrep(x = 2, times = 5)\n\n\nrep(times = 5, x = 2)\n\n\nrep(2, 5)\n\n\nrep(5, 2)\n\nFinally, R is case sensitive. Try using Rep() instead of rep(). Take time to read the error message!\n\nRep(5, 2)",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-3-save-it-for-later",
+    "href": "activities/Unit-02B-Intro-R.html#example-3-save-it-for-later",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 3: Save it for later",
+    "text": "Example 3: Save it for later\nWe’ll often want to store some R output for later use. In R:\nname &lt;- output\nwhere name is the name under which to store a result, output is the result we wish to store, and &lt;- is the assignment operator (I think of this as an arrow pointing the output into the name).\nIMPORTANT: Try out each line one at a time. Why doesn’t the first line produce any output?\n\ndegrees_c &lt;- -13\n\n\ndegrees_c\n\n\ndegrees_c * (9/5) + 32",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-4-import-data",
+    "href": "activities/Unit-02B-Intro-R.html#example-4-import-data",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 4: Import data",
+    "text": "Example 4: Import data\nNext, let’s work with data!! The first step is importing our data into RStudio. How we do this depends on:\n\nfile format (eg: .xls Excel spreadsheet, .csv, .txt)\nfile location (eg: online, on your desktop, built into RStudio itself).\n\nThe data from the similar survey collected in fall 2024 stored as a .csv file online. Import this data using the read_csv() function, and store it as survey using the code below:\nFirst, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):\ninstall.packages(\"tidyverse\")\n\n# Load the \"tidyverse\" package which contains the read_csv() function\nlibrary(tidyverse)\n\n# Import the data\nsurvey &lt;- read_csv(\"https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2024_survey.csv\")\n\n\n\nCheck out the data\nIn the Environment tab in the upper right pane of RStudio, click on survey. What happens?!\n\n\nIn the modern era, datasets often contain hundreds of variables and millions of observations. We need more effective ways to explore such data.",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-5-get-to-know-the-data",
+    "href": "activities/Unit-02B-Intro-R.html#example-5-get-to-know-the-data",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 5: Get to know the data",
+    "text": "Example 5: Get to know the data\nPAUSE: Make sure you’re sync with your group.\nBefore we can learn anything from our data, we must understand its structure. For each function below:\n\ntry it out\ndiscuss with your group what the function does\ndiscuss with your group how the function’s name connects to what it does\n\n\ndim(survey) # (Number of row (case/obs.), Number of column (variable))\n\n\nnrow(survey) # Number of case/obs.\n\n\nncol(survey) # Number of variables\n\n\nhead(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nhead(survey, 3) # Controlling the view of first few rows of the dataset\n\n\ntail(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nnames(survey) # Get all column (variable) names\n\n\nstr(survey) # Overall info about data",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-6-code-communication",
+    "href": "activities/Unit-02B-Intro-R.html#example-6-code-communication",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 6 : Code = communication",
+    "text": "Example 6 : Code = communication\nIt’s important to recognize from day 1 that code is a form of communication, both to yourself and others!!!!! Code structure and details are important to readability and clarity, just as grammar, punctuation, spelling, paragraphs, and line spacing are important in written essays. All of the code below works, but has bad structure. With your group, discuss what is unfortunate about each line, then make it better.\n\nseq(from=1, to=9, by=2)\nseq(from = 1, to=9, by=2)\ntemp_cel &lt;- -13\nthisisthetemperaturetodayincelsius &lt;- -13\nthis_is_the_temperature_today_in_celsius &lt;- -13",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-7-you-will-make-so-many-mistakes",
+    "href": "activities/Unit-02B-Intro-R.html#example-7-you-will-make-so-many-mistakes",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 7: You will make so many mistakes!",
+    "text": "Example 7: You will make so many mistakes!\nMistakes are common when, and even important to, learning any new language. You’ll get better and better at interpreting error messages, finding help, and fixing errors. In addition to finding help online, R has built-in help files. For example:\n\nIn the console, type ?rep and press Return/Enter.\nCheck out the documentation file that pops up in the Help tab (lower right).\nQuickly scroll through, noting the type of information provided.\nPause at the “Examples” section at the bottom – perhaps the most useful section! Try out a couple of the provided examples in your console.",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#example-8-make-a-cheat-sheet",
+    "href": "activities/Unit-02B-Intro-R.html#example-8-make-a-cheat-sheet",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Example 8: Make a “cheat sheet”",
+    "text": "Example 8: Make a “cheat sheet”\nYou will continue to pick up new R code and ideas. You’re highly encouraged to start tracking this in a cheat sheet (eg: in a Google doc). The cheat sheet will be a handy reference for you, and the act of making it will help deepen your understanding and retention.",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-complete-this-after-the-class",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-complete-this-after-the-class",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Exercise: Complete this after the class",
+    "text": "Exercise: Complete this after the class\nComplete this exercise after class. First, try it on your own (or with your group), and then check your work against the solution provided at the end of this .qmd file.\nUse R code to do the following:\n\nImport & name data on different Himalayan peaks from the url below:\nhttps://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv NOTE: A codebook, i.e. a description of the data, is here.\nUse a function to show which variables are recorded on each peak.\nHow many peaks are included in the dataset? Answer this using a function, not by counting up the rows yourself.\nShow the first 6 rows of the dataset. NOTE: This gives us a quick glimpse without having to print out the entire dataset!",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-02B-Intro-R.html#exercise-your-turn",
+    "href": "activities/Unit-02B-Intro-R.html#exercise-your-turn",
+    "title": "Unit 02.B: Intro to R and RStudio",
+    "section": "Exercise: Your turn",
+    "text": "Exercise: Your turn\n\n# a\npeaks &lt;- read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\")\n## Error in read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\"): could not find function \"read_csv\"\n\n# b\nnames(peaks)\n## Error: object 'peaks' not found\n\n# c\ndim(peaks)\n## Error: object 'peaks' not found\nnrow(peaks)\n## Error: object 'peaks' not found\n\n# d\nhead(peaks)\n## Error: object 'peaks' not found",
+    "crumbs": [
+      "Unit 02.B: Intro to R and RStudio"
     ]
   },
   {

@@ -1,0 +1,373 @@
+---
+title: "Unit 02.B: Intro to R and RStudio"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+
+You can download the .qmd file for this activity [here](../activities/Unit-02B-Intro-R.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+
+
+
+# R and RStudio {-}
+
+
+## Example 1: Use R as a calculator {-}
+
+Type the following lines in the **console** (bottom left), one by one, hitting Return/Enter after each line.
+In some cases you might even get an error!
+This error is *important* to learning how R code does and doesn't work.
+
+```{r eval = FALSE}
+4 + 2
+```
+
+
+```{r eval = FALSE}
+4^2
+```
+
+```{r eval = FALSE}
+4*2
+```
+
+```{r eval = FALSE}
+4(2)
+```
+
+
+
+
+\
+\
+\
+\
+
+
+## Example 2: Functions and arguments {-}
+
+We can also use built-in **functions** to perform common tasks.
+These functions have *names* and require information about *arguments* in order to run:
+
+`function(argument)`
+`Cheatcode: RiceCooker(Rice)`
+
+Try out the following functions *one by one* in the RStudio console.
+For each function, note its...
+
+- *name*
+- the *argument* or information it needs to run
+- what *output* it produces (what the function *does*)
+- how the name *connects* to what the function does
+
+```{r eval = FALSE}
+sqrt(9)
+```
+
+```{r eval = FALSE}
+nchar("casewesternreserve")
+```
+
+```{r eval = FALSE}
+sqrt(nchar("snow"))
+```
+
+Some functions have *more than 1 argument*, separated by commas:
+
+`function(argument1 = ___, argument2 = ___)`
+`Cheatcode: RiceCooker(Rice,Chicken)`
+
+Try out the following, one by one.
+
+```{r eval = FALSE}
+rep(x = 2, times = 5)
+```
+
+```{r eval = FALSE}
+rep(times = 5, x = 2)
+```
+
+```{r eval = FALSE}
+rep(2, 5)
+```
+
+```{r eval = FALSE}
+rep(5, 2)
+```
+
+Finally, R is case sensitive.
+Try using `Rep()` instead of `rep()`.
+Take time to read the **error message**!
+
+```{r eval = FALSE}
+Rep(5, 2)
+```
+
+
+\
+\
+\
+\
+
+
+## Example 3: Save it for later {-}
+
+We'll often want to store some R output for later use.
+In R:
+
+`name <- output`
+
+where `name` is the name under which to store a result, `output` is the result we wish to store, and `<-` is the **assignment operator** (I think of this as an arrow pointing the `output` into the `name`).
+
+IMPORTANT: Try out each line *one at a time*.
+Why doesn't the first line produce any output?
+
+```{r eval = FALSE}
+degrees_c <- -13
+```
+
+```{r eval = FALSE}
+degrees_c
+```
+
+```{r eval = FALSE}
+degrees_c * (9/5) + 32
+```
+
+
+
+
+\
+\
+\
+\
+
+
+
+
+## Example 4: Import data {-}
+
+
+Next, let's work with **data**!!
+The first step is importing our data into RStudio.
+How we do this depends on:
+
+1. file format (eg: .xls Excel spreadsheet, .csv, .txt)
+2. file location (eg: online, on your desktop, built into RStudio itself).
+
+The data from the similar survey collected in fall 2024 stored as a **.csv** file **online**.
+Import this data using the `read_csv()` function, and store it as `survey` using the code below:
+
+First, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):
+
+`install.packages("tidyverse")`
+
+```{r eval = FALSE}
+# Load the "tidyverse" package which contains the read_csv() function
+library(tidyverse)
+
+# Import the data
+survey <- read_csv("https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2024_survey.csv")
+```
+
+
+\
+
+
+**Check out the data**
+
+In the Environment tab in the upper right pane of RStudio, click on `survey`. What happens?!
+
+\
+
+In the modern era, datasets often contain hundreds of variables and millions of observations. We need more effective ways to explore such data.
+
+
+
+\
+\
+\
+\
+
+
+
+## Example 5: Get to know the data {-}
+
+PAUSE: Make sure you're sync with your group.
+
+Before we can learn anything from our data, we must understand its structure.
+For each function below:
+
+- try it out
+- discuss with your group what the function *does*
+- discuss with your group how the function's *name* connects to what it *does*
+
+
+```{r eval = FALSE}
+dim(survey) # (Number of row (case/obs.), Number of column (variable))
+```
+
+```{r eval = FALSE}
+nrow(survey) # Number of case/obs.
+```
+
+```{r eval = FALSE}
+ncol(survey) # Number of variables
+```
+
+```{r eval = FALSE}
+head(survey) # View first few rows of the dataset (6 rows, by default)
+```
+
+```{r eval = FALSE}
+head(survey, 3) # Controlling the view of first few rows of the dataset
+```
+
+```{r eval = FALSE}
+tail(survey) # View first few rows of the dataset (6 rows, by default)
+```
+
+```{r eval = FALSE} 
+names(survey) # Get all column (variable) names
+```
+
+```{r eval = FALSE}
+str(survey) # Overall info about data
+```
+
+\
+\
+\
+\
+
+
+
+## Example 6 : Code = communication {-}
+
+It's important to recognize from day 1 that **code is a form of communication**, both to yourself and others!!!!!
+Code structure and details are important to readability and clarity, just as grammar, punctuation, spelling, paragraphs, and line spacing are important in written essays.
+All of the code below *works*, but has bad structure.
+With your group, discuss what is unfortunate about each line, then make it better.
+
+
+```{r eval = FALSE}
+seq(from=1, to=9, by=2)
+seq(from = 1, to=9, by=2)
+temp_cel <- -13
+thisisthetemperaturetodayincelsius <- -13
+this_is_the_temperature_today_in_celsius <- -13
+```
+
+\
+\
+\
+\
+
+
+## Example 7: You will make so many mistakes! {-}
+
+Mistakes are common when, and even *important* to, learning any new language.
+You'll get better and better at interpreting error messages, finding help, and fixing errors.
+In addition to finding help online, R has built-in **help files**.
+For example:       
+
+-   In the console, type `?rep` and press Return/Enter.
+-   Check out the documentation file that pops up in the Help tab (lower right).
+-   Quickly scroll through, noting the type of information provided.
+-   Pause at the "Examples" section at the bottom -- perhaps the most useful section! Try out a couple of the provided examples in your console.
+
+
+
+
+
+\
+\
+\
+\
+
+## Example 8: Make a "cheat sheet" {-}
+
+You will continue to pick up new R code and ideas.
+You're highly encouraged to start tracking this in a cheat sheet (eg: in a Google doc).
+The cheat sheet will be a handy reference for you, and the act of making it will help deepen your understanding and retention.
+
+
+\
+\
+\
+\
+
+
+    
+## Exercise: Complete this after the class {-}
+
+Complete this exercise after class. First, try it on your own (or with your group), and then check your work against the solution provided at the end of this .qmd file.
+
+Use R code to do the following:
+
+a. Import & name data on different Himalayan peaks from the url below:       
+    `https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv`
+    NOTE: A **codebook**, i.e. a description of the data, is [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md).
+    
+b. Use a function to show which variables are recorded on each peak.
+
+c. How many peaks are included in the dataset? Answer this using a *function*, not by counting up the rows yourself.
+
+d. Show the first 6 rows of the dataset. NOTE: This gives us a quick glimpse without having to print out the entire dataset!
+
+
+\
+
+
+# We start Univariate Visualization and Summaries activities now
+
+
+\
+\
+\
+\
+
+
+
+# Solutions {-}
+
+
+## Exercise: Your turn {-}
+
+```{r}
+# a
+peaks <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv")
+
+# b
+names(peaks)
+
+# c
+dim(peaks)
+nrow(peaks)
+
+# d
+head(peaks)
+```
+
+
+
+
