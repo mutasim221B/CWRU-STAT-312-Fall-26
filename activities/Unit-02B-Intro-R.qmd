@@ -24,7 +24,9 @@ knitr::opts_chunk$set(
 
 
 
-You can download the .qmd file for this activity [here](../activities/Unit-02B-Intro-R.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+You can download the .qmd file for this activity [here](../activities/Unit-02B-Intro-R.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/) (Activities tab). 
+
+I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
 
 
 
@@ -186,7 +188,7 @@ First, in the Console pane of RStudio, run the following command to install some
 library(tidyverse)
 
 # Import the data
-survey <- read_csv("https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2024_survey.csv")
+survey <- read_csv("https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2025_survey.csv")
 ```
 
 
@@ -212,14 +214,9 @@ In the modern era, datasets often contain hundreds of variables and millions of 
 
 ## Example 5: Get to know the data {-}
 
-PAUSE: Make sure you're sync with your group.
 
 Before we can learn anything from our data, we must understand its structure.
-For each function below:
 
-- try it out
-- discuss with your group what the function *does*
-- discuss with your group how the function's *name* connects to what it *does*
 
 
 ```{r eval = FALSE}

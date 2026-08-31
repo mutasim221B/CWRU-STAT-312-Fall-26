@@ -346,7 +346,7 @@
     "href": "activities/Unit-02B-Intro-R.html",
     "title": "Unit 02.B: Intro to R and RStudio",
     "section": "",
-    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab).\nI often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
@@ -386,7 +386,7 @@
     "href": "activities/Unit-02B-Intro-R.html#example-4-import-data",
     "title": "Unit 02.B: Intro to R and RStudio",
     "section": "Example 4: Import data",
-    "text": "Example 4: Import data\nNext, let’s work with data!! The first step is importing our data into RStudio. How we do this depends on:\n\nfile format (eg: .xls Excel spreadsheet, .csv, .txt)\nfile location (eg: online, on your desktop, built into RStudio itself).\n\nThe data from the similar survey collected in fall 2024 stored as a .csv file online. Import this data using the read_csv() function, and store it as survey using the code below:\nFirst, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):\ninstall.packages(\"tidyverse\")\n\n# Load the \"tidyverse\" package which contains the read_csv() function\nlibrary(tidyverse)\n\n# Import the data\nsurvey &lt;- read_csv(\"https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2024_survey.csv\")\n\n\n\nCheck out the data\nIn the Environment tab in the upper right pane of RStudio, click on survey. What happens?!\n\n\nIn the modern era, datasets often contain hundreds of variables and millions of observations. We need more effective ways to explore such data.",
+    "text": "Example 4: Import data\nNext, let’s work with data!! The first step is importing our data into RStudio. How we do this depends on:\n\nfile format (eg: .xls Excel spreadsheet, .csv, .txt)\nfile location (eg: online, on your desktop, built into RStudio itself).\n\nThe data from the similar survey collected in fall 2024 stored as a .csv file online. Import this data using the read_csv() function, and store it as survey using the code below:\nFirst, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):\ninstall.packages(\"tidyverse\")\n\n# Load the \"tidyverse\" package which contains the read_csv() function\nlibrary(tidyverse)\n\n# Import the data\nsurvey &lt;- read_csv(\"https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/fall_2025_survey.csv\")\n\n\n\nCheck out the data\nIn the Environment tab in the upper right pane of RStudio, click on survey. What happens?!\n\n\nIn the modern era, datasets often contain hundreds of variables and millions of observations. We need more effective ways to explore such data.",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
@@ -396,7 +396,7 @@
     "href": "activities/Unit-02B-Intro-R.html#example-5-get-to-know-the-data",
     "title": "Unit 02.B: Intro to R and RStudio",
     "section": "Example 5: Get to know the data",
-    "text": "Example 5: Get to know the data\nPAUSE: Make sure you’re sync with your group.\nBefore we can learn anything from our data, we must understand its structure. For each function below:\n\ntry it out\ndiscuss with your group what the function does\ndiscuss with your group how the function’s name connects to what it does\n\n\ndim(survey) # (Number of row (case/obs.), Number of column (variable))\n\n\nnrow(survey) # Number of case/obs.\n\n\nncol(survey) # Number of variables\n\n\nhead(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nhead(survey, 3) # Controlling the view of first few rows of the dataset\n\n\ntail(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nnames(survey) # Get all column (variable) names\n\n\nstr(survey) # Overall info about data",
+    "text": "Example 5: Get to know the data\nBefore we can learn anything from our data, we must understand its structure.\n\ndim(survey) # (Number of row (case/obs.), Number of column (variable))\n\n\nnrow(survey) # Number of case/obs.\n\n\nncol(survey) # Number of variables\n\n\nhead(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nhead(survey, 3) # Controlling the view of first few rows of the dataset\n\n\ntail(survey) # View first few rows of the dataset (6 rows, by default)\n\n\nnames(survey) # Get all column (variable) names\n\n\nstr(survey) # Overall info about data",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
