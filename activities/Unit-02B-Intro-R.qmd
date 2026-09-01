@@ -414,7 +414,7 @@ names(abby)
 
 ## Exercise 2: Preparing to summarize and visualize the data 
 
-In the next exercises, we will be exploring themes in the Dear Abby questions and the overall "mood" or sentiment of the questions. Before continuing, read the [codebook](https://github.com/Mac-STAT/data/blob/main/dear_abby_codebook.md) for this dataset for some context about sentiment analysis, which gives us a measure of the mood/sentiment of a text.
+In the next exercises, we will be exploring themes in the Dear Abby questions and the overall "mood" or sentiment of the questions. Before continuing, read the [codebook](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/handout/dear_abby_codebook.pdf) for this dataset for some context about sentiment analysis, which gives us a measure of the mood/sentiment of a text.
 
 a.  What sentiment variables do we have in the dataset? Are they **quantitative** or **categorical**?
 
@@ -579,7 +579,7 @@ Save this file, and then click the "Render" button in the menu bar for this pane
 
 # Additional Practice
 
-If you have time and want additional practice, try out the following exercises.
+Finish these exercises after the class!
 
 
 
