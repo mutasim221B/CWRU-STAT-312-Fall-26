@@ -536,7 +536,7 @@
     "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature",
     "title": "Unit 02.B: Intro to R and RStudio",
     "section": "Exercise 11: Exploring temperature",
-    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about high temperatures in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
+    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nIs this variable quantitative or categorical?\nCreate three appropriate visualizations, and compute appropriate numerical summaries.\nWhat do you learn about high temperatures in Perth?\n\n\n# Visualizations\n\n# Numerical summaries",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]
@@ -596,7 +596,7 @@
     "href": "activities/Unit-02B-Intro-R.html#exercise-11-exploring-temperature-1",
     "title": "Unit 02.B: Intro to R and RStudio",
     "section": "Exercise 11: Exploring temperature",
-    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
+    "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Density plot\nggplot(weather, aes(x = maxtemp)) +\n    geom_density()\n\n\n\n\n\n\n\n\n# Box plot\nggplot(weather, aes(x = maxtemp)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
     ]

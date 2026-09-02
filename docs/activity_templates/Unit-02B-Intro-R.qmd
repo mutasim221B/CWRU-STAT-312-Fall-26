@@ -638,11 +638,11 @@ The `raintoday` variable contains information about rainfall.
 The `maxtemp` variable contains information on the daily high temperature.
 
 -   Is this variable quantitative or categorical?
--   Create an appropriate visualization, and compute appropriate numerical summaries.
+-   Create three appropriate visualizations, and compute appropriate numerical summaries.
 -   What do you learn about high temperatures in Perth?
 
 ```{r}
-# Visualization
+# Visualizations
 
 # Numerical summaries
 
@@ -837,6 +837,14 @@ The `maxtemp` variable contains information on the daily high temperature.
 # Visualization
 ggplot(weather, aes(x = maxtemp)) + 
     geom_histogram()
+
+# Density plot
+ggplot(weather, aes(x = maxtemp)) +
+    geom_density()
+
+# Box plot
+ggplot(weather, aes(x = maxtemp)) +
+    geom_boxplot()
 
 # Numerical summaries
 summary(weather$maxtemp)
