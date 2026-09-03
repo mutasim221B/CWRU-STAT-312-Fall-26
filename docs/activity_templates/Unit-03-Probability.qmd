@@ -1,0 +1,65 @@
+---
+title: "Unit 03: Probability"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+    reference-doc: ../master-cwru.pptx
+    
+format-links: false
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+# Resources
+
+
+## Handouts {-}
+
+::: {.incremental}
+
+- Download the [Unit 03 Handout: Probability](/handout/Unit-03-Prob-Handout.pdf) before class and bring it with you.
+
+- I will continue to post additional handouts as we progress through the course. Please watch for **Canvas Announcements** when a new handout becomes available.
+
+- It is very important that you **bring the appropriate handout to class regularly**, either as a printed copy or on your writing device.
+
+:::
+
+
+
+
+## Practice Problems {-}
+
+::: {.incremental}
+
+- **Practice Problems (PP)** are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.
+
+- The **Unit 03 Practice Problems** are available under the **Practice Problems** tab on the course website. The solutions are provided in Canvas.
+
+- Complete the relevant Practice Problems as we progress through the unit.
+
+- Make sure you have completed and reviewed the Practice Problems **before attempting the corresponding HW assignment**.
+
+:::
+
+

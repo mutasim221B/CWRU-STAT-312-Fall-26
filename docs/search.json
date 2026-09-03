@@ -144,7 +144,7 @@
     "href": "pp.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "Solve practice problems (PP) throughout the unit as we cover the corresponding topics in class. These problems reinforce the concepts discussed in the lecture notes, handouts, and course resources. Before attempting the homework assignments and preparing for exams, make sure you have completed and reviewed all practice problems from the unit.\nYou don’t need to submit the PP. Once posted, the solutions will be available on Canvas (Files).\n\nUnit 02 PP"
+    "text": "Solve practice problems (PP) throughout the unit as we cover the corresponding topics in class. These problems reinforce the concepts discussed in the lecture notes, handouts, and course resources. Before attempting the homework assignments and preparing for exams, make sure you have completed and reviewed all practice problems from the unit.\nYou don’t need to submit the PP. Once posted, the solutions will be available on Canvas (Files).\n\nUnit 02 PP\nUnit 03 PP"
   },
   {
     "objectID": "assignments.html",
@@ -152,204 +152,6 @@
     "title": "HW Assignments",
     "section": "",
     "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!\nHW Assignments are due at 11:59 pm on Canvas in the due date\n…due at 11:59 pm Central on Moodle!\n\nHW Assignment 1, due 9/04"
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Syllabus",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Why should engineers study statistics?",
-    "text": "Why should engineers study statistics?",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "What is statistics?",
-    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Manufacturing bolts",
-    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Population and sample",
-    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Variability",
-    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Machines",
-    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Production speed",
-    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "How should we collect the data?",
-    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Sample Variance and Standard Deviation",
-    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Quiz 01",
-    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#installing-r-and-rstudio",
-    "href": "R_Resources.html#installing-r-and-rstudio",
-    "title": "R & RStudio Resource",
-    "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R & RStudio Resource",
-    "section": "Getting Help",
-    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
   },
   {
     "objectID": "activities/Unit-02B-Intro-R.html",
@@ -599,6 +401,234 @@
     "text": "Exercise 11: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Density plot\nggplot(weather, aes(x = maxtemp)) +\n    geom_density()\n\n\n\n\n\n\n\n\n# Box plot\nggplot(weather, aes(x = maxtemp)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
     "crumbs": [
       "Unit 02.B: Intro to R and RStudio"
+    ]
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#installing-r-and-rstudio",
+    "href": "R_Resources.html#installing-r-and-rstudio",
+    "title": "R & RStudio Resource",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R & RStudio Resource",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Syllabus",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Why should engineers study statistics?",
+    "text": "Why should engineers study statistics?",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "What is statistics?",
+    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Manufacturing bolts",
+    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Population and sample",
+    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Variability",
+    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Machines",
+    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Production speed",
+    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "How should we collect the data?",
+    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Sample Variance and Standard Deviation",
+    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html",
+    "href": "activities/Unit-03-Probability.html",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#handouts",
+    "href": "activities/Unit-03-Probability.html#handouts",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#practice-problems",
+    "href": "activities/Unit-03-Probability.html#practice-problems",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
     ]
   },
   {
