@@ -632,6 +632,46 @@
     ]
   },
   {
+    "objectID": "activities/Unit-03-Probability.html#class-notes",
+    "href": "activities/Unit-03-Probability.html#class-notes",
+    "title": "Unit 03: Probability",
+    "section": "Class Notes",
+    "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "title": "Unit 03: Probability",
+    "section": "Coin Toss Applet",
+    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Interpretation of Probability",
+    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Axioms of Probability",
+    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STAT 312. Basic Statistics for Engineering and Science",

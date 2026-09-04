@@ -63,3 +63,56 @@ knitr::opts_chunk$set(
 :::
 
 
+
+
+
+
+# Probability
+
+
+## Class Notes {-}
+
+- Live class lecture notes
+- I usually post the class notes on Canvas by the end of the day. If you don't see it, shoot me an email next day!
+
+
+## Coin Toss Applet {-}
+
+- [Rossman/Chance Coin Tossing Simulation](https://www.rossmanchance.com/applets/2021/oneprop/OneProp.htm)
+
+
+## Interpretation of Probability {-}
+
+::: {.incremental}
+
+
+- **Examples:**
+
+  - “The chance of getting 1 when rolling a die is $1/6 = 16.7\%$.”
+
+  - Meaning: If we roll a die many times under the same conditions, we would get 1 roughly $16.7\%$ of the time.
+
+  - “The chance that a light bulb lasts longer than 2 years is $72\%$.”
+
+  - Meaning: If we turn on many light bulbs under the same conditions, about $72\%$ of them would last longer than 2 years.
+
+:::
+
+
+## Axioms of Probability {-}
+
+::: {.incremental}
+
+- The axioms of probability are properties that we intuitively expect a probability to have.
+
+- All probability theory is built on these axioms.
+
+- The mathematical foundations of probability, including these axioms, were laid out by **Andrey Kolmogorov in 1933**.
+
+```{r echo = FALSE}
+knitr::include_graphics("../images/kolmogorov.png")
+```
+
+:::
+
+
