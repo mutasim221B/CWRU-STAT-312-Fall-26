@@ -1,10 +1,17 @@
 ---
 title: "STAT 312. Basic Statistics for Engineering and Science"
 subtitle: "Case Western Reserve University, Fall 2026"
-format: 
+
+format:
   html:
     embed-resources: true
     toc: true
+
+  pdf:
+    toc: true
+
+format-links:
+  - pdf
 ---
 
 -   **Section 103**: M/W/F 10:25-11:15am, White Building 411
@@ -200,9 +207,9 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 
 2. 📅 **Check the Course Schedule** in the course website for what is happening in class that day.
 
-3. 📝 **Go through the lecture and class notes on your own** & check the course resources posted in the course website. Also, be sure to review the related topics in the **textbooks**, as some details discussed in class may not appear in the class notes. For example, I may work through additional examples on the board or explain certain concepts verbally. **You are responsible for these materials as well, and usually they appear on quizzes, HW Assignments, or Exams.**
+3. 📝 **Go through the lecture notes (from course website activities), class notes, and solved handouts on your own** (I usually post the class notes and handouts by the evening of the class day). Also, be sure to review the related topics in the **textbooks**, as some details discussed in class may not appear in the class notes. For example, I may work through additional examples on the board or explain certain concepts verbally. **You are responsible for these materials as well, and usually they appear on quizzes, HW Assignments, or Exams.**
 
-4. 💬 **Ask any follow-up questions** on the Canvas Discussion forum or come to office hours (OH).
+4. 💬 After finishing all the steps mentioned above, **ask any follow-up questions** on the Canvas Discussion forum or come to office hours (OH).
 :::
 
 ## Artificial Intelligence (AI)
