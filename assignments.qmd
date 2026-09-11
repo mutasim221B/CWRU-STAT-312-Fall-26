@@ -13,3 +13,4 @@ Please review the [STAT 312 HW Assignment & Quiz policies ](https://docs.google.
 **...due at 11:59 pm Central on Moodle!**
 
 - [HW Assignment 1](assignments/HW-01.pdf), due 9/04
+- [HW Assignment 2](assignments/HW-02.pdf), due 9/18
