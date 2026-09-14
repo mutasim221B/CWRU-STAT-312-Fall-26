@@ -87,7 +87,7 @@ We have three wonderful **STAT 312 graders** this semester! Their primary role i
 
 The graders will follow grading guidelines established by the instructor to help ensure that student work is evaluated consistently and fairly. Please keep in mind that graders do not determine course policies, assignment requirements, grading schemes, or final course grades.
 
-If you have any questions or concerns about how your work was graded, please **contact me directly rather than contacting the graders**. I will review your question and, if necessary, communicate with the appropriate grader on your behalf. All questions regarding grading decisions, grading policies, regrade requests, or other assessment-related concerns should be directed to me.
+For questions related to grading, please contact the grader who graded that specific problem. For example, if a grader was responsible for Problem 1, please contact that grader only for questions about Problem 1. If your question involves a course policy, extension, accommodation, academic integrity concern, or another matter requiring an instructor-level decision, please contact me directly.
 
 In selecting and working with our graders, we emphasize **fairness, professionalism, kindness, and respect**. I expect the same from students in all interactions with them. Please respect the time, effort, and important contribution of our graders in supporting STAT 312 throughout the semester.
 
