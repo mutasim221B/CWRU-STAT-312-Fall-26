@@ -4067,9 +4067,20 @@ window.Quarto = {
   <li><a href="#handouts" id="toc-handouts" class="nav-link" data-scroll-target="#handouts">Handouts</a></li>
   <li><a href="#practice-problems" id="toc-practice-problems" class="nav-link" data-scroll-target="#practice-problems">Practice Problems</a></li>
   </ul></li>
-  <li><a href="#probability" id="toc-probability" class="nav-link" data-scroll-target="#probability">Probability</a>
+  <li><a href="#discrete-random-variable" id="toc-discrete-random-variable" class="nav-link" data-scroll-target="#discrete-random-variable">Discrete Random Variable</a>
   <ul class="collapse">
   <li><a href="#class-notes" id="toc-class-notes" class="nav-link" data-scroll-target="#class-notes">Class Notes</a></li>
+  <li><a href="#bernoulli-distribution" id="toc-bernoulli-distribution" class="nav-link" data-scroll-target="#bernoulli-distribution">Bernoulli Distribution</a>
+  <ul class="collapse">
+  <li><a href="#idea" id="toc-idea" class="nav-link" data-scroll-target="#idea">Idea</a></li>
+  <li><a href="#formula" id="toc-formula" class="nav-link" data-scroll-target="#formula">Formula</a></li>
+  <li><a href="#bernoulli-trials" id="toc-bernoulli-trials" class="nav-link" data-scroll-target="#bernoulli-trials">Bernoulli Trials</a></li>
+  <li><a href="#bernoulli-trials-example" id="toc-bernoulli-trials-example" class="nav-link" data-scroll-target="#bernoulli-trials-example">Bernoulli Trials: Example</a></li>
+  <li><a href="#bernoulli-trials-possible-outcomes" id="toc-bernoulli-trials-possible-outcomes" class="nav-link" data-scroll-target="#bernoulli-trials-possible-outcomes">Bernoulli Trials: Possible Outcomes</a></li>
+  <li><a href="#bernoulli-trials-probability-of-an-outcome" id="toc-bernoulli-trials-probability-of-an-outcome" class="nav-link" data-scroll-target="#bernoulli-trials-probability-of-an-outcome">Bernoulli Trials: Probability of an Outcome</a></li>
+  <li><a href="#bernoulli-trials-number-of-outcomes" id="toc-bernoulli-trials-number-of-outcomes" class="nav-link" data-scroll-target="#bernoulli-trials-number-of-outcomes">Bernoulli Trials: Number of Outcomes</a></li>
+  <li><a href="#bernoulli-trials-leading-to" id="toc-bernoulli-trials-leading-to" class="nav-link" data-scroll-target="#bernoulli-trials-leading-to">Bernoulli Trials Leading to ?</a></li>
+  </ul></li>
   <li><a href="#hypergeometric-distribution" id="toc-hypergeometric-distribution" class="nav-link" data-scroll-target="#hypergeometric-distribution">Hypergeometric Distribution</a></li>
   <li><a href="#hypergeometric-mean-and-variance" id="toc-hypergeometric-mean-and-variance" class="nav-link" data-scroll-target="#hypergeometric-mean-and-variance">Hypergeometric Mean and Variance</a></li>
   </ul></li>
@@ -4123,14 +4134,425 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="probability" class="level1">
-<h1>Probability</h1>
+<section id="discrete-random-variable" class="level1">
+<h1>Discrete Random Variable</h1>
 <section id="class-notes" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="class-notes">Class Notes</h2>
 <ul>
 <li>Live class lecture notes</li>
 <li>I usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!</li>
 </ul>
+</section>
+<section id="bernoulli-distribution" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="bernoulli-distribution">Bernoulli Distribution</h2>
+<section id="idea" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="idea">Idea</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>A <strong>Bernoulli experiment</strong> has exactly two possible outcomes.</p></li>
+<li><p>One outcome is called <strong>success</strong>, and the other is called <strong>failure</strong>.</p>
+<ul class="incremental">
+<li><p>For example, we can define “rolling a six” as a <strong>success</strong>.</p></li>
+<li><p>We can define “an item is defective” as a <strong>success</strong>.</p></li>
+</ul></li>
+<li><p>Let <span class="math inline">\(p\)</span> be the probability that the experiment results in a success.</p></li>
+<li><p>Define the discrete random variable</p></li>
+</ul>
+<p><span class="math display">\[
+X=
+\begin{cases}
+1, &amp; \text{if the experiment is a success},\\
+0, &amp; \text{if the experiment is a failure}.
+\end{cases}
+\]</span></p>
+<ul class="incremental">
+<li>Then</li>
+</ul>
+<p><span class="math display">\[
+P(X=1)=p
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+P(X=0)=1-p.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore, the probability mass function (PMF) of <span class="math inline">\(X\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+p(x)=
+\begin{cases}
+p, &amp; x=1,\\
+1-p, &amp; x=0.
+\end{cases}
+\]</span></p>
+</div>
+</section>
+<section id="formula" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="formula">Formula</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>A discrete random variable <span class="math inline">\(X\)</span> has the <strong>Bernoulli distribution</strong> with parameter <span class="math inline">\(p\)</span> (A parameter is a fixed number that describes or controls a probability distribution) if</li>
+</ul>
+<p><span class="math display">\[
+P(X=1)=p
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+P(X=0)=1-p.
+\]</span></p>
+<ul class="incremental">
+<li>The probability mass function (PMF) of <span class="math inline">\(X\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+p(x)=
+\begin{cases}
+p, &amp; x=1,\\
+1-p, &amp; x=0.
+\end{cases}
+\]</span></p>
+<ul class="incremental">
+<li>Equivalently,</li>
+</ul>
+<p><span class="math display">\[
+p(x)=p^x(1-p)^{1-x},
+\qquad x=0,1.
+\]</span></p>
+<ul class="incremental">
+<li><p>The parameter <span class="math inline">\(p\)</span> can be any number between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p></li>
+<li><p>The mean and variance are</p></li>
+</ul>
+<p><span class="math display">\[
+E(X)=p
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+V(X)=p(1-p).
+\]</span></p>
+</div>
+</section>
+<section id="bernoulli-trials" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials">Bernoulli Trials</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>A sequence of <strong>independent Bernoulli experiments</strong> with the same probability of success <span class="math inline">\(p\)</span> is called a sequence of <strong>Bernoulli trials</strong>.</p></li>
+<li><p><strong>Examples:</strong></p>
+<ul class="incremental">
+<li><p>Tossing a coin 10 times.</p></li>
+<li><p>Rolling a die 8 times and recording each time whether we get a six.</p></li>
+<li><p>Inspecting 50 manufactured items for defects.</p></li>
+</ul></li>
+<li><p>With Bernoulli trials, we are usually interested in the <strong>total number of successes</strong>.</p></li>
+<li><p>For example:</p>
+<ul class="incremental">
+<li><p>Out of 10 tosses, how many heads did we get?</p></li>
+<li><p>How many sixes did we get in 8 rolls of a die?</p></li>
+<li><p>Out of 50 manufactured items, how many are defective?</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="bernoulli-trials-example" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials-example">Bernoulli Trials: Example</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Suppose <span class="math inline">\(n=5\)</span> items are manufactured <strong>independently</strong> of each other.</p></li>
+<li><p>Define:</p>
+<ul class="incremental">
+<li><p><span class="math inline">\(B=\)</span> success (defect)</p></li>
+<li><p><span class="math inline">\(A=\)</span> failure (no defect)</p></li>
+</ul></li>
+<li><p>Suppose the probability of a defect is</p></li>
+</ul>
+<p><span class="math display">\[
+p=0.05.
+\]</span></p>
+<ul class="incremental">
+<li>Let</li>
+</ul>
+<p><span class="math display">\[
+X_i=
+\begin{cases}
+1, &amp; \text{if the }i\text{th item is defective},\\
+0, &amp; \text{otherwise}.
+\end{cases}
+\]</span></p>
+<ul class="incremental">
+<li>Let</li>
+</ul>
+<p><span class="math display">\[
+Y=\text{total number of defects}.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+Y=X_1+X_2+X_3+X_4+X_5.
+\]</span></p>
+<ul class="incremental">
+<li>The possible values of <span class="math inline">\(Y\)</span> are</li>
+</ul>
+<p><span class="math display">\[
+Y=\{0,1,2,3,4,5\}.
+\]</span></p>
+</div>
+</section>
+<section id="bernoulli-trials-possible-outcomes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials-possible-outcomes">Bernoulli Trials: Possible Outcomes</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>The table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of <span class="math inline">\(Y\)</span>.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;"><span class="math inline">\(Y\)</span></th>
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;"><span class="math inline">\(Y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">AAAAA</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">AAAAB</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BAAAA</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">BAAAB</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ABAAA</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">ABAAB</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BBAAA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">BBAAB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AABAA</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">AABAB</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BABAA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">BABAB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ABBAA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">ABBAB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BBBAA</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">BBBAB</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AAABA</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">AAABB</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BAABA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">BAABB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ABABA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">ABABB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BBABA</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">BBABB</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AABBA</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">AABBB</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BABBA</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">BABBB</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ABBBA</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">ABBBB</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BBBBA</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">BBBBB</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="bernoulli-trials-probability-of-an-outcome" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials-probability-of-an-outcome">Bernoulli Trials: Probability of an Outcome</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>The Bernoulli random variables <span class="math inline">\(X_i\)</span> are <strong>independent</strong>.</p></li>
+<li><p>Therefore, using basic probability rules we get,</p></li>
+</ul>
+<p><span class="math display">\[
+P(AABAB)
+=
+P(X_1=0 \text{ and } X_2=0 \text{ and } X_3=1 \text{ and } X_4=0 \text{ and } X_5=1)
+\]</span></p>
+<p><span class="math display">\[
+=
+P(X_1=0)
+P(X_2=0)
+P(X_3=1)
+P(X_4=0)
+P(X_5=1)
+\]</span></p>
+<p><span class="math display">\[
+=
+(0.95)(0.95)(0.05)(0.95)(0.05)
+\]</span></p>
+<p><span class="math display">\[
+=0.05^2(0.95)^3
+\]</span></p>
+<ul class="incremental">
+<li>Similarly,</li>
+</ul>
+<p><span class="math display">\[
+P(BAAAB)=0.05^2(0.95)^3.
+\]</span></p>
+<ul class="incremental">
+<li>Thus, the probability of <strong>each particular outcome containing exactly 2 defects</strong> is</li>
+</ul>
+<p><span class="math display">\[
+0.05^2(0.95)^3.
+\]</span></p>
+</div>
+</section>
+<section id="bernoulli-trials-number-of-outcomes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials-number-of-outcomes">Bernoulli Trials: Number of Outcomes</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>We want to find</li>
+</ul>
+<p><span class="math display">\[
+P(Y=2).
+\]</span></p>
+<ul class="incremental">
+<li>Each particular outcome containing exactly 2 defects has probability</li>
+</ul>
+<p><span class="math display">\[
+0.05^2(0.95)^3.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+P(Y=2)
+=
+(\text{number of outcomes with 2 defects})
+\times
+0.05^2(0.95)^3.
+\]</span></p>
+<ul class="incremental">
+<li>How many different outcomes of 5 items contain exactly 2 defects?</li>
+</ul>
+<p><span class="math display">\[
+\binom{5}{2}
+=
+\frac{5!}{2!3!}
+=
+10.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+P(Y=2)
+=
+\binom{5}{2}(0.05)^2(0.95)^3.
+\]</span></p>
+</div>
+</section>
+<section id="bernoulli-trials-leading-to" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bernoulli-trials-leading-to">Bernoulli Trials Leading to ?</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>We can group all possible outcomes of the Bernoulli trials according to the value of <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>The probability mass function of <span class="math inline">\(Y\)</span> is</p></li>
+</ul>
+<p><span class="math display">\[
+P(Y=0)
+=
+1(0.05)^0(0.95)^5,
+\]</span></p>
+<p><span class="math display">\[
+P(Y=1)
+=
+5(0.05)^1(0.95)^4,
+\]</span></p>
+<p><span class="math display">\[
+P(Y=2)
+=
+10(0.05)^2(0.95)^3,
+\]</span></p>
+<p><span class="math display">\[
+P(Y=3)
+=
+10(0.05)^3(0.95)^2,
+\]</span></p>
+<p><span class="math display">\[
+P(Y=4)
+=
+5(0.05)^4(0.95)^1,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+P(Y=5)
+=
+1(0.05)^5(0.95)^0.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore, the PMF of <span class="math inline">\(Y\)</span> can be written as</li>
+</ul>
+<p><span class="math display">\[
+P(Y=x)
+=
+\binom{5}{x}
+(0.05)^x
+(0.95)^{5-x},
+\qquad
+x=0,1,\ldots,5.
+\]</span></p>
+<ul class="incremental">
+<li>The distribution of <span class="math inline">\(Y\)</span> is called the <strong>Binomial distribution</strong>.</li>
+</ul>
+</div>
+</section>
 </section>
 <section id="hypergeometric-distribution" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="hypergeometric-distribution">Hypergeometric Distribution</h2>

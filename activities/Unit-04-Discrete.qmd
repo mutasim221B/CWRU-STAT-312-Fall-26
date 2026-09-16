@@ -67,7 +67,7 @@ knitr::opts_chunk$set(
 
 
 
-# Probability
+# Discrete Random Variable
 
 
 ## Class Notes {-}
@@ -75,6 +75,368 @@ knitr::opts_chunk$set(
 - Live class lecture notes
 - I usually post the class notes on Canvas by the end of the day. If you don't see it, shoot me an email next day!
 
+## Bernoulli Distribution {-}
+
+### Idea {-}
+
+::: {.incremental}
+
+- A **Bernoulli experiment** has exactly two possible outcomes.
+
+- One outcome is called **success**, and the other is called **failure**.
+
+  - For example, we can define “rolling a six” as a **success**.
+
+  - We can define “an item is defective” as a **success**.
+
+- Let $p$ be the probability that the experiment results in a success.
+
+- Define the discrete random variable
+
+$$
+X=
+\begin{cases}
+1, & \text{if the experiment is a success},\\
+0, & \text{if the experiment is a failure}.
+\end{cases}
+$$
+
+- Then
+
+$$
+P(X=1)=p
+$$
+
+and
+
+$$
+P(X=0)=1-p.
+$$
+
+- Therefore, the probability mass function (PMF) of $X$ is
+
+$$
+p(x)=
+\begin{cases}
+p, & x=1,\\
+1-p, & x=0.
+\end{cases}
+$$
+
+:::
+
+
+### Formula {-}
+
+::: {.incremental}
+
+- A discrete random variable $X$ has the **Bernoulli distribution** with parameter $p$ (A parameter is a fixed number that describes or controls a probability distribution) if
+
+$$
+P(X=1)=p
+$$
+
+and
+
+$$
+P(X=0)=1-p.
+$$
+
+- The probability mass function (PMF) of $X$ is
+
+$$
+p(x)=
+\begin{cases}
+p, & x=1,\\
+1-p, & x=0.
+\end{cases}
+$$
+
+- Equivalently,
+
+$$
+p(x)=p^x(1-p)^{1-x},
+\qquad x=0,1.
+$$
+
+- The parameter $p$ can be any number between $0$ and $1$.
+
+- The mean and variance are
+
+$$
+E(X)=p
+$$
+
+and
+
+$$
+V(X)=p(1-p).
+$$
+
+:::
+
+
+### Bernoulli Trials {-}
+
+::: {.incremental}
+
+- A sequence of **independent Bernoulli experiments** with the same probability of success $p$ is called a sequence of **Bernoulli trials**.
+
+- **Examples:**
+
+  - Tossing a coin 10 times.
+
+  - Rolling a die 8 times and recording each time whether we get a six.
+
+  - Inspecting 50 manufactured items for defects.
+
+- With Bernoulli trials, we are usually interested in the **total number of successes**.
+
+- For example:
+
+  - Out of 10 tosses, how many heads did we get?
+
+  - How many sixes did we get in 8 rolls of a die?
+
+  - Out of 50 manufactured items, how many are defective?
+
+:::
+
+
+### Bernoulli Trials: Example {-}
+
+::: {.incremental}
+
+- Suppose $n=5$ items are manufactured **independently** of each other.
+
+- Define:
+
+  - $B=$ success (defect)
+
+  - $A=$ failure (no defect)
+
+- Suppose the probability of a defect is
+
+$$
+p=0.05.
+$$
+
+- Let
+
+$$
+X_i=
+\begin{cases}
+1, & \text{if the }i\text{th item is defective},\\
+0, & \text{otherwise}.
+\end{cases}
+$$
+
+- Let
+
+$$
+Y=\text{total number of defects}.
+$$
+
+- Therefore,
+
+$$
+Y=X_1+X_2+X_3+X_4+X_5.
+$$
+
+- The possible values of $Y$ are
+
+$$
+Y=\{0,1,2,3,4,5\}.
+$$
+
+:::
+
+
+### Bernoulli Trials: Possible Outcomes {-}
+
+::: {.incremental}
+
+- The table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of $Y$.
+
+| Outcome | $Y$ | Outcome | $Y$ |
+|:-------:|:---:|:-------:|:---:|
+| AAAAA | 0 | AAAAB | 1 |
+| BAAAA | 1 | BAAAB | 2 |
+| ABAAA | 1 | ABAAB | 2 |
+| BBAAA | 2 | BBAAB | 3 |
+| AABAA | 1 | AABAB | 2 |
+| BABAA | 2 | BABAB | 3 |
+| ABBAA | 2 | ABBAB | 3 |
+| BBBAA | 3 | BBBAB | 4 |
+| AAABA | 1 | AAABB | 2 |
+| BAABA | 2 | BAABB | 3 |
+| ABABA | 2 | ABABB | 3 |
+| BBABA | 3 | BBABB | 4 |
+| AABBA | 2 | AABBB | 3 |
+| BABBA | 3 | BABBB | 4 |
+| ABBBA | 3 | ABBBB | 4 |
+| BBBBA | 4 | BBBBB | 5 |
+
+:::
+
+
+### Bernoulli Trials: Probability of an Outcome {-}
+
+::: {.incremental}
+
+- The Bernoulli random variables $X_i$ are **independent**.
+
+- Therefore, using basic probability rules we get,
+
+$$
+P(AABAB)
+=
+P(X_1=0 \text{ and } X_2=0 \text{ and } X_3=1 \text{ and } X_4=0 \text{ and } X_5=1)
+$$
+
+
+$$
+=
+P(X_1=0)
+P(X_2=0)
+P(X_3=1)
+P(X_4=0)
+P(X_5=1)
+$$
+
+
+$$
+=
+(0.95)(0.95)(0.05)(0.95)(0.05)
+$$
+
+$$
+=0.05^2(0.95)^3
+$$
+
+- Similarly,
+
+$$
+P(BAAAB)=0.05^2(0.95)^3.
+$$
+
+- Thus, the probability of **each particular outcome containing exactly 2 defects** is
+
+$$
+0.05^2(0.95)^3.
+$$
+
+:::
+
+
+### Bernoulli Trials: Number of Outcomes {-}
+
+::: {.incremental}
+
+- We want to find
+
+$$
+P(Y=2).
+$$
+
+- Each particular outcome containing exactly 2 defects has probability
+
+$$
+0.05^2(0.95)^3.
+$$
+
+- Therefore,
+
+$$
+P(Y=2)
+=
+(\text{number of outcomes with 2 defects})
+\times
+0.05^2(0.95)^3.
+$$
+
+- How many different outcomes of 5 items contain exactly 2 defects?
+
+$$
+\binom{5}{2}
+=
+\frac{5!}{2!3!}
+=
+10.
+$$
+
+- Therefore,
+
+$$
+P(Y=2)
+=
+\binom{5}{2}(0.05)^2(0.95)^3.
+$$
+
+:::
+
+
+### Bernoulli Trials Leading to ? {-}
+
+::: {.incremental}
+
+- We can group all possible outcomes of the Bernoulli trials according to the value of $Y$.
+
+- The probability mass function of $Y$ is
+
+$$
+P(Y=0)
+=
+1(0.05)^0(0.95)^5,
+$$
+
+$$
+P(Y=1)
+=
+5(0.05)^1(0.95)^4,
+$$
+
+$$
+P(Y=2)
+=
+10(0.05)^2(0.95)^3,
+$$
+
+$$
+P(Y=3)
+=
+10(0.05)^3(0.95)^2,
+$$
+
+$$
+P(Y=4)
+=
+5(0.05)^4(0.95)^1,
+$$
+
+and
+
+$$
+P(Y=5)
+=
+1(0.05)^5(0.95)^0.
+$$
+
+- Therefore, the PMF of $Y$ can be written as
+
+$$
+P(Y=x)
+=
+\binom{5}{x}
+(0.05)^x
+(0.95)^{5-x},
+\qquad
+x=0,1,\ldots,5.
+$$
+
+- The distribution of $Y$ is called the **Binomial distribution**.
+
+:::
 
 ## Hypergeometric Distribution {-}
 
