@@ -75,6 +75,300 @@ knitr::opts_chunk$set(
 - Live class lecture notes
 - I usually post the class notes on Canvas by the end of the day. If you don't see it, shoot me an email next day!
 
+
+## Proof: Expected Value of Linear Transformation {-}
+
+::: {.incremental}
+
+- Let $a$ and $b$ be constants.
+
+- We want to show that
+
+$$
+E(aX+b)=aE(X)+b.
+$$
+
+- Start from the definition of expected value:
+
+$$
+E(aX+b)
+=
+\sum (ax+b)p(x).
+$$
+
+- Distribute inside the summation:
+
+$$
+E(aX+b)
+=
+\sum axp(x)
++
+\sum bp(x).
+$$
+
+- Since $a$ and $b$ are constants, they can be taken outside the summations:
+
+$$
+E(aX+b)
+=
+a\sum xp(x)
++
+b\sum p(x).
+$$
+
+- Recall that
+
+$$
+\sum xp(x)=E(X)
+$$
+
+and
+
+$$
+\sum p(x)=1.
+$$
+
+- Therefore,
+
+$$
+E(aX+b)
+=
+aE(X)+b(1).
+$$
+
+- Hence,
+
+$$
+\boxed{
+E(aX+b)=aE(X)+b
+}
+$$
+
+:::
+
+## Variance of a Discrete Random Variable{-}
+
+::: {.incremental}
+
+- Recall that the variance of a discrete random variable $X$ is
+
+$$
+V(X)
+=
+\sum (x-\mu)^2 P(X=x).
+$$
+
+- Since
+
+$$
+P(X=x)=p(x),
+$$
+
+we can write
+
+$$
+V(X)
+=
+\sum (x-\mu)^2 p(x).
+$$
+
+- Expand the squared term:
+
+$$
+V(X)
+=
+\sum (x^2-2\mu x+\mu^2)p(x).
+$$
+
+- Distribute $f(x)$:
+
+$$
+V(X)
+=
+\sum x^2 p(x)
+-
+2\mu \sum x p(x)
++
+\mu^2 \sum p(x).
+$$
+
+- Recall that
+
+$$
+\sum x p(x)=E(X)=\mu
+$$
+
+and
+
+$$
+\sum p(x)=1.
+$$
+
+- Therefore,
+
+$$
+V(X)
+=
+\sum x^2 p(x)
+-
+2\mu(\mu)
++
+\mu^2(1).
+$$
+
+- Hence,
+
+$$
+V(X)
+=
+\sum x^2 p(x)-\mu^2.
+$$
+
+- Since
+
+$$
+E(X^2)=\sum x^2 p(x),
+$$
+
+we obtain the useful variance formula
+
+$$
+\boxed{
+V(X)=E(X^2)-[E(X)]^2
+}
+$$
+
+:::
+
+
+
+## Proof: Variance of a Linear Transformation {-}
+
+::: {.incremental}
+
+- We want to show that
+
+$$
+V(aX+b)=a^2V(X).
+$$
+
+- By the definition of variance,
+
+$$
+V(aX+b)
+=
+\sum
+\left[
+(ax+b)-E(aX+b)
+\right]^2
+p(x).
+$$
+
+- Using
+
+$$
+E(aX+b)=aE(X)+b,
+$$
+
+we get
+
+$$
+V(aX+b)
+=
+\sum
+\left[
+ax+b-aE(X)-b
+\right]^2
+p(x).
+$$
+
+- Simplifying,
+
+$$
+V(aX+b)
+=
+\sum
+\left[
+ax-aE(X)
+\right]^2
+p(x).
+$$
+
+- Factor out $a$:
+
+$$
+V(aX+b)
+=
+\sum
+\left[
+a(x-E(X))
+\right]^2
+p(x).
+$$
+
+- Therefore,
+
+$$
+V(aX+b)
+=
+\sum
+a^2
+\left[
+x-E(X)
+\right]^2
+p(x).
+$$
+
+- Since $a^2$ is a constant,
+
+$$
+V(aX+b)
+=
+a^2
+\sum
+\left[
+x-E(X)
+\right]^2
+p(x).
+$$
+
+- But
+
+$$
+\sum
+\left[
+x-E(X)
+\right]^2
+p(x)
+=
+V(X).
+$$
+
+- Hence,
+
+$$
+\boxed{
+V(aX+b)=a^2V(X)
+}
+$$
+
+- The other two properties are special cases:
+
+$$
+V(aX)=a^2V(X)
+$$
+
+when $b=0$, and
+
+$$
+V(X+b)=V(X)
+$$
+
+when $a=1$.
+
+:::
+
+
 ## Bernoulli Distribution {-}
 
 ### Idea {-}
@@ -296,7 +590,7 @@ $$
 
 
 $$
-=
+
 P(X_1=0)
 P(X_2=0)
 P(X_3=1)

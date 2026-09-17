@@ -4070,6 +4070,9 @@ window.Quarto = {
   <li><a href="#discrete-random-variable" id="toc-discrete-random-variable" class="nav-link" data-scroll-target="#discrete-random-variable">Discrete Random Variable</a>
   <ul class="collapse">
   <li><a href="#class-notes" id="toc-class-notes" class="nav-link" data-scroll-target="#class-notes">Class Notes</a></li>
+  <li><a href="#proof-expected-value-of-linear-transformation" id="toc-proof-expected-value-of-linear-transformation" class="nav-link" data-scroll-target="#proof-expected-value-of-linear-transformation">Proof: Expected Value of Linear Transformation</a></li>
+  <li><a href="#variance-of-a-discrete-random-variable" id="toc-variance-of-a-discrete-random-variable" class="nav-link" data-scroll-target="#variance-of-a-discrete-random-variable">Variance of a Discrete Random Variable</a></li>
+  <li><a href="#proof-variance-of-a-linear-transformation" id="toc-proof-variance-of-a-linear-transformation" class="nav-link" data-scroll-target="#proof-variance-of-a-linear-transformation">Proof: Variance of a Linear Transformation</a></li>
   <li><a href="#bernoulli-distribution" id="toc-bernoulli-distribution" class="nav-link" data-scroll-target="#bernoulli-distribution">Bernoulli Distribution</a>
   <ul class="collapse">
   <li><a href="#idea" id="toc-idea" class="nav-link" data-scroll-target="#idea">Idea</a></li>
@@ -4142,6 +4145,279 @@ window.Quarto = {
 <li>Live class lecture notes</li>
 <li>I usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!</li>
 </ul>
+</section>
+<section id="proof-expected-value-of-linear-transformation" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="proof-expected-value-of-linear-transformation">Proof: Expected Value of Linear Transformation</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be constants.</p></li>
+<li><p>We want to show that</p></li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)=aE(X)+b.
+\]</span></p>
+<ul class="incremental">
+<li>Start from the definition of expected value:</li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)
+=
+\sum (ax+b)p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Distribute inside the summation:</li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)
+=
+\sum axp(x)
++
+\sum bp(x).
+\]</span></p>
+<ul class="incremental">
+<li>Since <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, they can be taken outside the summations:</li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)
+=
+a\sum xp(x)
++
+b\sum p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Recall that</li>
+</ul>
+<p><span class="math display">\[
+\sum xp(x)=E(X)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum p(x)=1.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)
+=
+aE(X)+b(1).
+\]</span></p>
+<ul class="incremental">
+<li>Hence,</li>
+</ul>
+<p><span class="math display">\[
+\boxed{
+E(aX+b)=aE(X)+b
+}
+\]</span></p>
+</div>
+</section>
+<section id="variance-of-a-discrete-random-variable" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="variance-of-a-discrete-random-variable">Variance of a Discrete Random Variable</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Recall that the variance of a discrete random variable <span class="math inline">\(X\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+V(X)
+=
+\sum (x-\mu)^2 P(X=x).
+\]</span></p>
+<ul class="incremental">
+<li>Since</li>
+</ul>
+<p><span class="math display">\[
+P(X=x)=p(x),
+\]</span></p>
+<p>we can write</p>
+<p><span class="math display">\[
+V(X)
+=
+\sum (x-\mu)^2 p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Expand the squared term:</li>
+</ul>
+<p><span class="math display">\[
+V(X)
+=
+\sum (x^2-2\mu x+\mu^2)p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Distribute <span class="math inline">\(f(x)\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+V(X)
+=
+\sum x^2 p(x)
+-
+2\mu \sum x p(x)
++
+\mu^2 \sum p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Recall that</li>
+</ul>
+<p><span class="math display">\[
+\sum x p(x)=E(X)=\mu
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum p(x)=1.
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+V(X)
+=
+\sum x^2 p(x)
+-
+2\mu(\mu)
++
+\mu^2(1).
+\]</span></p>
+<ul class="incremental">
+<li>Hence,</li>
+</ul>
+<p><span class="math display">\[
+V(X)
+=
+\sum x^2 p(x)-\mu^2.
+\]</span></p>
+<ul class="incremental">
+<li>Since</li>
+</ul>
+<p><span class="math display">\[
+E(X^2)=\sum x^2 p(x),
+\]</span></p>
+<p>we obtain the useful variance formula</p>
+<p><span class="math display">\[
+\boxed{
+V(X)=E(X^2)-[E(X)]^2
+}
+\]</span></p>
+</div>
+</section>
+<section id="proof-variance-of-a-linear-transformation" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="proof-variance-of-a-linear-transformation">Proof: Variance of a Linear Transformation</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>We want to show that</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)=a^2V(X).
+\]</span></p>
+<ul class="incremental">
+<li>By the definition of variance,</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)
+=
+\sum
+\left[
+(ax+b)-E(aX+b)
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Using</li>
+</ul>
+<p><span class="math display">\[
+E(aX+b)=aE(X)+b,
+\]</span></p>
+<p>we get</p>
+<p><span class="math display">\[
+V(aX+b)
+=
+\sum
+\left[
+ax+b-aE(X)-b
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Simplifying,</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)
+=
+\sum
+\left[
+ax-aE(X)
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Factor out <span class="math inline">\(a\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)
+=
+\sum
+\left[
+a(x-E(X))
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Therefore,</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)
+=
+\sum
+a^2
+\left[
+x-E(X)
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>Since <span class="math inline">\(a^2\)</span> is a constant,</li>
+</ul>
+<p><span class="math display">\[
+V(aX+b)
+=
+a^2
+\sum
+\left[
+x-E(X)
+\right]^2
+p(x).
+\]</span></p>
+<ul class="incremental">
+<li>But</li>
+</ul>
+<p><span class="math display">\[
+\sum
+\left[
+x-E(X)
+\right]^2
+p(x)
+=
+V(X).
+\]</span></p>
+<ul class="incremental">
+<li>Hence,</li>
+</ul>
+<p><span class="math display">\[
+\boxed{
+V(aX+b)=a^2V(X)
+}
+\]</span></p>
+<ul class="incremental">
+<li>The other two properties are special cases:</li>
+</ul>
+<p><span class="math display">\[
+V(aX)=a^2V(X)
+\]</span></p>
+<p>when <span class="math inline">\(b=0\)</span>, and</p>
+<p><span class="math display">\[
+V(X+b)=V(X)
+\]</span></p>
+<p>when <span class="math inline">\(a=1\)</span>.</p>
+</div>
 </section>
 <section id="bernoulli-distribution" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="bernoulli-distribution">Bernoulli Distribution</h2>
@@ -4424,14 +4700,8 @@ P(AABAB)
 =
 P(X_1=0 \text{ and } X_2=0 \text{ and } X_3=1 \text{ and } X_4=0 \text{ and } X_5=1)
 \]</span></p>
-<p><span class="math display">\[
-=
-P(X_1=0)
-P(X_2=0)
-P(X_3=1)
-P(X_4=0)
-P(X_5=1)
-\]</span></p>
+<p>$$</p>
+<p>P(X_1=0) P(X_2=0) P(X_3=1) P(X_4=0) P(X_5=1) $$</p>
 <p><span class="math display">\[
 =
 (0.95)(0.95)(0.05)(0.95)(0.05)
