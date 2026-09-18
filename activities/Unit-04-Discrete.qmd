@@ -597,29 +597,13 @@ $$
 - Therefore, using basic probability rules we get,
 
 $$
+\begin{aligned}
 P(AABAB)
-=
-P(X_1=0 \text{ and } X_2=0 \text{ and } X_3=1 \text{ and } X_4=0 \text{ and } X_5=1)
-$$
-
-
-$$
-
-P(X_1=0)
-P(X_2=0)
-P(X_3=1)
-P(X_4=0)
-P(X_5=1)
-$$
-
-
-$$
-=
-(0.95)(0.95)(0.05)(0.95)(0.05)
-$$
-
-$$
-=0.05^2(0.95)^3
+&= P(X_1=0 \text{ and } X_2=0 \text{ and } X_3=1 \text{ and } X_4=0 \text{ and } X_5=1) \\
+&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\
+&= (0.95)(0.95)(0.05)(0.95)(0.05) \\
+&= 0.05^2(0.95)^3.
+\end{aligned}
 $$
 
 - Similarly,
