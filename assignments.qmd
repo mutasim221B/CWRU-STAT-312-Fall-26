@@ -14,3 +14,4 @@ Please review the [STAT 312 HW Assignment & Quiz policies ](https://docs.google.
 
 - [HW Assignment 1](assignments/HW-01.pdf), due 9/04
 - [HW Assignment 2](assignments/HW-02.pdf), due 9/18
+- [HW Assignment 3](assignments/HW-03.pdf), due 9/25
