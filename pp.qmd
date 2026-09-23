@@ -11,5 +11,6 @@ You don't need to submit the PP. Once posted, the solutions will be available on
 - [Unit 02:Descriptive PP](practice/unit02-pp.pdf)
 - [Unit 03:Probability PP](practice/Unit 03-PP.pdf)
 - [Unit 04:Discrete PP](practice/Unit04-PP.pdf)
+- [Unit 05:Continuous PP](practice/Unit05-PP.pdf)
 
 
