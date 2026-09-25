@@ -1,0 +1,941 @@
+---
+title: "Unit A: Joint Probability Distribution"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+    reference-doc: ../master-cwru.pptx
+    
+format-links: false
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+# Resources
+
+
+## Class Notes {-}
+
+::: {.incremental}
+
+- In-class live note taking!
+
+:::
+
+
+
+
+## Practice Problems {-}
+
+::: {.incremental}
+
+- **Practice Problems (PP)** are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.
+
+- The **Unit A Practice Problems** will be available under the **Practice Problems** tab on the course website soon. The solutions are provided in Canvas.
+
+- Complete the relevant Practice Problems as we progress through the unit.
+
+- Make sure you have completed and reviewed the Practice Problems **before attempting the corresponding HW assignment and/or the Exams**.
+
+:::
+
+
+## Independence of Discrete Random Variables using Conditional Probability {-}
+
+::: {.incremental}
+
+- Suppose $X$ and $Y$ are two discrete random variables.
+
+- Intuitively, $X$ and $Y$ are **independent** if knowing the value of one random variable does not change the probability distribution of the other.
+
+- Using conditional probabilities, $X$ and $Y$ are independent if
+
+$$
+p_{X|Y}(x|y)=p_X(x)
+$$
+
+for every $x$ and every $y$ such that $p_Y(y)>0$.
+
+- Similarly,
+
+$$
+p_{Y|X}(y|x)=p_Y(y)
+$$
+
+for every $y$ and every $x$ such that $p_X(x)>0$.
+
+- An equivalent, and often easier, condition is (class)
+
+$$
+\boxed{
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+}
+$$
+
+for **every possible pair $(x,y)$**.
+
+- In terms of events, independence means
+
+$$
+P(X\in A,\;Y\in B)
+=
+P(X\in A)P(Y\in B)
+$$
+
+for all possible sets $A$ and $B$.
+
+- **Important:**
+  - To show that $X$ and $Y$ are **not independent**, we only need to find **one case** where the independence condition fails.
+  - To establish independence, the condition must hold for **all possible values**.
+
+:::
+
+
+## Independence: Supermarket Example {-}
+
+::: {.incremental}
+
+- Recall the supermarket example:
+
+  - $X=$ number of customers who choose counter 1.
+  - $Y=$ number of customers who choose counter 2.
+
+- The joint PMF and marginal PMFs are
+
+| $X \backslash Y$ | $0$ | $1$ | $2$ | $p_X(x)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $0$ | $1/9$ | $2/9$ | $1/9$ | $4/9$ |
+| $1$ | $2/9$ | $2/9$ | $0$ | $4/9$ |
+| $2$ | $1/9$ | $0$ | $0$ | $1/9$ |
+| $p_Y(y)$ | $4/9$ | $4/9$ | $1/9$ | $1$ |
+
+- We want to determine whether $X$ and $Y$ are independent.
+
+- One way is to examine the conditional distribution of $X$ given a particular value of $Y$.
+
+- Suppose we know that
+
+$$
+Y=0.
+$$
+
+- Then
+
+$$
+p_Y(0)=\frac{4}{9}.
+$$
+
+:::
+
+
+## Independence: Conditional Distribution {-}
+
+::: {.incremental}
+
+- Using
+
+$$
+p_{X|Y}(x|0)
+=
+\frac{p_{X,Y}(x,0)}{p_Y(0)},
+$$
+
+we get
+
+$$
+p_{X|Y}(0|0)
+=
+\frac{1/9}{4/9}
+=
+\frac14,
+$$
+
+$$
+p_{X|Y}(1|0)
+=
+\frac{2/9}{4/9}
+=
+\frac12,
+$$
+
+and
+
+$$
+p_{X|Y}(2|0)
+=
+\frac{1/9}{4/9}
+=
+\frac14.
+$$
+
+- Therefore, given $Y=0$, the conditional distribution of $X$ is
+
+$$
+\left(
+\frac14,\frac12,\frac14
+\right).
+$$
+
+- But the marginal distribution of $X$ is
+
+$$
+\left(
+\frac49,\frac49,\frac19
+\right).
+$$
+
+- For example,
+
+$$
+p_{X|Y}(0|0)=\frac14
+\neq
+\frac49=p_X(0).
+$$
+
+- Therefore,
+
+$$
+\boxed{X \text{ and } Y \text{ are not independent.}}
+$$
+
+- Knowing the value of $Y$ changes the probability distribution of $X$.
+
+:::
+
+
+## Independence: A Faster Check {-}
+
+::: {.incremental}
+
+- We can reach the same conclusion more quickly using
+
+$$
+p_{X,Y}(x,y)=p_X(x)p_Y(y).
+$$
+
+- Consider
+
+$$
+X=2,\qquad Y=2.
+$$
+
+- From the joint PMF,
+
+$$
+p_{X,Y}(2,2)=0.
+$$
+
+- However,
+
+$$
+p_X(2)p_Y(2)
+=
+\left(\frac19\right)
+\left(\frac19\right)
+=
+\frac{1}{81}.
+$$
+
+- Therefore,
+
+$$
+p_{X,Y}(2,2)
+\neq
+p_X(2)p_Y(2).
+$$
+
+- Since the independence condition fails for even one pair,
+
+$$
+\boxed{X \text{ and } Y \text{ are dependent.}}
+$$
+
+- This also makes intuitive sense.
+
+- If $Y=2$, then **both customers chose counter 2**.
+
+- Therefore, it is impossible for either customer to have chosen counter 1, so
+
+$$
+X=0.
+$$
+
+- Thus, knowing $Y$ tells us something about $X$.
+
+:::
+
+
+## Independence: Another Example {-}
+
+::: {.incremental}
+
+- Suppose $X$ and $Y$ have the following joint PMF:
+
+| $X \backslash Y$ | $1$ | $2$ | $3$ | $p_X(x)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $1$ | $1/16$ | $1/8$ | $1/16$ | $1/4$ |
+| $2$ | $3/16$ | $3/8$ | $3/16$ | $3/4$ |
+| $p_Y(y)$ | $1/4$ | $1/2$ | $1/4$ | $1$ |
+
+- We want to determine whether $X$ and $Y$ are independent.
+
+- The easiest way is to check whether
+
+$$
+p_{X,Y}(x,y)
+=
+p_X(x)p_Y(y)
+$$
+
+for every possible pair $(x,y)$.
+
+:::
+
+
+## Independence: Checking the Joint PMF {-}
+
+::: {.incremental}
+
+- For $X=1$,
+
+$$
+p_X(1)p_Y(1)
+=
+\left(\frac14\right)
+\left(\frac14\right)
+=
+\frac{1}{16}
+=
+p_{X,Y}(1,1),
+$$
+
+$$
+p_X(1)p_Y(2)
+=
+\left(\frac14\right)
+\left(\frac12\right)
+=
+\frac18
+=
+p_{X,Y}(1,2),
+$$
+
+and
+
+$$
+p_X(1)p_Y(3)
+=
+\left(\frac14\right)
+\left(\frac14\right)
+=
+\frac{1}{16}
+=
+p_{X,Y}(1,3).
+$$
+
+- For $X=2$,
+
+$$
+p_X(2)p_Y(1)
+=
+\left(\frac34\right)
+\left(\frac14\right)
+=
+\frac{3}{16}
+=
+p_{X,Y}(2,1),
+$$
+
+$$
+p_X(2)p_Y(2)
+=
+\left(\frac34\right)
+\left(\frac12\right)
+=
+\frac38
+=
+p_{X,Y}(2,2),
+$$
+
+and
+
+$$
+p_X(2)p_Y(3)
+=
+\left(\frac34\right)
+\left(\frac14\right)
+=
+\frac{3}{16}
+=
+p_{X,Y}(2,3).
+$$
+
+- The relationship
+
+$$
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+$$
+
+holds for **every possible pair $(x,y)$**.
+
+- Therefore,
+
+$$
+\boxed{X \text{ and } Y \text{ are independent.}}
+$$
+
+:::
+
+
+## Independence: Conditional Interpretation {-}
+
+::: {.incremental}
+
+- We can also see the meaning of independence using conditional probabilities.
+
+- Suppose we are told that
+
+$$
+Y=1.
+$$
+
+- Since
+
+$$
+p_Y(1)=\frac14,
+$$
+
+we have
+
+$$
+p_{X|Y}(1|1)
+=
+\frac{p_{X,Y}(1,1)}{p_Y(1)}
+=
+\frac{1/16}{1/4}
+=
+\frac14.
+$$
+
+- But
+
+$$
+p_X(1)=\frac14.
+$$
+
+- Similarly,
+
+$$
+p_{X|Y}(2|1)
+=
+\frac{3/16}{1/4}
+=
+\frac34
+=
+p_X(2).
+$$
+
+- Thus, knowing that $Y=1$ does **not change the distribution of $X$**.
+
+- This is the intuitive meaning of independence.
+
+- We already established independence by verifying
+
+$$
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+$$
+
+for every possible pair.
+
+:::
+
+
+## Independence: Events {-}
+
+::: {.incremental}
+
+- Independence also applies to events involving $X$ and $Y$.
+
+- Consider the events
+
+$$
+A=\{X>1\}
+$$
+
+and
+
+$$
+B=\{Y<3\}.
+$$
+
+- First,
+
+$$
+P(X>1,\;Y<3)
+=
+p_{X,Y}(2,1)+p_{X,Y}(2,2).
+$$
+
+- Therefore,
+
+$$
+P(X>1,\;Y<3)
+=
+\frac{3}{16}+\frac38
+=
+\frac{9}{16}.
+$$
+
+- Also,
+
+$$
+P(X>1)=p_X(2)=\frac34,
+$$
+
+and
+
+$$
+P(Y<3)
+=
+p_Y(1)+p_Y(2)
+=
+\frac14+\frac12
+=
+\frac34.
+$$
+
+- Therefore,
+
+$$
+P(X>1)P(Y<3)
+=
+\left(\frac34\right)
+\left(\frac34\right)
+=
+\frac{9}{16}.
+$$
+
+- Hence,
+
+$$
+P(X>1,\;Y<3)
+=
+P(X>1)P(Y<3).
+$$
+
+- This is consistent with the fact that $X$ and $Y$ are independent.
+
+- **Remember:** checking only one pair of events is not enough by itself to establish independence. Independence requires the relationship to hold for all relevant values or events.
+
+:::
+
+
+## Expected Value of a Function of Two Random Variables {-}
+
+::: {.incremental}
+
+- Let $X$ and $Y$ be two discrete random variables with joint PMF
+
+$$
+p(x,y)=P(X=x,\;Y=y).
+$$
+
+- If $g(X,Y)$ is a function of $X$ and $Y$, then
+
+$$
+\boxed{
+E[g(X,Y)]
+=
+\sum_x \sum_y g(x,y)p(x,y)
+}
+$$
+
+- In words, multiply each possible value of $g(x,y)$ by the probability associated with $(x,y)$, and then add over all possible pairs.
+
+- A particularly important case is
+
+$$
+g(X,Y)=XY.
+$$
+
+- Therefore,
+
+$$
+\boxed{
+E(XY)
+=
+\sum_x\sum_y xy\,p(x,y)
+}
+$$
+
+:::
+
+
+## Expected Values: Supermarket Example {-}
+
+::: {.incremental}
+
+- Recall the supermarket example:
+
+  - $X=$ number of customers who choose counter 1.
+  - $Y=$ number of customers who choose counter 2.
+
+- The joint PMF and marginal PMFs are
+
+| $X \backslash Y$ | $0$ | $1$ | $2$ | $p_X(x)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $0$ | $1/9$ | $2/9$ | $1/9$ | $4/9$ |
+| $1$ | $2/9$ | $2/9$ | $0$ | $4/9$ |
+| $2$ | $1/9$ | $0$ | $0$ | $1/9$ |
+| $p_Y(y)$ | $4/9$ | $4/9$ | $1/9$ | $1$ |
+
+- First, find
+
+$$
+E(XY).
+$$
+
+- Using
+
+$$
+E(XY)=\sum_x\sum_y xy\,p(x,y),
+$$
+
+we examine each possible pair $(x,y)$.
+
+- Whenever $x=0$ or $y=0$, the product $xy=0$.
+
+- Also,
+
+$$
+p(1,2)=p(2,1)=p(2,2)=0.
+$$
+
+- Therefore, the only nonzero contribution comes from
+
+$$
+(X,Y)=(1,1).
+$$
+
+:::
+
+
+## Expected Values: Calculating $E(XY)$ {-}
+
+::: {.incremental}
+
+- Thus,
+
+$$
+\begin{aligned}
+E(XY)
+&=
+(0)(0)\frac19
++(0)(1)\frac29
++(0)(2)\frac19 \\
+&\quad
++(1)(0)\frac29
++(1)(1)\frac29
++(1)(2)(0) \\
+&\quad
++(2)(0)\frac19
++(2)(1)(0)
++(2)(2)(0).
+\end{aligned}
+$$
+
+- Therefore,
+
+$$
+E(XY)
+=
+(1)(1)\left(\frac29\right)
+=
+\boxed{\frac29}.
+$$
+
+:::
+
+
+## Expected Values: Calculating $E(X)$ {-}
+
+::: {.incremental}
+
+- We can calculate $E(X)$ directly from the **marginal PMF of $X$**.
+
+- Recall
+
+$$
+p_X(0)=\frac49,
+\qquad
+p_X(1)=\frac49,
+\qquad
+p_X(2)=\frac19.
+$$
+
+- Therefore,
+
+$$
+\begin{aligned}
+E(X)
+&=
+\sum_x x\,p_X(x)\\
+&=
+0\left(\frac49\right)
++
+1\left(\frac49\right)
++
+2\left(\frac19\right)\\
+&=
+\frac69
+=
+\boxed{\frac23}.
+\end{aligned}
+$$
+
+- By symmetry,
+
+$$
+E(Y)=\frac23.
+$$
+
+- We could also calculate $E(X)$ from the joint PMF:
+
+$$
+E(X)
+=
+\sum_x\sum_y x\,p(x,y),
+$$
+
+but using the marginal PMF is usually simpler.
+
+:::
+
+
+## Properties of Expected Values {-}
+
+::: {.incremental}
+
+- **Property 1: Expected value of a constant**
+
+- If $c$ is a constant, then
+
+$$
+\boxed{
+E(c)=c.
+}
+$$
+
+- A constant does not vary, so its average value is simply the constant itself.
+
+- **Property 2: Multiplying by a constant**
+
+- Let $g(X,Y)$ be any function of the random variables $X$ and $Y$, and let $c$ be a constant.
+
+- Then
+
+$$
+\boxed{
+E[c\,g(X,Y)]
+=
+cE[g(X,Y)].
+}
+$$
+
+- The constant can be taken outside the expected value.
+
+:::
+
+
+## Properties of Expected Values: Example {-}
+
+::: {.incremental}
+
+- From the supermarket example, we found
+
+$$
+E(XY)=\frac29.
+$$
+
+- Find
+
+$$
+E(4XY).
+$$
+
+- Using
+
+$$
+E[c\,g(X,Y)]
+=
+cE[g(X,Y)],
+$$
+
+we obtain
+
+$$
+\begin{aligned}
+E(4XY)
+&=
+4E(XY)\\
+&=
+4\left(\frac29\right)\\
+&=
+\boxed{\frac89}.
+\end{aligned}
+$$
+
+- We do **not** need to calculate the entire sum again.
+
+:::
+
+
+## Expected Values and Independence {-}
+
+::: {.incremental}
+
+- Suppose $X$ and $Y$ are **independent** random variables.
+
+- Let $g$ be a function of $X$ and $h$ be a function of $Y$.
+
+- Then
+
+$$
+\boxed{
+E[g(X)h(Y)]
+=
+E[g(X)]E[h(Y)].
+}
+$$
+
+- A particularly important special case occurs when
+
+$$
+g(X)=X
+\qquad\text{and}\qquad
+h(Y)=Y.
+$$
+
+- Therefore, if $X$ and $Y$ are independent,
+
+$$
+\boxed{
+E(XY)=E(X)E(Y).
+}
+$$
+
+:::
+
+
+## Expected Values and Independence: Important Note {-}
+
+::: {.incremental}
+
+- Independence gives us the implication
+
+$$
+X\text{ and }Y\text{ independent}
+\quad\Longrightarrow\quad
+E(XY)=E(X)E(Y).
+$$
+
+- Therefore, if we find that
+
+$$
+E(XY)\neq E(X)E(Y),
+$$
+
+then $X$ and $Y$ **cannot be independent**.
+
+- However, the reverse is not generally true.
+
+- It is possible for
+
+$$
+E(XY)=E(X)E(Y)
+$$
+
+even when $X$ and $Y$ are **not independent**.
+
+- Therefore,
+
+$$
+E(XY)=E(X)E(Y)
+$$
+
+by itself is **not enough to prove independence**.
+
+:::
+
+
+## Expected Values and Independence: Supermarket Example {-}
+
+::: {.incremental}
+
+- For the supermarket example, we found
+
+$$
+E(XY)=\frac29.
+$$
+
+- We also found
+
+$$
+E(X)=E(Y)=\frac23.
+$$
+
+- Therefore,
+
+$$
+E(X)E(Y)
+=
+\left(\frac23\right)
+\left(\frac23\right)
+=
+\frac49.
+$$
+
+- But
+
+$$
+\frac29
+\neq
+\frac49.
+$$
+
+- Hence,
+
+$$
+E(XY)\neq E(X)E(Y).
+$$
+
+- Therefore,
+
+$$
+\boxed{
+X\text{ and }Y\text{ are not independent.}
+}
+$$
+
+- This agrees with what we already found from the joint PMF and conditional probabilities.
+
+:::

@@ -54,7 +54,7 @@ knitr::opts_chunk$set(
 
 - **Practice Problems (PP)** are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.
 
-- The **Unit 03 Practice Problems** are available under the **Practice Problems** tab on the course website. The solutions are provided in Canvas.
+- The **Unit 04 Practice Problems** are available under the **Practice Problems** tab on the course website. The solutions are provided in Canvas.
 
 - Complete the relevant Practice Problems as we progress through the unit.
 

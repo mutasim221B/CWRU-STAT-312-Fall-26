@@ -42,6 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
+          - "activities/Unit-A-Joint.qmd"
           - "activities/Unit-04-Discrete.qmd"
           - "activities/Unit-03-Probability.qmd"
           - "activities/Unit-02B-Intro-R.qmd"

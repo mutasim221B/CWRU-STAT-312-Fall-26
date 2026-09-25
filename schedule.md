@@ -5,7 +5,7 @@ editor:
 
 # Course Schedule {.unnumbered}
 
-UPDATE: The schedule below is simply an example from Alicia's Fall 2025 TR sections.
+UPDATE: The schedule below is simply an example from Bill's Fall 2025 TR sections.
 
 
 \

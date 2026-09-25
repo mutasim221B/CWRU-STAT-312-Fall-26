@@ -154,272 +154,114 @@
     "text": "Please review the STAT 312 HW Assignment & Quiz policies document before proceeding!\nHW Assignments are due at 11:59 pm on Canvas in the due date\n…due at 11:59 pm Central on Moodle!\n\nHW Assignment 1, due 9/04\nHW Assignment 2, due 9/18\nHW Assignment 3, due 9/25"
   },
   {
-    "objectID": "activities/Unit-03-Probability.html",
-    "href": "activities/Unit-03-Probability.html",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html",
+    "href": "activities/Unit-04-Discrete.html",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#handouts",
-    "href": "activities/Unit-03-Probability.html#handouts",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#handouts",
+    "href": "activities/Unit-04-Discrete.html#handouts",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#practice-problems",
-    "href": "activities/Unit-03-Probability.html#practice-problems",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
+    "href": "activities/Unit-04-Discrete.html#practice-problems",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#class-notes",
-    "href": "activities/Unit-03-Probability.html#class-notes",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#class-notes",
+    "href": "activities/Unit-04-Discrete.html#class-notes",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "title": "Unit 03: Probability",
-    "section": "Coin Toss Applet",
-    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
+    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Expected Value of Linear Transformation",
+    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Interpretation of Probability",
-    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
+    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Variance of a Discrete Random Variable",
+    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Axioms of Probability",
-    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
+    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Variance of a Linear Transformation",
+    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
+    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Simulating Roulette!",
+    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
     "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
+    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Bernoulli Distribution",
+    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
     "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Distribution",
+    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
     "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Mean and Variance",
+    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
     "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
+      "Unit 04: Discrete Random Variable"
     ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Syllabus",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Why should engineers study statistics?",
-    "text": "Why should engineers study statistics?",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "What is statistics?",
-    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Manufacturing bolts",
-    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Population and sample",
-    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Variability",
-    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Machines",
-    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Production speed",
-    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "How should we collect the data?",
-    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Sample Variance and Standard Deviation",
-    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Quiz 01",
-    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#installing-r-and-rstudio",
-    "href": "R_Resources.html#installing-r-and-rstudio",
-    "title": "R & RStudio Resource",
-    "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R & RStudio Resource",
-    "section": "Getting Help",
-    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
   },
   {
     "objectID": "activities/Unit-02B-Intro-R.html",
@@ -672,113 +514,471 @@
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html",
-    "href": "activities/Unit-04-Discrete.html",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R & RStudio Resource",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#installing-r-and-rstudio",
+    "href": "R_Resources.html#installing-r-and-rstudio",
+    "title": "R & RStudio Resource",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R & RStudio Resource",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#handouts",
-    "href": "activities/Unit-04-Discrete.html#handouts",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
-    "href": "activities/Unit-04-Discrete.html#practice-problems",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Syllabus",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Why should engineers study statistics?",
+    "text": "Why should engineers study statistics?",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "What is statistics?",
+    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Manufacturing bolts",
+    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Population and sample",
+    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Variability",
+    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Machines",
+    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Production speed",
+    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "How should we collect the data?",
+    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Sample Variance and Standard Deviation",
+    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html",
+    "href": "activities/Unit-03-Probability.html",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#handouts",
+    "href": "activities/Unit-03-Probability.html#handouts",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#practice-problems",
+    "href": "activities/Unit-03-Probability.html#practice-problems",
+    "title": "Unit 03: Probability",
     "section": "",
     "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#class-notes",
-    "href": "activities/Unit-04-Discrete.html#class-notes",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-03-Probability.html#class-notes",
+    "href": "activities/Unit-03-Probability.html#class-notes",
+    "title": "Unit 03: Probability",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Expected Value of Linear Transformation",
-    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "title": "Unit 03: Probability",
+    "section": "Coin Toss Applet",
+    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Variance of a Discrete Random Variable",
-    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Interpretation of Probability",
+    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Variance of a Linear Transformation",
-    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
+    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Axioms of Probability",
+    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Simulating Roulette!",
-    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
+    "objectID": "activities/Unit-A-Joint.html",
+    "href": "activities/Unit-A-Joint.html",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "In-class live note taking!\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit A Practice Problems will be available under the Practice Problems tab on the course website soon. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment and/or the Exams.\n\n\n\n\n\n\n\nSuppose \\(X\\) and \\(Y\\) are two discrete random variables.\nIntuitively, \\(X\\) and \\(Y\\) are independent if knowing the value of one random variable does not change the probability distribution of the other.\nUsing conditional probabilities, \\(X\\) and \\(Y\\) are independent if\n\n\\[\np_{X|Y}(x|y)=p_X(x)\n\\]\nfor every \\(x\\) and every \\(y\\) such that \\(p_Y(y)&gt;0\\).\n\nSimilarly,\n\n\\[\np_{Y|X}(y|x)=p_Y(y)\n\\]\nfor every \\(y\\) and every \\(x\\) such that \\(p_X(x)&gt;0\\).\n\nAn equivalent, and often easier, condition is (class)\n\n\\[\n\\boxed{\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n}\n\\]\nfor every possible pair \\((x,y)\\).\n\nIn terms of events, independence means\n\n\\[\nP(X\\in A,\\;Y\\in B)\n=\nP(X\\in A)P(Y\\in B)\n\\]\nfor all possible sets \\(A\\) and \\(B\\).\n\nImportant:\n\nTo show that \\(X\\) and \\(Y\\) are not independent, we only need to find one case where the independence condition fails.\nTo establish independence, the condition must hold for all possible values.\n\n\n\n\n\n\n\n\nRecall the supermarket example:\n\n\\(X=\\) number of customers who choose counter 1.\n\\(Y=\\) number of customers who choose counter 2.\n\nThe joint PMF and marginal PMFs are\n\n\n\n\n\\(X \\backslash Y\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(0\\)\n\\(1/9\\)\n\\(2/9\\)\n\\(1/9\\)\n\\(4/9\\)\n\n\n\\(1\\)\n\\(2/9\\)\n\\(2/9\\)\n\\(0\\)\n\\(4/9\\)\n\n\n\\(2\\)\n\\(1/9\\)\n\\(0\\)\n\\(0\\)\n\\(1/9\\)\n\n\n\\(p_Y(y)\\)\n\\(4/9\\)\n\\(4/9\\)\n\\(1/9\\)\n\\(1\\)\n\n\n\n\nWe want to determine whether \\(X\\) and \\(Y\\) are independent.\nOne way is to examine the conditional distribution of \\(X\\) given a particular value of \\(Y\\).\nSuppose we know that\n\n\\[\nY=0.\n\\]\n\nThen\n\n\\[\np_Y(0)=\\frac{4}{9}.\n\\]\n\n\n\n\n\n\nUsing\n\n\\[\np_{X|Y}(x|0)\n=\n\\frac{p_{X,Y}(x,0)}{p_Y(0)},\n\\]\nwe get\n\\[\np_{X|Y}(0|0)\n=\n\\frac{1/9}{4/9}\n=\n\\frac14,\n\\]\n\\[\np_{X|Y}(1|0)\n=\n\\frac{2/9}{4/9}\n=\n\\frac12,\n\\]\nand\n\\[\np_{X|Y}(2|0)\n=\n\\frac{1/9}{4/9}\n=\n\\frac14.\n\\]\n\nTherefore, given \\(Y=0\\), the conditional distribution of \\(X\\) is\n\n\\[\n\\left(\n\\frac14,\\frac12,\\frac14\n\\right).\n\\]\n\nBut the marginal distribution of \\(X\\) is\n\n\\[\n\\left(\n\\frac49,\\frac49,\\frac19\n\\right).\n\\]\n\nFor example,\n\n\\[\np_{X|Y}(0|0)=\\frac14\n\\neq\n\\frac49=p_X(0).\n\\]\n\nTherefore,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are not independent.}}\n\\]\n\nKnowing the value of \\(Y\\) changes the probability distribution of \\(X\\).\n\n\n\n\n\n\n\nWe can reach the same conclusion more quickly using\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y).\n\\]\n\nConsider\n\n\\[\nX=2,\\qquad Y=2.\n\\]\n\nFrom the joint PMF,\n\n\\[\np_{X,Y}(2,2)=0.\n\\]\n\nHowever,\n\n\\[\np_X(2)p_Y(2)\n=\n\\left(\\frac19\\right)\n\\left(\\frac19\\right)\n=\n\\frac{1}{81}.\n\\]\n\nTherefore,\n\n\\[\np_{X,Y}(2,2)\n\\neq\np_X(2)p_Y(2).\n\\]\n\nSince the independence condition fails for even one pair,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are dependent.}}\n\\]\n\nThis also makes intuitive sense.\nIf \\(Y=2\\), then both customers chose counter 2.\nTherefore, it is impossible for either customer to have chosen counter 1, so\n\n\\[\nX=0.\n\\]\n\nThus, knowing \\(Y\\) tells us something about \\(X\\).\n\n\n\n\n\n\n\nSuppose \\(X\\) and \\(Y\\) have the following joint PMF:\n\n\n\n\n\\(X \\backslash Y\\)\n\\(1\\)\n\\(2\\)\n\\(3\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(1\\)\n\\(1/16\\)\n\\(1/8\\)\n\\(1/16\\)\n\\(1/4\\)\n\n\n\\(2\\)\n\\(3/16\\)\n\\(3/8\\)\n\\(3/16\\)\n\\(3/4\\)\n\n\n\\(p_Y(y)\\)\n\\(1/4\\)\n\\(1/2\\)\n\\(1/4\\)\n\\(1\\)\n\n\n\n\nWe want to determine whether \\(X\\) and \\(Y\\) are independent.\nThe easiest way is to check whether\n\n\\[\np_{X,Y}(x,y)\n=\np_X(x)p_Y(y)\n\\]\nfor every possible pair \\((x,y)\\).\n\n\n\n\n\n\nFor \\(X=1\\),\n\n\\[\np_X(1)p_Y(1)\n=\n\\left(\\frac14\\right)\n\\left(\\frac14\\right)\n=\n\\frac{1}{16}\n=\np_{X,Y}(1,1),\n\\]\n\\[\np_X(1)p_Y(2)\n=\n\\left(\\frac14\\right)\n\\left(\\frac12\\right)\n=\n\\frac18\n=\np_{X,Y}(1,2),\n\\]\nand\n\\[\np_X(1)p_Y(3)\n=\n\\left(\\frac14\\right)\n\\left(\\frac14\\right)\n=\n\\frac{1}{16}\n=\np_{X,Y}(1,3).\n\\]\n\nFor \\(X=2\\),\n\n\\[\np_X(2)p_Y(1)\n=\n\\left(\\frac34\\right)\n\\left(\\frac14\\right)\n=\n\\frac{3}{16}\n=\np_{X,Y}(2,1),\n\\]\n\\[\np_X(2)p_Y(2)\n=\n\\left(\\frac34\\right)\n\\left(\\frac12\\right)\n=\n\\frac38\n=\np_{X,Y}(2,2),\n\\]\nand\n\\[\np_X(2)p_Y(3)\n=\n\\left(\\frac34\\right)\n\\left(\\frac14\\right)\n=\n\\frac{3}{16}\n=\np_{X,Y}(2,3).\n\\]\n\nThe relationship\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n\\]\nholds for every possible pair \\((x,y)\\).\n\nTherefore,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are independent.}}\n\\]\n\n\n\n\n\n\nWe can also see the meaning of independence using conditional probabilities.\nSuppose we are told that\n\n\\[\nY=1.\n\\]\n\nSince\n\n\\[\np_Y(1)=\\frac14,\n\\]\nwe have\n\\[\np_{X|Y}(1|1)\n=\n\\frac{p_{X,Y}(1,1)}{p_Y(1)}\n=\n\\frac{1/16}{1/4}\n=\n\\frac14.\n\\]\n\nBut\n\n\\[\np_X(1)=\\frac14.\n\\]\n\nSimilarly,\n\n\\[\np_{X|Y}(2|1)\n=\n\\frac{3/16}{1/4}\n=\n\\frac34\n=\np_X(2).\n\\]\n\nThus, knowing that \\(Y=1\\) does not change the distribution of \\(X\\).\nThis is the intuitive meaning of independence.\nWe already established independence by verifying\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n\\]\nfor every possible pair.\n\n\n\n\n\n\nIndependence also applies to events involving \\(X\\) and \\(Y\\).\nConsider the events\n\n\\[\nA=\\{X&gt;1\\}\n\\]\nand\n\\[\nB=\\{Y&lt;3\\}.\n\\]\n\nFirst,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\np_{X,Y}(2,1)+p_{X,Y}(2,2).\n\\]\n\nTherefore,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\n\\frac{3}{16}+\\frac38\n=\n\\frac{9}{16}.\n\\]\n\nAlso,\n\n\\[\nP(X&gt;1)=p_X(2)=\\frac34,\n\\]\nand\n\\[\nP(Y&lt;3)\n=\np_Y(1)+p_Y(2)\n=\n\\frac14+\\frac12\n=\n\\frac34.\n\\]\n\nTherefore,\n\n\\[\nP(X&gt;1)P(Y&lt;3)\n=\n\\left(\\frac34\\right)\n\\left(\\frac34\\right)\n=\n\\frac{9}{16}.\n\\]\n\nHence,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\nP(X&gt;1)P(Y&lt;3).\n\\]\n\nThis is consistent with the fact that \\(X\\) and \\(Y\\) are independent.\nRemember: checking only one pair of events is not enough by itself to establish independence. Independence requires the relationship to hold for all relevant values or events.\n\n\n\n\n\n\n\nLet \\(X\\) and \\(Y\\) be two discrete random variables with joint PMF\n\n\\[\np(x,y)=P(X=x,\\;Y=y).\n\\]\n\nIf \\(g(X,Y)\\) is a function of \\(X\\) and \\(Y\\), then\n\n\\[\n\\boxed{\nE[g(X,Y)]\n=\n\\sum_x \\sum_y g(x,y)p(x,y)\n}\n\\]\n\nIn words, multiply each possible value of \\(g(x,y)\\) by the probability associated with \\((x,y)\\), and then add over all possible pairs.\nA particularly important case is\n\n\\[\ng(X,Y)=XY.\n\\]\n\nTherefore,\n\n\\[\n\\boxed{\nE(XY)\n=\n\\sum_x\\sum_y xy\\,p(x,y)\n}\n\\]\n\n\n\n\n\n\nRecall the supermarket example:\n\n\\(X=\\) number of customers who choose counter 1.\n\\(Y=\\) number of customers who choose counter 2.\n\nThe joint PMF and marginal PMFs are\n\n\n\n\n\\(X \\backslash Y\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(0\\)\n\\(1/9\\)\n\\(2/9\\)\n\\(1/9\\)\n\\(4/9\\)\n\n\n\\(1\\)\n\\(2/9\\)\n\\(2/9\\)\n\\(0\\)\n\\(4/9\\)\n\n\n\\(2\\)\n\\(1/9\\)\n\\(0\\)\n\\(0\\)\n\\(1/9\\)\n\n\n\\(p_Y(y)\\)\n\\(4/9\\)\n\\(4/9\\)\n\\(1/9\\)\n\\(1\\)\n\n\n\n\nFirst, find\n\n\\[\nE(XY).\n\\]\n\nUsing\n\n\\[\nE(XY)=\\sum_x\\sum_y xy\\,p(x,y),\n\\]\nwe examine each possible pair \\((x,y)\\).\n\nWhenever \\(x=0\\) or \\(y=0\\), the product \\(xy=0\\).\nAlso,\n\n\\[\np(1,2)=p(2,1)=p(2,2)=0.\n\\]\n\nTherefore, the only nonzero contribution comes from\n\n\\[\n(X,Y)=(1,1).\n\\]\n\n\n\n\n\n\nThus,\n\n\\[\n\\begin{aligned}\nE(XY)\n&=\n(0)(0)\\frac19\n+(0)(1)\\frac29\n+(0)(2)\\frac19 \\\\\n&\\quad\n+(1)(0)\\frac29\n+(1)(1)\\frac29\n+(1)(2)(0) \\\\\n&\\quad\n+(2)(0)\\frac19\n+(2)(1)(0)\n+(2)(2)(0).\n\\end{aligned}\n\\]\n\nTherefore,\n\n\\[\nE(XY)\n=\n(1)(1)\\left(\\frac29\\right)\n=\n\\boxed{\\frac29}.\n\\]\n\n\n\n\n\n\nWe can calculate \\(E(X)\\) directly from the marginal PMF of \\(X\\).\nRecall\n\n\\[\np_X(0)=\\frac49,\n\\qquad\np_X(1)=\\frac49,\n\\qquad\np_X(2)=\\frac19.\n\\]\n\nTherefore,\n\n\\[\n\\begin{aligned}\nE(X)\n&=\n\\sum_x x\\,p_X(x)\\\\\n&=\n0\\left(\\frac49\\right)\n+\n1\\left(\\frac49\\right)\n+\n2\\left(\\frac19\\right)\\\\\n&=\n\\frac69\n=\n\\boxed{\\frac23}.\n\\end{aligned}\n\\]\n\nBy symmetry,\n\n\\[\nE(Y)=\\frac23.\n\\]\n\nWe could also calculate \\(E(X)\\) from the joint PMF:\n\n\\[\nE(X)\n=\n\\sum_x\\sum_y x\\,p(x,y),\n\\]\nbut using the marginal PMF is usually simpler.\n\n\n\n\n\n\nProperty 1: Expected value of a constant\nIf \\(c\\) is a constant, then\n\n\\[\n\\boxed{\nE(c)=c.\n}\n\\]\n\nA constant does not vary, so its average value is simply the constant itself.\nProperty 2: Multiplying by a constant\nLet \\(g(X,Y)\\) be any function of the random variables \\(X\\) and \\(Y\\), and let \\(c\\) be a constant.\nThen\n\n\\[\n\\boxed{\nE[c\\,g(X,Y)]\n=\ncE[g(X,Y)].\n}\n\\]\n\nThe constant can be taken outside the expected value.\n\n\n\n\n\n\n\nFrom the supermarket example, we found\n\n\\[\nE(XY)=\\frac29.\n\\]\n\nFind\n\n\\[\nE(4XY).\n\\]\n\nUsing\n\n\\[\nE[c\\,g(X,Y)]\n=\ncE[g(X,Y)],\n\\]\nwe obtain\n\\[\n\\begin{aligned}\nE(4XY)\n&=\n4E(XY)\\\\\n&=\n4\\left(\\frac29\\right)\\\\\n&=\n\\boxed{\\frac89}.\n\\end{aligned}\n\\]\n\nWe do not need to calculate the entire sum again.\n\n\n\n\n\n\n\nSuppose \\(X\\) and \\(Y\\) are independent random variables.\nLet \\(g\\) be a function of \\(X\\) and \\(h\\) be a function of \\(Y\\).\nThen\n\n\\[\n\\boxed{\nE[g(X)h(Y)]\n=\nE[g(X)]E[h(Y)].\n}\n\\]\n\nA particularly important special case occurs when\n\n\\[\ng(X)=X\n\\qquad\\text{and}\\qquad\nh(Y)=Y.\n\\]\n\nTherefore, if \\(X\\) and \\(Y\\) are independent,\n\n\\[\n\\boxed{\nE(XY)=E(X)E(Y).\n}\n\\]\n\n\n\n\n\n\nIndependence gives us the implication\n\n\\[\nX\\text{ and }Y\\text{ independent}\n\\quad\\Longrightarrow\\quad\nE(XY)=E(X)E(Y).\n\\]\n\nTherefore, if we find that\n\n\\[\nE(XY)\\neq E(X)E(Y),\n\\]\nthen \\(X\\) and \\(Y\\) cannot be independent.\n\nHowever, the reverse is not generally true.\nIt is possible for\n\n\\[\nE(XY)=E(X)E(Y)\n\\]\neven when \\(X\\) and \\(Y\\) are not independent.\n\nTherefore,\n\n\\[\nE(XY)=E(X)E(Y)\n\\]\nby itself is not enough to prove independence.\n\n\n\n\n\n\nFor the supermarket example, we found\n\n\\[\nE(XY)=\\frac29.\n\\]\n\nWe also found\n\n\\[\nE(X)=E(Y)=\\frac23.\n\\]\n\nTherefore,\n\n\\[\nE(X)E(Y)\n=\n\\left(\\frac23\\right)\n\\left(\\frac23\\right)\n=\n\\frac49.\n\\]\n\nBut\n\n\\[\n\\frac29\n\\neq\n\\frac49.\n\\]\n\nHence,\n\n\\[\nE(XY)\\neq E(X)E(Y).\n\\]\n\nTherefore,\n\n\\[\n\\boxed{\nX\\text{ and }Y\\text{ are not independent.}\n}\n\\]\n\nThis agrees with what we already found from the joint PMF and conditional probabilities.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit A: Joint Probability Distribution"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Bernoulli Distribution",
-    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
+    "objectID": "activities/Unit-A-Joint.html#class-notes",
+    "href": "activities/Unit-A-Joint.html#class-notes",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "In-class live note taking!",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit A: Joint Probability Distribution"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Distribution",
-    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
+    "objectID": "activities/Unit-A-Joint.html#practice-problems",
+    "href": "activities/Unit-A-Joint.html#practice-problems",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit A Practice Problems will be available under the Practice Problems tab on the course website soon. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment and/or the Exams.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit A: Joint Probability Distribution"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Mean and Variance",
-    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
+    "objectID": "activities/Unit-A-Joint.html#independence-of-discrete-random-variables-using-conditional-probability",
+    "href": "activities/Unit-A-Joint.html#independence-of-discrete-random-variables-using-conditional-probability",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Suppose \\(X\\) and \\(Y\\) are two discrete random variables.\nIntuitively, \\(X\\) and \\(Y\\) are independent if knowing the value of one random variable does not change the probability distribution of the other.\nUsing conditional probabilities, \\(X\\) and \\(Y\\) are independent if\n\n\\[\np_{X|Y}(x|y)=p_X(x)\n\\]\nfor every \\(x\\) and every \\(y\\) such that \\(p_Y(y)&gt;0\\).\n\nSimilarly,\n\n\\[\np_{Y|X}(y|x)=p_Y(y)\n\\]\nfor every \\(y\\) and every \\(x\\) such that \\(p_X(x)&gt;0\\).\n\nAn equivalent, and often easier, condition is (class)\n\n\\[\n\\boxed{\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n}\n\\]\nfor every possible pair \\((x,y)\\).\n\nIn terms of events, independence means\n\n\\[\nP(X\\in A,\\;Y\\in B)\n=\nP(X\\in A)P(Y\\in B)\n\\]\nfor all possible sets \\(A\\) and \\(B\\).\n\nImportant:\n\nTo show that \\(X\\) and \\(Y\\) are not independent, we only need to find one case where the independence condition fails.\nTo establish independence, the condition must hold for all possible values.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-supermarket-example",
+    "href": "activities/Unit-A-Joint.html#independence-supermarket-example",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Recall the supermarket example:\n\n\\(X=\\) number of customers who choose counter 1.\n\\(Y=\\) number of customers who choose counter 2.\n\nThe joint PMF and marginal PMFs are\n\n\n\n\n\\(X \\backslash Y\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(0\\)\n\\(1/9\\)\n\\(2/9\\)\n\\(1/9\\)\n\\(4/9\\)\n\n\n\\(1\\)\n\\(2/9\\)\n\\(2/9\\)\n\\(0\\)\n\\(4/9\\)\n\n\n\\(2\\)\n\\(1/9\\)\n\\(0\\)\n\\(0\\)\n\\(1/9\\)\n\n\n\\(p_Y(y)\\)\n\\(4/9\\)\n\\(4/9\\)\n\\(1/9\\)\n\\(1\\)\n\n\n\n\nWe want to determine whether \\(X\\) and \\(Y\\) are independent.\nOne way is to examine the conditional distribution of \\(X\\) given a particular value of \\(Y\\).\nSuppose we know that\n\n\\[\nY=0.\n\\]\n\nThen\n\n\\[\np_Y(0)=\\frac{4}{9}.\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-conditional-distribution",
+    "href": "activities/Unit-A-Joint.html#independence-conditional-distribution",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Using\n\n\\[\np_{X|Y}(x|0)\n=\n\\frac{p_{X,Y}(x,0)}{p_Y(0)},\n\\]\nwe get\n\\[\np_{X|Y}(0|0)\n=\n\\frac{1/9}{4/9}\n=\n\\frac14,\n\\]\n\\[\np_{X|Y}(1|0)\n=\n\\frac{2/9}{4/9}\n=\n\\frac12,\n\\]\nand\n\\[\np_{X|Y}(2|0)\n=\n\\frac{1/9}{4/9}\n=\n\\frac14.\n\\]\n\nTherefore, given \\(Y=0\\), the conditional distribution of \\(X\\) is\n\n\\[\n\\left(\n\\frac14,\\frac12,\\frac14\n\\right).\n\\]\n\nBut the marginal distribution of \\(X\\) is\n\n\\[\n\\left(\n\\frac49,\\frac49,\\frac19\n\\right).\n\\]\n\nFor example,\n\n\\[\np_{X|Y}(0|0)=\\frac14\n\\neq\n\\frac49=p_X(0).\n\\]\n\nTherefore,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are not independent.}}\n\\]\n\nKnowing the value of \\(Y\\) changes the probability distribution of \\(X\\).",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-a-faster-check",
+    "href": "activities/Unit-A-Joint.html#independence-a-faster-check",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "We can reach the same conclusion more quickly using\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y).\n\\]\n\nConsider\n\n\\[\nX=2,\\qquad Y=2.\n\\]\n\nFrom the joint PMF,\n\n\\[\np_{X,Y}(2,2)=0.\n\\]\n\nHowever,\n\n\\[\np_X(2)p_Y(2)\n=\n\\left(\\frac19\\right)\n\\left(\\frac19\\right)\n=\n\\frac{1}{81}.\n\\]\n\nTherefore,\n\n\\[\np_{X,Y}(2,2)\n\\neq\np_X(2)p_Y(2).\n\\]\n\nSince the independence condition fails for even one pair,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are dependent.}}\n\\]\n\nThis also makes intuitive sense.\nIf \\(Y=2\\), then both customers chose counter 2.\nTherefore, it is impossible for either customer to have chosen counter 1, so\n\n\\[\nX=0.\n\\]\n\nThus, knowing \\(Y\\) tells us something about \\(X\\).",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-another-example",
+    "href": "activities/Unit-A-Joint.html#independence-another-example",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Suppose \\(X\\) and \\(Y\\) have the following joint PMF:\n\n\n\n\n\\(X \\backslash Y\\)\n\\(1\\)\n\\(2\\)\n\\(3\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(1\\)\n\\(1/16\\)\n\\(1/8\\)\n\\(1/16\\)\n\\(1/4\\)\n\n\n\\(2\\)\n\\(3/16\\)\n\\(3/8\\)\n\\(3/16\\)\n\\(3/4\\)\n\n\n\\(p_Y(y)\\)\n\\(1/4\\)\n\\(1/2\\)\n\\(1/4\\)\n\\(1\\)\n\n\n\n\nWe want to determine whether \\(X\\) and \\(Y\\) are independent.\nThe easiest way is to check whether\n\n\\[\np_{X,Y}(x,y)\n=\np_X(x)p_Y(y)\n\\]\nfor every possible pair \\((x,y)\\).",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-checking-the-joint-pmf",
+    "href": "activities/Unit-A-Joint.html#independence-checking-the-joint-pmf",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "For \\(X=1\\),\n\n\\[\np_X(1)p_Y(1)\n=\n\\left(\\frac14\\right)\n\\left(\\frac14\\right)\n=\n\\frac{1}{16}\n=\np_{X,Y}(1,1),\n\\]\n\\[\np_X(1)p_Y(2)\n=\n\\left(\\frac14\\right)\n\\left(\\frac12\\right)\n=\n\\frac18\n=\np_{X,Y}(1,2),\n\\]\nand\n\\[\np_X(1)p_Y(3)\n=\n\\left(\\frac14\\right)\n\\left(\\frac14\\right)\n=\n\\frac{1}{16}\n=\np_{X,Y}(1,3).\n\\]\n\nFor \\(X=2\\),\n\n\\[\np_X(2)p_Y(1)\n=\n\\left(\\frac34\\right)\n\\left(\\frac14\\right)\n=\n\\frac{3}{16}\n=\np_{X,Y}(2,1),\n\\]\n\\[\np_X(2)p_Y(2)\n=\n\\left(\\frac34\\right)\n\\left(\\frac12\\right)\n=\n\\frac38\n=\np_{X,Y}(2,2),\n\\]\nand\n\\[\np_X(2)p_Y(3)\n=\n\\left(\\frac34\\right)\n\\left(\\frac14\\right)\n=\n\\frac{3}{16}\n=\np_{X,Y}(2,3).\n\\]\n\nThe relationship\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n\\]\nholds for every possible pair \\((x,y)\\).\n\nTherefore,\n\n\\[\n\\boxed{X \\text{ and } Y \\text{ are independent.}}\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-conditional-interpretation",
+    "href": "activities/Unit-A-Joint.html#independence-conditional-interpretation",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "We can also see the meaning of independence using conditional probabilities.\nSuppose we are told that\n\n\\[\nY=1.\n\\]\n\nSince\n\n\\[\np_Y(1)=\\frac14,\n\\]\nwe have\n\\[\np_{X|Y}(1|1)\n=\n\\frac{p_{X,Y}(1,1)}{p_Y(1)}\n=\n\\frac{1/16}{1/4}\n=\n\\frac14.\n\\]\n\nBut\n\n\\[\np_X(1)=\\frac14.\n\\]\n\nSimilarly,\n\n\\[\np_{X|Y}(2|1)\n=\n\\frac{3/16}{1/4}\n=\n\\frac34\n=\np_X(2).\n\\]\n\nThus, knowing that \\(Y=1\\) does not change the distribution of \\(X\\).\nThis is the intuitive meaning of independence.\nWe already established independence by verifying\n\n\\[\np_{X,Y}(x,y)=p_X(x)p_Y(y)\n\\]\nfor every possible pair.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#independence-events",
+    "href": "activities/Unit-A-Joint.html#independence-events",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Independence also applies to events involving \\(X\\) and \\(Y\\).\nConsider the events\n\n\\[\nA=\\{X&gt;1\\}\n\\]\nand\n\\[\nB=\\{Y&lt;3\\}.\n\\]\n\nFirst,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\np_{X,Y}(2,1)+p_{X,Y}(2,2).\n\\]\n\nTherefore,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\n\\frac{3}{16}+\\frac38\n=\n\\frac{9}{16}.\n\\]\n\nAlso,\n\n\\[\nP(X&gt;1)=p_X(2)=\\frac34,\n\\]\nand\n\\[\nP(Y&lt;3)\n=\np_Y(1)+p_Y(2)\n=\n\\frac14+\\frac12\n=\n\\frac34.\n\\]\n\nTherefore,\n\n\\[\nP(X&gt;1)P(Y&lt;3)\n=\n\\left(\\frac34\\right)\n\\left(\\frac34\\right)\n=\n\\frac{9}{16}.\n\\]\n\nHence,\n\n\\[\nP(X&gt;1,\\;Y&lt;3)\n=\nP(X&gt;1)P(Y&lt;3).\n\\]\n\nThis is consistent with the fact that \\(X\\) and \\(Y\\) are independent.\nRemember: checking only one pair of events is not enough by itself to establish independence. Independence requires the relationship to hold for all relevant values or events.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-value-of-a-function-of-two-random-variables",
+    "href": "activities/Unit-A-Joint.html#expected-value-of-a-function-of-two-random-variables",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Let \\(X\\) and \\(Y\\) be two discrete random variables with joint PMF\n\n\\[\np(x,y)=P(X=x,\\;Y=y).\n\\]\n\nIf \\(g(X,Y)\\) is a function of \\(X\\) and \\(Y\\), then\n\n\\[\n\\boxed{\nE[g(X,Y)]\n=\n\\sum_x \\sum_y g(x,y)p(x,y)\n}\n\\]\n\nIn words, multiply each possible value of \\(g(x,y)\\) by the probability associated with \\((x,y)\\), and then add over all possible pairs.\nA particularly important case is\n\n\\[\ng(X,Y)=XY.\n\\]\n\nTherefore,\n\n\\[\n\\boxed{\nE(XY)\n=\n\\sum_x\\sum_y xy\\,p(x,y)\n}\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-supermarket-example",
+    "href": "activities/Unit-A-Joint.html#expected-values-supermarket-example",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Recall the supermarket example:\n\n\\(X=\\) number of customers who choose counter 1.\n\\(Y=\\) number of customers who choose counter 2.\n\nThe joint PMF and marginal PMFs are\n\n\n\n\n\\(X \\backslash Y\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(0\\)\n\\(1/9\\)\n\\(2/9\\)\n\\(1/9\\)\n\\(4/9\\)\n\n\n\\(1\\)\n\\(2/9\\)\n\\(2/9\\)\n\\(0\\)\n\\(4/9\\)\n\n\n\\(2\\)\n\\(1/9\\)\n\\(0\\)\n\\(0\\)\n\\(1/9\\)\n\n\n\\(p_Y(y)\\)\n\\(4/9\\)\n\\(4/9\\)\n\\(1/9\\)\n\\(1\\)\n\n\n\n\nFirst, find\n\n\\[\nE(XY).\n\\]\n\nUsing\n\n\\[\nE(XY)=\\sum_x\\sum_y xy\\,p(x,y),\n\\]\nwe examine each possible pair \\((x,y)\\).\n\nWhenever \\(x=0\\) or \\(y=0\\), the product \\(xy=0\\).\nAlso,\n\n\\[\np(1,2)=p(2,1)=p(2,2)=0.\n\\]\n\nTherefore, the only nonzero contribution comes from\n\n\\[\n(X,Y)=(1,1).\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-calculating-exy",
+    "href": "activities/Unit-A-Joint.html#expected-values-calculating-exy",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Thus,\n\n\\[\n\\begin{aligned}\nE(XY)\n&=\n(0)(0)\\frac19\n+(0)(1)\\frac29\n+(0)(2)\\frac19 \\\\\n&\\quad\n+(1)(0)\\frac29\n+(1)(1)\\frac29\n+(1)(2)(0) \\\\\n&\\quad\n+(2)(0)\\frac19\n+(2)(1)(0)\n+(2)(2)(0).\n\\end{aligned}\n\\]\n\nTherefore,\n\n\\[\nE(XY)\n=\n(1)(1)\\left(\\frac29\\right)\n=\n\\boxed{\\frac29}.\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-calculating-ex",
+    "href": "activities/Unit-A-Joint.html#expected-values-calculating-ex",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "We can calculate \\(E(X)\\) directly from the marginal PMF of \\(X\\).\nRecall\n\n\\[\np_X(0)=\\frac49,\n\\qquad\np_X(1)=\\frac49,\n\\qquad\np_X(2)=\\frac19.\n\\]\n\nTherefore,\n\n\\[\n\\begin{aligned}\nE(X)\n&=\n\\sum_x x\\,p_X(x)\\\\\n&=\n0\\left(\\frac49\\right)\n+\n1\\left(\\frac49\\right)\n+\n2\\left(\\frac19\\right)\\\\\n&=\n\\frac69\n=\n\\boxed{\\frac23}.\n\\end{aligned}\n\\]\n\nBy symmetry,\n\n\\[\nE(Y)=\\frac23.\n\\]\n\nWe could also calculate \\(E(X)\\) from the joint PMF:\n\n\\[\nE(X)\n=\n\\sum_x\\sum_y x\\,p(x,y),\n\\]\nbut using the marginal PMF is usually simpler.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#properties-of-expected-values",
+    "href": "activities/Unit-A-Joint.html#properties-of-expected-values",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Property 1: Expected value of a constant\nIf \\(c\\) is a constant, then\n\n\\[\n\\boxed{\nE(c)=c.\n}\n\\]\n\nA constant does not vary, so its average value is simply the constant itself.\nProperty 2: Multiplying by a constant\nLet \\(g(X,Y)\\) be any function of the random variables \\(X\\) and \\(Y\\), and let \\(c\\) be a constant.\nThen\n\n\\[\n\\boxed{\nE[c\\,g(X,Y)]\n=\ncE[g(X,Y)].\n}\n\\]\n\nThe constant can be taken outside the expected value.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#properties-of-expected-values-example",
+    "href": "activities/Unit-A-Joint.html#properties-of-expected-values-example",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "From the supermarket example, we found\n\n\\[\nE(XY)=\\frac29.\n\\]\n\nFind\n\n\\[\nE(4XY).\n\\]\n\nUsing\n\n\\[\nE[c\\,g(X,Y)]\n=\ncE[g(X,Y)],\n\\]\nwe obtain\n\\[\n\\begin{aligned}\nE(4XY)\n&=\n4E(XY)\\\\\n&=\n4\\left(\\frac29\\right)\\\\\n&=\n\\boxed{\\frac89}.\n\\end{aligned}\n\\]\n\nWe do not need to calculate the entire sum again.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-and-independence",
+    "href": "activities/Unit-A-Joint.html#expected-values-and-independence",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Suppose \\(X\\) and \\(Y\\) are independent random variables.\nLet \\(g\\) be a function of \\(X\\) and \\(h\\) be a function of \\(Y\\).\nThen\n\n\\[\n\\boxed{\nE[g(X)h(Y)]\n=\nE[g(X)]E[h(Y)].\n}\n\\]\n\nA particularly important special case occurs when\n\n\\[\ng(X)=X\n\\qquad\\text{and}\\qquad\nh(Y)=Y.\n\\]\n\nTherefore, if \\(X\\) and \\(Y\\) are independent,\n\n\\[\n\\boxed{\nE(XY)=E(X)E(Y).\n}\n\\]",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-and-independence-important-note",
+    "href": "activities/Unit-A-Joint.html#expected-values-and-independence-important-note",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "Independence gives us the implication\n\n\\[\nX\\text{ and }Y\\text{ independent}\n\\quad\\Longrightarrow\\quad\nE(XY)=E(X)E(Y).\n\\]\n\nTherefore, if we find that\n\n\\[\nE(XY)\\neq E(X)E(Y),\n\\]\nthen \\(X\\) and \\(Y\\) cannot be independent.\n\nHowever, the reverse is not generally true.\nIt is possible for\n\n\\[\nE(XY)=E(X)E(Y)\n\\]\neven when \\(X\\) and \\(Y\\) are not independent.\n\nTherefore,\n\n\\[\nE(XY)=E(X)E(Y)\n\\]\nby itself is not enough to prove independence.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-A-Joint.html#expected-values-and-independence-supermarket-example",
+    "href": "activities/Unit-A-Joint.html#expected-values-and-independence-supermarket-example",
+    "title": "Unit A: Joint Probability Distribution",
+    "section": "",
+    "text": "For the supermarket example, we found\n\n\\[\nE(XY)=\\frac29.\n\\]\n\nWe also found\n\n\\[\nE(X)=E(Y)=\\frac23.\n\\]\n\nTherefore,\n\n\\[\nE(X)E(Y)\n=\n\\left(\\frac23\\right)\n\\left(\\frac23\\right)\n=\n\\frac49.\n\\]\n\nBut\n\n\\[\n\\frac29\n\\neq\n\\frac49.\n\\]\n\nHence,\n\n\\[\nE(XY)\\neq E(X)E(Y).\n\\]\n\nTherefore,\n\n\\[\n\\boxed{\nX\\text{ and }Y\\text{ are not independent.}\n}\n\\]\n\nThis agrees with what we already found from the joint PMF and conditional probabilities.",
+    "crumbs": [
+      "Unit A: Joint Probability Distribution"
     ]
   },
   {
