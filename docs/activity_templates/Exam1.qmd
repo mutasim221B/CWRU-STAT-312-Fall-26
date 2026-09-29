@@ -1,0 +1,54 @@
+---
+title: "Midterm Exam 01"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+    reference-doc: ../master-cwru.pptx
+    
+format-links: false
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+# Resources
+
+
+## Announcement {-}
+
+::: {.incremental}
+
+- Download the [Exam 1 Announcement](/handout/EXAM01-Announcement.pdf) and carefully review the announcement.
+
+
+:::
+
+
+## Review {-}
+
+::: {.incremental}
+
+- Download the [Exam 1 Review](/handout/EXAM01-Review.pdf) before class and bring it with you.
+
+
+:::
+
