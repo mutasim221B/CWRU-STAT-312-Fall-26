@@ -1,0 +1,70 @@
+---
+title: "Unit 06: Normal Distribution & Central Limit Theorem"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+    reference-doc: ../master-cwru.pptx
+    
+format-links: false
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+# Resources
+
+
+## Handouts {-}
+
+::: {.incremental}
+
+- Download the [Unit 06 Handout: Normal Distribution & CTL](/handout/Unit-06-Normal-CTL.pdf) before class and bring it with you.
+
+- In the class I have provided a copy of [Tables 1](/handout/Tables-1.pdf). If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.
+
+- I will continue to post additional handouts as we progress through the course. Please watch for **Canvas Announcements** when a new handout becomes available.
+
+- It is very important that you **bring the appropriate handout to class regularly**, either as a printed copy or on your writing device.
+
+:::
+
+
+
+
+## Practice Problems {-}
+
+::: {.incremental}
+
+- **Practice Problems (PP)** are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.
+
+- The **Unit 06 Practice Problems** will be posted soon
+
+- Complete the relevant Practice Problems as we progress through the unit.
+
+- Make sure you have completed and reviewed the Practice Problems **before attempting the corresponding HW assignment**.
+
+:::
+
+
+
+
+
