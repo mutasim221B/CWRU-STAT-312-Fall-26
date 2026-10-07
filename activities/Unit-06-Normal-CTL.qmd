@@ -65,6 +65,159 @@ knitr::opts_chunk$set(
 :::
 
 
+```{r normal-plot-setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, warning = FALSE, message = FALSE,
+  error = FALSE, fig.height = 2.75, fig.width = 4.25,
+  fig.env = 'figure', fig.pos = 'h', fig.align = 'center'
+)
+normal_plot <- function(lower = -Inf, upper = Inf, mu = 0, sigma = 1,
+                        shade = TRUE, marks = mu, labels = marks) {
+  old <- par(mar = c(3, 2, 1, 1)); on.exit(par(old))
+  xx <- seq(mu - 4*sigma, mu + 4*sigma, length.out = 1000)
+  yy <- dnorm(xx, mu, sigma)
+  plot(xx, yy, type = 'n', axes = FALSE, xlab = '', ylab = '',
+       ylim = c(0, max(yy)*1.12))
+  if (shade) {
+    a <- max(min(xx), lower); b <- min(max(xx), upper)
+    if (a < b) {
+      x <- seq(a, b, length.out = 500)
+      polygon(c(a, x, b), c(0, dnorm(x, mu, sigma), 0),
+              col = '#8DE5ED', border = NA)
+    }
+  }
+  lines(xx, yy, lwd = 2)
+  axis(1, at = marks, labels = labels)
+  abline(h = 0, col = 'gray40')
+  mtext(if (mu == 0 && sigma == 1) 'z' else 'x', side = 1, line = 2)
+}
+```
 
+<!-- Adapted from Philip Kendall's Introductory Statistics with R,
+     Unit 05, Videos 05.05–05.07, supplied by the instructor.
+     Repeated reveal slides have been combined. Graphs are regenerated in R.
+     Table answers use four-decimal cumulative probabilities. -->
 
+# Normal Distribution
+
+## The Normal Distribution {-}
+
+::: {.incremental}
+- The **normal distribution**, often called the **bell curve**, is an important continuous probability distribution.
+- Its support is $(-\infty,\infty)$.
+- The curve is centered at its mean $\mu$; its spread depends on its standard deviation $\sigma>0$.
+- We write $X\sim N(\mu,\sigma^2)$, using the **variance** as the second parameter. The source labels its curves using the mean and standard deviation explicitly.
+:::
+
+```{r normal-curve}
+#| echo: false
+normal_plot(shade = FALSE, marks = 0, labels = expression(mu))
+```
+
+## Normal Probability Density Function {-}
+
+$$
+f_X(x)=\frac{1}{\sqrt{2\pi}\,\sigma}
+\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],
+\qquad -\infty<x<\infty.
+$$
+
+The inflection points occur at $\mu-\sigma$ and $\mu+\sigma$.
+
+```{r inflection-points}
+#| echo: false
+normal_plot(shade = FALSE, marks = c(-1,0,1),
+            labels = expression(mu-sigma,mu,mu+sigma))
+points(c(-1,1), dnorm(c(-1,1)), pch = 19, col = 'red')
+```
+
+## Comparing Normal Curves {-}
+
+Changing $\mu$ shifts the center. Increasing $\sigma$ makes the curve wider and lowers its peak.
+
+```{r compare-normal-curves}
+#| echo: false
+par(mar=c(3,3,1,1))
+x <- seq(0,20,length.out=1000)
+plot(x,dnorm(x,5,1),type='l',col='#2976B9',lwd=2,
+     xlab='x',ylab='Density',ylim=c(0,.48))
+lines(x,dnorm(x,15,1),col='#739B15',lwd=2)
+lines(x,dnorm(x,5,2),col='#DE9500',lwd=2)
+legend('top',c('Mean 5, SD 1','Mean 15, SD 1','Mean 5, SD 2'),
+       col=c('#2976B9','#739B15','#DE9500'),lwd=2,bty='n',cex=.75)
+```
+
+## Example: Adult Heights {-}
+
+Suppose adult men's heights are approximately normal with mean $\mu=70$ inches and standard deviation $\sigma=4$ inches.
+
+How tall would someone be if their height were **10 standard deviations above the mean**?
+
+$$
+70+10(4)=110\text{ inches}=9\text{ feet }2\text{ inches}.
+$$
+
+This illustrates how extreme a value 10 standard deviations above the mean would be. For comparison, the source describes the tallest recorded man as approximately 8 feet 11 inches tall.
+
+## The Empirical Rule {-}
+
+For a normal distribution, approximately:
+
+- **68%** of observations lie within $\mu\pm\sigma$;
+- **95%** lie within $\mu\pm2\sigma$;
+- **99.7%** lie within $\mu\pm3\sigma$.
+
+```{r empirical-rule}
+#| echo: false
+normal_plot(-3,3,marks=-3:3,
+ labels=expression(mu-3*sigma,mu-2*sigma,mu-sigma,mu,mu+sigma,mu+2*sigma,mu+3*sigma))
+for (k in c(2,1)) {
+ x <- seq(-k,k,length.out=300)
+ polygon(c(-k,x,k),c(0,dnorm(x),0),border=NA,
+         col=if(k==2) '#68DD9A' else '#FFF47A')
+}
+curve(dnorm(x),-4,4,add=TRUE,lwd=2)
+text(0,c(.30,.12,.035),c('68%','95%','99.7%'))
+```
+
+## Empirical Rule: Heights and IQ Scores {-}
+
+For the height model with $\mu=70$ and $\sigma=4$:
+
+| Range | Interval (inches) | Approximate percentage |
+|:--|:--|:--|
+| $\mu\pm\sigma$ | 66–74 | 68% |
+| $\mu\pm2\sigma$ | 62–78 | 95% |
+| $\mu\pm3\sigma$ | 58–82 | 99.7% |
+
+The source also illustrates an approximately normal IQ-score model with $\mu=100$ and $\sigma=15$. Its corresponding intervals are **85–115**, **70–130**, and **55–145**.
+
+The source mentions *The Bell Curve* (Herrnstein and Murray, 1994) in this context. The normal model here is used only to illustrate the empirical rule.
+
+# Standard Normal Distribution: Probabilities
+
+## The Standard Normal Distribution {-}
+
+There are infinitely many normal curves: $\mu$ may be any real number, and $\sigma$ may be any positive real number.
+
+The **standard normal distribution** has $\mu=0$ and $\sigma=1$:
+
+$$
+Z\sim N(0,1),\qquad
+f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-z^2/2},\quad -\infty<z<\infty.
+$$
+
+Its density has no elementary antiderivative. We use a **Z-table** or software to calculate areas.
+
+## Reading the Z-Table {-}
+
+::: {.incremental}
+- The total area under the curve is **1**.
+- The standard normal curve is symmetric about **0**.
+- The table used here gives the area **to the left**: $\Phi(z)=P(Z\le z)$.
+- Other tables may use different area conventions; always check the table heading.
+- Use the row for the ones and tenths digits and the column for the hundredths digit.
+- For a continuous random variable, $P(Z<z)=P(Z\le z)$.
+:::
 

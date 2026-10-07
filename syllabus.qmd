@@ -236,7 +236,8 @@ Engagement is important to your own learning & to fostering a supportive learnin
 - **When attending class:**
   - Be on time & don’t leave early
   - Do not use your phone (phones must be put away when you enter the classroom, even if class hasn’t started)
-  - [Do not use your laptop for anything other than taking notes and in-class activities](https://www.sciencedirect.com/science/article/pii/S0360131512002254) (e.g., no videos, no email, no messaging apps, etc.)
+  - [Do not use your laptop for anything other than taking notes and in-class activities](https://www.sciencedirect.com/science/article/pii/S0360131512002254) (e.g., no videos, no email, no messaging apps, etc.). 
+  - If you plan to use a laptop for note-taking, please obtain my permission first. Otherwise, I may ask you to put your laptop away at any point during class if its use appears unrelated to the course.
   - Be actively present (e.g., don’t work on other courses, etc.)
 
 - **Course handouts:**
@@ -247,6 +248,12 @@ Engagement is important to your own learning & to fostering a supportive learnin
   - If you use a **tablet, iPad, or other writing device**, you may download the handout directly to your device.
   - I strongly recommend creating a folder named **STAT 312** on your device and organizing the handouts into separate folders for each unit (e.g., `Unit 01`, `Unit 02`, etc.).
 
+- **Class activities**
+  - On selected class days, we will complete short in-class activities. Students who are present and participate in these activities will receive activity points, and those points will be added to as a separate quiz score (for example, Quiz A). 
+  -  If you are unable to attend a class, please send me an email before class begins with your section number (see the syllabus for the section number, if you are unsure). If that happens to be a day when we complete a Class Activity, you may otherwise miss the opportunity to earn those activity points.
+  - Please note that requests regarding missed Class Activity points cannot be processed unless your section number is included in the email. Requests submitted after the class has ended will also not be processed.
+  
+  
 - **Outside class:**
   - Check your email for Canvas announcements and stay updated on the Canvas Discussion Forum.
   - When you have questions, or just want to chat, please stop by OH!
