@@ -158,7 +158,7 @@
     "href": "activities/Unit-06-Normal-CTL.html",
     "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes/Handouts are provided, they should serve as one of your core course resources. For these units, you are not expected to use the textbook as your primary study resource, but feel free to go through the related topics in the textbooks (mentioned in the class) if you want to!\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to go through some additional (optional) resource.\n\nAlways prioritize the Class Notes if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
       "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
@@ -174,91 +174,21 @@
     ]
   },
   {
+    "objectID": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "href": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "section": "",
+    "text": "Download the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes/Handouts are provided, they should serve as one of your core course resources. For these units, you are not expected to use the textbook as your primary study resource, but feel free to go through the related topics in the textbooks (mentioned in the class) if you want to!\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to go through some additional (optional) resource.\n\nAlways prioritize the Class Notes if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "crumbs": [
+      "Unit 06: Normal Distribution & Central Limit Theorem"
+    ]
+  },
+  {
     "objectID": "activities/Unit-06-Normal-CTL.html#practice-problems",
     "href": "activities/Unit-06-Normal-CTL.html#practice-problems",
     "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
     "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#the-normal-distribution",
-    "href": "activities/Unit-06-Normal-CTL.html#the-normal-distribution",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "The Normal Distribution",
-    "text": "The Normal Distribution\n\n\nThe normal distribution, often called the bell curve, is an important continuous probability distribution.\nIts support is \\((-\\infty,\\infty)\\).\nThe curve is centered at its mean \\(\\mu\\); its spread depends on its standard deviation \\(\\sigma&gt;0\\).\nWe write \\(X\\sim N(\\mu,\\sigma^2)\\), using the variance as the second parameter. The source labels its curves using the mean and standard deviation explicitly.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#normal-probability-density-function",
-    "href": "activities/Unit-06-Normal-CTL.html#normal-probability-density-function",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "Normal Probability Density Function",
-    "text": "Normal Probability Density Function\n\\[\nf_X(x)=\\frac{1}{\\sqrt{2\\pi}\\,\\sigma}\n\\exp\\left[-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right],\n\\qquad -\\infty&lt;x&lt;\\infty.\n\\]\nThe inflection points occur at \\(\\mu-\\sigma\\) and \\(\\mu+\\sigma\\).",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#comparing-normal-curves",
-    "href": "activities/Unit-06-Normal-CTL.html#comparing-normal-curves",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "Comparing Normal Curves",
-    "text": "Comparing Normal Curves\nChanging \\(\\mu\\) shifts the center. Increasing \\(\\sigma\\) makes the curve wider and lowers its peak.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#example-adult-heights",
-    "href": "activities/Unit-06-Normal-CTL.html#example-adult-heights",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "Example: Adult Heights",
-    "text": "Example: Adult Heights\nSuppose adult men’s heights are approximately normal with mean \\(\\mu=70\\) inches and standard deviation \\(\\sigma=4\\) inches.\nHow tall would someone be if their height were 10 standard deviations above the mean?\n\\[\n70+10(4)=110\\text{ inches}=9\\text{ feet }2\\text{ inches}.\n\\]\nThis illustrates how extreme a value 10 standard deviations above the mean would be. For comparison, the source describes the tallest recorded man as approximately 8 feet 11 inches tall.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#the-empirical-rule",
-    "href": "activities/Unit-06-Normal-CTL.html#the-empirical-rule",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "The Empirical Rule",
-    "text": "The Empirical Rule\nFor a normal distribution, approximately:\n\n68% of observations lie within \\(\\mu\\pm\\sigma\\);\n95% lie within \\(\\mu\\pm2\\sigma\\);\n99.7% lie within \\(\\mu\\pm3\\sigma\\).",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#empirical-rule-heights-and-iq-scores",
-    "href": "activities/Unit-06-Normal-CTL.html#empirical-rule-heights-and-iq-scores",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "Empirical Rule: Heights and IQ Scores",
-    "text": "Empirical Rule: Heights and IQ Scores\nFor the height model with \\(\\mu=70\\) and \\(\\sigma=4\\):\n\n\n\nRange\nInterval (inches)\nApproximate percentage\n\n\n\n\n\\(\\mu\\pm\\sigma\\)\n66–74\n68%\n\n\n\\(\\mu\\pm2\\sigma\\)\n62–78\n95%\n\n\n\\(\\mu\\pm3\\sigma\\)\n58–82\n99.7%\n\n\n\nThe source also illustrates an approximately normal IQ-score model with \\(\\mu=100\\) and \\(\\sigma=15\\). Its corresponding intervals are 85–115, 70–130, and 55–145.\nThe source mentions The Bell Curve (Herrnstein and Murray, 1994) in this context. The normal model here is used only to illustrate the empirical rule.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#the-standard-normal-distribution",
-    "href": "activities/Unit-06-Normal-CTL.html#the-standard-normal-distribution",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "The Standard Normal Distribution",
-    "text": "The Standard Normal Distribution\nThere are infinitely many normal curves: \\(\\mu\\) may be any real number, and \\(\\sigma\\) may be any positive real number.\nThe standard normal distribution has \\(\\mu=0\\) and \\(\\sigma=1\\):\n\\[\nZ\\sim N(0,1),\\qquad\nf_Z(z)=\\frac{1}{\\sqrt{2\\pi}}e^{-z^2/2},\\quad -\\infty&lt;z&lt;\\infty.\n\\]\nIts density has no elementary antiderivative. We use a Z-table or software to calculate areas.",
-    "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-06-Normal-CTL.html#reading-the-z-table",
-    "href": "activities/Unit-06-Normal-CTL.html#reading-the-z-table",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
-    "section": "Reading the Z-Table",
-    "text": "Reading the Z-Table\n\n\nThe total area under the curve is 1.\nThe standard normal curve is symmetric about 0.\nThe table used here gives the area to the left: \\(\\Phi(z)=P(Z\\le z)\\).\nOther tables may use different area conventions; always check the table heading.\nUse the row for the ones and tenths digits and the column for the hundredths digit.\nFor a continuous random variable, \\(P(Z&lt;z)=P(Z\\le z)\\).",
     "crumbs": [
       "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
