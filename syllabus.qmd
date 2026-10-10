@@ -101,7 +101,7 @@ In selecting and working with our graders, we emphasize **fairness, professional
 
 - Statistical Methods for Engineers, by Vining and Kowalski. You can download an e-Book from Canvas (Files).
 
-- The [online course manual](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/) includes all the course resources.
+- The [online course website](https://mutasim221b.github.io/CWRU-STAT-312-Fall-26/) includes all the course resources.
 
 - See the rough [schedule](https://docs.google.com/spreadsheets/d/16jPhUjlyee5PkXYkTi81HqbMs_XqtgzI39InAWzJPNY/edit?usp=sharing) of the course, which will be updated throughout the semester.
 
