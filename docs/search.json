@@ -466,7 +466,7 @@
     "href": "activities/Exam1.html",
     "title": "Midterm Exam 01",
     "section": "",
-    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.",
+    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.\n\n\n\n\n\n\n\nReview the Exam 1 Report before the class on Monday.",
     "crumbs": [
       "Midterm Exam 01"
     ]
@@ -487,6 +487,16 @@
     "title": "Midterm Exam 01",
     "section": "",
     "text": "Download the Exam 1 Review before class and bring it with you.",
+    "crumbs": [
+      "Midterm Exam 01"
+    ]
+  },
+  {
+    "objectID": "activities/Exam1.html#exam-01-analysis",
+    "href": "activities/Exam1.html#exam-01-analysis",
+    "title": "Midterm Exam 01",
+    "section": "",
+    "text": "Review the Exam 1 Report before the class on Monday.",
     "crumbs": [
       "Midterm Exam 01"
     ]

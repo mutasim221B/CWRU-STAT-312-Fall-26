@@ -52,3 +52,12 @@ knitr::opts_chunk$set(
 
 :::
 
+
+## Exam 01 Analysis {-}
+
+::: {.incremental}
+
+- Review the [Exam 1 Report](/handout/Exam01-Report.pdf) before the class on Monday.
+
+
+:::
