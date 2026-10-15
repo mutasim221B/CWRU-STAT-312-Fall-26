@@ -1,0 +1,637 @@
+---
+title: "Unit B: Point Estimate"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+
+format:
+  html:
+    embed-resources: true
+    toc: true
+
+  pptx:
+    slide-level: 2
+    reference-doc: ../master-cwru.pptx
+    
+format-links: false
+---
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+<!-- Original slide 15 -->
+
+# Statistical Inference
+
+## Models and Parameters {-}
+
+::: {.incremental}
+
+- Statistical models describe populations using probability distributions, represented by probability density functions (PDFs) or probability mass functions (PMFs).
+
+- These distributions usually depend on unknown **parameters**.
+
+  - We use $\theta$ as a general symbol for a parameter.
+
+
+- Examples:
+
+  - The lifetime of a string of Christmas lights follows an exponential distribution, $\operatorname{Exp}(\theta)$.
+  - The average amount in 63 poured drinks is approximately normally distributed with mean $\theta$.
+  - The number of people with a disease among $n$ independently sampled people follows $\operatorname{Binomial}(n,\theta)$, where $\theta$ is the population prevalence.
+
+- In practice, the value of $\theta$ is unknown.
+
+:::
+
+
+
+## Learning from Data {-}
+
+::: {.incremental}
+
+- Our observed data come from a **random sample** of the population.
+
+- Given the observed data, what can we say about $\theta$?
+
+- We model the sample as random variables $X_1,\ldots,X_n$ and use their observed values to draw conclusions about the unknown population parameter.
+
+- **Example:** Five strings of Christmas lights from the same manufacturer lasted
+
+  $$
+  21,\quad 103,\quad 76,\quad 88,\quad 96
+  \quad \text{days}.
+  $$
+
+- Assuming that their lifetimes are independent and follow $\operatorname{Exp}(\theta)$, with $\theta$ representing the failure rate, what do these data tell us about $\theta$?
+
+:::
+
+
+
+
+## Example: Estimating Disease Prevalence {-}
+
+Suppose we take a random sample of **100 people** and test each person for a disease. **Three people** have the disease.
+
+Let $\theta$ denote the prevalence of the disease in the population.
+
+The sample proportion gives the estimate (point estimate)
+
+$$
+\widehat{\theta}
+=
+\frac{3}{100}
+=
+0.03
+=
+3\%.
+$$
+
+::: {.incremental}
+
+- How certain are we about this estimate?
+
+- Can we be confident that the population prevalence is greater than **2%**?
+
+:::
+
+
+
+
+## Estimation and Decisions {-}
+
+::: {.incremental}
+
+- **Estimation:** Estimate an unknown population parameter.
+
+  - For example, we estimated disease prevalence as $\widehat{\theta}=3\%$.
+  - A **point estimate** provides a single numerical value.
+  - An **interval estimate** provides a range of plausible values.
+
+- **Making decisions:** Use hypothesis testing and decision theory.
+
+  - Suppose the state will launch a costly public health campaign if the disease affects **2% or more** of the population.
+  - Do the data provide sufficient evidence that $\theta$ is greater than $0.02$?
+
+:::
+
+
+
+
+
+<!-- Original slide 20 -->
+
+## Population and Sample {-}
+
+```{r population-sample-inference}
+#| echo: false
+#| error: false
+#| fig.width: 8
+#| fig.height: 4.2
+#| fig.align: center
+#| out.width: "100%"
+
+# This chunk is self-contained and uses only base R.
+local({
+  old_par <- par(mar = c(0, 0, 0, 0))
+  on.exit(par(old_par))
+
+  plot.new()
+  plot.window(xlim = c(0, 10), ylim = c(0, 6))
+
+  # Population and sample
+  rect(
+    0.5, 3.9, 3.3, 5.5,
+    col = "#E4EFF5", border = "#003071", lwd = 2
+  )
+
+  rect(
+    6.7, 3.9, 9.5, 5.5,
+    col = "#E4EFF5", border = "#003071", lwd = 2
+  )
+
+  text(
+    1.9, 5.05, "Population",
+    font = 2, cex = 1.35, col = "#003071"
+  )
+
+  text(
+    8.1, 5.05, "Sample",
+    font = 2, cex = 1.35, col = "#003071"
+  )
+
+  # Dots represent members of the population and sample.
+  population_dots <- expand.grid(
+    x = seq(0.9, 2.9, length.out = 7),
+    y = c(4.2, 4.5)
+  )
+
+  points(
+    population_dots$x, population_dots$y,
+    pch = 19, cex = 0.9, col = "#003071"
+  )
+
+  points(
+    c(7.5, 8.1, 8.7), rep(4.35, 3),
+    pch = 19, cex = 1.2, col = "#003071"
+  )
+
+  # Parameters and statistics
+  text(
+    1.9, 1.1, "Parameters",
+    font = 2, cex = 1.35, col = "#003071"
+  )
+
+  text(
+    8.1, 1.1, "Statistics",
+    font = 2, cex = 1.35, col = "#003071"
+  )
+
+  text(1.9, 0.55, expression(mu ~~ sigma ~~ p), cex = 1.2)
+  text(8.1, 0.55, expression(bar(X) ~~ S ~~ hat(p)), cex = 1.2)
+
+  # Probability: population to sample
+  arrows(
+    3.5, 4.65, 6.5, 4.65,
+    length = 0.15, lwd = 2.5, col = "#003071"
+  )
+
+  text(5, 5.02, "Probability", cex = 1.15)
+
+  # Sample to statistics
+  arrows(
+    8.1, 3.7, 8.1, 1.7,
+    length = 0.15, lwd = 2.5, col = "#003071"
+  )
+
+  text(8.35, 2.7, "Calculate", adj = 0, cex = 0.95)
+
+  # Inference: statistics to parameters
+  arrows(
+    6.6, 1.1, 3.4, 1.1,
+    length = 0.15, lwd = 2.5, col = "#003071"
+  )
+
+  text(5, 1.48, "Inference", cex = 1.15)
+
+  # Parameters describe the population.
+  arrows(
+    1.9, 1.7, 1.9, 3.7,
+    length = 0.15, lwd = 2.5, col = "#003071"
+  )
+
+  text(1.65, 2.7, "Describe", adj = 1, cex = 0.95)
+})
+```
+
+- **Probability:** Start with a population model and study possible sample outcomes.
+- **Inference:** Start with sample data and learn about unknown population parameters.
+
+
+
+
+# Point Estimation
+
+<!-- Original slide 2 -->
+
+## Introduction {-}
+
+::: {.incremental}
+
+- We often want to estimate an unknown **population parameter** using the results of a **random sample**.
+
+- Examples of population parameters include:
+
+  - Population mean: $\mu$
+  - Population proportion: $p$
+  - Population standard deviation: $\sigma$
+
+- A statistic calculated from the sample provides an estimate of the corresponding population parameter.
+
+:::
+
+
+
+
+## Point Estimation {-}
+
+::: {.incremental}
+
+- Let $\theta$ denote an unknown population parameter.
+
+- A **point estimator** of $\theta$ is a statistic used to estimate $\theta$.
+
+- A **point estimate** is the observed numerical value of that statistic for a particular sample.
+
+- The point estimate is regarded as a plausible value of the unknown parameter.
+
+:::
+
+
+
+
+## Parameters, Point Estimators, and Point Estimates {-}
+
+| Population parameter | Point estimator | Observed point estimate |
+|:--|:--|:--|
+| Mean $\mu$ | $\overline{X}$ | $\overline{x}$ |
+| Proportion $p$ | $\widehat{p}=X/n$ | $\widehat{p}=x/n$ |
+| Standard deviation $\sigma$ | $S$ | $s$ |
+
+::: {.incremental}
+
+- An **estimator** is a random variable because its value depends on the random sample.
+
+- An **estimate** is the numerical value obtained after observing the sample.
+
+- For the sample proportion, $X$ is the random number of successes and $x$ is its observed value. The notation $\widehat{p}$ is commonly used for both the estimator and its observed value.
+
+:::
+
+
+
+## Example: Estimating a Population Proportion {-}
+
+We want to estimate the proportion of people in Cleveland who like liver.
+
+A random sample of **500 Clevelanders** is taken, and **110** say that they like lakes.
+
+::: {.incremental}
+
+- **Parameter:** $p$, the proportion of all people in Cleveland who like lakes.
+
+- **Point estimator:**
+
+  $$
+  \widehat{p}=\frac{X}{n}.
+  $$
+
+- **Point estimate:**
+
+  $$
+  \widehat{p}=\frac{110}{500}=0.22.
+  $$
+
+- We estimate that **22%** of people in Cleveland like lakes.
+
+:::
+
+```{r liver-proportion}
+x <- 110
+n <- 500
+
+p_hat <- x / n
+p_hat
+```
+
+
+# Properties of Point Estimators
+
+
+## Unbiased Estimators {-}
+
+An estimator $\widehat{\theta}$ is an **unbiased estimator** of $\theta$ if
+
+$$
+E(\widehat{\theta})=\theta.
+$$
+
+The **bias** of an estimator is
+
+$$
+\operatorname{Bias}(\widehat{\theta})
+=
+E(\widehat{\theta})-\theta.
+$$
+
+An unbiased estimator has bias equal to zero.
+
+**Class discussion:** For an i.i.d. random sample with the relevant finite moments:
+
+a. Is $\overline{X}$ an unbiased estimator of $\mu$?
+
+b. Is $\widehat{p}$ an unbiased estimator of $p$?
+
+c. Is $S^2$ an unbiased estimator of $\sigma^2$, when
+   $S^2$ uses the denominator $n-1$?
+
+
+## Unbiased Estimation of the Mean and Variance
+
+### Assumptions and Definitions {-}
+
+Let $X_1,\ldots,X_n$ be independent and identically distributed random variables, with $n\ge 2$, such that
+
+$$
+E(X_i)=\mu,
+\qquad
+\operatorname{Var}(X_i)=\sigma^2<\infty.
+$$
+
+Define the **sample mean** and **sample variance** by
+
+$$
+\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i,
+$$
+
+$$
+S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2.
+$$
+
+We will show that
+
+$$
+\boxed{E(\overline{X})=\mu
+\qquad\text{and}\qquad
+E(S^2)=\sigma^2.}
+$$
+
+**Normality is not required for these results.**
+
+
+### Proof: The Sample Mean Is Unbiased {-}
+
+
+See Class Notes of Unit 06 topics.
+
+
+### Proof: Expected Value of Sample Variance {-}
+
+See Class Notes of Unit B topics.
+
+
+
+### Why Do We Divide by n − 1 Instead of n? {-}
+
+Suppose we instead define
+
+$$
+\widetilde{S}^{\,2}
+=
+\frac{1}{n}\sum_{i=1}^{n}(X_i-\overline{X})^2.
+$$
+
+Since $\widetilde{S}^{\,2}=\frac{n-1}{n}S^2$,
+
+$$
+E(\widetilde{S}^{\,2})
+=
+\frac{n-1}{n}E(S^2)
+=
+\frac{n-1}{n}\sigma^2.
+$$
+
+Its bias is
+
+$$
+\begin{aligned}
+\operatorname{Bias}(\widetilde{S}^{\,2})
+&=E(\widetilde{S}^{\,2})-\sigma^2\\[4pt]
+&=-\frac{\sigma^2}{n}.
+\end{aligned}
+$$
+
+For $\sigma^2>0$, dividing by $n$ **underestimates the population variance on average**. Dividing by $n-1$ removes this bias.
+
+
+### Degrees of Freedom {-}
+
+::: {.incremental}
+
+- Once $\bar{X}$ is calculated, the deviations
+
+$$
+X_1-\bar{X},\ldots,X_n-\bar{X}
+$$
+
+are not all free to vary independently.
+
+- This is because they must satisfy
+
+$$
+\boxed{
+\sum_{i=1}^{n}(X_i-\bar{X})=0
+}
+$$
+
+- Therefore, if we know any $n-1$ of the deviations, the last one is automatically determined.
+
+- We say there are
+
+$$
+\boxed{n-1\text{ degrees of freedom}}
+$$
+
+- In other words, only $n-1$ of the deviations are free to vary independently.
+
+:::
+
+
+### Notes {-}
+
+::: {.incremental}
+
+- **Unbiasedness is a repeated-sampling property.** It does not mean that every observed sample variance equals $\sigma^2$.
+
+- Across repeated random samples, the sampling distribution of $S^2$ has mean $\sigma^2$.
+
+
+
+
+
+
+## Standard Error {-}
+
+The **standard error** of an estimator is the standard deviation of its sampling distribution:
+
+$$
+\sigma_{\widehat{\theta}}
+=
+\sqrt{\operatorname{Var}(\widehat{\theta})}.
+$$
+
+::: {.incremental}
+
+- The standard error describes how much the estimator varies from sample to sample.
+
+- If the standard error contains unknown population parameters, we can replace them with estimates.
+
+- The resulting quantity is called the **estimated standard error**.
+
+- Following the notation in these slides, we denote the estimated standard error by $\operatorname{SE}(\widehat{\theta})$.
+
+:::
+
+
+<!-- Original slide 12 -->
+
+## Reporting a Point Estimate and Its Standard Error {-}
+
+The standard error, or its estimate, should be reported with the point estimate to indicate its precision.
+
+**Example:** Estimate a population mean $\mu$ when $\sigma$ is unknown.
+
+For an i.i.d. sample:
+
+- The point estimate of $\mu$ is $\overline{x}$.
+
+- The standard error of the sample mean is
+
+  $$
+  \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
+  $$
+
+- When $\sigma$ is unknown, estimate it using $s$:
+
+  $$
+  \widehat{\operatorname{SE}}(\overline{X})
+  =
+  \frac{s}{\sqrt{n}}.
+  $$
+
+Report $\overline{x}$ together with its estimated standard error $s/\sqrt{n}$.
+
+
+<!-- Original slide 13 -->
+
+## Goal for Point Estimators {-}
+
+::: {.incremental}
+
+- We want an estimator with **small bias** and **small spread**.
+
+- An unbiased estimator has bias equal to **zero**.
+
+- Spread describes how much the estimator varies across repeated samples.
+
+- For the sample mean, increasing the sample size reduces its standard error:
+
+  $$
+  \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
+  $$
+
+- If the estimate is not sufficiently precise, increasing the sample size can improve precision.
+
+:::
+
+
+# Mean Squared Error
+
+<!-- Original slide 15 -->
+
+## Mean Squared Error {-}
+
+The **mean squared error** of $\widehat{\theta}$ as an estimator of $\theta$ is
+
+$$
+\operatorname{MSE}(\widehat{\theta})
+=
+E\left[(\widehat{\theta}-\theta)^2\right].
+$$
+
+It can be written as
+
+$$
+\boxed{
+\operatorname{MSE}(\widehat{\theta})
+=
+\operatorname{Var}(\widehat{\theta})
++
+\left[\operatorname{Bias}(\widehat{\theta})\right]^2
+}.
+$$
+where, 
+
+$$
+\operatorname{Bias}(\widehat{\theta})
+=
+E(\widehat{\theta})-\theta.
+$$
+
+
+**Example:** For an i.i.d. sample with mean $\mu$ and finite variance $\sigma^2$, $\overline{X}$ is unbiased for $\mu$. Therefore,
+
+$$
+\operatorname{MSE}(\overline{X})
+=
+\operatorname{Var}(\overline{X})
+=
+\frac{\sigma^2}{n}.
+$$
+
+
+<!-- Original slide 16 -->
+
+## Comparing Estimators Using MSE {-}
+
+::: {.incremental}
+
+- We want an estimator with **small bias** and **small spread**.
+
+- MSE measures overall estimation error by combining **variance** and **squared bias**.
+
+- For an unbiased estimator,
+
+  $$
+  \operatorname{MSE}(\widehat{\theta})
+  =
+  \operatorname{Var}(\widehat{\theta}).
+  $$
+
+- If two estimators are both unbiased for the same parameter, the estimator with the **smaller MSE** also has the **smaller variance**.
+
+- Under the MSE criterion, we prefer the estimator with the smaller MSE.
+
+:::
