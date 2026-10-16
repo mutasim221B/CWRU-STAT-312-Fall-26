@@ -55,7 +55,7 @@ knitr::opts_chunk$set(
 
 - Download the [Lecture Notes Unit 06A: Normal Distribution](/handout/Unit-06A-Normal.pdf) and [Lecture Notes Unit 06B: Central Limit Theorem](/handout/Unit-06B-CLT.pdf) -- review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.
 
-- For units where Lecture Notes are provided, they should serve as one of your core course resources. For these units, you are not expected to use the textbook as your primary study resource, but feel free to go through the related topics in the textbooks (mentioned in the class) if you want to!
+- For units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.
 
 - You do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)
 
@@ -63,9 +63,9 @@ knitr::opts_chunk$set(
 
   - Class Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.
 
-  - Lecture Notes: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.
+  - Lecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.
 
-  - Textbook: Use it when you would like to go through some additional (optional) resource.
+  - Textbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.
 
 Always prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.
 

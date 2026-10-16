@@ -510,7 +510,7 @@ $$
 
 - The resulting quantity is called the **estimated standard error**.
 
-- Following the notation in these slides, we denote the estimated standard error by $\operatorname{SE}(\widehat{\theta})$.
+- Following the notation in these slides, we denote the estimated standard error by $\widehat{\operatorname{SE}}(\widehat{\theta})$.
 
 :::
 
