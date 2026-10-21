@@ -79,7 +79,7 @@ Always prioritize the Class Notes (+Handouts) if you notice any difference in no
 
 - **Practice Problems (PP)** are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.
 
-- The **Unit 06 Practice Problems** will be posted soon
+- The **Unit 07 Practice Problems** are available in Practice Problems tab of the course website.
 
 - Complete the relevant Practice Problems as we progress through the unit.
 
@@ -88,3 +88,14 @@ Always prioritize the Class Notes (+Handouts) if you notice any difference in no
 :::
 
 
+## Confidence Interval Simulation Applet {-}
+
+::: {.incremental}
+
+- Explore confidence intervals using the [**Confidence Interval Simulation Applet**](https://www.rossmanchance.com/applets/2021/confsim/ConfSim.html).
+
+- Pay attention to which intervals **capture the true population parameter** and which do not.
+
+- What happens to the interval when you increae or decrease the sample size?
+
+:::
