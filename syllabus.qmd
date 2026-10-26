@@ -297,8 +297,8 @@ In the HW assignments, you will practice and explore the course material in more
 
 Your course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person exams. You must schedule all travel and other commitments around them - there will not be any alternative exam times.
 
-- **Midterm Exam 1:** Monday, Oct 5 (Tentative Date)
-- **Midterm Exam 2:** Monday, Nov 9 (Tentative Date)
+- **Midterm Exam 1:** Monday, Oct 5 
+- **Midterm Exam 2:** Monday, Nov 16 
 - **Final Exam (Comprehensive):** *Finals week*  
   - The final exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.  
     - 10:25–11:15am section 103: Dec 14, 8:00-10:00am in class
