@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Unit 07: Confidence Interval – STAT 312</title>
+<title>Unit 08: Hypothesis Testing – STAT 312</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -3802,7 +3802,7 @@ vertical-align: -.125em;
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -3836,6 +3836,10 @@ vertical-align: -.125em;
  <span class="menu-text">Activities</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
+        <li>
+    <a class="dropdown-item" href="../activities/Unit-08-Hypothesis.html">
+ <span class="dropdown-text">Unit 08: Hypothesis Testing</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="../activities/Unit-07-Confidence-Interval.html">
  <span class="dropdown-text">Unit 07: Confidence Interval</span></a>
@@ -3892,10 +3896,87 @@ vertical-align: -.125em;
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/Unit-08-Hypothesis.html">Unit 08: Hypothesis Testing</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-08-Hypothesis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Unit 08: Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-07-Confidence-Interval.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 07: Confidence Interval</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-B-Point-Estimate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit B: Point Estimate</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-06-Normal-CTL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 06: Normal Distribution &amp; Central Limit Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Exam1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Exam 01</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-A-Joint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit A: Joint Probability Distribution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-04-Discrete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 04: Discrete Random Variable</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-03-Probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 03: Probability</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-02B-Intro-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 02.B: Intro to R and RStudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-01-02A-Intro-Descriptive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 01-02.A: Intro &amp; Descriptive Statistics</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -3916,7 +3997,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Unit 07: Confidence Interval</h1>
+<h1 class="title">Unit 08: Hypothesis Testing</h1>
 <p class="subtitle lead">Instructor: Dr. Md Mutasim Billah</p>
 </div>
 

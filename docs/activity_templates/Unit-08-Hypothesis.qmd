@@ -1,5 +1,5 @@
 ---
-title: "Unit 07: Confidence Interval"
+title: "Unit 08: Hypothesis Testing"
 subtitle: "Instructor: Dr. Md Mutasim Billah"
 
 format:
