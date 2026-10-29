@@ -15,5 +15,6 @@ You don't need to submit the PP. Once posted, the solutions will be available on
 - [Unit A:Joint Distribution PP](practice/UnitA-PP.pdf)
 - [Unit 6: Normal Distribution & CTL](practice/Unit-PP-06.pdf)
 - [Unit 7: Confidence Interval](practice/Unit 07-PP.pdf)
+- [Unit 8: Hypthesis Testing](practice/Unit-08-PP.pdf)
 
 
