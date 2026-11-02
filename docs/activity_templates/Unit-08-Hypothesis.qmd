@@ -88,3 +88,53 @@ Always prioritize the Class Notes (+Handouts) if you notice any difference in no
 :::
 
 
+## Power {-}
+
+Recall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:
+
+P(Type I error) = P(reject $H_0$ | $H_0$ is actually true) = 0.05
+
+We have less control over the Type II error (aka false negative) rate:
+
+P(Type II error) = P(fail to reject $H_0$ | $H_0$ actually false) = ???
+
+An important related concept is that of statistical **power**, the *true positive rate*. Specifically, power is the probability of (correctly!) rejecting $H_0$ when $H_0$ is actually false:
+
+power = P(reject $H_0$ | $H_0$ actually false) = 1 - P(Type II error)
+
+Less formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.
+
+Unfortunately, we can't control power. It's influenced by various factors. Navigate to [this page](https://rpsychologist.com/d3/NHST/) to check out an interactive visualization of the factors that influence statistical power.
+
+Under "Settings", next to the "Solve for?" text, click "Power". You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.
+
+Some context behind this interactive visualization:
+
+- Visualization is based on a one sample Z-test:    
+    This is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)
+- The effect size slider is measured with a metric called Cohen's d:
+    - Cohen's d = magnitude of effect/standard deviation of response variable
+    - Here: how far is the true mean from the null value in units of SD?
+    - e.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.
+
+**Overall notes about the power investigations:**
+
+> Because power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called $Z_{\text{crit}}$) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the $H_A$ label is above it). Power corresponds to the light blue area under the $H_A$ distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).
+
+
+a. What is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.
+
+> If the significance level increases, there is a "less stringent" threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).
+
+
+b. Repeat Part a for the sample size.
+
+> If sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.
+
+c. Repeat Part a for the effect size.
+
+> If the magnitude of the effect (numerator of Cohen's d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.
+
+> If the variability of the response variable decreases (denominator of Cohen's d), power should increase because any "signal" from our predictors being picked up by our coefficient estimates will rise far enough above the "noise" in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.
+
+> A large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.
