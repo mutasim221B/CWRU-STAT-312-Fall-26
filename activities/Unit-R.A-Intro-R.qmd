@@ -1,5 +1,5 @@
 ---
-title: "Unit R.A: Intro to R and RStudio"
+title: "Unit R.A: Descriptive Statistics in R"
 subtitle: "Instructor: Dr. Md Mutasim Billah"
 format: 
   html:
