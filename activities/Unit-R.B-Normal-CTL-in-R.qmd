@@ -1,0 +1,442 @@
+---
+title: "Unit R.B: Normal & CTL in R"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+
+
+
+
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+
+
+
+
+
+# Purpose and how to use this activity
+
+This activity introduces **base R** commands for finding Normal and Student's $t$ probabilities, cutoff values, confidence intervals, and hypothesis-test results. **No additional R packages are required.** You can run each code chunk in RStudio.
+
+The **Normal distribution and Central Limit Theorem (CLT)** examples below follow our *Unit 06: Normal Distribution & CLT* handout, keeping its original example numbers and data. Examples on **confidence intervals and hypothesis testing** are placed in clearly labeled later sections. 
+
+::: {.callout-important}
+## A reminder for STAT 312
+
+R is a tool for evaluating probabilities and quantiles. **You still need to identify the appropriate distribution, define the event, check assumptions, and interpret the result.** Use your class notes, lecture notes (when available), quizzes, required practice problems, and homework assignments to prepare for assessments.
+:::
+
+## Four essential distribution commands
+
+- `pnorm(x)` gives $P(Z\le x)$ for a standard Normal random variable.
+- `qnorm(p)` returns the $z$-value with **left-tail area** $p$: $P(Z\le z)=p$.
+- `pt(t, df)` gives $P(T\le t)$ for a $t$ distribution with `df` degrees of freedom.
+- `qt(p, df)` returns the $t$-value with **left-tail area** $p$.
+
+For right-tail probabilities, use `lower.tail = FALSE`. For an arbitrary Normal distribution, specify `mean` and `sd` in `pnorm()` or `qnorm()`.
+
+```{r}
+# Standard Normal: P(Z < 1.25), P(Z > 1.25), and its 95th percentile
+pnorm(1.25)
+pnorm(1.25, lower.tail = FALSE)
+qnorm(0.95)
+
+# Student's t with 10 degrees of freedom
+df <- 10
+pt(1.25, df = df)
+pt(1.25, df = df, lower.tail = FALSE)
+qt(0.95, df = df)
+```
+
+::: {.callout-tip}
+## R's conventions
+
+For continuous distributions, $P(Z < z)=P(Z\le z)$, so the strict versus non-strict inequality does not affect `pnorm()` results. R gives more precise numerical answers than a printed table; note that in the exam you will need to use the table, however.
+:::
+
+
+
+
+
+# Group Works:
+
+- Make sure you are synchronized in a group of at least two students.
+- Download the .qmd file for this activity [here](../activity_templates/Unit-R.B-Normal-CTL-in-R.qmd) and open in R-studio.
+- Work through the following examples that we have discussed in the class - it is highly recommended you have your solved handouts with you or download the solved one from the Canvas.
+- Work in a group, share your thoughts.
+- I will be moving around, raise your hand if you have any question!
+
+
+
+# Normal distribution: examples from Unit 06
+
+## Example 1: Standard Normal probabilities
+
+Assume $Z\sim N(0,1)$. In R, `pnorm()` evaluates the area **to the left** of a given value unless you request the right tail.
+
+### (a) Find $P(Z<-0.77)$
+
+```{r}
+p_a <- pnorm(-0.77)
+round(p_a, 4)  # Approximately 0.2206
+```
+
+### (b) Find $P(Z>-0.77)$
+
+```{r}
+p_b <- pnorm(-0.77, lower.tail = FALSE)
+round(p_b, 4)  # Approximately 0.7794
+
+# Equivalent complement method
+round(1 - pnorm(-0.77), 4)
+```
+
+### (c) Find $P(-1.05<Z<2.41)$
+
+Subtract the left-tail area at the lower endpoint from that at the upper endpoint.
+
+$$
+P(-1.05<Z<2.41)=P(Z<2.41)-P(Z<-1.05).
+$$
+
+```{r}
+p_c <- pnorm(2.41) - pnorm(-1.05)
+round(p_c, 4)  # Approximately 0.8452
+```
+
+*Table note:* Using the four-decimal table entries $0.9920-0.1469$ gives $0.8451$; R's unrounded result is about $0.8452$.
+
+### (d) Find the areas within 1, 2, and 3 standard deviations
+
+Evaluate $P(-k<Z<k)$ for $k=1,2,3$ and compare with the empirical rule.
+
+```{r}
+k <- c(1, 2, 3)
+probability <- pnorm(k) - pnorm(-k)
+
+data.frame(
+  interval = paste0("-", k, " < Z < ", k),
+  probability = round(probability, 4),
+  percent = round(100 * probability, 2)
+)
+```
+
+These are approximately **68%, 95%, and 99.7%**, respectively.
+
+## Example 2: Finding Standard Normal cutoffs
+
+Here the **area is given**, and the goal is to find a $z$-value. Use `qnorm()`.
+
+### (a) Find $z$ such that $P(Z<z)=0.0708$
+
+```{r}
+z_a <- qnorm(0.0708)
+round(z_a, 2)  # Approximately -1.47
+```
+
+### (b) Find $z$ such that $P(Z>z)=0.6480$
+
+Convert the right-tail probability to a left-tail probability: $1-0.6480=0.3520$.
+
+```{r}
+z_b <- qnorm(0.6480, lower.tail = FALSE)
+round(z_b, 2)  # Approximately -0.38
+
+# Equivalent left-tail method
+round(qnorm(1 - 0.6480), 2)
+```
+
+### (c) Find $z>0$ such that $P(-z<Z<z)=0.95$
+
+The two tails each contain $0.025$, so the left-tail probability at the positive cutoff is $0.975$.
+
+```{r}
+alpha <- 1 - 0.95
+z_c <- qnorm(1 - alpha / 2)
+round(z_c, 2)  # Approximately 1.96
+
+# Check the central area
+pnorm(z_c) - pnorm(-z_c)
+```
+
+### (d) Find $z$ such that $P(-1.21<Z<z)=0.7330$
+
+First find $P(Z<-1.21)$, then add $0.7330$ to obtain the area to the left of $z$.
+
+```{r}
+left_area <- pnorm(-1.21)
+target_area <- left_area + 0.7330
+z_d <- qnorm(target_area)
+
+round(left_area, 4)
+round(target_area, 4)
+round(z_d, 2)  # Approximately 1.02
+
+# Verify the requested interval area
+round(pnorm(z_d) - pnorm(-1.21), 4)
+```
+
+## Example 3: Standard Normal percentiles
+
+A **percentile** is a cutoff with the stated percentage of the distribution below it. Use `qnorm(percent / 100)`.
+
+### (a) Find the 90th and 10th percentiles
+
+```{r}
+z_90 <- qnorm(0.90)
+z_10 <- qnorm(0.10)
+
+round(c(`90th percentile` = z_90,
+        `10th percentile` = z_10), 2)
+```
+
+### (b) Find the 75th and 25th percentiles
+
+```{r}
+z_75 <- qnorm(0.75)
+z_25 <- qnorm(0.25)
+
+round(c(`75th percentile` = z_75,
+        `25th percentile` = z_25), 2)
+```
+
+**Additional practice from our handwritten notes:** Find the 95th and 5th percentiles.
+
+```{r}
+round(c(`95th percentile` = qnorm(0.95),
+        `5th percentile` = qnorm(0.05)), 3)
+```
+
+## Example 4: Newborn mass
+
+Let $Y$ denote newborn mass in grams, with
+
+$$
+Y\sim N(\mu=3400,\ \sigma=500).
+$$
+
+You can **standardize first** using $z=(y-\mu)/\sigma$, or pass the original mean and standard deviation directly to `pnorm()` and `qnorm()`.
+
+### (a) Find $P(Y>4170)$
+
+```{r}
+mu <- 3400
+sigma <- 500
+
+y <- 4170
+z <- (y - mu) / sigma
+round(z, 2)  # z = 1.54
+
+p_above <- pnorm(y, mean = mu, sd = sigma, lower.tail = FALSE)
+round(p_above, 4)  # Approximately 0.0618
+
+# Standardized method: same answer
+round(pnorm(z, lower.tail = FALSE), 4)
+```
+
+### (b) Find $P(Y<3800)$
+
+```{r}
+y <- 3800
+z <- (y - mu) / sigma
+round(z, 2)  # z = 0.80
+
+p_below <- pnorm(y, mean = mu, sd = sigma)
+round(p_below, 4)  # Approximately 0.7881
+```
+
+### (c) Mary is heavier than 87.7% of newborns. Find her mass.
+
+The 87.7th percentile is a **left-tail probability** of $0.877$.
+
+```{r}
+z_mary <- qnorm(0.877)
+mary_mass <- qnorm(0.877, mean = mu, sd = sigma)
+
+round(z_mary, 2)    # Approximately 1.16
+round(mary_mass, 0) # Approximately 3980 grams
+
+# Equivalent transformation from Z back to Y
+round(mu + z_mary * sigma, 0)
+```
+
+*Numbering note:* The supplied Unit 06 handout continues from Example 4 to Example 6. The original numbering is preserved here.
+
+## Example 6: Filling milk jugs
+
+The volume in a randomly selected jug is modeled by
+
+$$
+Y\sim N(\mu=1.02,\ \sigma=0.01)\quad\text{gallons}.
+$$
+
+### (a) Find the probability that a jug is underfilled: $P(Y<1)$
+
+```{r}
+mu <- 1.02
+sigma <- 0.01
+
+z_underfilled <- (1 - mu) / sigma
+p_underfilled <- pnorm(1, mean = mu, sd = sigma)
+
+round(z_underfilled, 2)  # z = -2.00
+round(p_underfilled, 4)  # Approximately 0.0228
+```
+
+### (b) Find the central 80% interval $(A,B)$, centered at 1.02
+
+The interval leaves $10\%$ in each tail.
+
+```{r}
+central_area <- 0.80
+alpha <- 1 - central_area
+
+A <- qnorm(alpha / 2, mean = mu, sd = sigma)
+B <- qnorm(1 - alpha / 2, mean = mu, sd = sigma)
+
+round(c(A = A, B = B), 4)
+round((A + B) / 2, 4)  # Check: 1.02
+round(pnorm(B, mean = mu, sd = sigma) -
+      pnorm(A, mean = mu, sd = sigma), 4) # Check: 0.80
+```
+
+The R cutoffs are approximately $A=1.0072$ and $B=1.0328$ gallons.
+
+# Part II. Sampling distribution and the CLT
+
+For independent and identically distributed observations with population mean $\mu$ and finite population standard deviation $\sigma$,
+
+$$
+\mathrm{E}(\overline Y)=\mu,\qquad
+\mathrm{SD}(\overline Y)=\frac{\sigma}{\sqrt n}.
+$$
+
+If the **population is Normal**, the sample mean is exactly Normal for any $n$. If the population is not Normal, the CLT often gives an approximately Normal sampling distribution for sufficiently large $n$; $n\ge30$ is a guideline, not a universal guarantee.
+
+## Example 7: Sample mean of milk volumes
+
+Continue with independent $Y_i\sim N(1.02,0.01)$, where the second parameter is the standard deviation. For a sample mean, use **`sd = sigma / sqrt(n)`**, not `sd = sigma`.
+
+### (a) Two independently selected jugs: find $P(\overline Y<1)$
+
+```{r}
+mu <- 1.02
+sigma <- 0.01
+n <- 2
+
+se <- sigma / sqrt(n)
+z_mean <- (1 - mu) / se
+p_mean <- pnorm(1, mean = mu, sd = se)
+
+round(se, 6)
+round(z_mean, 2)  # Approximately -2.83
+round(p_mean, 6)  # Approximately 0.002339
+```
+
+*Compared with a single jug:* $P(Y<1)\approx0.0228$; for an average of two jugs it is only about $0.0023$.
+
+### (b) What happens as the sample size increases?
+
+```{r}
+mu <- 1.02
+sigma <- 0.01
+n_values <- c(1, 2, 5, 10, 30)
+
+se_values <- sigma / sqrt(n_values)
+z_values <- (1 - mu) / se_values
+p_values <- pnorm(1, mean = mu, sd = se_values)
+
+data.frame(
+  n = n_values,
+  standard_error = round(se_values, 6),
+  z_value = round(z_values, 2),
+  probability = signif(p_values, 5)
+)
+```
+
+As $n$ increases, the standard error decreases, and the fixed threshold of 1 gallon lies farther below the population mean of 1.02 gallons. Therefore, $P(\overline Y<1)$ becomes smaller.
+
+## Example 8: Sample mean of car-part weights
+
+Let each independent car-part weight follow a Uniform distribution:
+
+$$
+Y\sim\operatorname{Uniform}(a=2.97,b=3.01).
+$$
+
+For this distribution,
+
+$$
+\mu=\frac{a+b}{2},\qquad
+\sigma=\frac{b-a}{\sqrt{12}}.
+$$
+
+The distribution of each individual part is **Uniform, not Normal**. Use the CLT to approximate the distribution of the sample mean.
+
+```{r}
+a <- 2.97
+b <- 3.01
+mu <- (a + b) / 2
+sigma <- (b - a) / sqrt(12)
+
+round(mu, 4)
+round(sigma, 6)
+```
+
+### (a) For $n=30$, approximate $P(2.987<\overline Y<2.991)$
+
+```{r}
+n <- 30
+se <- sigma / sqrt(n)
+
+z_lower <- (2.987 - mu) / se
+z_upper <- (2.991 - mu) / se
+
+p_30 <- pnorm(2.991, mean = mu, sd = se) -
+        pnorm(2.987, mean = mu, sd = se)
+
+round(c(z_lower = z_lower, z_upper = z_upper), 4)
+round(p_30, 4)  # Approximately 0.6050 (unrounded CLT calculation)
+```
+
+**Why does the handwritten Z-table answer differ?** The handout first rounds the endpoints to about $-1.42$ and $0.47$, then uses table entries: $0.6808-0.0778=0.6030$. R uses the **unrounded** endpoints and gives approximately $0.6050$. Both are CLT approximations, but the latter avoids intermediate rounding.
+
+### (b) For $n=50$, approximate the same probability
+
+```{r}
+n <- 50
+se <- sigma / sqrt(n)
+
+z_lower <- (2.987 - mu) / se
+z_upper <- (2.991 - mu) / se
+
+p_50 <- pnorm(2.991, mean = mu, sd = se) -
+        pnorm(2.987, mean = mu, sd = se)
+
+round(c(z_lower = z_lower, z_upper = z_upper), 4)
+round(p_50, 4)  # Approximately 0.6968 (unrounded CLT calculation)
+```
+
+The handout's rounded Z-table calculation produces approximately $0.6962$. Here the target interval includes the population mean of $2.99$, so the probability increases as the sample mean becomes more concentrated around that mean.
+
+
+

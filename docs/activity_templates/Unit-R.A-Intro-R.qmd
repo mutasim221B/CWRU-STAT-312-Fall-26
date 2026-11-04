@@ -1,5 +1,5 @@
 ---
-title: "Unit 02.B: Intro to R and RStudio"
+title: "Unit R.A: Intro to R and RStudio"
 subtitle: "Instructor: Dr. Md Mutasim Billah"
 format: 
   html:

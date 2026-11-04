@@ -1,0 +1,4317 @@
+---
+title: "Unit R.B: Normal & CTL in R"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+
+
+
+
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+
+
+
+
+
+# Purpose and how to use this activity
+
+This activity introduces **base R** commands for finding Normal and Student's $t$ probabilities, cutoff values, confidence intervals, and hypothesis-test results. **No additional R packages are required.** You can run each code chunk in RStudio.
+
+The **Normal distribution and Central Limit Theorem (CLT)** examples below follow our *Unit 06: Normal Distribution & CLT* handout, keeping its original example numbers and data. Examples on **confidence intervals and hypothesis testing** are placed in clearly labeled later sections. 
+
+::: {.callout-important}
+## A reminder for STAT 312
+
+R is a tool for evaluating probabilities and quantiles. **You still need to identify the appropriate distribution, define the event, check assumptions, and interpret the result.** Use your class notes, lecture notes (when available), quizzes, required practice problems, and homework assignments to prepare for assessments.
+:::
+
+## Four essential distribution commands
+
+- `pnorm(x)` gives $P(Z\le x)$ for a standard Normal random variable.
+- `qnorm(p)` returns the $z$-value with **left-tail area** $p$: $P(Z\le z)=p$.
+- `pt(t, df)` gives $P(T\le t)$ for a $t$ distribution with `df` degrees of freedom.
+- `qt(p, df)` returns the $t$-value with **left-tail area** $p$.
+
+For right-tail probabilities, use `lower.tail = FALSE`. For an arbitrary Normal distribution, specify `mean` and `sd` in `pnorm()` or `qnorm()`.
+
+```{r}
+# Standard Normal: P(Z < 1.25), P(Z > 1.25), and its 95th percentile
+pnorm(1.25)
+pnorm(1.25, lower.tail = FALSE)
+qnorm(0.95)
+
+# Student's t with 10 degrees of freedom
+df <- 10
+pt(1.25, df = df)
+pt(1.25, df = df, lower.tail = FALSE)
+qt(0.95, df = df)
+```
+
+::: {.callout-tip}
+## R's conventions
+
+For continuous distributions, $P(Z < z)=P(Z\le z)$, so the strict versus non-strict inequality does not affect `pnorm()` results. R gives more precise numerical answers than a printed table; note that in the exam you will need to use the table, however.
+:::
+
+
+
+
+
+
+
+
+
+
+# Finding Z and t critical values directly in R
+
+The first two parts used the Standard Normal model. When the population standard deviation is **unknown**, many one-sample mean procedures use Student's $t$ distribution with degrees of freedom $df=n-1$.
+
+## Z critical values and tail probabilities
+
+```{r}
+# Common two-sided Normal critical values
+qnorm(0.95)   # 90% confidence interval -> 1.645
+qnorm(0.975)  # 95% confidence interval -> 1.960
+qnorm(0.995)  # 99% confidence interval -> 2.576
+
+# Left-tail alpha = 0.05 rejection cutoff
+qnorm(0.05)
+
+# Right-tail alpha = 0.05 rejection cutoff
+qnorm(0.05, lower.tail = FALSE)
+
+# Calculate a two-sided p-value for an observed z = -2.10
+z_obs <- -2.10
+2 * pnorm(abs(z_obs), lower.tail = FALSE)
+```
+
+## t critical values and tail probabilities
+
+**Always specify the degrees of freedom.** The $t$ critical value depends on `df`.
+
+```{r}
+n <- 16
+df <- n - 1
+
+# Critical t for a 95% two-sided confidence interval
+t_crit <- qt(0.975, df = df)
+round(t_crit, 3)
+
+# Left-tailed test, significance level 0.05
+round(qt(0.05, df = df), 3)
+
+# Right-tailed test, significance level 0.05
+round(qt(0.05, df = df, lower.tail = FALSE), 3)
+
+# P(T < -1.20), P(T > 1.20), and P(-1.20 < T < 1.20)
+round(pt(-1.20, df = df), 4)
+round(pt(1.20, df = df, lower.tail = FALSE), 4)
+round(pt(1.20, df = df) - pt(-1.20, df = df), 4)
+```
+
+
+
+# Group Works:
+
+- Make sure you are synchronized in a group of at least two students.
+- Download the .qmd file for this activity [here](../activity_templates/Unit-R.C-Confidence-Hypothesis-in-R.qmd) and open in R-studio.
+- Work through the following examples that we have discussed in the class - it is highly recommended you have your solved handouts with you or download the solved one from the Canvas.
+- Work in a group, share your thoughts.
+- I will be moving around, raise your hand if you have any question!
+
+
+
+### Classroom practice: place a bound on a t-test p-value
+
+For a **left-tailed** test with observed $t=-1.20$ and $df=5$, find the exact p-value and compare with the table-based bound.
+
+```{r}
+t_obs <- -1.20
+df <- 5
+p_exact <- pt(t_obs, df = df)
+
+round(p_exact, 4)
+
+# Left-tail critical t values for areas 0.10 and 0.20
+round(c(`10% left tail` = qt(0.10, df = df),
+        `20% left tail` = qt(0.20, df = df)), 3)
+```
+
+Since $qt(0.10,5)\approx-1.476<-1.20<qt(0.20,5)\approx-0.920$, the table gives **$0.10<p<0.20$**. R gives the more precise value, about $0.142$.
+
+::: {.callout-note}
+## Other useful R distribution commands
+
+`dnorm(x)` and `dt(x, df)` calculate **density heights**, not tail probabilities. `rnorm(n)` and `rt(n, df)` generate random values. Use `pnorm()`/`pt()` for areas and `qnorm()`/`qt()` for cutoffs.
+:::
+
+# Part IV. Confidence intervals in R (supplementary examples)
+
+These worked examples extend beyond the attached Unit 06 handout. They show how to use the same R commands in our confidence-interval topics.
+
+## Example CI-1: Population mean, known population SD (Z interval)
+
+**New illustrative example inspired by the newborn-mass setting.** Suppose a random independent sample of $n=100$ newborns has sample mean $\bar y=3420$ grams and the population SD is known to be $\sigma=500$ grams. Find a 95% confidence interval for $\mu$.
+
+$$
+\bar y\pm z_{\alpha/2}\frac{\sigma}{\sqrt n}.
+$$
+
+```{r}
+xbar <- 3420
+sigma <- 500
+n <- 100
+confidence <- 0.95
+
+alpha <- 1 - confidence
+z_star <- qnorm(1 - alpha / 2)
+se <- sigma / sqrt(n)
+me <- z_star * se
+ci <- c(lower = xbar - me, upper = xbar + me)
+
+round(z_star, 3)
+round(me, 2)
+round(ci, 2)
+```
+
+## Example CI-2: Population mean, unknown population SD (t interval)
+
+**Example reused from our STAT 312 hypothesis-testing practice:** A random sample of 41 people with unpaid parking tickets has mean age $\bar x=35.6$ and sample standard deviation $s=11.5$ years. Construct a 95% two-sided confidence interval, assuming the observations are independent and a t-based procedure is reasonable.
+
+$$
+\bar x\pm t_{\alpha/2,n-1}\frac{s}{\sqrt n}.
+$$
+
+```{r}
+n <- 41
+xbar <- 35.6
+s <- 11.5
+confidence <- 0.95
+
+df <- n - 1
+t_star <- qt((1 + confidence) / 2, df = df)
+se <- s / sqrt(n)
+me <- t_star * se
+ci <- c(lower = xbar - me, upper = xbar + me)
+
+round(t_star, 3)
+round(me, 3)
+round(ci, 3)
+
+# R's built-in t.test() can calculate this CI from raw data,
+# but xbar, s, and n alone are enough for the manual formula above.
+```
+
+## Example CI-3: Population proportion (Normal approximation)
+
+**New illustrative example.** In an independent random sample of 200 people, 112 answer "yes." Estimate the population proportion $p$ with a 95% confidence interval.
+
+$$
+\widehat p\pm z_{\alpha/2}
+\sqrt{\frac{\widehat p(1-\widehat p)}{n}}.
+$$
+
+```{r}
+n <- 200
+successes <- 112
+p_hat <- successes / n
+
+# Check the course guideline for this Normal approximation
+c(successes = n * p_hat,
+  failures = n * (1 - p_hat))
+
+z_star <- qnorm(0.975)
+se_hat <- sqrt(p_hat * (1 - p_hat) / n)
+ci <- p_hat + c(-1, 1) * z_star * se_hat
+
+round(p_hat, 4)
+round(setNames(ci, c("lower", "upper")), 4)
+```
+
+# Part V. Hypothesis testing in R (supplementary examples)
+
+In each test, **state $H_0$ and $H_a$ first**, then compute the test statistic and p-value. Compare the p-value with $\alpha$ and write a conclusion in the context of the problem.
+
+## Example HT-1: Left-tailed t-test for average age
+
+**Previously discussed STAT 312 practice example:** For people with unpaid parking tickets, suppose $n=41$, $\bar x=35.6$, and $s=11.5$. Test
+
+$$
+H_0:\mu=37\quad\text{vs.}\quad H_a:\mu<37
+$$
+
+at $\alpha=0.05$. Because $\sigma$ is unknown, use a one-sample $t$ test with 40 degrees of freedom (subject to the usual sampling assumptions).
+
+```{r}
+n <- 41
+xbar <- 35.6
+s <- 11.5
+mu0 <- 37
+alpha <- 0.05
+
+df <- n - 1
+t_obs <- (xbar - mu0) / (s / sqrt(n))
+p_value <- pt(t_obs, df = df)  # LEFT-tailed p-value
+critical_t <- qt(alpha, df = df)
+
+round(t_obs, 3)       # Approximately -0.780
+round(critical_t, 3)  # Approximately -1.684
+round(p_value, 4)     # Approximately 0.2201
+
+if (p_value < alpha) {
+  cat("Reject H0 at alpha =", alpha, "\n")
+} else {
+  cat("Fail to reject H0 at alpha =", alpha, "\n")
+}
+```
+
+**Interpretation:** Since $p\approx0.2201>0.05$, there is insufficient evidence to conclude that the population mean age is less than 37 years.
+
+### How does the p-value change for a two-sided alternative?
+
+If instead $H_a:\mu\ne37$, the test statistic stays the same but the two-sided p-value changes.
+
+```{r}
+p_two_sided <- 2 * pt(abs(t_obs), df = df, lower.tail = FALSE)
+round(p_two_sided, 4)
+```
+
+**Remember:** Never choose a one-sided versus two-sided alternative *after* looking at the data. The alternative should be determined by the research question in advance.
+
+## Example HT-2: Right-tailed Z-test when the population SD is known
+
+**New illustrative example inspired by the newborn-mass setting.** Suppose the established population SD is $500$ grams. A random independent sample of $100$ newborns has mean mass $3500$ grams. At $\alpha=0.05$, test
+
+$$
+H_0:\mu=3400\quad\text{vs.}\quad H_a:\mu>3400.
+$$
+
+```{r}
+xbar <- 3500
+mu0 <- 3400
+sigma <- 500
+n <- 100
+alpha <- 0.05
+
+z_obs <- (xbar - mu0) / (sigma / sqrt(n))
+p_value <- pnorm(z_obs, lower.tail = FALSE)
+critical_z <- qnorm(alpha, lower.tail = FALSE)
+
+round(z_obs, 3)
+round(critical_z, 3)
+round(p_value, 4)
+
+if (p_value < alpha) {
+  cat("Reject H0: evidence supports a mean above 3400 grams.\n")
+} else {
+  cat("Fail to reject H0: insufficient evidence of a mean above 3400 grams.\n")
+}
+```
+
+## A reusable R template for one-sample mean tests
+
+Use this template for **summary statistics**. Set `alternative` to `"less"`, `"greater"`, or `"two.sided"`. Choose `sigma` only when the **population** standard deviation is known; otherwise use the sample SD `s`.
+
+```{r}
+# Example inputs: edit these for a different problem
+xbar <- 35.6
+mu0 <- 37
+n <- 41
+s <- 11.5
+sigma_known <- FALSE
+alpha <- 0.05
+alternative <- "less"  # "less", "greater", or "two.sided"
+
+stopifnot(n > 1, alternative %in% c("less", "greater", "two.sided"))
+
+if (sigma_known) {
+  sigma <- 11.5  # Replace with the KNOWN population SD when applicable
+  statistic <- (xbar - mu0) / (sigma / sqrt(n))
+  cdf <- function(x, lower.tail = TRUE) pnorm(x, lower.tail = lower.tail)
+  distribution <- "Z"
+} else {
+  statistic <- (xbar - mu0) / (s / sqrt(n))
+  cdf <- function(x, lower.tail = TRUE) pt(x, df = n - 1,
+                                          lower.tail = lower.tail)
+  distribution <- "t"
+}
+
+p_value <- switch(
+  alternative,
+  less = cdf(statistic),
+  greater = cdf(statistic, lower.tail = FALSE),
+  two.sided = 2 * cdf(abs(statistic), lower.tail = FALSE)
+)
+
+cat("Distribution:", distribution, "\n")
+cat("Test statistic:", round(statistic, 4), "\n")
+cat("p-value:", round(p_value, 5), "\n")
+cat(if (p_value < alpha) "Reject H0\n" else "Fail to reject H0\n")
+```
+
+# Quick reference: which R command do I need?
+
+- **Probability to the left:** `pnorm(value)` or `pt(value, df)`.
+- **Probability to the right:** `pnorm(value, lower.tail = FALSE)` or `pt(value, df, lower.tail = FALSE)`.
+- **Probability between two values:** `pnorm(upper) - pnorm(lower)` or `pt(upper, df) - pt(lower, df)`.
+- **A cutoff from a left-tail area:** `qnorm(area)` or `qt(area, df)`.
+- **A cutoff from a right-tail area:** `qnorm(area, lower.tail = FALSE)` or `qt(area, df, lower.tail = FALSE)`.
+- **A central $100(1-\alpha)\%$ critical value:** `qnorm(1 - alpha/2)` or `qt(1 - alpha/2, df)`.
+- **A sampling distribution for a mean:** replace `sd = sigma` by `sd = sigma/sqrt(n)` when using Normal approximations.
+
+::: {.callout-warning}
+## Common mistakes to avoid
+
+1. Using `qnorm()` when the question asks for a probability; use `pnorm()` for probabilities and `qnorm()` for cutoffs.
+2. Forgetting `lower.tail = FALSE` for right-tailed probabilities.
+3. Using the SD of individual observations ($\sigma$) instead of the standard error ($\sigma/\sqrt n$) for $\overline Y$.
+4. Using `pnorm()` when the correct test statistic follows a $t$ distribution; specify `df = n - 1` in `pt()` and `qt()`.
+5. Treating a p-value as the probability that $H_0$ is true. It is **not** that probability.
+6. Treating a nonsignificant result as proof of $H_0$. Say **"fail to reject $H_0$"** instead.
+:::
+
+# Try it yourself
+
+Before running R, decide which function and tail you need. Then check your result in R.
+
+1. Find $P(Z>1.35)$.
+2. Find $P(-0.50<Z<1.80)$.
+3. Find the value $z$ for which $P(Z>z)=0.025$.
+4. Find the positive $t$ cutoff with 5% to its right and $df=20$.
+5. If $T=-1.20$ with $df=5$, find the **two-sided** p-value.
+6. For the milk-jug model, find $P(\overline Y<1)$ if $n=4$.
+7. For the Uniform car-part model, approximate $P(2.987<\overline Y<2.991)$ for $n=100$ and compare it with the $n=30$ and $n=50$ results.
+
+::: {.callout-note collapse="true"}
+## Show R code for self-checking
+
+```{r}
+round(pnorm(1.35, lower.tail = FALSE), 4)
+round(pnorm(1.80) - pnorm(-0.50), 4)
+round(qnorm(0.025, lower.tail = FALSE), 4)
+round(qt(0.05, df = 20, lower.tail = FALSE), 4)
+round(2 * pt(1.20, df = 5, lower.tail = FALSE), 4)
+round(pnorm(1, mean = 1.02, sd = 0.01 / sqrt(4)), 6)
+
+mu_uniform <- (2.97 + 3.01) / 2
+sigma_uniform <- (3.01 - 2.97) / sqrt(12)
+se_100 <- sigma_uniform / sqrt(100)
+round(pnorm(2.991, mean = mu_uniform, sd = se_100) -
+      pnorm(2.987, mean = mu_uniform, sd = se_100), 4)
+```
+
+:::
+
+
+
+
+# Unit 07: Confidence Intervals in R
+
+In Unit 06, we learned how to calculate probabilities and critical values using R. We will now use those functions to construct and interpret **confidence intervals**.
+
+Our goal is to learn how to use R instead of printed Z- and t-tables.
+
+The main functions are:
+
+- `qnorm()` finds critical Z-values.
+- `qt()` finds critical t-values.
+- `pnorm()` finds probabilities from a normal distribution.
+- `pt()` finds probabilities from a t-distribution.
+- `sqrt()` calculates square roots.
+- `ceiling()` rounds a number upward to an integer.
+
+**Important:** R uses more decimal places than the printed tables. Therefore, some answers may differ slightly from those obtained in class using rounded critical values.
+
+---
+
+## Example 1: Confidence Interval for a Population Mean When $\sigma$ Is Known
+
+Suppose the sample mean $\overline{Y}$ has a normal or approximately normal sampling distribution:
+
+$$
+\overline{Y}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right).
+$$
+
+Assume the population standard deviation $\sigma$ is known.
+
+### (a) Construct a 95% confidence interval for $\mu$
+
+Recall that
+
+$$
+Z=\frac{\overline{Y}-\mu}{\sigma/\sqrt{n}}.
+$$
+
+For a 95% confidence interval,
+
+$$
+\alpha=1-0.95=0.05.
+$$
+
+Each tail contains probability
+
+$$
+\frac{\alpha}{2}=0.025.
+$$
+
+We need the critical value satisfying
+
+$$
+P(Z<z_{0.025})=0.975.
+$$
+
+In R, use `qnorm()`:
+
+```{r}
+# Confidence level
+conf_level <- 0.95
+
+# Significance level
+alpha <- 1 - conf_level
+
+# Find the critical Z-value
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+
+# The corresponding negative critical value
+-z_critical
+```
+
+We should obtain approximately
+
+$$
+z_{0.025}=1.96.
+$$
+
+Let us verify that the area between $-1.96$ and $1.96$ is approximately 0.95.
+
+```{r}
+# Probability between the two critical values
+pnorm(z_critical) - pnorm(-z_critical)
+```
+
+Therefore,
+
+$$
+P(-1.96<Z<1.96)\approx0.95.
+$$
+
+The resulting 95% confidence interval is
+
+$$
+\boxed{
+\overline{y}\pm1.96\frac{\sigma}{\sqrt{n}}
+}
+$$
+
+Notice that we have not yet used actual sample values. We have simply obtained the critical value necessary to construct the interval.
+
+### (b) Generalize to a $(1-\alpha)100\%$ confidence interval
+
+For any confidence level $1-\alpha$, we can obtain the critical value using
+
+```{r}
+# Example: 90%, 95%, and 99% confidence levels
+
+qnorm(0.95)   # 90% CI: 5% in each tail
+
+qnorm(0.975)  # 95% CI: 2.5% in each tail
+
+qnorm(0.995)  # 99% CI: 0.5% in each tail
+```
+
+The general formula is
+
+$$
+\boxed{
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
+}
+$$
+
+where
+
+$$
+z_{\alpha/2}
+=
+\texttt{qnorm}(1-\alpha/2).
+$$
+
+We can define a reusable R function:
+
+```{r}
+# Function for a Z-based confidence interval
+# when population standard deviation is known
+
+ci_mean_z <- function(xbar, sigma, n, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sigma / sqrt(n)
+
+  ME <- z_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+```
+
+We will use this function in the next examples.
+
+---
+
+## Example 2: Confidence Interval for Mean Weight of CWRU Students
+
+We are interested in the population mean weight $\mu$ among all CWRU students.
+
+Suppose we have the following information:
+
+- Sample size: $n=30$
+- Sample mean: $\overline{y}=150$ pounds
+- Known population standard deviation: $\sigma=25$ pounds
+- Confidence level: 95%
+
+Construct a 95% confidence interval for $\mu$.
+
+The formula is
+
+$$
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+### Step 1: Enter the information
+
+```{r}
+n <- 30
+xbar <- 150
+sigma <- 25
+conf_level <- 0.95
+```
+
+### Step 2: Find the critical Z-value
+
+```{r}
+alpha <- 1 - conf_level
+
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+```
+
+### Step 3: Calculate the standard error
+
+```{r}
+SE <- sigma / sqrt(n)
+
+SE
+```
+
+### Step 4: Calculate the margin of error
+
+```{r}
+ME <- z_critical * SE
+
+ME
+```
+
+### Step 5: Find the confidence interval
+
+```{r}
+lower <- xbar - ME
+upper <- xbar + ME
+
+c(lower = lower, upper = upper)
+
+# Rounded to two decimal places
+round(c(lower = lower, upper = upper), 2)
+```
+
+The 95% confidence interval is approximately
+
+$$
+\boxed{(141.05,\ 158.95)}
+$$
+
+We can also obtain the result using our function from Example 1.
+
+```{r}
+ci_mean_z(
+  xbar = 150,
+  sigma = 25,
+  n = 30,
+  conf_level = 0.95
+)
+```
+
+**Interpretation:** Based on the sample, we are 95% confident that the true population mean weight of all CWRU students lies between approximately 141.05 and 158.95 pounds.
+
+This confidence statement refers to the population mean, not to the weights of individual students.
+
+---
+
+## Example 3: Interpreting Confidence Intervals
+
+Recall the 95% confidence interval from Example 2:
+
+$$
+(141.05,\ 158.95).
+$$
+
+Consider the following statements.
+
+**(a)** We sampled 95% of all CWRU students.
+
+**False.** The confidence level does not represent the percentage of the population sampled.
+
+**(b)** We know with certainty that $141.05<\mu<158.95$.
+
+**False.** Confidence intervals involve uncertainty. The interval may or may not contain the population mean.
+
+**(c)** Based on our sample, values of $\mu$ between 141.05 and 158.95 are plausible.
+
+**True.** These values are consistent with the confidence interval we constructed.
+
+**(d)** $P(141.05<\mu<158.95)=0.95$.
+
+**False under the frequentist interpretation.** The population mean $\mu$ is a fixed, unknown parameter. The confidence procedure is random before the sample is observed.
+
+**(e)** We are 95% confident that $141.05<\mu<158.95$.
+
+**True.** This is the standard interpretation of a 95% confidence interval.
+
+**(f)** Approximately 95% of intervals constructed using this procedure would contain $\mu$ in repeated sampling.
+
+**True.** This describes the long-run coverage property of the confidence interval procedure.
+
+**(g)** We know that $\mu=150$.
+
+**False.** The number 150 is the sample mean, which estimates the unknown population mean.
+
+**(h)** 95% of CWRU students weigh between 141.05 and 158.95 pounds.
+
+**False.** A confidence interval for $\mu$ does not describe where 95% of individual observations lie.
+
+We can use R to demonstrate the long-run interpretation in the following examples.
+
+---
+
+## Example 4: Horseshoes and Confidence Intervals
+
+In our classroom analogy:
+
+- The horseshoe represents a confidence interval.
+- The pin represents the true population mean $\mu$.
+- The thrower does not know the precise location of the pin, just as a researcher does not know the true value of $\mu$.
+
+A confidence interval either captures the true parameter or misses it.
+
+### Visualizing confidence intervals using R
+
+We will generate 40 hypothetical random samples from a normal population.
+
+For illustration, suppose the true population has
+
+$$
+\mu=150,\qquad \sigma=25,\qquad n=30.
+$$
+
+These are simulated observations, not actual CWRU student data.
+
+```{r}
+# Set a seed so results can be reproduced
+set.seed(312)
+
+# Population characteristics
+mu_true <- 150
+sigma <- 25
+n <- 30
+
+# Number of repeated samples
+n_samples <- 40
+
+# Critical Z-value for a 95% CI
+z_critical <- qnorm(0.975)
+
+# Generate 40 sample means
+sample_means <- replicate(
+  n_samples,
+  mean(rnorm(n, mean = mu_true, sd = sigma))
+)
+
+# Margin of error for each sample
+ME <- z_critical * sigma / sqrt(n)
+
+# Construct the confidence intervals
+lower <- sample_means - ME
+upper <- sample_means + ME
+
+# Check whether each interval contains the true mean
+captured <- (lower <= mu_true) & (mu_true <= upper)
+
+# Number of intervals capturing the true mean
+sum(captured)
+
+# Number missing the true mean
+sum(!captured)
+```
+
+### Plot the 40 confidence intervals
+
+```{r}
+#| fig-width: 9
+#| fig-height: 6
+#| fig-cap: "Forty simulated 95% confidence intervals"
+
+plot(
+  1:n_samples, sample_means,
+  type = "n",
+  ylim = range(c(lower, upper, mu_true)),
+  xlab = "Sample number",
+  ylab = "Population mean weight (pounds)",
+  main = "Repeated 95% Confidence Intervals"
+)
+
+# Draw each confidence interval
+for (i in 1:n_samples) {
+
+  segments(
+    x0 = i,
+    y0 = lower[i],
+    x1 = i,
+    y1 = upper[i],
+    col = ifelse(captured[i], "darkgreen", "red"),
+    lwd = 2
+  )
+}
+
+# The true population mean
+abline(h = mu_true, col = "blue", lwd = 2, lty = 2)
+
+legend(
+  "topright",
+  legend = c("Captures true mean", "Misses true mean", "True mean"),
+  col = c("darkgreen", "red", "blue"),
+  lwd = 2,
+  lty = c(1, 1, 2),
+  bty = "n"
+)
+```
+
+The blue horizontal line represents the fixed population mean.
+
+Green intervals capture the population mean, whereas red intervals miss it.
+
+**Important:** Exactly 95% of the intervals do not have to capture the true mean in every small simulation. The 95% refers to long-run performance.
+
+---
+
+## Example 5: Coin Toss and Confidence Intervals
+
+Recall the classroom analogy near Wade Lagoon.
+
+Imagine that we repeatedly construct 95% confidence intervals.
+
+Each interval either:
+
+1. Captures the true population mean $\mu$.
+2. Fails to capture the true population mean $\mu$.
+
+For a correctly calibrated 95% confidence interval procedure, approximately 95% of intervals should capture $\mu$ over many independent repetitions.
+
+Let us simulate 10,000 samples.
+
+```{r}
+set.seed(312)
+
+mu_true <- 150
+sigma <- 25
+n <- 30
+
+z_critical <- qnorm(0.975)
+
+# Number of repetitions
+N <- 10000
+
+# Simulate whether each CI captures the true mean
+captured <- replicate(N, {
+
+  sample_data <- rnorm(
+    n,
+    mean = mu_true,
+    sd = sigma
+  )
+
+  xbar <- mean(sample_data)
+
+  ME <- z_critical * sigma / sqrt(n)
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  (lower <= mu_true) && (mu_true <= upper)
+})
+
+# Proportion of intervals that capture mu
+mean(captured)
+
+# Proportion that do not capture mu
+mean(!captured)
+```
+
+The results should be close to
+
+$$
+P(\text{CI captures }\mu)=0.95
+$$
+
+and
+
+$$
+P(\text{CI misses }\mu)=0.05.
+$$
+
+The outcome for each individual interval is either capture or miss.
+
+The confidence level describes the long-run reliability of the method, not a probability assigned to the fixed parameter after observing the interval.
+
+---
+
+## Exercise 6: Understanding Confidence Interval Width
+
+Recall the confidence interval for a population mean when $\sigma$ is known:
+
+$$
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+Its total width is
+
+$$
+\text{Width}
+=
+2z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+### (a) What makes a confidence interval wider or narrower?
+
+The width depends on three important quantities:
+
+1. Population standard deviation $\sigma$.
+2. Sample size $n$.
+3. Confidence level $1-\alpha$.
+
+We can define the following function in R:
+
+```{r}
+ci_width <- function(n, sigma, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  width <- 2 * z_critical * sigma / sqrt(n)
+
+  return(width)
+}
+```
+
+### Effect of sample size
+
+Keep $\sigma=25$ and the confidence level at 95%.
+
+```{r}
+ci_width(n = 20, sigma = 25)
+
+ci_width(n = 30, sigma = 25)
+
+ci_width(n = 100, sigma = 25)
+
+ci_width(n = 500, sigma = 25)
+```
+
+**Observation:** Increasing sample size decreases the confidence interval width.
+
+### Effect of population standard deviation
+
+Keep $n=30$ and the confidence level at 95%.
+
+```{r}
+ci_width(n = 30, sigma = 10)
+
+ci_width(n = 30, sigma = 25)
+
+ci_width(n = 30, sigma = 40)
+```
+
+**Observation:** Larger population standard deviation produces a wider confidence interval.
+
+### Effect of confidence level
+
+Keep $n=30$ and $\sigma=25$.
+
+```{r}
+ci_width(n = 30, sigma = 25, conf_level = 0.90)
+
+ci_width(n = 30, sigma = 25, conf_level = 0.95)
+
+ci_width(n = 30, sigma = 25, conf_level = 0.99)
+```
+
+**Observation:** Higher confidence levels require wider intervals when the other quantities are fixed.
+
+### (b) What happens with a 100% confidence interval?
+
+For 100% confidence,
+
+$$
+\alpha=0.
+$$
+
+Therefore, the critical value would be
+
+$$
+z_{\alpha/2}=z_0.
+$$
+
+Let's examine this using R.
+
+```{r}
+# Critical value for 99% confidence
+qnorm(0.995)
+
+# Critical value for 99.9% confidence
+qnorm(0.9995)
+
+# Critical value corresponding to 100% confidence
+qnorm(1)
+```
+
+R returns `Inf` for `qnorm(1)`.
+
+Therefore, a 100% confidence interval based on this two-sided Normal procedure would have infinite width:
+
+$$
+(-\infty,\infty).
+$$
+
+Such an interval would always contain the parameter but would not provide a useful estimate of its location.
+
+---
+
+## Example 7: Margin of Error and Required Sample Size
+
+For a Z-based confidence interval,
+
+$$
+ME=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+### (a) Derive the required sample size
+
+Suppose we want the margin of error to be no greater than $B$.
+
+We require
+
+$$
+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\le B.
+$$
+
+Solving for $n$,
+
+$$
+n\ge
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2.
+$$
+
+The required integer sample size is
+
+$$
+\boxed{
+n=
+\left\lceil
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2
+\right\rceil.
+}
+$$
+
+In R, `ceiling()` rounds up to the next integer when needed.
+
+### (b) Required sample size for CWRU student weights
+
+Recall Example 2:
+
+$$
+\sigma=25.
+$$
+
+Suppose we want a 95% confidence interval with a margin of error no greater than 3 pounds.
+
+Given:
+
+$$
+B=3,\quad \sigma=25,\quad 1-\alpha=0.95.
+$$
+
+```{r}
+sigma <- 25
+
+B <- 3
+
+conf_level <- 0.95
+
+# Step 1: Find critical Z-value
+z_critical <- qnorm(1 - (1 - conf_level) / 2)
+
+# Step 2: Calculate required sample size
+n_required <- (z_critical * sigma / B)^2
+
+n_required
+
+# Step 3: Round upward
+ceiling(n_required)
+```
+
+We need at least
+
+$$
+\boxed{n=267\text{ students}.}
+$$
+
+**Important:** We always round upward because rounding downward could produce a margin of error larger than the desired maximum.
+
+---
+
+## Example 8: Confidence Intervals at Different Confidence Levels
+
+For a population mean with known $\sigma$,
+
+$$
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+We want to find the critical Z-values for 90%, 95%, and 99% confidence intervals.
+
+### Step 1: Find the critical values
+
+```{r}
+# 90% confidence
+z90 <- qnorm(0.95)
+
+# 95% confidence
+z95 <- qnorm(0.975)
+
+# 99% confidence
+z99 <- qnorm(0.995)
+
+z90
+z95
+z99
+```
+
+The critical values are approximately
+
+$$
+z_{0.05}=1.645,
+$$
+
+$$
+z_{0.025}=1.960,
+$$
+
+$$
+z_{0.005}=2.576.
+$$
+
+### Step 2: Construct the intervals
+
+The general expressions are
+
+$$
+\text{90% CI: }
+\overline{y}\pm1.645\frac{\sigma}{\sqrt{n}},
+$$
+
+$$
+\text{95% CI: }
+\overline{y}\pm1.960\frac{\sigma}{\sqrt{n}},
+$$
+
+$$
+\text{99% CI: }
+\overline{y}\pm2.576\frac{\sigma}{\sqrt{n}}.
+$$
+
+For a numerical illustration, we can reuse the CWRU student-weight information from Example 2:
+
+$$
+\overline{y}=150,\quad\sigma=25,\quad n=30.
+$$
+
+```{r}
+xbar <- 150
+sigma <- 25
+n <- 30
+
+# Construct confidence intervals
+ci_mean_z(xbar, sigma, n, conf_level = 0.90)
+
+ci_mean_z(xbar, sigma, n, conf_level = 0.95)
+
+ci_mean_z(xbar, sigma, n, conf_level = 0.99)
+```
+
+**Question:** Which confidence interval is the widest?
+
+**Answer:** The 99% confidence interval.
+
+A higher confidence level requires a larger critical value, resulting in a larger margin of error.
+
+---
+
+## Example 9: Confidence Interval for $\mu$ When $\sigma$ Is Unknown
+
+Suppose $\mu$ represents the population mean cholesterol level among 70-year-old American men.
+
+We are given:
+
+- $n=19$
+- $\overline{y}=44.2$
+- Sample standard deviation $s=3.8$
+- Population standard deviation $\sigma$ is unknown.
+- Confidence level: 90%
+
+Because the sample size is small, we assume the population distribution is normal.
+
+When $\sigma$ is unknown, we use a t-based confidence interval:
+
+$$
+\boxed{
+\overline{y}\pm
+t_{\alpha/2,n-1}\frac{s}{\sqrt{n}}.
+}
+$$
+
+### Step 1: Find the degrees of freedom
+
+$$
+df=n-1=18.
+$$
+
+```{r}
+n <- 19
+xbar <- 44.2
+s <- 3.8
+conf_level <- 0.90
+
+df <- n - 1
+
+df
+```
+
+### Step 2: Find the critical t-value
+
+For a 90% confidence interval,
+
+$$
+\alpha=0.10,\qquad\alpha/2=0.05.
+$$
+
+We need
+
+$$
+t_{0.05,18}.
+$$
+
+Use `qt()`:
+
+```{r}
+alpha <- 1 - conf_level
+
+t_critical <- qt(1 - alpha / 2, df = 18)
+
+t_critical
+```
+
+The critical value is approximately
+
+$$
+t_{0.05,18}=1.734.
+$$
+
+### Step 3: Calculate standard error and margin of error
+
+```{r}
+SE <- s / sqrt(n)
+
+ME <- t_critical * SE
+
+SE
+ME
+```
+
+### Step 4: Construct the confidence interval
+
+```{r}
+lower <- xbar - ME
+upper <- xbar + ME
+
+round(c(lower = lower, upper = upper), 3)
+```
+
+The 90% confidence interval is approximately
+
+$$
+\boxed{(42.688,\ 45.712)}.
+$$
+
+**Interpretation:** Based on the sample, we are 90% confident that the true population mean cholesterol level among 70-year-old American men lies between approximately 42.688 and 45.712.
+
+### Define a reusable t-confidence interval function
+
+```{r}
+ci_mean_t <- function(xbar, s, n, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  df <- n - 1
+
+  t_critical <- qt(1 - alpha / 2, df = df)
+
+  SE <- s / sqrt(n)
+
+  ME <- t_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+```
+
+We can now obtain the same result with one command:
+
+```{r}
+ci_mean_t(
+  xbar = 44.2,
+  s = 3.8,
+  n = 19,
+  conf_level = 0.90
+)
+```
+
+**Remember:**
+
+- Use `qnorm()` to find Z critical values.
+- Use `qt()` to find t critical values.
+- The t-distribution requires degrees of freedom.
+
+---
+
+## Example 10: Reverse-Engineering a Confidence Interval
+
+Suppose we know that
+
+- $n=16$
+- $\sigma$ is unknown.
+- An 80% confidence interval for $\mu$ is $(48,54)$.
+
+We want to determine the sample mean $\overline{y}$ and sample standard deviation $s$.
+
+### Step 1: Find the sample mean
+
+For a symmetric t-confidence interval,
+
+$$
+\overline{y}=\frac{L+U}{2}.
+$$
+
+```{r}
+lower <- 48
+upper <- 54
+
+xbar <- (lower + upper) / 2
+
+xbar
+```
+
+Therefore,
+
+$$
+\boxed{\overline{y}=51}.
+$$
+
+### Step 2: Find the margin of error
+
+$$
+ME=\frac{U-L}{2}.
+$$
+
+```{r}
+ME <- (upper - lower) / 2
+
+ME
+```
+
+Thus,
+
+$$
+ME=3.
+$$
+
+### Step 3: Find the critical t-value
+
+For an 80% confidence interval,
+
+$$
+\alpha=0.20,\qquad df=16-1=15.
+$$
+
+```{r}
+n <- 16
+conf_level <- 0.80
+
+alpha <- 1 - conf_level
+
+df <- n - 1
+
+t_critical <- qt(1 - alpha / 2, df = df)
+
+t_critical
+```
+
+We obtain approximately
+
+$$
+t_{0.10,15}=1.341.
+$$
+
+### Step 4: Solve for the sample standard deviation
+
+Recall
+
+$$
+ME=t_{\alpha/2,n-1}\frac{s}{\sqrt{n}}.
+$$
+
+Rearranging,
+
+$$
+s=\frac{ME\sqrt{n}}{t_{\alpha/2,n-1}}.
+$$
+
+```{r}
+s <- ME * sqrt(n) / t_critical
+
+s
+```
+
+The sample standard deviation is approximately
+
+$$
+\boxed{s=8.951}.
+$$
+
+The handwritten solution may differ slightly because the t-value was rounded to 1.341 before calculating $s$.
+
+### Step 5: Verify our result
+
+Use the function from Example 9.
+
+```{r}
+ci_mean_t(
+  xbar = 51,
+  s = s,
+  n = 16,
+  conf_level = 0.80
+)
+```
+
+The result should reproduce the original interval:
+
+$$
+(48,54).
+$$
+
+---
+
+## Example 11: Finding a t Critical Value When $df=74$
+
+Suppose
+
+$$
+n=75
+$$
+
+and the population standard deviation is unknown.
+
+We want to construct a 95% confidence interval for $\mu$.
+
+### Step 1: Find the degrees of freedom
+
+```{r}
+n <- 75
+
+df <- n - 1
+
+df
+```
+
+We have
+
+$$
+df=74.
+$$
+
+### Step 2: Find the critical t-value
+
+In our printed t-table, $df=74$ may not be listed.
+
+In class, we used the closest available smaller degrees of freedom, $df=70$, to approximate the critical value.
+
+Using R, we can obtain the exact critical value for $df=74$.
+
+```{r}
+# Exact critical value using R
+qt(0.975, df = 74)
+
+# Approximate value from the printed table using df = 70
+qt(0.975, df = 70)
+```
+
+R gives approximately
+
+$$
+t_{0.025,74}=1.993.
+$$
+
+The printed-table approximation using $df=70$ is approximately 1.994.
+
+**Advantage of R:** We do not need to choose a nearby degrees-of-freedom row. R calculates the appropriate t critical value directly.
+
+The confidence interval has the form
+
+$$
+\boxed{
+\overline{y}\pm1.993\frac{s}{\sqrt{75}}.
+}
+$$
+
+Since this example does not provide a numerical sample mean or sample standard deviation, we cannot calculate the numerical endpoints.
+
+When those values are available, we can use `ci_mean_t()` with $n=75$.
+
+---
+
+## Example 12: Confidence Interval for a Population Proportion
+
+A sample of 100 one-gallon milk jugs is inspected.
+
+Of these, 80 jugs contain at least one gallon of milk.
+
+Let $p$ denote the true population proportion of jugs containing at least one gallon.
+
+We are given
+
+$$
+n=100,\qquad X=80.
+$$
+
+### (a) Estimate the population proportion
+
+The sample proportion is
+
+$$
+\widehat{p}=\frac{X}{n}.
+$$
+
+```{r}
+n <- 100
+
+X <- 80
+
+phat <- X / n
+
+phat
+```
+
+Therefore,
+
+$$
+\boxed{\widehat{p}=0.80}.
+$$
+
+The estimated successful-fill proportion is 80%.
+
+### (b) Construct a 95% confidence interval for $p$
+
+We use the approximate confidence interval
+
+$$
+\boxed{
+\widehat{p}\pm
+z_{\alpha/2}
+\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
+}
+$$
+
+#### Step 1: Check the normal approximation conditions
+
+For the method discussed in class, we check that
+
+$$
+n\widehat{p}\ge15
+$$
+
+and
+
+$$
+n(1-\widehat{p})\ge15.
+$$
+
+```{r}
+# Number of observed successes
+n * phat
+
+# Number of observed failures
+n * (1 - phat)
+
+# Check both conditions
+n * phat >= 15
+
+n * (1 - phat) >= 15
+```
+
+Both conditions are satisfied:
+
+$$
+80\ge15,\qquad20\ge15.
+$$
+
+#### Step 2: Find the critical Z-value
+
+```{r}
+conf_level <- 0.95
+
+alpha <- 1 - conf_level
+
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+```
+
+#### Step 3: Calculate the standard error
+
+```{r}
+SE <- sqrt(phat * (1 - phat) / n)
+
+SE
+```
+
+#### Step 4: Calculate the margin of error
+
+```{r}
+ME <- z_critical * SE
+
+ME
+```
+
+#### Step 5: Construct the confidence interval
+
+```{r}
+lower <- phat - ME
+upper <- phat + ME
+
+round(c(lower = lower, upper = upper), 4)
+```
+
+The approximate 95% confidence interval is
+
+$$
+\boxed{(0.7216,\ 0.8784)}.
+$$
+
+**Interpretation:** Based on the sample, we are 95% confident that the population proportion of milk jugs containing at least one gallon lies between approximately 72.16% and 87.84%.
+
+### Reusable R function for a proportion confidence interval
+
+```{r}
+# Wald confidence interval for a population proportion
+# This is the Normal-approximation method from our handout.
+
+ci_proportion <- function(X, n, conf_level = 0.95) {
+
+  phat <- X / n
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sqrt(phat * (1 - phat) / n)
+
+  ME <- z_critical * SE
+
+  lower <- phat - ME
+  upper <- phat + ME
+
+  return(c(lower = lower, upper = upper))
+}
+```
+
+Check the result:
+
+```{r}
+ci_proportion(
+  X = 80,
+  n = 100,
+  conf_level = 0.95
+)
+```
+
+*Note:* This is the Wald (Normal-approximation) interval used in the handout. Other methods are available for estimating a proportion, and their results may differ.
+
+### (c) What happens if the sample size increases?
+
+Suppose we observe 800 successfully filled jugs out of 1,000.
+
+The sample proportion remains
+
+$$
+\widehat{p}=\frac{800}{1000}=0.80.
+$$
+
+We will compare the confidence interval widths.
+
+```{r}
+# Original sample: 80 successes out of 100
+CI_100 <- ci_proportion(
+  X = 80,
+  n = 100,
+  conf_level = 0.95
+)
+
+# Larger sample: 800 successes out of 1000
+CI_1000 <- ci_proportion(
+  X = 800,
+  n = 1000,
+  conf_level = 0.95
+)
+
+# Display both intervals
+round(CI_100, 4)
+
+round(CI_1000, 4)
+
+# Compare interval widths
+width_100 <- CI_100[2] - CI_100[1]
+
+width_1000 <- CI_1000[2] - CI_1000[1]
+
+width_100
+width_1000
+```
+
+**Observation:** Even though the sample proportion remains 0.80, increasing the sample size makes the interval narrower.
+
+Larger samples generally provide more precise estimates.
+
+### (d) Can we conclude that a majority of jugs are successfully filled?
+
+Recall the 95% confidence interval:
+
+$$
+(0.7216,\ 0.8784).
+$$
+
+We want to determine whether the data support the claim
+
+$$
+p>0.50.
+$$
+
+Since the entire confidence interval lies above 0.50, the interval supports the conclusion that more than half of all jugs contain at least one gallon.
+
+We can check this in R:
+
+```{r}
+CI <- ci_proportion(
+  X = 80,
+  n = 100,
+  conf_level = 0.95
+)
+
+# Is the entire confidence interval above 0.50?
+CI[1] > 0.50
+```
+
+R returns `TRUE`.
+
+Therefore, the data provide sufficient evidence, using the confidence-interval approach discussed in class, that the majority of jugs contain at least one gallon.
+
+This does not mean that every jug is successfully filled.
+
+### (e) Required sample size for a 99% confidence interval
+
+Suppose we want a 99% confidence interval for $p$ with margin of error no greater than
+
+$$
+B=0.01.
+$$
+
+#### Case 1: A prior estimate of $p$ is available
+
+Use
+
+$$
+\widehat{p}=0.80.
+$$
+
+The required sample size is
+
+$$
+n=
+\left\lceil
+\widehat{p}(1-\widehat{p})
+\left(\frac{z_{\alpha/2}}{B}\right)^2
+\right\rceil.
+$$
+
+```{r}
+phat <- 0.80
+
+conf_level <- 0.99
+
+B <- 0.01
+
+# Find the critical Z-value
+z_critical <- qnorm(1 - (1 - conf_level) / 2)
+
+z_critical
+
+# Calculate required sample size
+n_required <- phat * (1 - phat) * (z_critical / B)^2
+
+n_required
+
+# Round upward
+ceiling(n_required)
+```
+
+Using the full R critical value, the required sample size is
+
+$$
+\boxed{n=10616}.
+$$
+
+**Why is this slightly different from the handwritten answer?**
+
+In the handout, we rounded the critical value to
+
+$$
+z_{0.005}=2.576.
+$$
+
+If we use this rounded value in R:
+
+```{r}
+# Using the Z-value rounded as in our printed table
+
+z_table <- 2.576
+
+ceiling(0.80 * 0.20 * (z_table / 0.01)^2)
+```
+
+We obtain
+
+$$
+n=10618.
+$$
+
+Both computations follow the same formula. The difference is due to rounding the critical value.
+
+### (f) Required sample size when no prior estimate is available
+
+If we do not have an estimate of the population proportion, we use
+
+$$
+\widehat{p}=0.50.
+$$
+
+This is the conservative choice because
+
+$$
+p(1-p)\le0.25.
+$$
+
+The sample-size formula is
+
+$$
+n=
+\left\lceil
+0.25\left(\frac{z_{\alpha/2}}{B}\right)^2
+\right\rceil.
+$$
+
+Using R:
+
+```{r}
+phat <- 0.50
+
+conf_level <- 0.99
+
+B <- 0.01
+
+z_critical <- qnorm(1 - (1 - conf_level) / 2)
+
+n_required <- phat * (1 - phat) * (z_critical / B)^2
+
+n_required
+
+ceiling(n_required)
+```
+
+Using the full R critical value, we obtain
+
+$$
+\boxed{n=16588}.
+$$
+
+Using the rounded value from the printed Z-table:
+
+```{r}
+ceiling(0.25 * (2.576 / 0.01)^2)
+```
+
+we obtain
+
+$$
+n=16590.
+$$
+
+**Observation:** When no prior estimate is available, the conservative sample-size calculation requires a larger sample.
+
+---
+
+## Making Decisions Using Confidence Intervals for a Proportion
+
+A confidence interval can help us evaluate a claim about the population proportion.
+
+For example, suppose we are interested in whether
+
+$$
+p>0.50.
+$$
+
+Consider three possible situations.
+
+### Situation 1: The entire confidence interval is above 0.50
+
+Example:
+
+$$
+(0.60,\ 0.80).
+$$
+
+The data support the conclusion that $p>0.50$.
+
+### Situation 2: The entire confidence interval is below 0.50
+
+Example:
+
+$$
+(0.30,\ 0.41).
+$$
+
+The data support the conclusion that $p<0.50$.
+
+### Situation 3: The confidence interval contains 0.50
+
+Example:
+
+$$
+(0.45,\ 0.65).
+$$
+
+We cannot conclude from this interval alone whether the population proportion is above or below 0.50.
+
+### Checking the three situations using R
+
+```{r}
+# Confidence interval 1
+CI1 <- c(0.60, 0.80)
+
+# Confidence interval 2
+CI2 <- c(0.30, 0.41)
+
+# Confidence interval 3
+CI3 <- c(0.45, 0.65)
+
+# Case 1: Entire interval above 0.50
+CI1[1] > 0.50
+
+# Case 2: Entire interval below 0.50
+CI2[2] < 0.50
+
+# Case 3: Interval contains 0.50
+CI3[1] <= 0.50 && CI3[2] >= 0.50
+```
+
+**Important:** These conclusions are based on two-sided confidence intervals. The connection with hypothesis testing will become clearer when we discuss significance levels and rejection regions.
+
+---
+
+## Quick Reference: Z and t Critical Values in R
+
+The following commands are particularly useful when constructing confidence intervals.
+
+### Z critical values
+
+```{r}
+# 90% confidence
+qnorm(0.95)
+
+# 95% confidence
+qnorm(0.975)
+
+# 99% confidence
+qnorm(0.995)
+```
+
+### t critical values
+
+```{r}
+# 90% confidence interval, df = 18
+qt(0.95, df = 18)
+
+# 95% confidence interval, df = 15
+qt(0.975, df = 15)
+
+# 95% confidence interval, df = 74
+qt(0.975, df = 74)
+
+# 99% confidence interval, df = 20
+qt(0.995, df = 20)
+```
+
+### Verify probability between critical values
+
+```{r}
+# 95% central probability for standard Normal
+z <- qnorm(0.975)
+
+pnorm(z) - pnorm(-z)
+
+# 95% central probability for t distribution, df = 18
+t <- qt(0.975, df = 18)
+
+pt(t, df = 18) - pt(-t, df = 18)
+```
+
+Both central probabilities should equal approximately 0.95.
+
+---
+
+## Independent Practice Using R
+
+Try the following problems using the R functions from this handout.
+
+**Practice 1: Confidence interval for a mean**
+
+Suppose
+
+$$
+n=50,\quad\overline{x}=72,\quad\sigma=12.
+$$
+
+Construct 90%, 95%, and 99% confidence intervals for $\mu$.
+
+```{r}
+# Enter the values and use ci_mean_z()
+
+```
+
+**Practice 2: Confidence interval using t**
+
+Suppose
+
+$$
+n=25,\quad\overline{x}=40,\quad s=8.
+$$
+
+Construct a 95% confidence interval for $\mu$ assuming the population is normally distributed.
+
+```{r}
+# Use qt() or ci_mean_t()
+
+```
+
+**Practice 3: Confidence interval for a proportion**
+
+Suppose 180 out of 250 randomly selected items satisfy a particular quality requirement.
+
+Estimate $p$ and construct a 95% confidence interval.
+
+```{r}
+# Use ci_proportion()
+
+```
+
+**Practice 4: Required sample size**
+
+Suppose $\sigma=15$, and we want a 99% confidence interval for $\mu$ with a margin of error no greater than 2.
+
+Find the required sample size.
+
+```{r}
+# Use qnorm(), sqrt(), and ceiling() as appropriate
+
+```
+
+**Practice 5: Conceptual question**
+
+Explain why increasing the confidence level from 90% to 99% makes a confidence interval wider when the sample size and standard deviation remain unchanged.
+
+Use R to support your explanation.
+
+```{r}
+# Compare critical values and interval widths
+
+```
+
+---
+
+## Final Reminders
+
+1. Use **`qnorm()`** for Z critical values and **`qt()`** for t critical values.
+2. For a mean, use a Z-based interval when the population standard deviation is known and the normal sampling approximation is appropriate.
+3. When $\sigma$ is unknown, use the sample standard deviation $s$ and a t-based interval under appropriate assumptions.
+4. For a t critical value, remember that the degrees of freedom are $n-1$.
+5. For a sample proportion, check the conditions for the Normal approximation before using the corresponding confidence interval.
+6. A confidence interval estimates an unknown **population parameter**, not the range of individual observations.
+7. Increasing the confidence level makes the interval wider, while increasing the sample size generally makes it narrower.
+8. Use **`ceiling()`** when computing a required sample size.
+9. Differences between R and printed-table results may occur because R uses more precise critical values.
+10. Understanding which statistical method applies, its assumptions, and how to interpret the result is just as important as obtaining the numerical answer using R.
+
+
+
+# Unit 08: Hypothesis Testing in R
+
+In this unit, we will learn how to conduct hypothesis tests using R.
+
+Previously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly, without relying on printed tables or rounding to the nearest table entry.
+
+Our main objectives are to:
+
+1. Calculate Type I and Type II error probabilities.
+2. Find rejection regions using critical values.
+3. Calculate Z-, t-, and chi-square test statistics.
+4. Calculate exact numerical p-values using R's distribution functions.
+5. Compare p-values with significance levels.
+6. Make appropriate statistical decisions and interpret them in context.
+
+## Important R Functions
+
+The following base R functions will be useful:
+
+- `pnorm()` computes probabilities under a Normal distribution.
+- `qnorm()` finds Normal critical values.
+- `pt()` computes probabilities under a t-distribution.
+- `qt()` finds t critical values.
+- `pchisq()` computes probabilities under a chi-square distribution.
+- `qchisq()` finds chi-square critical values.
+- `dbinom()` computes binomial probabilities.
+- `sqrt()` calculates square roots.
+- `abs()` calculates absolute values.
+
+**Remember:**
+
+Functions beginning with `p` calculate probabilities, while functions beginning with `q` calculate critical values or percentiles.
+
+For example:
+
+```{r}
+# P(Z < 1.96)
+pnorm(1.96)
+
+# P(Z > 1.96)
+pnorm(1.96, lower.tail = FALSE)
+
+# Find z such that P(Z < z) = 0.975
+qnorm(0.975)
+```
+
+---
+
+## A Quick Review of Hypothesis Testing
+
+A statistical hypothesis test begins with two competing hypotheses:
+
+$$
+H_0:\text{Null hypothesis}
+$$
+
+versus
+
+$$
+H_a:\text{Alternative hypothesis}.
+$$
+
+We temporarily assume that $H_0$ is true and examine whether the sample provides sufficient evidence against it.
+
+### Significance level
+
+The significance level is denoted by $\alpha$.
+
+$$
+\alpha=P(\text{Reject }H_0\mid H_0\text{ is true}).
+$$
+
+For a test with an exact Type I error probability equal to its chosen significance level, this is the probability of a Type I error.
+
+Common significance levels are
+
+$$
+\alpha=0.10,\quad 0.05,\quad 0.01.
+$$
+
+### Type I and Type II errors
+
+A **Type I error** occurs when we reject a true null hypothesis.
+
+A **Type II error** occurs when we fail to reject a false null hypothesis.
+
+The probability of a Type II error is denoted by $\beta$.
+
+$$
+\beta=P(\text{Fail to reject }H_0\mid H_0\text{ is false}).
+$$
+
+The power of a test, at a specified alternative, is
+
+$$
+\text{Power}=1-\beta.
+$$
+
+We will examine these concepts in Example 1.
+
+---
+
+## Example 1: Basket A versus Basket B
+
+Three balls are randomly drawn, **with replacement**, from either Basket A or Basket B.
+
+We do not know which basket is being used.
+
+Basket A contains:
+
+- 9 red balls
+- 1 green ball
+
+Basket B contains:
+
+- 1 red ball
+- 4 green balls
+
+We want to test
+
+$$
+H_0:\text{The balls come from Basket A}
+$$
+
+versus
+
+$$
+H_a:\text{The balls come from Basket B}.
+$$
+
+### Decision rule
+
+Reject $H_0$ if all three selected balls are green.
+
+Otherwise, fail to reject $H_0$.
+
+Since the draws are made with replacement, the individual draws are independent.
+
+### Part (a): Probability of a Type I error
+
+A Type I error occurs when we reject $H_0$, even though the balls actually come from Basket A.
+
+Under Basket A,
+
+$$
+P(\text{Green})=\frac{1}{10}=0.10.
+$$
+
+The decision rule rejects $H_0$ when the observed sequence is GGG.
+
+Therefore,
+
+$$
+\alpha=P(GGG\mid\text{Basket A})
+=(0.10)^3.
+$$
+
+Using R:
+
+```{r}
+# Basket A
+
+p_green_A <- 1 / 10
+
+# Probability of three green balls
+alpha_basket <- p_green_A^3
+
+alpha_basket
+```
+
+We obtain
+
+$$
+\boxed{\alpha=0.001}.
+$$
+
+Thus, the probability of making a Type I error is 0.001.
+
+We can also calculate the same probability using the binomial distribution.
+
+```{r}
+# Probability of exactly three green balls
+# in three independent draws from Basket A
+
+dbinom(
+  x = 3,
+  size = 3,
+  prob = 0.10
+)
+```
+
+The result is again 0.001.
+
+### Part (b): Probability of a Type II error
+
+A Type II error occurs when the balls come from Basket B but we fail to reject $H_0$.
+
+Under Basket B,
+
+$$
+P(\text{Green})=\frac45=0.80.
+$$
+
+We fail to reject $H_0$ whenever the three draws are **not all green**.
+
+Therefore,
+
+$$
+\beta
+=1-P(GGG\mid\text{Basket B})
+=1-(0.80)^3.
+$$
+
+Using R:
+
+```{r}
+# Basket B
+
+p_green_B <- 4 / 5
+
+# Probability of failing to reject H0
+beta_basket <- 1 - p_green_B^3
+
+beta_basket
+```
+
+We obtain
+
+$$
+\boxed{\beta=0.488}.
+$$
+
+Alternatively, we can use `dbinom()`:
+
+```{r}
+# Probability of NOT observing three green balls
+
+1 - dbinom(
+  x = 3,
+  size = 3,
+  prob = 0.80
+)
+```
+
+### Part (c): Find the power of the test
+
+Power is the probability of correctly rejecting $H_0$ when Basket B is used.
+
+$$
+\text{Power}=1-\beta.
+$$
+
+Using R:
+
+```{r}
+power_basket <- 1 - beta_basket
+
+power_basket
+```
+
+We obtain
+
+$$
+\boxed{\text{Power}=0.512}.
+$$
+
+In other words, when Basket B is actually used, our decision rule correctly identifies it approximately 51.2% of the time.
+
+### Part (d): What if we never reject $H_0$?
+
+Suppose we change our decision rule so that we never reject $H_0$, regardless of which balls are observed.
+
+Then,
+
+$$
+\alpha=0
+$$
+
+because we never reject a true null hypothesis.
+
+However,
+
+$$
+\beta=1
+$$
+
+because we also never reject $H_0$ when Basket B is used.
+
+```{r}
+alpha_never_reject <- 0
+
+beta_never_reject <- 1
+
+power_never_reject <- 1 - beta_never_reject
+
+alpha_never_reject
+beta_never_reject
+power_never_reject
+```
+
+**Important observation:**
+
+We can force the Type I error probability to zero by never rejecting $H_0$, but then the Type II error probability becomes one.
+
+This demonstrates why controlling Type I error alone is not sufficient for designing a useful test.
+
+---
+
+## Example 2: Purchasing Shipments of Iron Ore Pellets
+
+A company purchases shipments of iron ore pellets.
+
+Let
+
+$$
+\mu=\text{population mean shipment weight}.
+$$
+
+The supplier claims that the average shipment weighs 80 pounds.
+
+We suspect that the shipments may be underweight.
+
+The population standard deviation is known:
+
+$$
+\sigma=10\text{ pounds}.
+$$
+
+### Step 1: State the hypotheses
+
+Since we suspect that the average shipment weight is less than 80 pounds, we use a left-tailed test:
+
+$$
+H_0:\mu=80
+$$
+
+versus
+
+$$
+H_a:\mu<80.
+$$
+
+Suppose we randomly select
+
+$$
+n=30
+$$
+
+shipments and obtain a sample mean of
+
+$$
+\overline{x}=76.
+$$
+
+We use
+
+$$
+\alpha=0.05.
+$$
+
+### Step 2: Calculate the Z-test statistic
+
+Since $\sigma$ is known, we use
+
+$$
+Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}.
+$$
+
+Under $H_0$, the sampling distribution is approximately standard Normal, assuming the observations are independent and the normal approximation is appropriate.
+
+Enter the values into R.
+
+```{r}
+# Given information
+
+mu0_iron <- 80
+sigma_iron <- 10
+n_iron <- 30
+xbar_iron <- 76
+
+alpha_iron <- 0.05
+
+# Calculate the standard error
+SE_iron <- sigma_iron / sqrt(n_iron)
+
+# Calculate the Z-test statistic
+z_iron <- (xbar_iron - mu0_iron) / SE_iron
+
+z_iron
+```
+
+We obtain approximately
+
+$$
+\boxed{z=-2.191}.
+$$
+
+### Step 3: Find the rejection region
+
+For a left-tailed test,
+
+$$
+\text{Reject }H_0\text{ if }Z<z_\alpha.
+$$
+
+With $\alpha=0.05$,
+
+$$
+z_\alpha=-1.645.
+$$
+
+Using R:
+
+```{r}
+# Critical value for a left-tailed test
+
+z_critical_iron <- qnorm(alpha_iron)
+
+z_critical_iron
+```
+
+The rejection region is
+
+$$
+\boxed{Z<-1.645}.
+$$
+
+### Step 4: Make the decision using the rejection region
+
+Our observed statistic is
+
+$$
+z=-2.191.
+$$
+
+Since
+
+$$
+-2.191<-1.645,
+$$
+
+we reject $H_0$.
+
+We can ask R to make this comparison directly:
+
+```{r}
+# Does the observed test statistic fall
+# inside the rejection region?
+
+z_iron < z_critical_iron
+```
+
+R returns `TRUE`.
+
+Therefore, we reject $H_0$ at the 5% significance level.
+
+### Step 5: Calculate the p-value
+
+For a left-tailed test, the p-value is
+
+$$
+P(Z\le z_{\text{observed}}).
+$$
+
+Use `pnorm()`.
+
+```{r}
+# Left-tailed p-value
+
+pvalue_iron <- pnorm(z_iron)
+
+pvalue_iron
+```
+
+The p-value is approximately
+
+$$
+\boxed{p=0.0142}.
+$$
+
+Since
+
+$$
+0.0142<0.05,
+$$
+
+we reject $H_0$.
+
+Check in R:
+
+```{r}
+pvalue_iron < alpha_iron
+```
+
+### Conclusion
+
+At the 5% significance level, there is sufficient statistical evidence that the population mean shipment weight is less than 80 pounds.
+
+This supports the concern that the shipments may be underweight.
+
+### Optional: Visualize the rejection region
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.5
+
+curve(
+  dnorm(x),
+  from = -4,
+  to = 4,
+  lwd = 2,
+  xlab = "Z",
+  ylab = "Density",
+  main = "Left-Tailed Z-Test: Iron Ore Shipments"
+)
+
+# Shade the rejection region
+x_reject <- seq(-4, z_critical_iron, length.out = 300)
+
+polygon(
+  c(-4, x_reject, z_critical_iron),
+  c(0, dnorm(x_reject), 0),
+  col = "lightblue",
+  border = NA
+)
+
+# Critical value
+abline(
+  v = z_critical_iron,
+  col = "blue",
+  lwd = 2,
+  lty = 2
+)
+
+# Observed test statistic
+abline(
+  v = z_iron,
+  col = "red",
+  lwd = 2
+)
+
+legend(
+  "topright",
+  legend = c("Critical value", "Observed Z"),
+  col = c("blue", "red"),
+  lty = c(2, 1),
+  lwd = 2,
+  bty = "n"
+)
+```
+
+---
+
+## Choosing the Correct Alternative Hypothesis
+
+Recall that the direction of the alternative hypothesis determines the type of test.
+
+### Left-tailed test
+
+$$
+H_a:\mu<\mu_0.
+$$
+
+The p-value is
+
+```{r}
+# For a left-tailed Z-test
+
+pnorm(-1.50)
+```
+
+### Right-tailed test
+
+$$
+H_a:\mu>\mu_0.
+$$
+
+The p-value is
+
+```{r}
+# For a right-tailed Z-test
+
+pnorm(1.50, lower.tail = FALSE)
+```
+
+### Two-tailed test
+
+$$
+H_a:\mu\ne\mu_0.
+$$
+
+For a symmetric standard Normal distribution, the p-value is
+
+$$
+2P(Z>|z_{\text{observed}}|).
+$$
+
+```{r}
+# For a two-tailed Z-test
+
+z_observed <- 1.50
+
+2 * pnorm(abs(z_observed), lower.tail = FALSE)
+```
+
+**Important:** Do not automatically multiply every p-value by two. We multiply the one-tail probability by two for a two-sided test because the Normal distribution is symmetric.
+
+---
+
+## Classroom Example A: Two-Tailed Z-Test
+
+Suppose
+
+$$
+H_0:\mu=50
+$$
+
+versus
+
+$$
+H_a:\mu\ne50.
+$$
+
+We are given
+
+$$
+\alpha=0.01,\quad
+\overline{x}=53,\quad
+n=64,\quad
+\sigma=16.
+$$
+
+Since the population standard deviation is known, we use the Z-test.
+
+### Step 1: Calculate the Z-test statistic
+
+$$
+Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}.
+$$
+
+```{r}
+mu0_A <- 50
+xbar_A <- 53
+n_A <- 64
+sigma_A <- 16
+
+alpha_A <- 0.01
+
+z_A <- (xbar_A - mu0_A) /
+  (sigma_A / sqrt(n_A))
+
+z_A
+```
+
+We obtain
+
+$$
+\boxed{z=1.50}.
+$$
+
+### Step 2: Find the rejection region
+
+Since this is a two-tailed test with $\alpha=0.01$, each tail contains probability 0.005.
+
+The critical value is
+
+$$
+z_{\alpha/2}=2.576.
+$$
+
+Use R:
+
+```{r}
+z_critical_A <- qnorm(1 - alpha_A / 2)
+
+z_critical_A
+
+# Negative critical value
+-z_critical_A
+```
+
+The rejection region is
+
+$$
+Z<-2.576
+\quad\text{or}\quad
+Z>2.576.
+$$
+
+Equivalently,
+
+$$
+\boxed{|Z|>2.576}.
+$$
+
+### Step 3: Make the decision
+
+```{r}
+abs(z_A) > z_critical_A
+```
+
+R returns `FALSE`.
+
+We fail to reject $H_0$.
+
+### Step 4: Calculate the p-value
+
+For a two-tailed Z-test,
+
+$$
+p=2P(Z>|z_{\text{observed}}|).
+$$
+
+```{r}
+pvalue_A <- 2 * pnorm(
+  abs(z_A),
+  lower.tail = FALSE
+)
+
+pvalue_A
+```
+
+We obtain
+
+$$
+\boxed{p\approx0.1336}.
+$$
+
+Since
+
+$$
+0.1336>0.01,
+$$
+
+we fail to reject $H_0$.
+
+### Conclusion
+
+At the 1% significance level, there is insufficient evidence to conclude that the population mean differs from 50.
+
+---
+
+## Classroom Example B: Right-Tailed Z-Test
+
+Suppose
+
+$$
+H_0:\mu=70
+$$
+
+versus
+
+$$
+H_a:\mu>70.
+$$
+
+We are given
+
+$$
+\alpha=0.09,\quad
+\overline{x}=74,\quad
+n=36,\quad
+\sigma=12.
+$$
+
+### Step 1: Calculate the test statistic
+
+```{r}
+mu0_B <- 70
+xbar_B <- 74
+sigma_B <- 12
+n_B <- 36
+
+alpha_B <- 0.09
+
+z_B <- (xbar_B - mu0_B) /
+  (sigma_B / sqrt(n_B))
+
+z_B
+```
+
+We obtain
+
+$$
+\boxed{z=2}.
+$$
+
+### Step 2: Find the rejection region
+
+For a right-tailed test,
+
+$$
+\text{Reject }H_0\text{ if }Z>z_\alpha.
+$$
+
+Use `qnorm()`:
+
+```{r}
+z_critical_B <- qnorm(1 - alpha_B)
+
+z_critical_B
+```
+
+We obtain approximately
+
+$$
+z_\alpha=1.341.
+$$
+
+Thus, the rejection region is
+
+$$
+Z>1.341.
+$$
+
+Since
+
+$$
+2>1.341,
+$$
+
+we reject $H_0$.
+
+### Step 3: Calculate the p-value
+
+For a right-tailed test,
+
+$$
+p=P(Z>2).
+$$
+
+```{r}
+pvalue_B <- pnorm(
+  z_B,
+  lower.tail = FALSE
+)
+
+pvalue_B
+```
+
+We obtain
+
+$$
+\boxed{p\approx0.0228}.
+$$
+
+### Step 4: Compare the same p-value with different significance levels
+
+One advantage of reporting a p-value is that we can assess statistical significance at different significance levels.
+
+```{r}
+# Compare the p-value with three significance levels
+
+alpha_levels_B <- c(0.09, 0.05, 0.01)
+
+data.frame(
+  significance_level = alpha_levels_B,
+  p_value = rep(pvalue_B, length(alpha_levels_B)),
+  reject_H0 = pvalue_B < alpha_levels_B
+)
+```
+
+The results show that:
+
+- At $\alpha=0.09$, reject $H_0$.
+- At $\alpha=0.05$, reject $H_0$.
+- At $\alpha=0.01$, fail to reject $H_0$.
+
+**Important observation:** The p-value does not change when we choose a different significance level. The significance decision may change because we compare the same p-value against a different threshold.
+
+---
+
+## Hypothesis Testing for a Population Mean When $\sigma$ Is Unknown
+
+When the population standard deviation is unknown, we generally use a **one-sample t-test**.
+
+The test statistic is
+
+$$
+\boxed{
+T=\frac{\overline{X}-\mu_0}{S/\sqrt{n}}.
+}
+$$
+
+For independent observations from a Normal population, under $H_0$,
+
+$$
+T\sim t_{n-1}.
+$$
+
+The degrees of freedom are
+
+$$
+df=n-1.
+$$
+
+In R, the relevant functions are:
+
+- `qt()` for t critical values.
+- `pt()` for t probabilities and p-values.
+
+For sufficiently large samples, t-based procedures can also be appropriate approximately under suitable conditions.
+
+---
+
+## Classroom Example: Cholesterol Levels
+
+Recall the cholesterol example from Unit 07.
+
+Let
+
+$$
+\mu=\text{population mean cholesterol level among 70-year-old American men}.
+$$
+
+We want to test
+
+$$
+H_0:\mu=45.5
+$$
+
+versus
+
+$$
+H_a:\mu<45.5.
+$$
+
+We are given
+
+$$
+n=19,\quad
+\overline{x}=44.2,\quad
+s=3.8.
+$$
+
+The population standard deviation is unknown.
+
+Assume the population distribution is Normal.
+
+We use
+
+$$
+\alpha=0.05.
+$$
+
+### Step 1: Calculate the t-test statistic
+
+```{r}
+mu0_chol <- 45.5
+
+xbar_chol <- 44.2
+
+s_chol <- 3.8
+
+n_chol <- 19
+
+alpha_chol <- 0.05
+
+# Degrees of freedom
+df_chol <- n_chol - 1
+
+# Standard error
+SE_chol <- s_chol / sqrt(n_chol)
+
+# Observed t-test statistic
+t_chol <- (xbar_chol - mu0_chol) / SE_chol
+
+df_chol
+t_chol
+```
+
+We obtain
+
+$$
+df=18,\qquad t\approx-1.491.
+$$
+
+### Step 2: Find the rejection region
+
+Since the alternative hypothesis is left-tailed, we reject $H_0$ for sufficiently negative values of $T$.
+
+The critical value is
+
+$$
+t_{0.05,18}=-1.734.
+$$
+
+Using R:
+
+```{r}
+t_critical_chol <- qt(
+  alpha_chol,
+  df = df_chol
+)
+
+t_critical_chol
+```
+
+Thus, the rejection region is
+
+$$
+\boxed{T<-1.734}.
+$$
+
+### Step 3: Make the decision
+
+The observed t-test statistic is approximately
+
+$$
+t=-1.491.
+$$
+
+Since
+
+$$
+-1.491>-1.734,
+$$
+
+the statistic does not fall in the rejection region.
+
+Check in R:
+
+```{r}
+t_chol < t_critical_chol
+```
+
+We fail to reject $H_0$.
+
+### Step 4: Calculate the p-value
+
+For a left-tailed t-test,
+
+$$
+p=P(T_{18}\le -1.491).
+$$
+
+Use `pt()`:
+
+```{r}
+pvalue_chol <- pt(
+  t_chol,
+  df = df_chol
+)
+
+pvalue_chol
+```
+
+We obtain approximately
+
+$$
+\boxed{p=0.0766}.
+$$
+
+Since
+
+$$
+0.0766>0.05,
+$$
+
+we fail to reject $H_0$.
+
+### Conclusion
+
+At the 5% significance level, the sample does not provide sufficient evidence to conclude that the population mean cholesterol level is below 45.5.
+
+**Important:** Failing to reject $H_0$ does not prove that the population mean equals 45.5.
+
+---
+
+## Placing Bounds on p-values Using the t-Distribution
+
+In class, we used a printed t-table to place bounds on p-values.
+
+R allows us to calculate the p-value more precisely.
+
+Let us first revisit the cholesterol example.
+
+We obtained
+
+$$
+t=-1.491,\qquad df=18.
+$$
+
+For a left-tailed test, the relevant critical values are approximately
+
+$$
+t_{0.05,18}=-1.734
+$$
+
+and
+
+$$
+t_{0.10,18}=-1.330.
+$$
+
+Using R:
+
+```{r}
+# Left-tail cutoff corresponding to 0.05
+qt(0.05, df = 18)
+
+# Left-tail cutoff corresponding to 0.10
+qt(0.10, df = 18)
+```
+
+Since
+
+$$
+-1.734<-1.491<-1.330,
+$$
+
+we conclude that
+
+$$
+\boxed{0.05<p\text{-value}<0.10}.
+$$
+
+Using R, the more precise p-value is
+
+```{r}
+pt(t_chol, df = 18)
+```
+
+which is approximately 0.0766.
+
+The table-based bounds and the direct R calculation are consistent.
+
+---
+
+## Practice Example: Right-Tailed t-Test
+
+Suppose we have
+
+$$
+n=26,
+$$
+
+and our observed test statistic is
+
+$$
+t=2.1.
+$$
+
+We are conducting a right-tailed test.
+
+Find bounds on the p-value and then calculate its numerical value using R.
+
+### Step 1: Degrees of freedom
+
+$$
+df=26-1=25.
+$$
+
+### Step 2: Identify the relevant critical values
+
+In the printed table, we find approximately
+
+$$
+t_{0.025,25}=2.060
+$$
+
+and
+
+$$
+t_{0.01,25}=2.485.
+$$
+
+Using R:
+
+```{r}
+df_right_t <- 25
+
+t_right <- 2.1
+
+# Upper-tail probability 0.025
+qt(1 - 0.025, df = df_right_t)
+
+# Upper-tail probability 0.01
+qt(1 - 0.01, df = df_right_t)
+```
+
+Because
+
+$$
+2.060<2.1<2.485,
+$$
+
+the p-value must satisfy
+
+$$
+\boxed{0.01<p\text{-value}<0.025}.
+$$
+
+### Step 3: Calculate the p-value directly
+
+For a right-tailed t-test,
+
+$$
+p=P(T_{25}>2.1).
+$$
+
+Use
+
+```{r}
+pvalue_right_t <- pt(
+  t_right,
+  df = df_right_t,
+  lower.tail = FALSE
+)
+
+pvalue_right_t
+```
+
+We obtain
+
+$$
+\boxed{p\approx0.0230}.
+$$
+
+This value lies between 0.01 and 0.025, as expected.
+
+---
+
+## Practice Example: Two-Tailed t-Test
+
+Suppose we have
+
+$$
+n=21,
+$$
+
+with an observed test statistic
+
+$$
+t=2.
+$$
+
+The alternative hypothesis is two-sided.
+
+### Step 1: Degrees of freedom
+
+$$
+df=21-1=20.
+$$
+
+### Step 2: Find the relevant critical values
+
+From the t-table,
+
+$$
+t_{0.05,20}=1.725
+$$
+
+and
+
+$$
+t_{0.025,20}=2.086.
+$$
+
+Using R:
+
+```{r}
+df_two_t <- 20
+
+t_two <- 2
+
+# Upper-tail probability 0.05
+qt(0.95, df = df_two_t)
+
+# Upper-tail probability 0.025
+qt(0.975, df = df_two_t)
+```
+
+Since
+
+$$
+1.725<2<2.086,
+$$
+
+the one-tail probability is between 0.025 and 0.05.
+
+Because this is a two-tailed test, we multiply by two.
+
+Therefore,
+
+$$
+\boxed{0.05<p\text{-value}<0.10}.
+$$
+
+### Step 3: Calculate the numerical p-value
+
+```{r}
+pvalue_two_t <- 2 * pt(
+  abs(t_two),
+  df = df_two_t,
+  lower.tail = FALSE
+)
+
+pvalue_two_t
+```
+
+We obtain
+
+$$
+\boxed{p\approx0.0593}.
+$$
+
+This is consistent with the bounds obtained from the printed t-table.
+
+**Important:** For a two-sided t-test, the factor of two accounts for the probability in both tails of the symmetric t-distribution.
+
+---
+
+## Example 3: Hypothesis Testing for a Population Proportion
+
+A gambler develops a new strategy for a game.
+
+Historically, the probability of winning the game is 0.49.
+
+The gambler believes the new strategy increases the probability of winning.
+
+He plays the game 80 times and wins 44 games.
+
+Assume the games are independent and that the probability of winning remains constant.
+
+Let
+
+$$
+p=\text{population probability of winning using the new strategy}.
+$$
+
+We want to test the new strategy at
+
+$$
+\alpha=0.05.
+$$
+
+### Part (a): State the hypotheses
+
+Since the gambler believes the new strategy increases the winning probability, we use a right-tailed test.
+
+$$
+H_0:p=0.49
+$$
+
+versus
+
+$$
+H_a:p>0.49.
+$$
+
+### Step 1: Calculate the sample proportion
+
+We are given
+
+$$
+n=80,\quad X=44.
+$$
+
+The sample proportion is
+
+$$
+\widehat p=\frac{44}{80}=0.55.
+$$
+
+In R:
+
+```{r}
+n_gambler <- 80
+
+X_gambler <- 44
+
+p0_gambler <- 0.49
+
+alpha_gambler <- 0.05
+
+phat_gambler <- X_gambler / n_gambler
+
+phat_gambler
+```
+
+We obtain
+
+$$
+\widehat p=0.55.
+$$
+
+### Step 2: Check the Normal approximation conditions
+
+For a one-proportion Z-test, the standard error under $H_0$ uses the hypothesized proportion $p_0$, not $\widehat p$.
+
+The usual approximation checks are
+
+$$
+np_0\ge15
+$$
+
+and
+
+$$
+n(1-p_0)\ge15.
+$$
+
+Using R:
+
+```{r}
+# Expected successes under H0
+n_gambler * p0_gambler
+
+# Expected failures under H0
+n_gambler * (1 - p0_gambler)
+
+# Check the conditions
+n_gambler * p0_gambler >= 15
+
+n_gambler * (1 - p0_gambler) >= 15
+```
+
+Both conditions are satisfied.
+
+### Step 3: Calculate the test statistic
+
+The one-proportion Z-test statistic is
+
+$$
+\boxed{
+Z=
+\frac{\widehat p-p_0}
+{\sqrt{p_0(1-p_0)/n}}.
+}
+$$
+
+Using R:
+
+```{r}
+# Standard error under H0
+SE_gambler <- sqrt(
+  p0_gambler * (1 - p0_gambler) / n_gambler
+)
+
+# Z-test statistic
+z_gambler <- (phat_gambler - p0_gambler) /
+  SE_gambler
+
+z_gambler
+```
+
+We obtain approximately
+
+$$
+\boxed{z=1.074}.
+$$
+
+### Step 4: Find the rejection region
+
+Since this is a right-tailed test at $\alpha=0.05$,
+
+$$
+\text{Reject }H_0\text{ if }Z>1.645.
+$$
+
+Use R:
+
+```{r}
+z_critical_gambler <- qnorm(1 - alpha_gambler)
+
+z_critical_gambler
+```
+
+Compare:
+
+```{r}
+z_gambler > z_critical_gambler
+```
+
+R returns `FALSE`.
+
+We fail to reject $H_0$.
+
+### Step 5: Calculate the p-value
+
+For a right-tailed Z-test,
+
+$$
+p=P(Z>1.074).
+$$
+
+Using R:
+
+```{r}
+pvalue_gambler <- pnorm(
+  z_gambler,
+  lower.tail = FALSE
+)
+
+pvalue_gambler
+```
+
+We obtain approximately
+
+$$
+\boxed{p=0.1415}.
+$$
+
+Since
+
+$$
+0.1415>0.05,
+$$
+
+we fail to reject $H_0$.
+
+### Conclusion
+
+At the 5% significance level, the results do not provide sufficient statistical evidence that the gambler's new strategy increases the probability of winning above 0.49.
+
+Although the observed winning proportion was 0.55, the difference is not statistically significant at the chosen level.
+
+### Using the built-in R function `prop.test()`
+
+R also provides the function `prop.test()` for testing a population proportion.
+
+For comparison:
+
+```{r}
+prop.test(
+  x = 44,
+  n = 80,
+  p = 0.49,
+  alternative = "greater",
+  correct = FALSE
+)
+```
+
+We set `correct = FALSE` to remove the continuity correction and make the result agree with the Normal-approximation Z-test used in class.
+
+**Note:** The reported statistic from `prop.test()` is labeled `X-squared`, but the one-sided p-value agrees with the corresponding Z-test in this setting.
+
+---
+
+## Example 3(b): What if the Gambler Won 55 Out of 100 Games?
+
+Suppose the gambler instead played
+
+$$
+n=100
+$$
+
+games and won
+
+$$
+X=55.
+$$
+
+The sample proportion is still
+
+$$
+\widehat p=0.55.
+$$
+
+Would the p-value increase or decrease?
+
+### Step 1: Calculate the Z-test statistic
+
+```{r}
+n_gambler2 <- 100
+
+X_gambler2 <- 55
+
+phat_gambler2 <- X_gambler2 / n_gambler2
+
+# Same null proportion
+p0_gambler2 <- 0.49
+
+SE_gambler2 <- sqrt(
+  p0_gambler2 * (1 - p0_gambler2) / n_gambler2
+)
+
+z_gambler2 <- (phat_gambler2 - p0_gambler2) /
+  SE_gambler2
+
+z_gambler2
+```
+
+We obtain
+
+$$
+\boxed{z\approx1.200}.
+$$
+
+### Step 2: Find the p-value
+
+```{r}
+pvalue_gambler2 <- pnorm(
+  z_gambler2,
+  lower.tail = FALSE
+)
+
+pvalue_gambler2
+```
+
+We obtain approximately
+
+$$
+\boxed{p=0.1150}.
+$$
+
+### Step 3: Compare the two experiments
+
+```{r}
+data.frame(
+  sample_size = c(80, 100),
+  wins = c(44, 55),
+  sample_proportion = c(
+    phat_gambler,
+    phat_gambler2
+  ),
+  z_statistic = c(
+    z_gambler,
+    z_gambler2
+  ),
+  p_value = c(
+    pvalue_gambler,
+    pvalue_gambler2
+  )
+)
+```
+
+**Observation:** The sample proportion remains 0.55, but the p-value decreases as the sample size increases.
+
+This happens because a larger sample size reduces the standard error.
+
+However, the new p-value is still greater than 0.05, so we continue to fail to reject $H_0$.
+
+---
+
+## Example 4: Hypothesis Testing for a Population Variance
+
+A manufacturer produces sticks of dynamite designed to detonate after approximately 25 seconds.
+
+For safety and consistency, the manufacturer wants the variability in detonation times to remain small.
+
+The claimed population variance is
+
+$$
+\sigma_0^2=0.25\text{ seconds}^2.
+$$
+
+The manufacturer is concerned that the actual variance may be larger.
+
+Assume the detonation times form an independent random sample from a Normal population.
+
+The sample information is
+
+$$
+n=20,
+$$
+
+$$
+\overline{x}=25\text{ seconds},
+$$
+
+$$
+s^2=0.2916\text{ seconds}^2.
+$$
+
+We will test at
+
+$$
+\alpha=0.01.
+$$
+
+### Step 1: State the hypotheses
+
+We want to determine whether the population variance exceeds 0.25.
+
+Therefore,
+
+$$
+H_0:\sigma^2=0.25
+$$
+
+versus
+
+$$
+H_a:\sigma^2>0.25.
+$$
+
+This is a right-tailed chi-square test.
+
+### Step 2: Calculate the chi-square test statistic
+
+When testing a population variance from a Normal population, the test statistic is
+
+$$
+\boxed{
+\chi^2=
+\frac{(n-1)S^2}{\sigma_0^2}.
+}
+$$
+
+Under the null hypothesis,
+
+$$
+\chi^2\sim\chi^2_{n-1}.
+$$
+
+Enter the values into R:
+
+```{r}
+n_var <- 20
+
+s2_var <- 0.2916
+
+sigma2_0 <- 0.25
+
+alpha_var <- 0.01
+
+# Degrees of freedom
+df_var <- n_var - 1
+
+# Chi-square test statistic
+chisq_var <- (n_var - 1) * s2_var / sigma2_0
+
+df_var
+chisq_var
+```
+
+We obtain
+
+$$
+\boxed{\chi^2=22.1616}.
+$$
+
+### Step 3: Find the rejection region
+
+For a right-tailed chi-square test at $\alpha=0.01$, reject $H_0$ when
+
+$$
+\chi^2>\chi^2_{0.01,19}.
+$$
+
+We use `qchisq()` to find the critical value.
+
+```{r}
+chisq_critical_var <- qchisq(
+  1 - alpha_var,
+  df = df_var
+)
+
+chisq_critical_var
+```
+
+We obtain
+
+$$
+\boxed{\chi^2_{0.01,19}\approx36.191}.
+$$
+
+Therefore, the rejection region is
+
+$$
+\chi^2>36.191.
+$$
+
+### Step 4: Make the decision
+
+Our observed statistic is approximately
+
+$$
+\chi^2=22.162.
+$$
+
+Since
+
+$$
+22.162<36.191,
+$$
+
+we fail to reject $H_0$.
+
+Check in R:
+
+```{r}
+chisq_var > chisq_critical_var
+```
+
+R returns `FALSE`.
+
+### Step 5: Calculate the p-value
+
+For this right-tailed chi-square test,
+
+$$
+p=P(\chi^2_{19}>22.1616).
+$$
+
+We use `pchisq()`.
+
+```{r}
+pvalue_var <- pchisq(
+  chisq_var,
+  df = df_var,
+  lower.tail = FALSE
+)
+
+pvalue_var
+```
+
+We obtain approximately
+
+$$
+\boxed{p=0.2763}.
+$$
+
+Since
+
+$$
+0.2763>0.01,
+$$
+
+we fail to reject $H_0$.
+
+### Conclusion
+
+At the 1% significance level, there is insufficient statistical evidence that the population variance in detonation times exceeds 0.25 seconds squared.
+
+**Important:** We have not proven that the variance equals 0.25. We have only concluded that the observed sample does not provide sufficient evidence that it is larger.
+
+### Visualizing the chi-square distribution
+
+Unlike the standard Normal and t-distributions, the chi-square distribution is generally right-skewed.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.5
+
+curve(
+  dchisq(x, df = df_var),
+  from = 0,
+  to = 50,
+  lwd = 2,
+  xlab = expression(chi^2),
+  ylab = "Density",
+  main = "Right-Tailed Chi-Square Test"
+)
+
+# Shade the rejection region
+x_reject_chi <- seq(
+  chisq_critical_var,
+  50,
+  length.out = 300
+)
+
+polygon(
+  c(chisq_critical_var, x_reject_chi, 50),
+  c(0, dchisq(x_reject_chi, df = df_var), 0),
+  col = "lightblue",
+  border = NA
+)
+
+abline(
+  v = chisq_critical_var,
+  col = "blue",
+  lwd = 2,
+  lty = 2
+)
+
+abline(
+  v = chisq_var,
+  col = "red",
+  lwd = 2
+)
+
+legend(
+  "topright",
+  legend = c("Critical value", "Observed chi-square"),
+  col = c("blue", "red"),
+  lty = c(2, 1),
+  lwd = 2,
+  bty = "n"
+)
+```
+
+**Remember:** The Normality assumption is particularly important for the chi-square test for a population variance.
+
+The sample mean of 25 seconds is provided for context, but it is not needed to calculate this variance test statistic.
+
+---
+
+## Connecting Confidence Intervals and Hypothesis Tests
+
+In Unit 07, we used confidence intervals to estimate unknown population parameters.
+
+In Unit 08, we use hypothesis tests to evaluate claims about those parameters.
+
+For a two-sided Z-test at significance level $\alpha$, the test rejects
+
+$$
+H_0:\mu=\mu_0
+$$
+
+when $\mu_0$ lies outside the corresponding $100(1-\alpha)\%$ two-sided Z-confidence interval.
+
+Let us revisit Classroom Example A.
+
+We had
+
+$$
+H_0:\mu=50,
+$$
+
+with
+
+$$
+\overline{x}=53,\quad n=64,\quad\sigma=16.
+$$
+
+We used
+
+$$
+\alpha=0.01.
+$$
+
+Therefore, the corresponding confidence level is
+
+$$
+1-\alpha=0.99.
+$$
+
+### Construct the 99% confidence interval
+
+```{r}
+xbar_CI <- 53
+
+sigma_CI <- 16
+
+n_CI <- 64
+
+alpha_CI <- 0.01
+
+z_critical_CI <- qnorm(1 - alpha_CI / 2)
+
+ME_CI <- z_critical_CI * sigma_CI / sqrt(n_CI)
+
+CI_lower <- xbar_CI - ME_CI
+
+CI_upper <- xbar_CI + ME_CI
+
+c(lower = CI_lower, upper = CI_upper)
+```
+
+Now check whether the null hypothesis value $\mu_0=50$ lies inside the interval.
+
+```{r}
+mu0_CI <- 50
+
+CI_lower <= mu0_CI && mu0_CI <= CI_upper
+```
+
+R returns `TRUE`.
+
+Because 50 lies inside the corresponding 99% confidence interval, we fail to reject $H_0$ at $\alpha=0.01$.
+
+This agrees with the two-tailed Z-test performed earlier.
+
+**Important:** This equivalence applies when the confidence interval and the two-sided test use compatible methods and significance levels. It should not automatically be applied to every one-sided or approximate procedure.
+
+---
+
+## Quick Reference: Hypothesis Testing Functions in R
+
+### Left-tailed Z-test
+
+```{r}
+# Example observed Z-statistic
+z <- -1.50
+
+# p-value
+pnorm(z)
+
+# Critical value at alpha = 0.05
+qnorm(0.05)
+```
+
+### Right-tailed Z-test
+
+```{r}
+z <- 1.50
+
+# p-value
+pnorm(z, lower.tail = FALSE)
+
+# Critical value at alpha = 0.05
+qnorm(0.95)
+```
+
+### Two-tailed Z-test
+
+```{r}
+z <- 1.50
+
+# p-value
+2 * pnorm(abs(z), lower.tail = FALSE)
+
+# Positive critical value at alpha = 0.05
+qnorm(0.975)
+```
+
+### Left-tailed t-test
+
+```{r}
+t <- -1.50
+df <- 18
+
+# p-value
+pt(t, df = df)
+
+# Critical value at alpha = 0.05
+qt(0.05, df = df)
+```
+
+### Right-tailed t-test
+
+```{r}
+t <- 1.50
+df <- 18
+
+# p-value
+pt(t, df = df, lower.tail = FALSE)
+
+# Critical value at alpha = 0.05
+qt(0.95, df = df)
+```
+
+### Two-tailed t-test
+
+```{r}
+t <- 1.50
+df <- 18
+
+# p-value
+2 * pt(abs(t), df = df, lower.tail = FALSE)
+
+# Positive critical value at alpha = 0.05
+qt(0.975, df = df)
+```
+
+### Right-tailed chi-square test
+
+```{r}
+chisq <- 22.16
+df <- 19
+
+# p-value
+pchisq(chisq, df = df, lower.tail = FALSE)
+
+# Critical value at alpha = 0.01
+qchisq(0.99, df = df)
+```
+
+---
+
+## Independent Practice Using R
+
+Use the functions introduced in this unit to answer the following questions.
+
+### Practice 1: Left-Tailed Z-Test
+
+Suppose
+
+$$
+H_0:\mu=100
+$$
+
+versus
+
+$$
+H_a:\mu<100.
+$$
+
+Given
+
+$$
+n=36,\quad\overline{x}=96,\quad\sigma=12,
+$$
+
+conduct the hypothesis test at $\alpha=0.05$.
+
+Find the observed Z-test statistic, critical value, p-value, and decision.
+
+```{r}
+# Your R code here
+
+```
+
+### Practice 2: Two-Tailed t-Test
+
+Suppose
+
+$$
+H_0:\mu=50
+$$
+
+versus
+
+$$
+H_a:\mu\ne50.
+$$
+
+Given
+
+$$
+n=25,\quad\overline{x}=53,\quad s=8,
+$$
+
+conduct the test at $\alpha=0.05$.
+
+Assume an independent random sample from a Normal population.
+
+```{r}
+# Your R code here
+
+```
+
+### Practice 3: Population Proportion
+
+A sample of 120 products contains 78 products meeting a quality requirement.
+
+We want to test
+
+$$
+H_0:p=0.60
+$$
+
+versus
+
+$$
+H_a:p>0.60.
+$$
+
+Use the Normal approximation to conduct the test at $\alpha=0.05$.
+
+```{r}
+# Your R code here
+
+```
+
+### Practice 4: Population Variance
+
+Suppose
+
+$$
+H_0:\sigma^2=9
+$$
+
+versus
+
+$$
+H_a:\sigma^2>9.
+$$
+
+Given
+
+$$
+n=20,\quad s^2=12,
+$$
+
+conduct the test at $\alpha=0.05$.
+
+Assume an independent random sample from a Normal population.
+
+```{r}
+# Your R code here
+
+```
+
+---
+
+## Final Reminders
+
+1. **Identify the parameter** being tested: a population mean, proportion, or variance.
+2. **State the hypotheses** before calculating the test statistic.
+3. **Choose the correct statistical distribution** based on the problem and its assumptions.
+4. Use `qnorm()`, `qt()`, or `qchisq()` to find critical values.
+5. Use `pnorm()`, `pt()`, or `pchisq()` to calculate p-values.
+6. Remember that `lower.tail = FALSE` requests the probability to the right of the specified value.
+7. For symmetric Z- and t-distributions, two-sided p-values are twice the corresponding one-tail probability beyond the absolute test statistic.
+8. Reject $H_0$ when the p-value is less than or equal to the chosen significance level; otherwise, fail to reject $H_0$.
+9. Statistical significance does not necessarily imply practical importance.
+10. **Failing to reject $H_0$ does not mean that $H_0$ has been proven true.**
+
+The goal of learning R is not simply to obtain numerical answers more quickly. You should also understand the hypotheses, assumptions, statistical reasoning, and interpretation of each result.

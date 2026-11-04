@@ -42,7 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
-          - "activities/Unit-08R-Hypothesis-in-R.qmd"
+          - "activities/Unit-R.B-Normal-CTL-in-R.qmd"
           - "activities/Unit-08-Hypothesis.qmd"
           - "activities/Unit-07-Confidence-Interval.qmd"
           - "activities/Unit-B-Point-Estimate.qmd"
@@ -51,7 +51,7 @@ website:
           - "activities/Unit-A-Joint.qmd"
           - "activities/Unit-04-Discrete.qmd"
           - "activities/Unit-03-Probability.qmd"
-          - "activities/Unit-02B-Intro-R.qmd"
+          - "activities/Unit-R.A-Intro-R.qmd"
           - "activities/Unit-01-02A-Intro-Descriptive.qmd"
 
 

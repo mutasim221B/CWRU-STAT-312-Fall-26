@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Unit 08R: Hypothesis Testing in R – STAT 312</title>
+<title>Unit 08: Hypothesis Testing – STAT 312</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -3976,12 +3976,12 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
-    <a class="dropdown-item" href="../activities/Unit-08R-Hypothesis-in-R.html">
- <span class="dropdown-text">Unit 08R: Hypothesis Testing in R</span></a>
+    <a class="dropdown-item" href="../activities/Unit-R.B-Normal-CTL-in-R.html">
+ <span class="dropdown-text">Unit R.B: Normal &amp; CTL in R</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../activities/Unit-08-Hypothesis.html">
- <span class="dropdown-text">Unit 08R: Hypothesis Testing in R</span></a>
+ <span class="dropdown-text">Unit 08: Hypothesis Testing</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../activities/Unit-07-Confidence-Interval.html">
@@ -4012,8 +4012,8 @@ window.Quarto = {
  <span class="dropdown-text">Unit 03: Probability</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../activities/Unit-02B-Intro-R.html">
- <span class="dropdown-text">Unit 02.B: Intro to R and RStudio</span></a>
+    <a class="dropdown-item" href="../activities/Unit-R.A-Intro-R.html">
+ <span class="dropdown-text">Unit R.A: Intro to R and RStudio</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../activities/Unit-01-02A-Intro-Descriptive.html">
@@ -4044,7 +4044,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/Unit-08-Hypothesis.html">Unit 08R: Hypothesis Testing in R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/Unit-08-Hypothesis.html">Unit 08: Hypothesis Testing</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -4058,14 +4058,14 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/Unit-08R-Hypothesis-in-R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unit 08R: Hypothesis Testing in R</span></a>
+  <a href="../activities/Unit-R.B-Normal-CTL-in-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit R.B: Normal &amp; CTL in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/Unit-08-Hypothesis.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Unit 08R: Hypothesis Testing in R</span></a>
+ <span class="menu-text">Unit 08: Hypothesis Testing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -4112,8 +4112,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/Unit-02B-Intro-R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unit 02.B: Intro to R and RStudio</span></a>
+  <a href="../activities/Unit-R.A-Intro-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit R.A: Intro to R and RStudio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -4137,7 +4137,7 @@ window.Quarto = {
   <li><a href="#handouts" id="toc-handouts" class="nav-link" data-scroll-target="#handouts">Handouts</a></li>
   <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">Lecture Notes</a></li>
   <li><a href="#practice-problems" id="toc-practice-problems" class="nav-link" data-scroll-target="#practice-problems">Practice Problems</a></li>
-  <li><a href="#power" id="toc-power" class="nav-link" data-scroll-target="#power">Power</a></li>
+  <li><a href="#power-group-work" id="toc-power-group-work" class="nav-link" data-scroll-target="#power-group-work">Power: Group Work</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -4147,7 +4147,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Unit 08R: Hypothesis Testing in R</h1>
+<h1 class="title">Unit 08: Hypothesis Testing</h1>
 <p class="subtitle lead">Instructor: Dr. Md Mutasim Billah</p>
 </div>
 
@@ -4205,22 +4205,25 @@ window.Quarto = {
 </ul>
 </div>
 </section>
-<section id="power" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="power">Power</h2>
-<p>Recall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:</p>
+<section id="power-group-work" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="power-group-work">Power: Group Work</h2>
+<ul>
+<li>Make sure you are synchronized in a group of at least two students and ready to start discussing.</li>
+</ul>
+<p>Recall: Via our chosen significance level (typically 0.05), we control the Type I error rate:</p>
 <p>P(Type I error) = P(reject <span class="math inline">\(H_0\)</span> | <span class="math inline">\(H_0\)</span> is actually true) = 0.05</p>
-<p>We have less control over the Type II error (aka false negative) rate:</p>
+<p>We have less control over the Type II error rate:</p>
 <p>P(Type II error) = P(fail to reject <span class="math inline">\(H_0\)</span> | <span class="math inline">\(H_0\)</span> actually false) = ???</p>
 <p>An important related concept is that of statistical <strong>power</strong>, the <em>true positive rate</em>. Specifically, power is the probability of (correctly!) rejecting <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is actually false:</p>
 <p>power = P(reject <span class="math inline">\(H_0\)</span> | <span class="math inline">\(H_0\)</span> actually false) = 1 - P(Type II error)</p>
 <p>Less formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.</p>
 <p>Unfortunately, we can’t control power. It’s influenced by various factors. Navigate to <a href="https://rpsychologist.com/d3/NHST/">this page</a> to check out an interactive visualization of the factors that influence statistical power.</p>
-<p>Under “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.</p>
+<p>Under “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 2 different parameters (significance level, and sample size) one at a time to understand how these factors affect power.</p>
 <p>Some context behind this interactive visualization:</p>
 <ul>
 <li>Visualization is based on a one sample Z-test:<br>
 This is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)</li>
-<li>The effect size slider is measured with a metric called Cohen’s d:
+<li>Optional: The effect size slider is measured with a metric called Cohen’s d:
 <ul>
 <li>Cohen’s d = magnitude of effect/standard deviation of response variable</li>
 <li>Here: how far is the true mean from the null value in units of SD?</li>
@@ -4229,7 +4232,7 @@ This is a test for whether the true population mean equals a particular value. (
 </ul>
 <p><strong>Overall notes about the power investigations:</strong></p>
 <blockquote class="blockquote">
-<p>Because power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called <span class="math inline">\(Z_{\text{crit}}\)</span>) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the <span class="math inline">\(H_A\)</span> label is above it). Power corresponds to the light blue area under the <span class="math inline">\(H_A\)</span> distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).</p>
+<p>Because power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called <span class="math inline">\(Z_{\text{crit}}\)</span>) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the <span class="math inline">\(H_a\)</span> label is above it). Power corresponds to the light blue area under the <span class="math inline">\(H_A\)</span> distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).</p>
 </blockquote>
 <ol type="a">
 <li>What is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.</li>
@@ -4242,18 +4245,6 @@ This is a test for whether the true population mean equals a particular value. (
 </ol>
 <blockquote class="blockquote">
 <p>If sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.</p>
-</blockquote>
-<ol start="3" type="a">
-<li>Repeat Part a for the effect size.</li>
-</ol>
-<blockquote class="blockquote">
-<p>If the magnitude of the effect (numerator of Cohen’s d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>If the variability of the response variable decreases (denominator of Cohen’s d), power should increase because any “signal” from our predictors being picked up by our coefficient estimates will rise far enough above the “noise” in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>A large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.</p>
 </blockquote>
 
 
