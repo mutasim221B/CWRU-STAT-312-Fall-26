@@ -354,163 +354,391 @@
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html",
-    "href": "activities/Unit-07-Confidence-Interval.html",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html",
+    "href": "activities/Unit-08-Hypothesis.html",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\n\nExplore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
+    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error (aka false negative) rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nThe effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_A\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.\n\n\nRepeat Part a for the effect size.\n\n\nIf the magnitude of the effect (numerator of Cohen’s d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.\n\n\nIf the variability of the response variable decreases (denominator of Cohen’s d), power should increase because any “signal” from our predictors being picked up by our coefficient estimates will rise far enough above the “noise” in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.\n\n\nA large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#handouts",
-    "href": "activities/Unit-07-Confidence-Interval.html#handouts",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html#handouts",
+    "href": "activities/Unit-08-Hypothesis.html#handouts",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
-    "href": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html#lecture-notes",
+    "href": "activities/Unit-08-Hypothesis.html#lecture-notes",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Download the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "text": "Download the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#practice-problems",
-    "href": "activities/Unit-07-Confidence-Interval.html#practice-problems",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html#practice-problems",
+    "href": "activities/Unit-08-Hypothesis.html#practice-problems",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
-    "href": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html#power",
+    "href": "activities/Unit-08-Hypothesis.html#power",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Explore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
+    "text": "Recall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error (aka false negative) rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nThe effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_A\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.\n\n\nRepeat Part a for the effect size.\n\n\nIf the magnitude of the effect (numerator of Cohen’s d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.\n\n\nIf the variability of the response variable decreases (denominator of Cohen’s d), power should increase because any “signal” from our predictors being picked up by our coefficient estimates will rise far enough above the “noise” in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.\n\n\nA large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html",
-    "href": "activities/Unit-04-Discrete.html",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-06-Normal-CTL.html",
+    "href": "activities/Unit-06-Normal-CTL.html",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#handouts",
-    "href": "activities/Unit-04-Discrete.html#handouts",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-06-Normal-CTL.html#handouts",
+    "href": "activities/Unit-06-Normal-CTL.html#handouts",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
-    "href": "activities/Unit-04-Discrete.html#practice-problems",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "href": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#class-notes",
-    "href": "activities/Unit-04-Discrete.html#class-notes",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Unit-06-Normal-CTL.html#practice-problems",
+    "href": "activities/Unit-06-Normal-CTL.html#practice-problems",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 06: Normal Distribution & Central Limit Theorem"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html",
+    "href": "activities/Unit-03-Probability.html",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#handouts",
+    "href": "activities/Unit-03-Probability.html#handouts",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#practice-problems",
+    "href": "activities/Unit-03-Probability.html#practice-problems",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#class-notes",
+    "href": "activities/Unit-03-Probability.html#class-notes",
+    "title": "Unit 03: Probability",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Expected Value of Linear Transformation",
-    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "title": "Unit 03: Probability",
+    "section": "Coin Toss Applet",
+    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Variance of a Discrete Random Variable",
-    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Interpretation of Probability",
+    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Variance of a Linear Transformation",
-    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
+    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Axioms of Probability",
+    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Simulating Roulette!",
-    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Bernoulli Distribution",
-    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Distribution",
-    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Mean and Variance",
-    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "",
+    "text": "Syllabus",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Why should engineers study statistics?",
+    "text": "Why should engineers study statistics?",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "What is statistics?",
+    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Manufacturing bolts",
+    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Population and sample",
+    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Variability",
+    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Machines",
+    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Additional information: Production speed",
+    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "How should we collect the data?",
+    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Example: Sample Variance and Standard Deviation",
+    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
+    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
+    "crumbs": [
+      "Unit 01-02.A: Intro & Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#installing-r-and-rstudio",
+    "href": "R_Resources.html#installing-r-and-rstudio",
+    "title": "R & RStudio Resource",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R & RStudio Resource",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "activities/Exam1.html",
+    "href": "activities/Exam1.html",
+    "title": "Midterm Exam 01",
+    "section": "",
+    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.",
+    "crumbs": [
+      "Midterm Exam 01"
+    ]
+  },
+  {
+    "objectID": "activities/Exam1.html#announcement",
+    "href": "activities/Exam1.html#announcement",
+    "title": "Midterm Exam 01",
+    "section": "",
+    "text": "Download the Exam 1 Announcement and carefully review the announcement.",
+    "crumbs": [
+      "Midterm Exam 01"
+    ]
+  },
+  {
+    "objectID": "activities/Exam1.html#review",
+    "href": "activities/Exam1.html#review",
+    "title": "Midterm Exam 01",
+    "section": "",
+    "text": "Download the Exam 1 Review before class and bring it with you.",
+    "crumbs": [
+      "Midterm Exam 01"
     ]
   },
   {
@@ -764,391 +992,383 @@
     ]
   },
   {
-    "objectID": "activities/Exam1.html",
-    "href": "activities/Exam1.html",
-    "title": "Midterm Exam 01",
+    "objectID": "activities/Unit-04-Discrete.html",
+    "href": "activities/Unit-04-Discrete.html",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Midterm Exam 01"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Exam1.html#announcement",
-    "href": "activities/Exam1.html#announcement",
-    "title": "Midterm Exam 01",
+    "objectID": "activities/Unit-04-Discrete.html#handouts",
+    "href": "activities/Unit-04-Discrete.html#handouts",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Exam 1 Announcement and carefully review the announcement.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Midterm Exam 01"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Exam1.html#review",
-    "href": "activities/Exam1.html#review",
-    "title": "Midterm Exam 01",
+    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
+    "href": "activities/Unit-04-Discrete.html#practice-problems",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Exam 1 Review before class and bring it with you.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Midterm Exam 01"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#installing-r-and-rstudio",
-    "href": "R_Resources.html#installing-r-and-rstudio",
-    "title": "R & RStudio Resource",
-    "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R & RStudio Resource",
-    "section": "Getting Help",
-    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions\n\n\n\n\n\n\n\n\nSlides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.\n\n\n\n\n\n\n\n\nDownload the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.\n\n\n\n\n\n\nSyllabus",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#course-website",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "The Course Website will serve as the main hub for this course.\nClass Activities: Lecture notes, handouts, examples, and other class resources will be posted under the Activities tab.\n\nI will continue adding materials to each unit as we progress through the course.\nOnce a unit is completed, we will move on to the next unit.\n\n\n\n\n\nThe Course Website will also provide easy access to:\n\nPractice Problems (PP)\nHomework Assignments (HW)\nLive Course Schedule\nR Resources\nCourse Syllabus\n\n\n\n\n\nCanvas will primarily be used for:\n\nTaking quizzes\nSubmitting HW assignments\nViewing Practice Problem solutions\nAccessing/downloading the course textbook and other restricted course materials\nCourse announcements and discussions",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#class-notes-vs-slides",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Slides are generated automatically from the Activities posted on the course website.\nDuring class, we will focus primarily on live note-taking rather than simply reading from slides.\nPlease watch for my email after each class for the corresponding electronic class notes.\n\n\n\n\nLive note-taking will generally have two parts:\n\nNotes on a blank page:\nWe will write down important definitions, concepts, theories, formulas, and other key ideas discussed during class.\nNotes on the handouts:\nThe handouts contain examples and exercises that apply the concepts and theories we have just discussed. We will work through these together during class.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#handouts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Download the Unit 02A Handout: Visualization before class and bring it with you.\nDownload additional Handout on Boxplot (no need to print and bring it in the class though!)\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#practice-problems",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 02 Practice Problems are available under the Practice Problems tab on the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Unit 02 Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#r-rstudio",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software. Calculators and spreadsheet functionality alone do not cut it.\nWe will use R and RStudio throughout the course.\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\nDownload and install R and RStudio on your device by the end of this week.\nCheck the R Resources tab on the course website for detailed installation instructions.\nIf you encounter problems during the installation process, you may use AI tools to help troubleshoot the issue.\nIf you are still unable to complete the installation, please bring your device to class or office hours so we can troubleshoot it together.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#communcation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "",
-    "text": "Syllabus",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#why-should-engineers-study-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Why should engineers study statistics?",
-    "text": "Why should engineers study statistics?",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#what-is-statistics",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "What is statistics?",
-    "text": "What is statistics?\nStatistics is the science of collecting, analyzing, and interpreting data.\n\n\nEngineers collect data from experiments, manufacturing processes, and systems.\nEngineers analyze data to understand patterns and relationships.\nEngineers interpret data to make decisions and improve processes.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-manufacturing-bolts",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Manufacturing bolts",
-    "text": "Example: Manufacturing bolts\nA factory is manufacturing bolts that should be exactly 2 inches long.\n\n\nMeasuring the length of all bolts (a census) may be:\n\ntoo time consuming,\ntoo expensive,\nor impossible.\n\nInstead, we can collect a sample of bolts.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#population-and-sample",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Population and sample",
-    "text": "Population and sample\nA random sample of 5 bolts yields the following measurements, in inches:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\n\nPopulation: The set of all people or things being studied, i.e., all possible observations.\nSample: The subset of the population from which information is actually collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#variability",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Variability",
-    "text": "Variability\nConsider again the measurements:\n[ {2.003, 1.999, 2.006, 1.996, 2.001} ]\nThe data have variability.\n\n\nIdentify the source(s) of the variation.\nReduce the variation.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-machines",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Machines",
-    "text": "Additional information: Machines\nThe bolts are being produced by two different machines:\n\n\nMachine A\nMachine B\n\n\nThis gives us one possible source of variation in bolt length.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#additional-information-production-speed",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Additional information: Production speed",
-    "text": "Additional information: Production speed\nEach machine has three speed settings:\n\n\nSlow: 500 bolts/minute\nMedium: 1000 bolts/minute\nFast: 2000 bolts/minute\n\n\nNow we have two possible sources of variation:\n\n\nMachine\nProduction speed",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#how-should-we-collect-the-data",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "How should we collect the data?",
-    "text": "How should we collect the data?\nThere are several options.\n\n\nRetrospective Study\nUse data that have been collected in the past.\nObservational Study\nObserve the process in the present and collect data.\nDesigned Experiment\nExhibit maximum control over when, where, and how the data are collected.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#example-sample-variance-and-standard-deviation",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Example: Sample Variance and Standard Deviation",
-    "text": "Example: Sample Variance and Standard Deviation\nSuppose we have collected the following random sample of \\(n=5\\) observations:\n\\[\n\\{3, 7, 10, 11, 14\\}\n\\]\nFind the sample variance and sample standard deviation.\n\nStep 1: Calculate the sample mean\n\\[\n\\begin{aligned}\n\\bar{x}\n&= \\frac{\\sum_{i=1}^{n}x_i}{n} \\\\[4pt]\n&= \\frac{3+7+10+11+14}{5} \\\\[4pt]\n&= \\frac{45}{5} \\\\[4pt]\n&= 9.\n\\end{aligned}\n\\]\n\n\nStep 2: Complete the table\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\\(x_i^2\\)\n\n\n\n\n3\n\\(-6\\)\n36\n9\n\n\n7\n\\(-2\\)\n4\n49\n\n\n10\n1\n1\n100\n\n\n11\n2\n4\n121\n\n\n14\n5\n25\n196\n\n\nTotal: 45\n0\n70\n475\n\n\n\n\n\nStep 3: Calculate the sample variance\nUsing the deviations from the sample mean:\n\\[\ns^2\n=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\ns^2\n&= \\frac{70}{5-1} \\\\[4pt]\n&= \\frac{70}{4} \\\\[4pt]\n&= 17.5.\n\\end{aligned}\n\\]\n\n\nStep 4: Verify using the convenient formula\nThe convenient formula for the sample variance is\n\\[\ns^2\n=\n\\frac{\n\\displaystyle\\sum_{i=1}^{n}x_i^2\n-\n\\frac{\\left(\\displaystyle\\sum_{i=1}^{n}x_i\\right)^2}{n}\n}{n-1}.\n\\]\nSubstituting the values from the table:\n\\[\n\\begin{aligned}\ns^2\n&=\n\\frac{\n475-\\dfrac{45^2}{5}\n}{5-1} \\\\[6pt]\n&=\n\\frac{475-405}{4} \\\\[6pt]\n&=\n\\frac{70}{4} \\\\[6pt]\n&=\n17.5.\n\\end{aligned}\n\\]\nBoth methods give the same sample variance:\n\\[\n\\boxed{s^2=17.5}\n\\]\n\n\nStep 5: Calculate the sample standard deviation\n\\[\n\\begin{aligned}\ns\n&= \\sqrt{s^2} \\\\[4pt]\n&= \\sqrt{17.5} \\\\[4pt]\n&\\approx 4.18.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\boxed{s\\approx 4.18}\n\\]",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "href": "activities/Unit-01-02A-Intro-Descriptive.html#quiz-01",
-    "title": "Unit 01-02.A: Intro & Descriptive Statistics",
-    "section": "Quiz 01",
-    "text": "Quiz 01\n\nWe have now covered all the topics included in Quiz 01, which covers Units 01 and 02.\nBefore attempting the quiz, carefully review the course material covered since the first day of class, including:\n\nClass notes\nWhiteboard notes\nHandouts\nRelevant textbook sections, especially if you missed a class\n\nQuiz 01 is designed to assess your general understanding of the course material covered so far.\nDue: Thursday, September 3, at 11:59 p.m. on Canvas.",
-    "crumbs": [
-      "Unit 01-02.A: Intro & Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-03-Probability.html",
-    "href": "activities/Unit-03-Probability.html",
-    "title": "Unit 03: Probability",
-    "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 03: Probability"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-03-Probability.html#handouts",
-    "href": "activities/Unit-03-Probability.html#handouts",
-    "title": "Unit 03: Probability",
-    "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
-    "crumbs": [
-      "Unit 03: Probability"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-03-Probability.html#practice-problems",
-    "href": "activities/Unit-03-Probability.html#practice-problems",
-    "title": "Unit 03: Probability",
-    "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
-    "crumbs": [
-      "Unit 03: Probability"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-03-Probability.html#class-notes",
-    "href": "activities/Unit-03-Probability.html#class-notes",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#class-notes",
+    "href": "activities/Unit-04-Discrete.html#class-notes",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "title": "Unit 03: Probability",
-    "section": "Coin Toss Applet",
-    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
+    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Expected Value of Linear Transformation",
+    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Interpretation of Probability",
-    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
+    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Variance of a Discrete Random Variable",
+    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Axioms of Probability",
-    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
+    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Variance of a Linear Transformation",
+    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html",
-    "href": "activities/Unit-06-Normal-CTL.html",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Simulating Roulette!",
+    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
+    "crumbs": [
+      "Unit 04: Discrete Random Variable"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Bernoulli Distribution",
+    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
+    "crumbs": [
+      "Unit 04: Discrete Random Variable"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Distribution",
+    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
+    "crumbs": [
+      "Unit 04: Discrete Random Variable"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Mean and Variance",
+    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
+    "crumbs": [
+      "Unit 04: Discrete Random Variable"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-07-Confidence-Interval.html",
+    "href": "activities/Unit-07-Confidence-Interval.html",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\n\nExplore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#handouts",
-    "href": "activities/Unit-06-Normal-CTL.html#handouts",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#handouts",
+    "href": "activities/Unit-07-Confidence-Interval.html#handouts",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#lecture-notes",
-    "href": "activities/Unit-06-Normal-CTL.html#lecture-notes",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
+    "href": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "text": "Download the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#practice-problems",
-    "href": "activities/Unit-06-Normal-CTL.html#practice-problems",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#practice-problems",
+    "href": "activities/Unit-07-Confidence-Interval.html#practice-problems",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html",
-    "href": "activities/Unit-08-Hypothesis.html",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
+    "href": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error (aka false negative) rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nThe effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_A\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.\n\n\nRepeat Part a for the effect size.\n\n\nIf the magnitude of the effect (numerator of Cohen’s d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.\n\n\nIf the variability of the response variable decreases (denominator of Cohen’s d), power should increase because any “signal” from our predictors being picked up by our coefficient estimates will rise far enough above the “noise” in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.\n\n\nA large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.",
+    "text": "Explore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#handouts",
-    "href": "activities/Unit-08-Hypothesis.html#handouts",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html",
+    "title": "Unit 08R: Hypothesis Testing in R",
     "section": "",
-    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab).\nI often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#lecture-notes",
-    "href": "activities/Unit-08-Hypothesis.html#lecture-notes",
-    "title": "Unit 08: Hypothesis Testing",
-    "section": "",
-    "text": "Download the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1",
+    "text": "Exercise 1",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#practice-problems",
-    "href": "activities/Unit-08-Hypothesis.html#practice-problems",
-    "title": "Unit 08: Hypothesis Testing",
-    "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nResearch question: Is there evidence that the mercury concentration in fish (Concen) differs according to the River they were sampled from?\n\npart a: fit the model\nFit a simple linear regression model (we will learn about simple linear regression in a few days!) that would address our research question\n\nmod_fish &lt;- lm(Concen ~ River, data=fish)\n## Error in eval(mf, parent.frame()): object 'fish' not found\nsummary(mod_fish)\n## Error: object 'mod_fish' not found\n\nInterpret the intercept from this model.\n\nOur model estimates an average mercury concentration of 1.078ppm among fish in the Lumber River.\n\n\n\npart b: construct a CI\nUsing the 68-95-99.7 rule, construct an approximate 95% confidence interval for the intercept term, and provide an appropriate interpretation.\n\n# approximate 95% confidence interval\n\n1.078 + 1.96*0.089\n## [1] 1.25244\n1.078 - 1.96*0.089\n## [1] 0.90356\n\n\nPreferred interpretation: It is plausible that the true mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.\n\n\n(technical addendum to this interpretation): …specifically, we expect that if we take many different samples and obtain a set of corresponding parameter estimates and confidence intervals, we expect that 95% of the resulting intervals will contain the true mean mercury concentration of the entire Lumber River fish population. We hope that our interval is one of the lucky 95% and not one of the unlucky 5% that don’t contain the true population parameter.\n\n\nNot as preferred interpretation: We are 95% confident that the mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.\n\nCompare your CI to an exact 95% confidence interval for the model coefficients:\n\nconfint(mod_fish, level=0.95)\n## Error: object 'mod_fish' not found\n\n\n\npart c: what can we conclude from multiple samples?\nSuppose we take 200 different samples of fish from the Lumber River. Based on these results, in how many of those samples would you expect to observe mean mercury concentration greater than 1.25ppm?\n\nWe don’t/can’t actually know! This depends on the true population parameter and the accuracy of our sampling distribution.\n\n\nWhat we can say is that if our sampling distribution model is accurate, then we should expect that about 10 out of 200 samples (5% of them) will produce confidence intervals that don’t contain the population parameter. We should expect that half of these–so 5 samples–are overestimates and the other half are underestimates.\n\n\n\npart d: intuition for constructing & interpreting test statistics\nSuppose previous environmental studies have found little evidence of mercury pollution in other rivers in the area, so perhaps our “default” assumption is that fish from the Lumber river should have an expected mercury concentration of 0ppm. How many standard errors is our sample estimate (1.078ppm) away from this expectation? What are three possible conclusions?\n\nIf we assume that 0ppm is the “true” mercury concentration, then our estimate of Beta_0 = 1.078ppm with a standard error of 0.08866 means that our estimate is (1.07808-0)/0.08866 = 12.16 standard errors away from what we should expect.\n\n\nPossible conclusions:\n\n\n\nOur working assumption that 0ppm should be the “true” mercury concentration in the Lumber river fish population was wrong! The confidence interval we constructed above suggests that a true value of 0ppm is extremely implausible.\n\n\n\n\nPerhaps ~0ppm is actually the true average mercury concentration in the population, we just got extremely, outrageously unlucky with our sample.\n\n\n\n\nPerhaps there was a measurement/data entry error, and the units are actually parts per billion, not million.\n\n\n\n\npart e: do individual observations contradict our conclusions?\nNow suppose we sample a single fish from the Lumber River and find it has a mercury concentration of 2.5ppm. Are you surprised by this result? Why or why not? (Hint: create a code chunk that calculates the mean, standard deviation, and maximum of the Concen variable in each river in our original sample)\n\nfish %&gt;% \n  group_by(River) %&gt;% \n  summarise(mean=mean(Concen), \n            sd=sd(Concen), \n            max=max(Concen))\n## Error: object 'fish' not found\n\n\nObserving a single fish with a mercury concentration of 2.5ppm is actually not that surprising! 2.5ppm is a little more than 2 standard deviations away from the mean mercury concentration in our sample of fish from the Lumber River (1.08+2*0.64=2.43), but there are certainly fish in the sample with even higher mercury concentrations (max=3.5ppm), so this isn’t outside the bounds of what we’d expect.\n\n\nClass Notes\n\nAdditional Reading (after class): FORMAL HYPOTHESIS TESTS\nThough CIs can help us evaluate hypotheses, hypothesis tests provide a more formal approach. The general idea:\n\nAssume that the hypothesis is not true.\n\nDetermine what sample observations would be expected under this assumption.\n\nEvaluate how compatible our observed sample data are with this assumption (are they consistent with what we’d expect?).\n\nOr, in context:\n\nAssume there were truly no association between mercury concentration and fish length, i.e. \\(\\beta_1 = 0\\) (the “null value”).\nDetermine how our fish sample might have “behaved” if there were truly no association.\nEvaluate how compatible our fish sample observations are with the null value (are they consistent with what we’d expect if there were no association?).",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#power",
-    "href": "activities/Unit-08-Hypothesis.html#power",
-    "title": "Unit 08: Hypothesis Testing",
-    "section": "",
-    "text": "Recall: Via our chosen significance level (typically 0.05), we control the Type I error (aka false positive) rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error (aka false negative) rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 3 different parameters (significance level, sample size, and effect size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nThe effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_A\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.\n\n\nRepeat Part a for the effect size.\n\n\nIf the magnitude of the effect (numerator of Cohen’s d) increases, power should increase because it is easier (we are more likely) to detect large effects. It is harder (we are less likely) to detect very small effects.\n\n\nIf the variability of the response variable decreases (denominator of Cohen’s d), power should increase because any “signal” from our predictors being picked up by our coefficient estimates will rise far enough above the “noise” in the small variability of the response. The variability of the response variable also contributes to the standard error for the coefficient. With low variability of the response, we will have lower standard errors because there will be lower spread in the estimates across samples. And with lower standard errors, test statistics should increase, resulting in greater frequency of rejecting the null.\n\n\nA large effect magnitude and small variability in the response result in a large effect size, and increasing effect size results in higher power.",
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 2:",
+    "text": "Exercise 2:\nLet’s look at the model summary output again:\n\nsummary(mod_fish)\n## Error: object 'mod_fish' not found\n\n\npart a: interpret model coefficient\nNow, let’s interpret the RiverWacamaw coefficient. Based only on the coefficient (don’t think about the standard error yet), what can we say about the difference in mercury concentration among fish in the two rivers?\n\nResponse\n\n\n\npart b: construct a CI\nUsing the 68-95-99.7 rule, construct an approximate 95% confidence interval for the RiverWacamaw coefficient, and provide an appropriate interpretation.\n\nResponse\n\n\n\npart c: interpreting the CI\nDo you believe it plausible that the mean mercury concentration of the fish population in the Wacamaw River is approximately the same as that of the fish population in the Lumber River? How would you confirm this? What assumptions are you making?\n\nResponse\n\n\n\npart d: effect of sample size on our conclusions\nSuppose we sample 10 times as many fish from the Wacamaw River, and get a similar coefficient estimate (0.2). Thinking back to the Central Limit Theorem, what should happen to the standard error of the RiverWacamaw coefficient? How small of a standard error would we need to more conclusively say that there is an actual difference in mean mercury concentrations of the Lumber River and Wacamaw River fish populations?\n\nResponse\n\n\n\npart e: reconciling parameter estimates and uncertainty\nSuppose the true population coefficient for the RiverWacamawparameter is 0.02 (i.e. the average mercury concentration is 0.02ppm higher for the Wacamaw River fish population compared to that of the Lumber River). Is this meaningful?\n\nResponse\n\n\n\npart f (CHALLENGE)\nUsing the model summary output, report the mean mercury concentration for our sample of fish from the Wacamaw River:\n\nsummary(mod_fish)\n## Error: object 'mod_fish' not found\n\n\nResponse:\n\nWhich of the following values do you think is the standard error of the sample mean for the Wacamaw River?\n\n0.11712\n0.08866\n0.11712 + 0.08866 = 0.20578\n0.11712 - 0.08866 = 0.02846\nsomething else\n\nTo answer this question, look at the code chunk below, which fits the same model, but uses the Wacamaw River as our reference category instead of the Lumber River:\n\nmod_fish2 &lt;- lm(Concen ~ River, data=fish %&gt;% mutate(River=ifelse(River == \"Wacamaw\", paste0(\"_\", River), River)))\n## Error in eval(mf, parent.frame()): object 'fish' not found\nsummary(mod_fish2)\n## Error: object 'mod_fish2' not found\n\nCompare this to the output for mod_fish. What do you notice about the standard errors of the intercepts (i.e., the standard errors of the means for each river) compared to the standard errors of the RiverWacamaw and RiverLumber coefficients (i.e., the standard errors of the differences between the means)?\n\nResponse:",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-simulating-data-under-the-null-value",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-simulating-data-under-the-null-value",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1: Simulating data under the null value",
+    "text": "Exercise 1: Simulating data under the null value\nTo begin testing our hypothesis that there is an association between mercury concentration and fish length (\\(\\beta_1 \\ne 0\\)), let’s explore how our sample data might behave IF in fact there were no association (\\(\\beta_1 = 0\\)). We’ll first do this using simulation, and then through theory.\n\nRead carefully:\n\n\nSuppose that when each individual fish in our sample was collected, the scientists wrote its Concen and Length on a piece of paper.\nThey then ripped the paper in half, with the observed Concen on one half and the observed Length on the other.\nThey then accidentally dropped the pieces of paper! In the resulting mess, they couldn’t tell which Length observation went with each Concen observation.\nTo cover up their mistake, they just randomly matched up the Length and Concen pieces of paper. Essentially, in this shuffling process, the scientists broke the bond of the original Length and Concen pairs.\n\nQuestion: Intuitively, if the researchers plotted the new pairs of Concen and Length values, what do you think their scatterplot would look like? What about their sample model?\n\nWe can simulate this idea in RStudio! Throughout, focus on concepts over code.\n\n\n# First check out the first 6 fish\nfish %&gt;% \n  select(Concen, Length) %&gt;% \n  head()\n## Error: object 'fish' not found\n\nNow, randomly shuffle the Length values! That is, break the original Concen and Length pairs, and just randomly assign Length:\n\n# Run this chunk a few times!!\n# Shuffle the Length values\nfish %&gt;%\n  select(Concen, Length) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;% \n  head()\n## Error: object 'fish' not found\n\nLet’s check out the sample models that arise from the shuffled Concen and Length pairs. Summarize your observations! Was your intuition in Part a correct?\n\n# Shuffle the Length values\n# Run this chunk a few times!!\n# Then plot the resulting sample data and model\nfish %&gt;% \n  select(Concen, Length) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_point() +\n  geom_smooth(method = \"lm\")\n## Error: object 'fish' not found\n\n\nThese shuffled samples give us a sense of the sample models we’d expect IF \\(\\beta_1\\) were actually 0, i.e. if there were no relationship between Concen and Length in the broader population of fish. To get a sense of the range of possible outcomes in this scenario, let’s simulate a bunch of shuffled samples. Specifically, take 500 different shuffled samples and use each to estimate the model of Concen by Length (gray lines). Summarize your observations!! If there were truly no relationship between Concen and Length, how would we expect the sample data to behave?\n\n\nset.seed(1)\nshuffled_models &lt;- mosaic::do(500)*(\n  fish %&gt;% \n  select(Concen, Length) %&gt;% \n  sample_n(size = length(Length), replace = TRUE) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;%\n  with(lm(Concen ~ Length))\n)\n## Error: object 'fish' not found\nhead(shuffled_models)\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'shuffled_models' not found\n\n\n# Plot the 500 shuffled models\nfish %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_abline(data = shuffled_models, \n              aes(intercept = Intercept, slope = Length), \n              color = \"gray\", size = 0.25) + \n  geom_smooth(method = \"lm\", se = FALSE, size = 0) # Ignore this line. It's a clunky workaround\n## Error: object 'fish' not found\n\n\nFinally, focus on just the slope estimates \\(\\hat{\\beta}_1\\) behind the lines above. Summarize your observations!! If there were truly no relationship between Concen and Length, i.e. \\(\\beta_1\\) were truly 0, how would we expect the sample slopes to behave?\n\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density()\n## Error: object 'shuffled_models' not found",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2-comparing-our-sample-results-to-the-null-value-intuition",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2-comparing-our-sample-results-to-the-null-value-intuition",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 2: Comparing our sample results to the null value (intuition)",
+    "text": "Exercise 2: Comparing our sample results to the null value (intuition)\nNow that we’ve simulated how sample data might behave if there were truly no relationship between Concen and Length (i.e. if \\(\\beta_1\\) were 0), let’s consider the next important step in a hypothesis test:\nEvaluate how compatible our observed sample data are with this assumption that \\(\\beta_1 = 0\\)!\n\nLet’s start with a visual assessment. Is our sample model (blue line) consistent / compatible with the “null models” simulated under the assumption the \\(\\beta_1 = 0\\) (gray lines)?\n\n\nfish %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_abline(data = shuffled_models, \n              aes(intercept = Intercept, slope = Length), \n              color = \"gray\", size = 0.25) + \n  geom_smooth(method = \"lm\", se = FALSE)\n## Error: object 'fish' not found\n\n\nConsider another visual assessment, focusing just on the slopes of the lines in the plot above, i.e. our sample estimates \\(\\hat{\\beta}_1\\). Is our sample slope of \\(\\hat{\\beta}_1 = 0.05813\\) (blue line) consistent / compatible with the collection of slopes from the “null models” (density plot)?\n\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density() + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n## Error: object 'shuffled_models' not found\n\n\nIn Part b, you evaluated the compatibility of our sample slope \\(\\hat{\\beta}_1 = 0.05813\\) model with slopes of the “null models” using visual cues alone. But for a formal hypothesis test, we need some numerical measures of compatibility. Brainstorm some ideas!",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-3-clt",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-3-clt",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 3: CLT",
+    "text": "Exercise 3: CLT\nNow that we’ve built up some intuition using simulation, let’s formalize these concepts with some theory.\nYou shouldn’t be surprised to know that sampling distributions are at the heart of hypothesis testing! The distribution of slopes from our shuffled sample models uses simulation to approximate the sampling distribution of slope estimates \\(\\hat{\\beta}_1\\) we’d expect if the population slope \\(\\beta_1\\) were actually 0 (the null value):\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density()\n## Error: object 'shuffled_models' not found\n\nWe can also approximate the sampling distribution using mathematical theory, specifically the Central Limit Theorem. If \\(\\beta_1\\) were truly 0, then the distribution of possible sample estimates \\(\\hat{\\beta}_1\\) would be Normally distributed around 0:\n\\[\n\\hat{\\beta}_1 \\sim N(0, s.e.(\\hat{\\beta}_1)^2)\n\\]\nwhere in Example 1 we approximated the standard error to be 0.005. Thus a plot of the CLT is below. Confirm that this is similar to the simulated sampling distribution above:\n\n# Don't worry about this code!!!\n# Save your plot\nclt_plot &lt;- data.frame(x = 0 + c(-4:4)*0.005) %&gt;% \n  mutate(y = dnorm(x, sd = 0.005)) %&gt;% \n  ggplot(aes(x = x)) +\n  stat_function(fun = dnorm, args = list(mean = 0, sd = 0.005)) +\n  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = \"dashed\") + \n  scale_x_continuous(breaks = c(-4:4)*0.005) + \n  xlab(\"\")\n  \nclt_plot",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-4-comparing-our-sample-results-to-the-null-value-test-statistic",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-4-comparing-our-sample-results-to-the-null-value-test-statistic",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 4: Comparing our sample results to the null value (test statistic)",
+    "text": "Exercise 4: Comparing our sample results to the null value (test statistic)\nOur sample slope estimate of \\(\\hat{\\beta}_1 = 0.05813\\) is shown on the sampling distribution of sample slopes \\(\\hat{\\beta}_1\\) that we’d expect if the population slope \\(\\beta_1\\) were actually 0 (the null value):\n\nclt_plot + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n\n\n\n\n\n\n\n\nTo measure how compatible (or incompatible) our estimate is with the null value, we can measure the distance between the two.\n\nOur sample slope estimate of \\(\\hat{\\beta}_1 = 0.05813\\) is 0.05813 units (ppm/cm) from the null value of 0.\n\n\nIn the context of this particular analysis, is that a big or a small number? How can you tell? That is, what info are you using to make this assessment?\nWould your answer be the same if you observed this estimate in another context?\n\n\nIn practice, we standardize our distance calculations so that they have the same meaning no matter the context of the analysis. We can do this by calculating a z-score:\n\n\\[\n\\frac{\\hat{\\beta}_1 - \\text{null value}}{s.e.(\\hat{\\beta}_1))} = \\text{ number of s.e. that $\\hat{\\beta}_1$ falls from the null value}\n\\]\nThis is called the test statistic. Calculate and interpret the test statistic for our example.\n\nWithin rounding, the same test statistic appears in our model summary table! Where is it?!\n\n\ncoef(summary(fish_mod_1))\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fish_mod_1' not found\n\n\nWhat can we conclude from your test statistic calculation and interpretation:\n\n\nOur sample data is not consistent with the null value of \\(\\beta_1 = 0\\), i.e. the idea that there’s no significant association between mercury concentration and length.\nOur sample data is consistent with the null value of \\(\\beta_1 = 0\\).",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-5-comparing-our-sample-results-to-the-null-value-p-value",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-5-comparing-our-sample-results-to-the-null-value-p-value",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 5: Comparing our sample results to the null value (p-value)",
+    "text": "Exercise 5: Comparing our sample results to the null value (p-value)\nAgain, our sample slope estimate of \\(\\hat{\\beta}_1 = 0.05813\\) is shown on the sampling distribution of sample slopes \\(\\hat{\\beta}_1\\) that we’d expect if the population slope \\(\\beta_1\\) were actually 0 (the null value):\n\nclt_plot + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n\n\n\n\n\n\n\n\n\nAnother way to evaluate the compatibility of our estimate with the null value of \\(\\beta_1 = 0\\) is to ask how likely we are to have gotten this estimate if the null value were indeed true! That is, what’s the probability that we would have gotten a sample slope that’s at least 0.058 above or below 0 IF in fact there were no association between mercury concentration and length? Equivalently, what’s the probability that we would have gotten a test statistic so far from 0 IF in fact \\(\\beta_1\\) were 0? Use the 68-95-99.7 Rule with the plot above to approximate the p-value:\n\n\nless than 0.003\nbetween 0.003 and 0.05\nbetween 0.05 and 0.32\nbigger than 0.32\n\n\nThe calculation above is called a p-value. A more accurate p-value is reported in the model summary table in the Pr(&gt;|t|) column. What is it?\n\n\ncoef(summary(fish_mod_1))\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fish_mod_1' not found\n\n\nHow can we interpret the p-value? IMPORTANT: Think about the steps that went into calculating the p-value!!\n\n\nIt’s very unlikely that we’d have observed such a steep increase in Concen with Length among our sample fish “by chance”, i.e. if in fact there were no relationship between mercury concentration and length in the broader fish population.\nGiven what we observed in our sample data, it’s very unlikely that mercury concentration is associated with length.\nGiven what we observed in our sample data, it’s very unlikely that mercury concentration and length are unrelated.\n\nPAUSE: Check the solutions to this question! p-values are commonly misinterpreted.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-6-river-test-part-i",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-6-river-test-part-i",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 6: River test Part I",
+    "text": "Exercise 6: River test Part I\nThe fish in our sample come from two different rivers: Lumber and Wacamaw. Research question: Is there evidence that the mercury concentration in fish differs between the 2 rivers? To answer this question, we’ll control for fish Length – we don’t want to mistakenly detect a difference in mercury levels just because we happened to sample bigger fish in one river and smaller fish in the other. The relevant population model is:\n\\[\nE[Concen | River, Length] = \\beta_0 + \\beta_1 RiverWacamaw + \\beta_2 Length\n\\]\n\nTo address the above research question, which model coefficient / population parameter is of primary interest: \\(\\beta_0\\), \\(\\beta_1\\), or \\(\\beta_2\\)? And what’s the null value of this coefficient? That is, what would this coefficient be if there were truly no difference in mercury concentration between the 2 rivers (when controlling for length)?\nFor the parameter of interest, obtain and report a sample estimate and its corresponding standard error:\n\n\nfish_mod_2 &lt;- lm(___, data = fish)\n\ncoef(summary(fish_mod_2))\n## Error in parse(text = input): &lt;text&gt;:1:19: unexpected input\n## 1: fish_mod_2 &lt;- lm(__\n##                       ^\n\n\nLet’s use this data to evaluate our research question. To do so, remember the next step: Assume that the null value from Part a is correct and determine what sample estimates we would expect to get in this scenario.\n\nAdjust the code below to sketch the appropriate sampling distribution. Represent our sample estimate by a blue line.\n\n# Put OUR sample estimate here\n# Round to 3 digits\nest &lt;- ___\n\n# Put the corresponding standard error here\n# Round to 3 digits\nse &lt;- ___\n\ndata.frame(x = 0 + c(-4:4)*se) %&gt;% \n  mutate(y = dnorm(x, sd = se)) %&gt;% \n  ggplot(aes(x = x)) +\n  stat_function(fun = dnorm, args = list(mean = 0, sd = se)) +\n  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = \"dashed\") + \n  scale_x_continuous(breaks = c(-4:4)*se) + \n  geom_vline(xintercept = est, color = \"blue\") +\n  labs(y = \"density\", x = \"possible estimates IF the null value were true\") \n## Error in parse(text = input): &lt;text&gt;:3:9: unexpected input\n## 2: # Round to 3 digits\n## 3: est &lt;- __\n##            ^",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-7-river-test-part-ii",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-7-river-test-part-ii",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 7: River test Part II",
+    "text": "Exercise 7: River test Part II\nRemember the next step: We must evaluate how compatible our sample estimate is with the null value. We’ll take 3 approaches: using a visual assessment, test statistic, and p-value.\n\nVisually, in Part c of the previous exercise, does our sample estimate seem compatible with the null value? Mainly, is our estimate consistent with what we’d expect to observe if there were truly no difference in the mercury concentration between the 2 rivers (when controlling for fish length)?\nLet’s focus on the test statistic:\n\n\nObtain the test statistic from the model summary table below.\nShow how this was calculated from the sample estimate and its standard error.\nInterpret the test statistic.\n\n\ncoef(summary(fish_mod_2))\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fish_mod_2' not found\n\n\nRecall that the p-value calculates the probability that, IF in fact the null value were correct (i.e. there was actually no difference in mercury concentration by river when controlling for length), we would have gotten a sample estimate that’s as far from the null value as ours, either above or below. Use the 68-95-99.7 Rule with the plot in Part c of the previous exercise to approximate the p-value:\n\n\nless than 0.003\nbetween 0.003 and 0.05\nbetween 0.05 and 0.32\nbigger than 0.32\n\nNow obtain and report the exact p-value from the model summary table.\n\nDo your test statistic and p-value indicate that your estimate is or is not compatible with the null value? Explain.\nPutting this all together, what do you conclude? When controlling for length…\n\n\nwe have evidence of a statistically significant difference in mercury concentration by river.\nwe do not have sufficient evidence to conclude that there’s a statistically significant difference in mercury concentration by river.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-8-river-ci",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-8-river-ci",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 8: River CI",
+    "text": "Exercise 8: River CI\n\nFinally, construct a 95% CI for the population parameter of interest in our river analysis.\n\n\nWhat do you conclude from this CI? When controlling for length…\n\n\nwe have evidence of a statistically significant difference in mercury concentration by river.\nwe do not have sufficient evidence to conclude that there’s a statistically significant difference in mercury concentration by river.\n\n\nYour conclusions from the hypothesis test (test statistic and p-value) should agree with those from your CI! If this is not the case, review your work.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-2",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-2",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nResearch question: Is there evidence that the mercury concentration in fish (Concen) differs according to the River they were sampled from?\n\npart a: fit the model\nFit a simple linear regression model that would address our research question\n\nmod_fish &lt;- lm(Concen ~ River, data=fish)\nsummary(mod_fish)\n## \n## Call:\n## lm(formula = Concen ~ River, data = fish)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -1.1664 -0.5681 -0.1764  0.4219  2.4219 \n## \n## Coefficients:\n##              Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   1.07808    0.08866  12.160   &lt;2e-16 ***\n## RiverWacamaw  0.19835    0.11712   1.694   0.0922 .  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 0.7575 on 169 degrees of freedom\n## Multiple R-squared:  0.01669,    Adjusted R-squared:  0.01087 \n## F-statistic: 2.868 on 1 and 169 DF,  p-value: 0.09218\n\nInterpret the intercept from this model.\n\nOur model estimates an average mercury concentration of 1.078ppm among fish in the Lumber River.\n\n\n\npart b: construct a CI\nUsing the 68-95-99.7 rule, construct an approximate 95% confidence interval for the intercept term, and provide an appropriate interpretation.\n\n1.078 +/- 2*0.089 –&gt; [0.90, 1.256]\n\n\nPreferred interpretation: It is plausible that the true mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.\n\n\n(technical addendum to this interpretation): …specifically, we expect that if we take many different samples and obtain a set of corresponding parameter estimates and confidence intervals, we expect that 95% of the resulting intervals will contain the true mean mercury concentration of the entire Lumber River fish population. We hope that our interval is one of the lucky 95% and not one of the unlucky 5% that don’t contain the true population parameter.\n\n\nNot as preferred interpretation, but still okay for this course: We are 95% confident that the mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.\n\nCompare your CI to an exact 95% confidence interval for the model coefficients:\n\nconfint(mod_fish, level=0.95)\n##                    2.5 %    97.5 %\n## (Intercept)   0.90305825 1.2531061\n## RiverWacamaw -0.03285077 0.4295435\n\n\n\npart c: what can we conclude from multiple samples?\nSuppose we take 200 different samples of fish from the Lumber River. In how many of those samples would you expect to observe an estimated mean mercury concentration greater than 1.25ppm?\n\nWe don’t/can’t actually know! This depends on the true population parameter and the accuracy of our sampling distribution.\n\n\nWhat we can say is that if our sampling distribution model is accurate, then we should expect that about 10 out of 200 samples (5% of them) will produce confidence intervals that don’t contain the population parameter. We should expect that half of these–so 5 samples–are overestimates and the other half are underestimates.\n\n\n\npart d: intuition for constructing & interpreting test statistics\nSuppose previous environmental studies have found little evidence of mercury pollution in other rivers in the area, so perhaps our “default” assumption is that fish from the Lumber river should have an expected mercury concentration of 0ppm. How many standard errors is our sample estimate (1.078ppm) away from this expectation? What are three possible conclusions?\n\nIf we assume that 0ppm is the “true” mercury concentration, then our estimate of Beta_0 = 1.078ppm with a standard error of 0.08866 means that our estimate is (1.07808-0)/0.08866 = 12.16 standard errors away from what we should expect.\n\n\nPossible conclusions:\n\n\n\nOur working assumption that 0ppm should be the “true” mercury concentration in the Lumber river fish population was wrong! The confidence interval we constructed above suggests that a true value of 0ppm is extremely implausible.\n\n\n\n\nPerhaps ~0ppm is actually the true average mercury concentration in the population, we just got extremely, outrageously unlucky with our sample.\n\n\n\n\nPerhaps there was a measurement/data entry error, and the units are actually parts per billion, not million.\n\n\n\n\npart e: do individual observations contradict our conclusions?\nNow suppose we sample a single fish from the Lumber River and find it has a mercury concentration of 2.5ppm. Are you surprised by this result? Why or why not? (Hint: create a code chunk that calculates the mean, standard deviation, and maximum of the Concen variable in each river in our original sample)\n\nfish %&gt;% \n  group_by(River) %&gt;% \n  summarise(mean=mean(Concen), \n            sd=sd(Concen), \n            max=max(Concen))\n## # A tibble: 2 × 4\n##   River    mean    sd   max\n##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n## 1 Lumber   1.08 0.649   3.5\n## 2 Wacamaw  1.28 0.829   3.6\n\n\nObserving a single fish with a mercury concentration of 2.5ppm is actually not that surprising! 2.5ppm is a little more than 2 standard deviations away from the mean mercury concentration in our sample of fish from the Lumber River (1.08+2*0.64=2.43), but there are certainly fish in the sample with even higher mercury concentrations (max=3.5ppm), so this isn’t outside the bounds of what we’d expect.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-3",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-3",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nLet’s look at the model summary output again:\n\nsummary(mod_fish)\n## \n## Call:\n## lm(formula = Concen ~ River, data = fish)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -1.1664 -0.5681 -0.1764  0.4219  2.4219 \n## \n## Coefficients:\n##              Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   1.07808    0.08866  12.160   &lt;2e-16 ***\n## RiverWacamaw  0.19835    0.11712   1.694   0.0922 .  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 0.7575 on 169 degrees of freedom\n## Multiple R-squared:  0.01669,    Adjusted R-squared:  0.01087 \n## F-statistic: 2.868 on 1 and 169 DF,  p-value: 0.09218\n\n\npart a: interpret model coefficient\nNow, let’s interpret the RiverWacamaw coefficient. Based only on the coefficient (don’t think about the standard error yet), what can we say about the difference in mercury concentration among fish in the two rivers?\n\nThe RiverWacamaw coefficient is 0.19835, meaning that the mean mercury concentration among fish in the Wacamaw River is, on average, about 0.20ppm higher than that of fish in the Lumber River.\n\n\n\npart b: construct a CI\nUsing the 68-95-99.7 rule, construct an approximate 95% confidence interval for the RiverWacamaw coefficient, and provide an appropriate interpretation.\n\n0.20 +/- 2*0.11 –&gt; [-0.02, 0.42]\n\n\nPreferred interpretation: It is plausible that the true difference in mean mercury concentration among fish in the Wacamaw River compared to the Lumber River is between -0.02 ppm and 0.42ppm.\n\n\nNot as preferred interpretation: We are 95% confident that the mean mercury concentration among fish in the Wacamaw River somewhere between 0.02ppm less than that of fish in the Lumber River and 0.42ppm more than that of fish in the Lumber River.\n\n\n\npart c: interpreting the CI\nDo you believe it plausible that the mean mercury concentration of the fish population in the Wacamaw River is approximately the same as that of the fish population in the Lumber River? How would you confirm this? What assumptions are you making?\n\nAnswers may vary–this is certainly plausible, since our 95% CI contains 0 (i.e., there is no difference in means between the two rivers). However, we might also argue that there is SOME evidence of a difference, since most of the CI is &gt; 0.\n\n\n\npart d: effect of sample size on our conclusions\nSuppose we sample 10 times as many fish from the Wacamaw River, and get a similar coefficient estimate (0.2). Thinking back to the Central Limit Theorem, what should happen to the standard error of the RiverWacamaw coefficient? How small of a standard error would we need to more conclusively say that there is an actual difference in mean mercury concentrations of the Lumber River and Wacamaw River fish populations?\n\nA larger sample should result in a smaller standard error of the RiverWacamaw coefficient. If the standard error is smaller than 0.1 (say 0.098), then a 95% confidence interval would be [0.004, 0.396]. Since this interval doesn’t include 0, we could conclude that fish in the Wacamaw River, on average, have a higher mercury concentration than fish in the Lumber River. More importantly, the lower standard error of the coefficient allows us to say there is evidence that this difference should be observable across new samples.\n\n\n\npart e: reconciling parameter estimates and uncertainty\nSuppose the true population coefficient for the RiverWacamawparameter is 0.02 (i.e. the average mercury concentration is 0.02ppm higher for the Wacamaw River fish population compared to that of the Lumber River). Is this meaningful?\n\nThis will depend on context–a priori, this difference appears to be negligible, and we could potentially chalk it up to uncontrolled confounders (e.g., perhaps fish in one river tend to be older/bigger and therefore have slightly higher mercury concentrations, even if there is no underlying difference in mercury pollution). We also might consider: what is considered a “harmful” mercury concentration, and are fish in either river near that threshold? Has this changed over time, and by how much?\n\n\n\npart f: (CHALLENGE)\nUsing the model summary output, report the mean mercury concentration for our sample of fish from the Wacamaw River:\n\nsummary(mod_fish)\n## \n## Call:\n## lm(formula = Concen ~ River, data = fish)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -1.1664 -0.5681 -0.1764  0.4219  2.4219 \n## \n## Coefficients:\n##              Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   1.07808    0.08866  12.160   &lt;2e-16 ***\n## RiverWacamaw  0.19835    0.11712   1.694   0.0922 .  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 0.7575 on 169 degrees of freedom\n## Multiple R-squared:  0.01669,    Adjusted R-squared:  0.01087 \n## F-statistic: 2.868 on 1 and 169 DF,  p-value: 0.09218\n\n\n1.07808 + 0.19835 = 1.27643ppm\n\nWhich of the following values do you think is the standard error of the sample mean for the Wacamaw River?\nTo answer this question, look at the code chunk below, which fits the same model, but uses the Wacamaw River as our reference category instead of the Lumber River:\n\nmod_fish2 &lt;- lm(Concen ~ River, data=fish %&gt;% mutate(River=ifelse(River == \"Wacamaw\", paste0(\"_\", River), River)))\nsummary(mod_fish2)\n## \n## Call:\n## lm(formula = Concen ~ River, data = fish %&gt;% mutate(River = ifelse(River == \n##     \"Wacamaw\", paste0(\"_\", River), River)))\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -1.1664 -0.5681 -0.1764  0.4219  2.4219 \n## \n## Coefficients:\n##             Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)  1.27643    0.07652  16.681   &lt;2e-16 ***\n## RiverLumber -0.19835    0.11712  -1.694   0.0922 .  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 0.7575 on 169 degrees of freedom\n## Multiple R-squared:  0.01669,    Adjusted R-squared:  0.01087 \n## F-statistic: 2.868 on 1 and 169 DF,  p-value: 0.09218\n\nCompare this to the output for mod_fish. What do you notice about the standard errors of the intercepts (i.e., the standard errors of the means for each river) compared to the standard errors of the RiverWacamaw and RiverLumber coefficients (i.e., the standard errors of the differences between the means)?\n\nSEs for the means are 0.08866 and 0.07652 for the Lumber and Wacamaw rivers, respectively. The SE for the difference is the same in both models (0.11712), which is greater than the SE of either mean. Because standard errors quantify uncertainty in a given parameter estimate, this tells us that the uncertainty of the estimated difference between two means is greater than the uncertainty in our estimate of either mean by itself.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-simulating-data-under-the-null-value-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-1-simulating-data-under-the-null-value-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 1: Simulating data under the null value",
+    "text": "Exercise 1: Simulating data under the null value\n\nPart a\nIntuition.\n\n\nPart b\n\n# First check out the first 6 fish\nfish %&gt;% \n  select(Concen, Length) %&gt;% \n  head()\n## # A tibble: 6 × 2\n##   Concen Length\n##    &lt;dbl&gt;  &lt;dbl&gt;\n## 1   1.6    47  \n## 2   1.5    48.7\n## 3   1.7    55.7\n## 4   0.73   45.2\n## 5   0.56   44.7\n## 6   0.51   43.8\n\n# Run this chunk a few times!!\n# Shuffle the Length values\nfish %&gt;%\n  select(Concen, Length) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;% \n  head()\n## # A tibble: 6 × 2\n##   Concen Length\n##    &lt;dbl&gt;  &lt;dbl&gt;\n## 1   1.6    42  \n## 2   1.5    47.5\n## 3   1.7    36  \n## 4   0.73   59.2\n## 5   0.56   36  \n## 6   0.51   47.4\n\n# Shuffle the Length values\n# Run this chunk a few times!!\n# Then plot the resulting sample data and model\nfish %&gt;% \n  select(Concen, Length) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\n\n\n\nPart c\nIf there were truly no relationship between Concen and Length, we’d expect the sample model to have a slope near to (but not exactly) 0.\n\nset.seed(1)\nshuffled_models &lt;- mosaic::do(500)*(\n  fish %&gt;% \n  select(Concen, Length) %&gt;% \n  sample_n(size = length(Length), replace = TRUE) %&gt;% \n  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %&gt;%\n  with(lm(Concen ~ Length))\n)\nhead(shuffled_models)\n##   Intercept     Length     sigma  r.squared        F numdf dendf .row .index\n## 1 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      1\n## 2 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      2\n## 3 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      3\n## 4 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      4\n## 5 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      5\n## 6 0.9165014 0.01136718 0.8865891 0.01204811 2.060961     1   169    1      6\n\nfish %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_abline(data = shuffled_models, \n              aes(intercept = Intercept, slope = Length), \n              color = \"gray\", size = 0.25) + \n  geom_smooth(method = \"lm\", se = FALSE, size = 0) # Ignore this line. It's a clunky workaround\n\n\n\n\n\n\n\n\n\n\nPart d\nWe’d expect slopes to be Normally distributed around 0 (the null value).\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density()",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2-comparing-our-sample-results-to-the-null-value-intuition-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-2-comparing-our-sample-results-to-the-null-value-intuition-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 2: Comparing our sample results to the null value (intuition)",
+    "text": "Exercise 2: Comparing our sample results to the null value (intuition)\n\nPart a\nNo! Its slope is much bigger than for the sample models simulated using the null value!\n\nfish %&gt;% \n  ggplot(aes(x = Length, y = Concen)) + \n  geom_abline(data = shuffled_models, \n              aes(intercept = Intercept, slope = Length), \n              color = \"gray\", size = 0.25) + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\n\nPart b\nNo! Our slope is much bigger than for the sample models simulated using the null value!\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density() + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n\n\n\n\n\n\n\n\n\n\nPart c\nWill vary.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-3-clt-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-3-clt-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 3: CLT",
+    "text": "Exercise 3: CLT\nThe simulated and CLT / theory-informed sampling distributions are similar!\n\nshuffled_models %&gt;% \n  ggplot(aes(x = Length)) + \n  geom_density()\n\n\n\n\n\n\n\n\nclt_plot &lt;- data.frame(x = 0 + c(-4:4)*0.005) %&gt;% \n  mutate(y = dnorm(x, sd = 0.005)) %&gt;% \n  ggplot(aes(x = x)) +\n  stat_function(fun = dnorm, args = list(mean = 0, sd = 0.005)) +\n  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = \"dashed\") + \n  scale_x_continuous(breaks = c(-4:4)*0.005) + \n  xlab(\"\")\n  \nclt_plot",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-4-comparing-our-sample-results-to-the-null-value-test-statistic-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-4-comparing-our-sample-results-to-the-null-value-test-statistic-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 4: Comparing our sample results to the null value (test statistic)",
+    "text": "Exercise 4: Comparing our sample results to the null value (test statistic)\n\nclt_plot + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n\n\n\n\n\n\n\n\n\nPart a\n\nHow far is our sample slope estimate of \\(\\hat{\\beta}_1 = 0.05813\\) from the null value of 0? 0.05813 :)\nIn the context of this particular analysis, is that a big or a small number? How can you tell? This seems pretty big relative to the standard error.\n\n\n\nPart b\nOur sample slope of 0.058 falls more than 11 standard errors above the null value of 0. That’s far!!!\n\n(0.058127 - 0) / 0.005228\n## [1] 11.1184\n\n\n\nPart c\nIn the t value column:\n\ncoef(summary(fish_mod_1))\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fish_mod_1' not found\n\n\n\nPart d\n\nOur sample data is not consistent with the null value of \\(\\beta_1 = 0\\), i.e. the idea that there’s no significant association between mercury concentration and length.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-5-comparing-our-sample-results-to-the-null-value-p-value-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-5-comparing-our-sample-results-to-the-null-value-p-value-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 5: Comparing our sample results to the null value (p-value)",
+    "text": "Exercise 5: Comparing our sample results to the null value (p-value)\n\nclt_plot + \n  geom_vline(xintercept = 0.05813, color = \"blue\")\n\n\n\n\n\n\n\n\n\nPart a\nOur estimate is more than 3 s.e. away from 0. Since 99.7% of estimates fall within 3 s.e. the probability of this happening is…\n\nless than 0.003 (1 - 0.997)\n\n\n\nPart b\n&lt; 2e-16 (which is very very close to 0)\n\ncoef(summary(fish_mod_1))\n## Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fish_mod_1' not found\n\n\n\nPart c\n\nIt’s very unlikely that we’d have observed such a steep increase in Concen with Length among our sample fish “by chance”, i.e. if in fact there were no relationship between mercury concentration and length in the broader fish population.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-6-river-test-part-i-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-6-river-test-part-i-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 6: River test Part I",
+    "text": "Exercise 6: River test Part I\n\nPart a\n\\(\\beta_1\\), the RiverWacamaw coefficient\nThe null value is \\(\\beta_1 = 0\\)\n\n\nPart b\n\\(\\hat{\\beta}_1 = 0.142\\) with a standard error of 0.089:\n\nfish_mod_2 &lt;- lm(Concen ~ River + Length, data = fish)\n\ncoef(summary(fish_mod_2))\n##                 Estimate  Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)  -1.19422929 0.216287220 -5.521497 1.255595e-07\n## RiverWacamaw  0.14202739 0.089496454  1.586961 1.144018e-01\n## Length        0.05765684 0.005212709 11.060821 1.033822e-21\n\n\n\nPart c\n\n# Put OUR sample estimate here\n# Round to 3 digits\nest &lt;- 0.142\n\n# Put the corresponding standard error here\n# Round to 3 digits\nse &lt;- 0.089\n\ndata.frame(x = 0 + c(-4:4)*se) %&gt;% \n  mutate(y = dnorm(x, sd = se)) %&gt;% \n  ggplot(aes(x = x)) +\n  stat_function(fun = dnorm, args = list(mean = 0, sd = se)) +\n  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = \"dashed\") + \n  scale_x_continuous(breaks = c(-4:4)*se) + \n  geom_vline(xintercept = est, color = \"blue\") +\n  labs(y = \"density\", x = \"possible estimates IF the null value were true\")",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-7-river-test-part-ii-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-7-river-test-part-ii-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 7: River test Part II",
+    "text": "Exercise 7: River test Part II\n\nPart a\nYes! Our estimate is relatively close to 0 on this scale (within 2 s.e.).\n\n\nPart b\nOur estimate of \\(\\beta_1\\), 0.142, falls only 1.59 s.e. from 0:\n\n(0.142 - 0) / 0.089\n## [1] 1.595506\ncoef(summary(fish_mod_2))\n##                 Estimate  Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)  -1.19422929 0.216287220 -5.521497 1.255595e-07\n## RiverWacamaw  0.14202739 0.089496454  1.586961 1.144018e-01\n## Length        0.05765684 0.005212709 11.060821 1.033822e-21\n\n\n\nPart c\nOur estimate is somewhere between 1 and 2 s.e. from 0:\n\nbetween 0.05 and 0.32\n\nAn exact p-value is 0.114:\n\ncoef(summary(fish_mod_2))\n##                 Estimate  Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)  -1.19422929 0.216287220 -5.521497 1.255595e-07\n## RiverWacamaw  0.14202739 0.089496454  1.586961 1.144018e-01\n## Length        0.05765684 0.005212709 11.060821 1.033822e-21\n\n\n\nPart d\nIt is. It is not very far from 0 (when considering s.e.) and would not be unlikely to observe if the null value were true.\n\n\nPart e\nWhen controlling for length…\n\nwe do not have sufficient evidence to conclude that there’s a statistically significant difference in mercury concentration by river.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08R-Hypothesis-in-R.html#exercise-8-river-ci-1",
+    "href": "activities/Unit-08R-Hypothesis-in-R.html#exercise-8-river-ci-1",
+    "title": "Unit 08R: Hypothesis Testing in R",
+    "section": "Exercise 8: River CI",
+    "text": "Exercise 8: River CI\n\nPart a\nRough version:\n\\(0.142 \\pm 2*0.089 = (-0.036, 0.320)\\)\nExact version:\n\nconfint(fish_mod_2)\n##                    2.5 %     97.5 %\n## (Intercept)  -1.62122031 -0.7672383\n## RiverWacamaw -0.03465518  0.3187100\n## Length        0.04736599  0.0679477\n\n\n\nPart b\nWhen controlling for length…\n\nwe do not have sufficient evidence to conclude that there’s a statistically significant difference in mercury concentration by river.",
+    "crumbs": [
+      "Unit 08R: Hypothesis Testing in R"
     ]
   },
   {
