@@ -42,6 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
+          - "activities/Unit-R.C-Confidence-in-R.qmd"
           - "activities/Unit-R.B-Normal-CTL-in-R.qmd"
           - "activities/Unit-08-Hypothesis.qmd"
           - "activities/Unit-07-Confidence-Interval.qmd"

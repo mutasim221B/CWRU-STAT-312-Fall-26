@@ -1,0 +1,1919 @@
+---
+title: "Unit R.C: Confidence Interval in R"
+subtitle: "Instructor: Dr. Md Mutasim Billah"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+
+You can download the .qmd file for this activity [here](../activity_templates/Unit-R.C-Confidence-Hypothesis-in-R.qmd) and open in R-studio.
+
+
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+
+
+
+
+
+
+In Unit R.B: Normal & CTL in R, we learned how to calculate probabilities and critical values using R. We will now use those functions to construct and interpret **confidence intervals**.
+
+Our goal is to learn how to use R instead of printed Z- and t-tables.
+
+The main functions are:
+
+- `qnorm()` finds critical Z-values.
+- `qt()` finds critical t-values.
+- `pnorm()` finds probabilities from a normal distribution.
+- `pt()` finds probabilities from a t-distribution.
+- `sqrt()` calculates square roots.
+- `ceiling()` rounds a number upward to an integer.
+
+**Important:** R uses more decimal places than the printed tables. Therefore, some answers may differ slightly from those obtained in class using rounded critical values.
+
+---
+
+
+# Examples
+
+## Example 1: Confidence Interval for a Population Mean When $\sigma$ Is Known
+
+Suppose the sample mean $\overline{Y}$ has a normal or approximately normal sampling distribution:
+
+$$
+\overline{Y}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right).
+$$
+
+Assume the population standard deviation $\sigma$ is known.
+
+### (a) Construct a 95% confidence interval for $\mu$
+
+Recall that
+
+$$
+Z=\frac{\overline{Y}-\mu}{\sigma/\sqrt{n}}.
+$$
+
+For a 95% confidence interval,
+
+$$
+\alpha=1-0.95=0.05.
+$$
+
+Each tail contains probability
+
+$$
+\frac{\alpha}{2}=0.025.
+$$
+
+We need the critical value satisfying
+
+$$
+P(Z<z_{0.025})=0.975.
+$$
+
+In R, use `qnorm()`:
+
+```{r}
+# Confidence level
+conf_level <- 0.95
+
+# Significance level
+alpha <- 1 - conf_level
+
+# Find the critical Z-value
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+
+# The corresponding negative critical value
+-z_critical
+
+```
+
+We should obtain approximately
+
+$$
+z_{0.025}=1.96.
+$$
+
+Let us verify that the area between $-1.96$ and $1.96$ is approximately 0.95.
+
+```{r}
+# Probability between the two critical values
+pnorm(z_critical) - pnorm(-z_critical)
+```
+
+Therefore,
+
+$$
+P(-1.96<Z<1.96)\approx0.95.
+$$
+
+The resulting 95% confidence interval is
+
+$$
+\boxed{
+\overline{y}\pm1.96\frac{\sigma}{\sqrt{n}}
+}
+$$
+
+Notice that we have not yet used actual sample values. We have simply obtained the critical value necessary to construct the interval.
+
+### (b) Generalize to a $(1-\alpha)100\%$ confidence interval
+
+
+The general formula is
+
+$$
+\boxed{
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
+}
+$$
+
+where
+
+$$
+z_{\alpha/2}
+=
+\texttt{qnorm}(1-\alpha/2).
+$$
+
+
+
+
+
+---
+
+## Example 2: Confidence Interval for Mean Weight of CWRU Students
+
+We are interested in the population mean weight $\mu$ among all CWRU students.
+
+Suppose we have the following information:
+
+- Sample size: $n=30$
+- Sample mean: $\overline{y}=150$ pounds
+- Known population standard deviation: $\sigma=25$ pounds
+- Confidence level: 95%
+
+Construct a 95% confidence interval for $\mu$.
+
+The formula is
+
+$$
+\overline{y}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+### Step 1: Enter the information
+
+```{r}
+n <- 30
+xbar <- 150
+sigma <- 25
+conf_level <- 0.95
+```
+
+### Step 2: Find the critical Z-value
+
+```{r}
+alpha <- 1 - conf_level
+
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+```
+
+### Step 3: Calculate the standard error
+
+```{r}
+SE <- sigma / sqrt(n)
+
+SE
+```
+
+### Step 4: Calculate the margin of error
+
+```{r}
+ME <- z_critical * SE
+
+ME
+```
+
+### Step 5: Find the confidence interval
+
+```{r}
+lower <- xbar - ME
+upper <- xbar + ME
+
+c(lower = lower, upper = upper)
+
+# Rounded to two decimal places
+round(c(lower = lower, upper = upper), 2)
+```
+
+The 95% confidence interval is approximately
+
+$$
+\boxed{(141.05,\ 158.95)}
+$$
+
+
+### Define a reusable z-confidence interval R function:
+
+```{r}
+# Function for a Z-based confidence interval
+# when population standard deviation is known
+
+ci_mean_z <- function(xbar, sigma, n, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sigma / sqrt(n)
+
+  ME <- z_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+
+ci_mean_z(
+  xbar = 150,
+  sigma = 25,
+  n = 30,
+  conf_level = 0.95
+)
+```
+
+**Interpretation:** Based on the sample, the plausible values of the true population mean weight of all CWRU students ranges approximately from 141.05 and 158.95 pounds, at the 95% confidence level.
+
+
+
+
+## Example 7: Margin of Error and Required Sample Size
+
+For a Z-based confidence interval,
+
+$$
+ME=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+### (a) Derive the required sample size
+
+Suppose we want the margin of error to be no greater than $B$.
+
+We require
+
+$$
+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\le B.
+$$
+
+Solving for $n$,
+
+$$
+n\ge
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2.
+$$
+
+The required integer sample size is
+
+$$
+\boxed{
+n=
+\left\lceil
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2
+\right\rceil.
+}
+$$
+
+In R, `ceiling()` rounds up to the next integer when needed.
+
+### (b) Required sample size for CWRU student weights
+
+Recall Example 2:
+
+$$
+\sigma=25.
+$$
+
+Suppose we want a 95% confidence interval with a margin of error no greater than 3 pounds.
+
+Given:
+
+$$
+B=3,\quad \sigma=25,\quad 1-\alpha=0.95.
+$$
+
+```{r}
+sigma <- 25
+
+B <- 3
+
+conf_level <- 0.95
+
+# Step 1: Find critical Z-value
+z_critical <- qnorm(1 - (1 - conf_level) / 2)
+
+# Step 2: Calculate required sample size
+n_required <- (z_critical * sigma / B)^2
+
+n_required
+
+# Step 3: Round upward
+ceiling(n_required)
+```
+
+We need at least
+
+$$
+\boxed{n=267\text{ students}.}
+$$
+
+**Important:** We always round upward because rounding downward could produce a margin of error larger than the desired maximum.
+
+---
+
+
+## Example 9: Confidence Interval for $\mu$ When $\sigma$ Is Unknown
+
+Suppose $\mu$ represents the population mean cholesterol level among 70-year-old American men.
+
+We are given:
+
+- $n=19$
+- $\overline{y}=44.2$
+- Sample standard deviation $s=3.8$
+- Population standard deviation $\sigma$ is unknown.
+- Confidence level: 90%
+
+Because the sample size is small, we assume the population distribution is normal.
+
+When $\sigma$ is unknown, we use a t-based confidence interval:
+
+$$
+\boxed{
+\overline{y}\pm
+t_{\alpha/2,n-1}\frac{s}{\sqrt{n}}.
+}
+$$
+
+### Step 1: Find the degrees of freedom
+
+$$
+df=n-1=18.
+$$
+
+```{r}
+n <- 19
+xbar <- 44.2
+s <- 3.8
+conf_level <- 0.90
+
+df <- n - 1
+
+df
+```
+
+### Step 2: Find the critical t-value
+
+For a 90% confidence interval,
+
+$$
+\alpha=0.10,\qquad\alpha/2=0.05.
+$$
+
+We need
+
+$$
+t_{0.05,18}.
+$$
+
+Use `qt()`:
+
+```{r}
+alpha <- 1 - conf_level
+
+t_critical <- qt(1 - alpha / 2, df = 18)
+
+t_critical
+```
+
+The critical value is approximately
+
+$$
+t_{0.05,18}=1.734.
+$$
+
+### Step 3: Calculate standard error and margin of error
+
+```{r}
+SE <- s / sqrt(n)
+
+ME <- t_critical * SE
+
+SE
+ME
+```
+
+### Step 4: Construct the confidence interval
+
+```{r}
+lower <- xbar - ME
+upper <- xbar + ME
+
+round(c(lower = lower, upper = upper), 3)
+```
+
+The 90% confidence interval is approximately
+
+$$
+\boxed{(42.688,\ 45.712)}.
+$$
+
+**Interpretation:** Based on the sample, we are 90% confident that the true population mean cholesterol level among 70-year-old American men lies between approximately 42.688 and 45.712.
+
+### Define a reusable t-confidence interval function
+
+```{r}
+ci_mean_t <- function(xbar, s, n, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  df <- n - 1
+
+  t_critical <- qt(1 - alpha / 2, df = df)
+
+  SE <- s / sqrt(n)
+
+  ME <- t_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+```
+
+We can now obtain the same result with one command:
+
+```{r}
+ci_mean_t(
+  xbar = 44.2,
+  s = 3.8,
+  n = 19,
+  conf_level = 0.90
+)
+```
+
+**Remember:**
+
+- Use `qnorm()` to find Z critical values.
+- Use `qt()` to find t critical values.
+- The t-distribution requires degrees of freedom.
+
+---
+
+
+
+## Example 12: Confidence Interval for a Population Proportion
+
+A sample of 100 one-gallon milk jugs is inspected.
+
+Of these, 80 jugs contain at least one gallon of milk.
+
+Let $p$ denote the true population proportion of jugs containing at least one gallon.
+
+We are given
+
+$$
+n=100,\qquad X=80.
+$$
+
+### (a) Estimate the population proportion
+
+The sample proportion is
+
+$$
+\widehat{p}=\frac{X}{n}.
+$$
+
+```{r}
+n <- 100
+
+X <- 80
+
+phat <- X / n
+
+phat
+```
+
+Therefore,
+
+$$
+\boxed{\widehat{p}=0.80}.
+$$
+
+The estimated successful-fill proportion is 80%.
+
+### (b) Construct a 95% confidence interval for $p$
+
+We use the approximate confidence interval
+
+$$
+\boxed{
+\widehat{p}\pm
+z_{\alpha/2}
+\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
+}
+$$
+
+#### Step 1: Check the normal approximation conditions
+
+For the method discussed in class, we check that
+
+$$
+n\widehat{p}\ge15
+$$
+
+and
+
+$$
+n(1-\widehat{p})\ge15.
+$$
+
+```{r}
+# Number of observed successes
+n * phat
+
+# Number of observed failures
+n * (1 - phat)
+
+# Check both conditions
+n * phat >= 15
+
+n * (1 - phat) >= 15
+```
+
+Both conditions are satisfied:
+
+$$
+80\ge15,\qquad20\ge15.
+$$
+
+#### Step 2: Find the critical Z-value
+
+```{r}
+conf_level <- 0.95
+
+alpha <- 1 - conf_level
+
+z_critical <- qnorm(1 - alpha / 2)
+
+z_critical
+```
+
+#### Step 3: Calculate the standard error
+
+```{r}
+SE <- sqrt(phat * (1 - phat) / n)
+
+SE
+```
+
+#### Step 4: Calculate the margin of error
+
+```{r}
+ME <- z_critical * SE
+
+ME
+```
+
+#### Step 5: Construct the confidence interval
+
+```{r}
+lower <- phat - ME
+upper <- phat + ME
+
+round(c(lower = lower, upper = upper), 4)
+```
+
+The approximate 95% confidence interval is
+
+$$
+\boxed{(0.7216,\ 0.8784)}.
+$$
+
+**Interpretation:** Based on the sample, the plausible values of population proportion of milk jugs containing at least one gallon ranges from 72.16% and 87.84% at 95% confidence level.
+
+### Reusable R function for a proportion confidence interval
+
+```{r}
+# Wald confidence interval for a population proportion
+# This is the Normal-approximation method from our handout.
+
+ci_proportion <- function(X, n, conf_level = 0.95) {
+
+  phat <- X / n
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sqrt(phat * (1 - phat) / n)
+
+  ME <- z_critical * SE
+
+  lower <- phat - ME
+  upper <- phat + ME
+
+  return(c(lower = lower, upper = upper))
+}
+```
+
+Check the result:
+
+```{r}
+ci_proportion(
+  X = 80,
+  n = 100,
+  conf_level = 0.95
+)
+```
+
+*Note:* This is the Wald (Normal-approximation) interval used in the handout. Other methods are available for estimating a proportion, and their results may differ.
+
+
+
+### (d) Can we conclude that a majority of jugs are successfully filled?
+
+Recall the 95% confidence interval:
+
+$$
+(0.7216,\ 0.8784).
+$$
+
+We want to determine whether the data support the claim
+
+$$
+p>0.50.
+$$
+
+Since the entire confidence interval lies above 0.50, the interval supports the conclusion that more than half of all jugs contain at least one gallon.
+
+We can check this in R:
+
+```{r}
+CI <- ci_proportion(
+  X = 80,
+  n = 100,
+  conf_level = 0.95
+)
+
+# Is the entire confidence interval above 0.50?
+CI[1] > 0.50
+```
+
+R returns `TRUE`.
+
+Therefore, the data provide sufficient evidence, using the confidence-interval approach discussed in class, that the majority of jugs contain at least one gallon.
+
+This does not mean that every jug is successfully filled.
+
+### (e) Required sample size for a 99% confidence interval
+
+Suppose we want a 99% confidence interval for $p$ with margin of error no greater than
+
+$$
+B=0.01.
+$$
+
+#### Case 1: A prior estimate of $p$ is available
+
+Use
+
+$$
+\widehat{p}=0.80.
+$$
+
+The required sample size is
+
+$$
+n=
+\left\lceil
+\widehat{p}(1-\widehat{p})
+\left(\frac{z_{\alpha/2}}{B}\right)^2
+\right\rceil.
+$$
+
+```{r}
+phat <- 0.80
+
+conf_level <- 0.99
+
+B <- 0.01
+
+# Find the critical Z-value
+z_critical <- qnorm(1 - (1 - conf_level) / 2)
+
+z_critical
+
+# Calculate required sample size
+n_required <- phat * (1 - phat) * (z_critical / B)^2
+
+n_required
+
+# Round upward
+ceiling(n_required)
+```
+
+Using the full R critical value, the required sample size is
+
+$$
+\boxed{n=10616}.
+$$
+
+**Why is this slightly different from the handwritten answer?**
+
+In the handout, we rounded the critical value to
+
+$$
+z_{0.005}=2.576.
+$$
+
+If we use this rounded value in R:
+
+```{r}
+# Using the Z-value rounded as in our printed table
+
+z_table <- 2.576
+
+ceiling(0.80 * 0.20 * (z_table / 0.01)^2)
+```
+
+We obtain
+
+$$
+n=10618.
+$$
+
+Both computations follow the same formula. The difference is due to rounding the critical value.
+
+
+## Quick Reference: Z and t Critical Values in R
+
+The following commands are particularly useful when constructing confidence intervals.
+
+### Z critical values
+
+```{r}
+# 90% confidence
+qnorm(0.95)
+
+# 95% confidence
+qnorm(0.975)
+
+# 99% confidence
+qnorm(0.995)
+```
+
+### t critical values
+
+```{r}
+# 90% confidence interval, df = 18
+qt(0.95, df = 18)
+
+# 95% confidence interval, df = 15
+qt(0.975, df = 15)
+
+# 95% confidence interval, df = 74
+qt(0.975, df = 74)
+
+# 99% confidence interval, df = 20
+qt(0.995, df = 20)
+```
+
+### Verify probability between critical values
+
+```{r}
+# 95% central probability for standard Normal
+z <- qnorm(0.975)
+
+pnorm(z) - pnorm(-z)
+
+# 95% central probability for t distribution, df = 18
+t <- qt(0.975, df = 18)
+
+pt(t, df = 18) - pt(-t, df = 18)
+```
+
+Both central probabilities should equal approximately 0.95.
+
+---
+
+
+
+# Group Works
+
+- Make sure you are synchronized in a group of at least two students.
+- Work through the following examples that we have discussed in the class - it is highly recommended you have your solved handouts with you or download the solved one from the Canvas.
+- Work in a group, share your thoughts.
+- I will be moving around, raise your hand if you have any question!
+
+
+
+
+
+
+# Exercises
+
+
+## Exercise 1: Confidence Interval for a Population Mean ($\sigma$ Known) [Following Ecample 2]
+
+A researcher wants to estimate the population mean time (in minutes) that CWRU students spend commuting to campus each day.
+
+Suppose a random sample of $n=64$ students gives a sample mean of $\overline{x}=22.5$ minutes. Assume that the population standard deviation is known to be $\sigma=8$ minutes.
+
+**Using R, answer the following questions:**
+
+(a) Find the critical Z-value for a 95% confidence interval using `qnorm()`.
+
+
+
+(b) Calculate the standard error and margin of error.
+
+
+
+(c) Construct the 95% confidence interval for the population mean commuting time.
+
+
+
+(d) Create a reusable z-confidence interval function. Then construct the 95% confidence interval for the population mean commuting time.
+
+
+
+(d) Interpret the confidence interval in the context of the problem.
+
+
+
+
+
+
+
+
+## Exercise 2: Margin of Error and Required Sample Size [Following Ecample 7]
+
+A researcher wants to estimate the population mean weight of a particular manufactured product.
+
+Assume that the population standard deviation is known to be $\sigma=18$ grams.
+
+The researcher wants to construct a **99% confidence interval** with a margin of error no greater than **4 grams**.
+
+**Using R, answer the following questions:**
+
+(a) Find the critical Z-value for a 99% confidence interval using `qnorm()`.
+
+
+
+(b) Calculate the minimum required sample size using the appropriate formula.
+
+
+
+(c) Use `ceiling()` to determine the required integer sample size.
+
+
+
+(d) Verify using R that your calculated sample size produces a margin of error no greater than 4 grams.
+
+
+
+
+
+
+## Exercise 3: Confidence Interval for a Population Mean ($\sigma$ Unknown) [Following Ecample 9]
+
+A researcher is interested in estimating the population mean amount of time students spend studying each week.
+
+A random sample of $n=16$ students gives a sample mean of $\overline{x}=28.5$ hours and a sample standard deviation of $s=6.4$ hours.
+
+Assume the population distribution of weekly study hours is approximately Normal.
+
+**Using R, answer the following questions:**
+
+(a) Explain why a t-based confidence interval is appropriate for this problem.
+
+
+
+(b) Determine the degrees of freedom and find the critical t-value for a **90% confidence interval** using `qt()`.
+
+
+
+(c) Calculate the standard error and margin of error.
+
+
+
+(d) Construct the 90% confidence interval for the population mean weekly study time.
+
+
+
+(e) Create a reusable t-confidence interval function. Then construct the 95% confidence interval for the population mean weekly study time.
+
+
+
+(f) Interpret your confidence interval in context.
+
+
+
+
+
+
+## Exercise 4: Confidence Interval for a Population Proportion [Following Ecample 12]
+
+A manufacturing company wants to estimate the proportion of products that pass its quality inspection.
+
+A random sample of $n=160$ products is inspected, and $X=120$ products pass the inspection.
+
+Let $p$ denote the true population proportion of products that pass the quality inspection. Assume the products were randomly and independently selected.
+
+**Using R, answer the following questions:**
+
+(a) Calculate the sample proportion $\widehat{p}$.
+
+
+(b) Check whether the Normal approximation conditions for the confidence interval discussed in class are satisfied.
+
+
+
+(c) Construct a **95% confidence interval** for the population proportion $p$ using `qnorm()`.
+
+
+
+(d) Create a reusable z-confidence interval function. Then construct the 95% confidence interval for the population proportion $p$.
+
+
+
+(e) Based on your confidence interval, can you conclude that more than 70% of all products pass the quality inspection? Explain.
+
+
+
+(f) Suppose the company wants a **99% confidence interval** with a margin of error no greater than 0.03. Using the sample proportion from part (a) as a planning estimate, calculate the minimum required sample size using R.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\
+\
+\
+\
+
+
+
+
+
+
+
+
+
+
+# Solutions to the Exercises
+
+The following solutions demonstrate how to use R to construct confidence intervals and determine required sample sizes.
+
+Remember that R calculates critical values using greater numerical precision than printed statistical tables. Therefore, small differences due to rounding are expected.
+
+---
+
+## Solution to Exercise 1: Confidence Interval for a Population Mean ($\sigma$ Known)
+
+We are interested in estimating the population mean commuting time among CWRU students.
+
+Given:
+
+- Sample size: $n=64$
+- Sample mean: $\overline{x}=22.5$ minutes
+- Population standard deviation: $\sigma=8$ minutes
+- Confidence level: 95%
+
+Since the population standard deviation is known, we use the Z-based confidence interval:
+
+$$
+\boxed{
+\overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
+}
+$$
+
+### (a) Find the critical Z-value
+
+For a 95% confidence interval,
+
+$$
+\alpha=1-0.95=0.05.
+$$
+
+Therefore,
+
+$$
+\frac{\alpha}{2}=0.025.
+$$
+
+Using R:
+
+```{r}
+# Exercise 1(a)
+
+ex1_n <- 64
+ex1_xbar <- 22.5
+ex1_sigma <- 8
+ex1_conf <- 0.95
+
+# Significance level
+ex1_alpha <- 1 - ex1_conf
+
+# Critical Z-value
+ex1_z <- qnorm(1 - ex1_alpha / 2)
+
+ex1_z
+```
+
+We obtain
+
+$$
+\boxed{z_{0.025}\approx1.960}.
+$$
+
+### (b) Calculate the standard error and margin of error
+
+Recall that
+
+$$
+SE=\frac{\sigma}{\sqrt{n}}.
+$$
+
+Therefore,
+
+$$
+SE=\frac{8}{\sqrt{64}}=1.
+$$
+
+The margin of error is
+
+$$
+ME=z_{\alpha/2}\times SE.
+$$
+
+Using R:
+
+```{r}
+# Exercise 1(b)
+
+# Standard error
+ex1_SE <- ex1_sigma / sqrt(ex1_n)
+
+# Margin of error
+ex1_ME <- ex1_z * ex1_SE
+
+ex1_SE
+ex1_ME
+```
+
+We obtain
+
+$$
+\boxed{SE=1}
+$$
+
+and
+
+$$
+\boxed{ME\approx1.960}.
+$$
+
+### (c) Construct the 95% confidence interval
+
+The confidence interval is
+
+$$
+22.5\pm1.960.
+$$
+
+Using R:
+
+```{r}
+# Exercise 1(c)
+
+ex1_lower <- ex1_xbar - ex1_ME
+ex1_upper <- ex1_xbar + ex1_ME
+
+round(
+  c(lower = ex1_lower, upper = ex1_upper),
+  2
+)
+```
+
+Therefore, the 95% confidence interval is
+
+$$
+\boxed{(20.54,\ 24.46)}.
+$$
+
+
+### (d) Interpret the confidence interval
+
+```{r}
+# Function for a Z-based confidence interval
+# when population standard deviation is known
+
+ci_mean_z <- function(xbar, sigma, n, conf_level = 0.95) {
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sigma / sqrt(n)
+
+  ME <- z_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+
+ci_mean_z(
+  xbar = 22.5,
+  sigma = 8,
+  n = 64,
+  conf_level = 0.95
+)
+```
+
+### (e) Interpret the confidence interval
+
+**Interpretation:** Based on the sample, the plausible values of the true population mean daily commuting time among CWRU students ranges approximately from **20.54 and 24.46 minutes**, at the 95% confidence level.
+
+
+
+
+
+---
+
+## Solution to Exercise 2: Margin of Error and Required Sample Size
+
+A researcher wants to estimate the population mean weight of a manufactured product.
+
+Given:
+
+- Population standard deviation: $\sigma=18$ grams
+- Confidence level: 99%
+- Desired maximum margin of error: $B=4$ grams
+
+We want to determine the minimum required sample size.
+
+Recall the margin of error:
+
+$$
+ME=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+$$
+
+To ensure the margin of error is no greater than $B$,
+
+$$
+n\ge
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2.
+$$
+
+### (a) Find the critical Z-value
+
+For a 99% confidence interval,
+
+$$
+\alpha=1-0.99=0.01.
+$$
+
+Therefore,
+
+$$
+\frac{\alpha}{2}=0.005.
+$$
+
+Using R:
+
+```{r}
+# Exercise 2(a)
+
+ex2_sigma <- 18
+ex2_B <- 4
+ex2_conf <- 0.99
+
+ex2_alpha <- 1 - ex2_conf
+
+ex2_z <- qnorm(1 - ex2_alpha / 2)
+
+ex2_z
+```
+
+We obtain
+
+$$
+\boxed{z_{0.005}\approx2.576}.
+$$
+
+### (b) Calculate the required sample size
+
+Using
+
+$$
+n\ge
+\left(
+\frac{z_{\alpha/2}\sigma}{B}
+\right)^2,
+$$
+
+we substitute the given information.
+
+```{r}
+# Exercise 2(b)
+
+ex2_n_raw <- (ex2_z * ex2_sigma / ex2_B)^2
+
+ex2_n_raw
+```
+
+We obtain
+
+$$
+n\ge134.3567.
+$$
+
+### (c) Round upward using `ceiling()`
+
+Since sample size must be a whole number, we round upward.
+
+```{r}
+# Exercise 2(c)
+
+ex2_n <- ceiling(ex2_n_raw)
+
+ex2_n
+```
+
+Therefore, the minimum required sample size is
+
+$$
+\boxed{n=135}.
+$$
+
+### (d) Verify the margin of error
+
+We will calculate the margin of error using $n=135$.
+
+```{r}
+# Exercise 2(d)
+
+ex2_ME <- ex2_z * ex2_sigma / sqrt(ex2_n)
+
+ex2_ME
+
+```
+
+The resulting margin of error is approximately
+
+$$
+\boxed{ME=3.9905\text{ grams}}.
+$$
+
+Since
+
+$$
+3.9905<4,
+$$
+
+the requirement is satisfied.
+
+
+**Conclusion:** A sample of at least **135 products** is required to construct a 99% confidence interval with a margin of error no greater than 4 grams, under the stated assumptions.
+
+---
+
+## Solution to Exercise 3: Confidence Interval for a Population Mean ($\sigma$ Unknown)
+
+We are interested in estimating the population mean weekly study time among students.
+
+Given:
+
+- Sample size: $n=16$
+- Sample mean: $\overline{x}=28.5$ hours
+- Sample standard deviation: $s=6.4$ hours
+- Population standard deviation: unknown
+- Confidence level: 90%
+
+Assume the population distribution is approximately Normal and the observations form an independent random sample.
+
+### (a) Why is a t-based confidence interval appropriate?
+
+Since the population standard deviation $\sigma$ is unknown, we use the sample standard deviation $s$.
+
+The sample size is relatively small ($n=16$), so the Normality assumption is particularly important.
+
+Therefore, we use the t-based confidence interval:
+
+$$
+\boxed{
+\overline{x}\pm
+t_{\alpha/2,n-1}\frac{s}{\sqrt{n}}
+}.
+$$
+
+### (b) Determine degrees of freedom and critical t-value
+
+The degrees of freedom are
+
+$$
+df=n-1=16-1=15.
+$$
+
+For a 90% confidence interval,
+
+$$
+\alpha=1-0.90=0.10
+$$
+
+and
+
+$$
+\frac{\alpha}{2}=0.05.
+$$
+
+We need $t_{0.05,15}$.
+
+Using R:
+
+```{r}
+# Exercise 3(b)
+
+ex3_n <- 16
+ex3_xbar <- 28.5
+ex3_s <- 6.4
+ex3_conf <- 0.90
+
+# Degrees of freedom
+ex3_df <- ex3_n - 1
+
+# Significance level
+ex3_alpha <- 1 - ex3_conf
+
+# Critical t-value
+ex3_t <- qt(
+  1 - ex3_alpha / 2,
+  df = ex3_df
+)
+
+ex3_df
+ex3_t
+```
+
+We obtain
+
+$$
+\boxed{df=15}
+$$
+
+and
+
+$$
+\boxed{t_{0.05,15}\approx1.753}.
+$$
+
+### (c) Calculate the standard error and margin of error
+
+The standard error is
+
+$$
+SE=\frac{s}{\sqrt{n}}.
+$$
+
+Therefore,
+
+$$
+SE=\frac{6.4}{\sqrt{16}}=1.6.
+$$
+
+The margin of error is
+
+$$
+ME=t_{\alpha/2,n-1}\times SE.
+$$
+
+Using R:
+
+```{r}
+# Exercise 3(c)
+
+ex3_SE <- ex3_s / sqrt(ex3_n)
+
+ex3_ME <- ex3_t * ex3_SE
+
+ex3_SE
+ex3_ME
+```
+
+We obtain
+
+$$
+\boxed{SE=1.6}
+$$
+
+and
+
+$$
+\boxed{ME\approx2.8049}.
+$$
+
+### (d) Construct the confidence interval
+
+The confidence interval is
+
+$$
+28.5\pm2.8049.
+$$
+
+Using R:
+
+```{r}
+# Exercise 3(d)
+
+ex3_lower <- ex3_xbar - ex3_ME
+ex3_upper <- ex3_xbar + ex3_ME
+
+round(
+  c(lower = ex3_lower, upper = ex3_upper),
+  2
+)
+```
+
+Therefore, the 90% confidence interval is
+
+$$
+\boxed{(25.70,\ 31.30)}.
+$$
+
+### (e) Reusable t-function
+
+
+
+```{r}
+ci_mean_t <- function(xbar, s, n, conf_level = 0.90) {
+
+  alpha <- 1 - conf_level
+
+  df <- n - 1
+
+  t_critical <- qt(1 - alpha / 2, df = df)
+
+  SE <- s / sqrt(n)
+
+  ME <- t_critical * SE
+
+  lower <- xbar - ME
+  upper <- xbar + ME
+
+  return(c(lower = lower, upper = upper))
+}
+
+# Verify using our previously defined function
+
+ci_mean_t(
+  xbar = 28.5,
+  s = 6.4,
+  n = 16,
+  conf_level = 0.90
+)
+```
+
+---
+
+
+## Solution to Exercise 4: Confidence Interval for a Population Proportion
+
+A manufacturing company wants to estimate the proportion of products that pass quality inspection.
+
+Given:
+
+- Sample size: $n=160$
+- Number of products passing inspection: $X=120$
+- Confidence level: 95%
+
+Let $p$ denote the population proportion of products that pass inspection.
+
+### (a) Calculate the sample proportion
+
+Recall that
+
+$$
+\widehat p=\frac{X}{n}.
+$$
+
+Using R:
+
+```{r}
+# Exercise 4(a)
+
+ex4_n <- 160
+ex4_X <- 120
+ex4_conf <- 0.95
+
+ex4_phat <- ex4_X / ex4_n
+
+ex4_phat
+```
+
+We obtain
+
+$$
+\boxed{\widehat p=0.75}.
+$$
+
+Thus, 75% of the sampled products passed inspection.
+
+### (b) Check the Normal approximation conditions
+
+For the confidence interval method discussed in class, we check
+
+$$
+n\widehat p\ge15
+$$
+
+and
+
+$$
+n(1-\widehat p)\ge15.
+$$
+
+Using R:
+
+```{r}
+# Exercise 4(b)
+
+# Observed successes
+ex4_success <- ex4_n * ex4_phat
+
+# Observed failures
+ex4_failure <- ex4_n * (1 - ex4_phat)
+
+ex4_success
+ex4_failure
+
+# Check conditions
+ex4_success >= 15
+ex4_failure >= 15
+```
+
+We obtain
+
+$$
+n\widehat p=120
+$$
+
+and
+
+$$
+n(1-\widehat p)=40.
+$$
+
+Both conditions are satisfied because
+
+$$
+120\ge15,\qquad40\ge15.
+$$
+
+Therefore, the Normal approximation conditions used in class are satisfied.
+
+### (c) Construct the 95% confidence interval
+
+The approximate confidence interval is
+
+$$
+\boxed{
+\widehat p\pm
+z_{\alpha/2}
+\sqrt{
+\frac{\widehat p(1-\widehat p)}{n}
+}
+}.
+$$
+
+#### Step 1: Find the critical Z-value
+
+```{r}
+# Exercise 4(c): Step 1
+
+ex4_alpha <- 1 - ex4_conf
+
+ex4_z <- qnorm(1 - ex4_alpha / 2)
+
+ex4_z
+```
+
+We obtain
+
+$$
+z_{0.025}\approx1.960.
+$$
+
+#### Step 2: Calculate the standard error
+
+```{r}
+# Exercise 4(c): Step 2
+
+ex4_SE <- sqrt(
+  ex4_phat * (1 - ex4_phat) / ex4_n
+)
+
+ex4_SE
+```
+
+We obtain approximately
+
+$$
+SE=0.03423.
+$$
+
+#### Step 3: Calculate the margin of error
+
+```{r}
+# Exercise 4(c): Step 3
+
+ex4_ME <- ex4_z * ex4_SE
+
+ex4_ME
+```
+
+We obtain approximately
+
+$$
+ME=0.06709.
+$$
+
+#### Step 4: Construct the interval
+
+```{r}
+# Exercise 4(c): Step 4
+
+ex4_lower <- ex4_phat - ex4_ME
+ex4_upper <- ex4_phat + ex4_ME
+
+round(
+  c(lower = ex4_lower, upper = ex4_upper),
+  4
+)
+```
+
+Therefore, the approximate 95% confidence interval is
+
+$$
+\boxed{(0.6829,\ 0.8171)}.
+$$
+
+### (d) Reusable function
+
+```{r}
+# Wald confidence interval for a population proportion
+# This is the Normal-approximation method from our handout.
+
+ci_proportion <- function(X, n, conf_level = 0.95) {
+
+  phat <- X / n
+
+  alpha <- 1 - conf_level
+
+  z_critical <- qnorm(1 - alpha / 2)
+
+  SE <- sqrt(phat * (1 - phat) / n)
+
+  ME <- z_critical * SE
+
+  lower <- phat - ME
+  upper <- phat + ME
+
+  return(c(lower = lower, upper = upper))
+}
+
+ci_proportion(
+  X = 120,
+  n = 160,
+  conf_level = 0.95
+)
+```
+
+
+### (e) Can we conclude that more than 70% pass inspection?
+
+We want to determine whether the data support the claim
+
+$$
+p>0.70.
+$$
+
+Recall the confidence interval:
+
+$$
+(0.6829,\ 0.8171).
+$$
+
+The value $0.70$ lies inside the interval.
+
+Therefore, we cannot conclude from this 95% confidence interval that the population proportion exceeds 70%.
+
+We can check this using R:
+
+```{r}
+# Exercise 4(e)
+
+ex4_CI <- c(
+  lower = ex4_lower,
+  upper = ex4_upper
+)
+
+# Is the entire interval above 0.70?
+ex4_CI["lower"] > 0.70
+
+# Does the interval contain 0.70?
+ex4_CI["lower"] <= 0.70 &&
+  ex4_CI["upper"] >= 0.70
+```
+
+The first expression returns `FALSE`, while the second returns `TRUE`.
+
+**Conclusion:** Although 75% of the sampled products passed inspection, the confidence interval includes population proportions below 70%. Therefore, we do not have sufficient evidence from this interval to conclude that more than 70% of all products pass inspection.
+
+### (f) Required sample size for a 99% confidence interval
+
+We want a 99% confidence interval with a margin of error no greater than
+
+$$
+B=0.03.
+$$
+
+We use the previous sample proportion as our planning estimate:
+
+$$
+\widehat p=0.75.
+$$
+
+The sample-size formula is
+
+$$
+\boxed{
+n=
+\left\lceil
+\widehat p(1-\widehat p)
+\left(
+\frac{z_{\alpha/2}}{B}
+\right)^2
+\right\rceil.
+}
+$$
+
+#### Step 1: Find the critical Z-value
+
+```{r}
+# Exercise 4(f)
+
+ex4_conf_new <- 0.99
+ex4_B <- 0.03
+
+ex4_alpha_new <- 1 - ex4_conf_new
+
+ex4_z_new <- qnorm(
+  1 - ex4_alpha_new / 2
+)
+
+ex4_z_new
+```
+
+We obtain approximately
+
+$$
+z_{0.005}=2.576.
+$$
+
+#### Step 2: Calculate the required sample size
+
+```{r}
+# Calculate required sample size
+
+ex4_n_raw <- ex4_phat * (1 - ex4_phat) *
+  (ex4_z_new / ex4_B)^2
+
+ex4_n_raw
+```
+
+We obtain
+
+$$
+n\ge1382.2701.
+$$
+
+#### Step 3: Round upward
+
+```{r}
+# Required integer sample size
+
+ex4_n_required <- ceiling(ex4_n_raw)
+
+ex4_n_required
+```
+
+Therefore,
+
+$$
+\boxed{n=1383}.
+$$
+
+#### Step 4: Verify the margin of error
+
+```{r}
+# Verify the required sample size
+
+ex4_ME_new <- ex4_z_new * sqrt(
+  ex4_phat * (1 - ex4_phat) /
+    ex4_n_required
+)
+
+ex4_ME_new
+
+# Check whether ME is no greater than 0.03
+ex4_ME_new <= ex4_B
+```
+
+The margin of error is approximately
+
+$$
+ME=0.02999.
+$$
+
+Since
+
+$$
+0.02999<0.03,
+$$
+
+the requirement is satisfied.
+
+**Conclusion:** The company needs a sample of at least **1,383 products** to construct a 99% confidence interval with a maximum margin of error of 0.03, using $\widehat p=0.75$ as the planning estimate.
+
+---
+
+## Summary of Exercise Solutions
+
+| Exercise | Topic | Final Answer |
+|---|---|---|
+| Exercise 1 | 95% CI for $\mu$, $\sigma$ known | $(20.54,\ 24.46)$ |
+| Exercise 2 | Required sample size for $\mu$ | $n=135$ |
+| Exercise 3 | 90% CI for $\mu$, $\sigma$ unknown | $(25.70,\ 31.30)$ |
+| Exercise 4(c) | 95% CI for $p$ | $(0.6829,\ 0.8171)$ |
+| Exercise 4(e) | Is $p>0.70$ supported? | Cannot conclude |
+| Exercise 4(f) | Required sample size for $p$ | $n=1383$ |
+
+**Final Reminder:** R helps us calculate statistical quantities accurately, but it is equally important to understand the appropriate method, assumptions, and interpretation of each result.
+

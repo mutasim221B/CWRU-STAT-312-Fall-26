@@ -440,3 +440,43 @@ The handout's rounded Z-table calculation produces approximately $0.6962$. Here 
 
 
 
+# Exercises
+
+1. Find $P(Z>1.35)$.
+2. Find $P(-0.50<Z<1.80)$.
+3. Find the value $z$ for which $P(Z>z)=0.025$.
+4. Find the positive $t$ cutoff with 5% to its right and $df=20$.
+5. If $T=-1.20$ with $df=5$, find the **two-sided** p-value.
+6. For the milk-jug model, find $P(\overline Y<1)$ if $n=4$.
+7. For the Uniform car-part model, approximate $P(2.987<\overline Y<2.991)$ for $n=100$ and compare it with the $n=30$ and $n=50$ results.
+
+
+
+
+
+
+
+\
+\
+\
+
+
+# Solution of Exercises
+
+
+```{r}
+round(pnorm(1.35, lower.tail = FALSE), 4)
+round(pnorm(1.80) - pnorm(-0.50), 4)
+round(qnorm(0.025, lower.tail = FALSE), 4)
+round(qt(0.05, df = 20, lower.tail = FALSE), 4)
+round(2 * pt(1.20, df = 5, lower.tail = FALSE), 4)
+round(pnorm(1, mean = 1.02, sd = 0.01 / sqrt(4)), 6)
+
+mu_uniform <- (2.97 + 3.01) / 2
+sigma_uniform <- (3.01 - 2.97) / sqrt(12)
+se_100 <- sigma_uniform / sqrt(100)
+round(pnorm(2.991, mean = mu_uniform, sd = se_100) -
+      pnorm(2.987, mean = mu_uniform, sd = se_100), 4)
+```
+
+

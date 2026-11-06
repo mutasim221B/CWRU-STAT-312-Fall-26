@@ -4011,6 +4011,10 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
+    <a class="dropdown-item" href="../activities/Unit-R.C-Confidence-in-R.html">
+ <span class="dropdown-text">Unit R.C: Confidence Interval in R</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../activities/Unit-R.B-Normal-CTL-in-R.html">
  <span class="dropdown-text">Unit R.B: Normal &amp; CTL in R</span></a>
   </li>  
@@ -4091,6 +4095,12 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Unit-R.C-Confidence-in-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit R.C: Confidence Interval in R</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/Unit-R.B-Normal-CTL-in-R.html" class="sidebar-item-text sidebar-link active">
@@ -4218,6 +4228,8 @@ window.Quarto = {
   <li><a href="#b-for-n50-approximate-the-same-probability" id="toc-b-for-n50-approximate-the-same-probability" class="nav-link" data-scroll-target="#b-for-n50-approximate-the-same-probability">(b) For <span class="math inline">\(n=50\)</span>, approximate the same probability</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#solution-of-exercises" id="toc-solution-of-exercises" class="nav-link" data-scroll-target="#solution-of-exercises">Solution of Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -4688,10 +4700,50 @@ Y\sim\operatorname{Uniform}(a=2.97,b=3.01).
 <span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.6968</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The handout’s rounded Z-table calculation produces approximately <span class="math inline">\(0.6962\)</span>. Here the target interval includes the population mean of <span class="math inline">\(2.99\)</span>, so the probability increases as the sample mean becomes more concentrated around that mean.</p>
-
-
 </section>
 </section>
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<ol type="1">
+<li>Find <span class="math inline">\(P(Z&gt;1.35)\)</span>.</li>
+<li>Find <span class="math inline">\(P(-0.50&lt;Z&lt;1.80)\)</span>.</li>
+<li>Find the value <span class="math inline">\(z\)</span> for which <span class="math inline">\(P(Z&gt;z)=0.025\)</span>.</li>
+<li>Find the positive <span class="math inline">\(t\)</span> cutoff with 5% to its right and <span class="math inline">\(df=20\)</span>.</li>
+<li>If <span class="math inline">\(T=-1.20\)</span> with <span class="math inline">\(df=5\)</span>, find the <strong>two-sided</strong> p-value.</li>
+<li>For the milk-jug model, find <span class="math inline">\(P(\overline Y&lt;1)\)</span> if <span class="math inline">\(n=4\)</span>.</li>
+<li>For the Uniform car-part model, approximate <span class="math inline">\(P(2.987&lt;\overline Y&lt;2.991)\)</span> for <span class="math inline">\(n=100\)</span> and compare it with the <span class="math inline">\(n=30\)</span> and <span class="math inline">\(n=50\)</span> results.</li>
+</ol>
+<p><br>
+<br>
+<br>
+</p>
+</section>
+<section id="solution-of-exercises" class="level1">
+<h1>Solution of Exercises</h1>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="fl">1.35</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>), <span class="dv">4</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.0885</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="fl">1.80</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.50</span>), <span class="dv">4</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.6555</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">qnorm</span>(<span class="fl">0.025</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>), <span class="dv">4</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 1.96</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">qt</span>(<span class="fl">0.05</span>, <span class="at">df =</span> <span class="dv">20</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>), <span class="dv">4</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 1.7247</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="fl">1.20</span>, <span class="at">df =</span> <span class="dv">5</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>), <span class="dv">4</span>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.2839</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="fl">1.02</span>, <span class="at">sd =</span> <span class="fl">0.01</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">4</span>)), <span class="dv">6</span>)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 3.2e-05</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>mu_uniform <span class="ot">&lt;-</span> (<span class="fl">2.97</span> <span class="sc">+</span> <span class="fl">3.01</span>) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>sigma_uniform <span class="ot">&lt;-</span> (<span class="fl">3.01</span> <span class="sc">-</span> <span class="fl">2.97</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">12</span>)</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>se_100 <span class="ot">&lt;-</span> sigma_uniform <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">100</span>)</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="fl">2.991</span>, <span class="at">mean =</span> mu_uniform, <span class="at">sd =</span> se_100) <span class="sc">-</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">pnorm</span>(<span class="fl">2.987</span>, <span class="at">mean =</span> mu_uniform, <span class="at">sd =</span> se_100), <span class="dv">4</span>)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.8021</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
