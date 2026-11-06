@@ -8,9 +8,6 @@ format:
 ---
 
 
-You can download the .qmd file for this activity [here](../activity_templates/Unit-R.C-Confidence-Hypothesis-in-R.qmd) and open in R-studio.
-
-
 
 
 ```{r setup}
@@ -30,6 +27,7 @@ knitr::opts_chunk$set(
 
 
 
+You can download the .qmd file for this activity [here](../activity_templates/Unit-R.C-Confidence-in-R.qmd) and open in R-studio.
 
 
 
