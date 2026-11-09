@@ -28,14 +28,6 @@ knitr::opts_chunk$set(
 
 
 
-# Group Works:
-
-- Make sure you are synchronized in a group of at least two students.
-- Download the .qmd file for this activity [here](../activity_templates/Unit-R.D-Hypothesis-in-R.qmd) and open in R-studio.
-- Work through the following examples that we have discussed in the class - it is highly recommended you have your solved handouts with you or download the solved one from the Canvas.
-- Work in a group, share your thoughts.
-- I will be moving around, raise your hand if you have any question!
-
 
 
 
@@ -43,16 +35,8 @@ knitr::opts_chunk$set(
 
 In this unit, we will learn how to conduct hypothesis tests using R.
 
-Previously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly, without relying on printed tables or rounding to the nearest table entry.
+Previously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly.
 
-Our main objectives are to:
-
-1. Calculate Type I and Type II error probabilities.
-2. Find rejection regions using critical values.
-3. Calculate Z-, t-, and chi-square test statistics.
-4. Calculate exact numerical p-values using R's distribution functions.
-5. Compare p-values with significance levels.
-6. Make appropriate statistical decisions and interpret them in context.
 
 ## Important R Functions
 
@@ -89,211 +73,8 @@ qnorm(0.975)
 
 
 
-## Example 1: Basket A versus Basket B
+# Examples
 
-Three balls are randomly drawn, **with replacement**, from either Basket A or Basket B.
-
-We do not know which basket is being used.
-
-Basket A contains:
-
-- 9 red balls
-- 1 green ball
-
-Basket B contains:
-
-- 1 red ball
-- 4 green balls
-
-We want to test
-
-$$
-H_0:\text{The balls come from Basket A}
-$$
-
-versus
-
-$$
-H_a:\text{The balls come from Basket B}.
-$$
-
-### Decision rule
-
-Reject $H_0$ if all three selected balls are green.
-
-Otherwise, fail to reject $H_0$.
-
-Since the draws are made with replacement, the individual draws are independent.
-
-### Part (a): Probability of a Type I error
-
-A Type I error occurs when we reject $H_0$, even though the balls actually come from Basket A.
-
-Under Basket A,
-
-$$
-P(\text{Green})=\frac{1}{10}=0.10.
-$$
-
-The decision rule rejects $H_0$ when the observed sequence is GGG.
-
-Therefore,
-
-$$
-\alpha=P(GGG\mid\text{Basket A})
-=(0.10)^3.
-$$
-
-Using R:
-
-```{r}
-# Basket A
-
-p_green_A <- 1 / 10
-
-# Probability of three green balls
-alpha_basket <- p_green_A^3
-
-alpha_basket
-```
-
-We obtain
-
-$$
-\boxed{\alpha=0.001}.
-$$
-
-Thus, the probability of making a Type I error is 0.001.
-
-We can also calculate the same probability using the binomial distribution.
-
-```{r}
-# Probability of exactly three green balls
-# in three independent draws from Basket A
-
-dbinom(
-  x = 3,
-  size = 3,
-  prob = 0.10
-)
-```
-
-The result is again 0.001.
-
-### Part (b): Probability of a Type II error
-
-A Type II error occurs when the balls come from Basket B but we fail to reject $H_0$.
-
-Under Basket B,
-
-$$
-P(\text{Green})=\frac45=0.80.
-$$
-
-We fail to reject $H_0$ whenever the three draws are **not all green**.
-
-Therefore,
-
-$$
-\beta
-=1-P(GGG\mid\text{Basket B})
-=1-(0.80)^3.
-$$
-
-Using R:
-
-```{r}
-# Basket B
-
-p_green_B <- 4 / 5
-
-# Probability of failing to reject H0
-beta_basket <- 1 - p_green_B^3
-
-beta_basket
-```
-
-We obtain
-
-$$
-\boxed{\beta=0.488}.
-$$
-
-Alternatively, we can use `dbinom()`:
-
-```{r}
-# Probability of NOT observing three green balls
-
-1 - dbinom(
-  x = 3,
-  size = 3,
-  prob = 0.80
-)
-```
-
-### Part (c): Find the power of the test
-
-Power is the probability of correctly rejecting $H_0$ when Basket B is used.
-
-$$
-\text{Power}=1-\beta.
-$$
-
-Using R:
-
-```{r}
-power_basket <- 1 - beta_basket
-
-power_basket
-```
-
-We obtain
-
-$$
-\boxed{\text{Power}=0.512}.
-$$
-
-In other words, when Basket B is actually used, our decision rule correctly identifies it approximately 51.2% of the time.
-
-### Part (d): What if we never reject $H_0$?
-
-Suppose we change our decision rule so that we never reject $H_0$, regardless of which balls are observed.
-
-Then,
-
-$$
-\alpha=0
-$$
-
-because we never reject a true null hypothesis.
-
-However,
-
-$$
-\beta=1
-$$
-
-because we also never reject $H_0$ when Basket B is used.
-
-```{r}
-alpha_never_reject <- 0
-
-beta_never_reject <- 1
-
-power_never_reject <- 1 - beta_never_reject
-
-alpha_never_reject
-beta_never_reject
-power_never_reject
-```
-
-**Important observation:**
-
-We can force the Type I error probability to zero by never rejecting $H_0$, but then the Type II error probability becomes one.
-
-This demonstrates why controlling Type I error alone is not sufficient for designing a useful test.
-
----
 
 ## Example 2: Purchasing Shipments of Iron Ore Pellets
 
@@ -540,61 +321,7 @@ legend(
 
 ---
 
-## Choosing the Correct Alternative Hypothesis
 
-Recall that the direction of the alternative hypothesis determines the type of test.
-
-### Left-tailed test
-
-$$
-H_a:\mu<\mu_0.
-$$
-
-The p-value is
-
-```{r}
-# For a left-tailed Z-test
-
-pnorm(-1.50)
-```
-
-### Right-tailed test
-
-$$
-H_a:\mu>\mu_0.
-$$
-
-The p-value is
-
-```{r}
-# For a right-tailed Z-test
-
-pnorm(1.50, lower.tail = FALSE)
-```
-
-### Two-tailed test
-
-$$
-H_a:\mu\ne\mu_0.
-$$
-
-For a symmetric standard Normal distribution, the p-value is
-
-$$
-2P(Z>|z_{\text{observed}}|).
-$$
-
-```{r}
-# For a two-tailed Z-test
-
-z_observed <- 1.50
-
-2 * pnorm(abs(z_observed), lower.tail = FALSE)
-```
-
-**Important:** Do not automatically multiply every p-value by two. We multiply the one-tail probability by two for a two-sided test because the Normal distribution is symmetric.
-
----
 
 ## Classroom Example A: Two-Tailed Z-Test
 
@@ -1056,249 +783,8 @@ At the 5% significance level, the sample does not provide sufficient evidence to
 
 ---
 
-## Placing Bounds on p-values Using the t-Distribution
 
-In class, we used a printed t-table to place bounds on p-values.
 
-R allows us to calculate the p-value more precisely.
-
-Let us first revisit the cholesterol example.
-
-We obtained
-
-$$
-t=-1.491,\qquad df=18.
-$$
-
-For a left-tailed test, the relevant critical values are approximately
-
-$$
-t_{0.05,18}=-1.734
-$$
-
-and
-
-$$
-t_{0.10,18}=-1.330.
-$$
-
-Using R:
-
-```{r}
-# Left-tail cutoff corresponding to 0.05
-qt(0.05, df = 18)
-
-# Left-tail cutoff corresponding to 0.10
-qt(0.10, df = 18)
-```
-
-Since
-
-$$
--1.734<-1.491<-1.330,
-$$
-
-we conclude that
-
-$$
-\boxed{0.05<p\text{-value}<0.10}.
-$$
-
-Using R, the more precise p-value is
-
-```{r}
-pt(t_chol, df = 18)
-```
-
-which is approximately 0.0766.
-
-The table-based bounds and the direct R calculation are consistent.
-
----
-
-## Practice Example: Right-Tailed t-Test
-
-Suppose we have
-
-$$
-n=26,
-$$
-
-and our observed test statistic is
-
-$$
-t=2.1.
-$$
-
-We are conducting a right-tailed test.
-
-Find bounds on the p-value and then calculate its numerical value using R.
-
-### Step 1: Degrees of freedom
-
-$$
-df=26-1=25.
-$$
-
-### Step 2: Identify the relevant critical values
-
-In the printed table, we find approximately
-
-$$
-t_{0.025,25}=2.060
-$$
-
-and
-
-$$
-t_{0.01,25}=2.485.
-$$
-
-Using R:
-
-```{r}
-df_right_t <- 25
-
-t_right <- 2.1
-
-# Upper-tail probability 0.025
-qt(1 - 0.025, df = df_right_t)
-
-# Upper-tail probability 0.01
-qt(1 - 0.01, df = df_right_t)
-```
-
-Because
-
-$$
-2.060<2.1<2.485,
-$$
-
-the p-value must satisfy
-
-$$
-\boxed{0.01<p\text{-value}<0.025}.
-$$
-
-### Step 3: Calculate the p-value directly
-
-For a right-tailed t-test,
-
-$$
-p=P(T_{25}>2.1).
-$$
-
-Use
-
-```{r}
-pvalue_right_t <- pt(
-  t_right,
-  df = df_right_t,
-  lower.tail = FALSE
-)
-
-pvalue_right_t
-```
-
-We obtain
-
-$$
-\boxed{p\approx0.0230}.
-$$
-
-This value lies between 0.01 and 0.025, as expected.
-
----
-
-## Practice Example: Two-Tailed t-Test
-
-Suppose we have
-
-$$
-n=21,
-$$
-
-with an observed test statistic
-
-$$
-t=2.
-$$
-
-The alternative hypothesis is two-sided.
-
-### Step 1: Degrees of freedom
-
-$$
-df=21-1=20.
-$$
-
-### Step 2: Find the relevant critical values
-
-From the t-table,
-
-$$
-t_{0.05,20}=1.725
-$$
-
-and
-
-$$
-t_{0.025,20}=2.086.
-$$
-
-Using R:
-
-```{r}
-df_two_t <- 20
-
-t_two <- 2
-
-# Upper-tail probability 0.05
-qt(0.95, df = df_two_t)
-
-# Upper-tail probability 0.025
-qt(0.975, df = df_two_t)
-```
-
-Since
-
-$$
-1.725<2<2.086,
-$$
-
-the one-tail probability is between 0.025 and 0.05.
-
-Because this is a two-tailed test, we multiply by two.
-
-Therefore,
-
-$$
-\boxed{0.05<p\text{-value}<0.10}.
-$$
-
-### Step 3: Calculate the numerical p-value
-
-```{r}
-pvalue_two_t <- 2 * pt(
-  abs(t_two),
-  df = df_two_t,
-  lower.tail = FALSE
-)
-
-pvalue_two_t
-```
-
-We obtain
-
-$$
-\boxed{p\approx0.0593}.
-$$
-
-This is consistent with the bounds obtained from the printed t-table.
-
-**Important:** For a two-sided t-test, the factor of two accounts for the probability in both tails of the symmetric t-distribution.
-
----
 
 ## Example 3: Hypothesis Testing for a Population Proportion
 
@@ -1374,40 +860,8 @@ $$
 \widehat p=0.55.
 $$
 
-### Step 2: Check the Normal approximation conditions
 
-For a one-proportion Z-test, the standard error under $H_0$ uses the hypothesized proportion $p_0$, not $\widehat p$.
-
-The usual approximation checks are
-
-$$
-np_0\ge15
-$$
-
-and
-
-$$
-n(1-p_0)\ge15.
-$$
-
-Using R:
-
-```{r}
-# Expected successes under H0
-n_gambler * p0_gambler
-
-# Expected failures under H0
-n_gambler * (1 - p0_gambler)
-
-# Check the conditions
-n_gambler * p0_gambler >= 15
-
-n_gambler * (1 - p0_gambler) >= 15
-```
-
-Both conditions are satisfied.
-
-### Step 3: Calculate the test statistic
+### Step 2: Calculate the test statistic
 
 The one-proportion Z-test statistic is
 
@@ -1505,25 +959,6 @@ At the 5% significance level, the results do not provide sufficient statistical 
 
 Although the observed winning proportion was 0.55, the difference is not statistically significant at the chosen level.
 
-### Using the built-in R function `prop.test()`
-
-R also provides the function `prop.test()` for testing a population proportion.
-
-For comparison:
-
-```{r}
-prop.test(
-  x = 44,
-  n = 80,
-  p = 0.49,
-  alternative = "greater",
-  correct = FALSE
-)
-```
-
-We set `correct = FALSE` to remove the continuity correction and make the result agree with the Normal-approximation Z-test used in class.
-
-**Note:** The reported statistic from `prop.test()` is labeled `X-squared`, but the one-sided p-value agrees with the corresponding Z-test in this setting.
 
 ---
 
@@ -1816,66 +1251,9 @@ At the 1% significance level, there is insufficient statistical evidence that th
 
 **Important:** We have not proven that the variance equals 0.25. We have only concluded that the observed sample does not provide sufficient evidence that it is larger.
 
-### Visualizing the chi-square distribution
-
-Unlike the standard Normal and t-distributions, the chi-square distribution is generally right-skewed.
-
-```{r}
-#| fig-width: 8
-#| fig-height: 4.5
-
-curve(
-  dchisq(x, df = df_var),
-  from = 0,
-  to = 50,
-  lwd = 2,
-  xlab = expression(chi^2),
-  ylab = "Density",
-  main = "Right-Tailed Chi-Square Test"
-)
-
-# Shade the rejection region
-x_reject_chi <- seq(
-  chisq_critical_var,
-  50,
-  length.out = 300
-)
-
-polygon(
-  c(chisq_critical_var, x_reject_chi, 50),
-  c(0, dchisq(x_reject_chi, df = df_var), 0),
-  col = "lightblue",
-  border = NA
-)
-
-abline(
-  v = chisq_critical_var,
-  col = "blue",
-  lwd = 2,
-  lty = 2
-)
-
-abline(
-  v = chisq_var,
-  col = "red",
-  lwd = 2
-)
-
-legend(
-  "topright",
-  legend = c("Critical value", "Observed chi-square"),
-  col = c("blue", "red"),
-  lty = c(2, 1),
-  lwd = 2,
-  bty = "n"
-)
-```
-
-**Remember:** The Normality assumption is particularly important for the chi-square test for a population variance.
-
-The sample mean of 25 seconds is provided for context, but it is not needed to calculate this variance test statistic.
 
 ---
+
 
 ## Connecting Confidence Intervals and Hypothesis Tests
 
@@ -2048,121 +1426,6 @@ pchisq(chisq, df = df, lower.tail = FALSE)
 qchisq(0.99, df = df)
 ```
 
----
-
-## Independent Practice Using R
-
-Use the functions introduced in this unit to answer the following questions.
-
-### Practice 1: Left-Tailed Z-Test
-
-Suppose
-
-$$
-H_0:\mu=100
-$$
-
-versus
-
-$$
-H_a:\mu<100.
-$$
-
-Given
-
-$$
-n=36,\quad\overline{x}=96,\quad\sigma=12,
-$$
-
-conduct the hypothesis test at $\alpha=0.05$.
-
-Find the observed Z-test statistic, critical value, p-value, and decision.
-
-```{r}
-# Your R code here
-
-```
-
-### Practice 2: Two-Tailed t-Test
-
-Suppose
-
-$$
-H_0:\mu=50
-$$
-
-versus
-
-$$
-H_a:\mu\ne50.
-$$
-
-Given
-
-$$
-n=25,\quad\overline{x}=53,\quad s=8,
-$$
-
-conduct the test at $\alpha=0.05$.
-
-Assume an independent random sample from a Normal population.
-
-```{r}
-# Your R code here
-
-```
-
-### Practice 3: Population Proportion
-
-A sample of 120 products contains 78 products meeting a quality requirement.
-
-We want to test
-
-$$
-H_0:p=0.60
-$$
-
-versus
-
-$$
-H_a:p>0.60.
-$$
-
-Use the Normal approximation to conduct the test at $\alpha=0.05$.
-
-```{r}
-# Your R code here
-
-```
-
-### Practice 4: Population Variance
-
-Suppose
-
-$$
-H_0:\sigma^2=9
-$$
-
-versus
-
-$$
-H_a:\sigma^2>9.
-$$
-
-Given
-
-$$
-n=20,\quad s^2=12,
-$$
-
-conduct the test at $\alpha=0.05$.
-
-Assume an independent random sample from a Normal population.
-
-```{r}
-# Your R code here
-
-```
 
 ---
 
@@ -2180,3 +1443,231 @@ Assume an independent random sample from a Normal population.
 10. **Failing to reject $H_0$ does not mean that $H_0$ has been proven true.**
 
 The goal of learning R is not simply to obtain numerical answers more quickly. You should also understand the hypotheses, assumptions, statistical reasoning, and interpretation of each result.
+
+
+
+
+
+
+\
+\
+\
+\
+\
+
+
+
+# Group Works:
+
+- Make sure you are synchronized in a group of at least two students.
+- Download the .qmd file for this activity [here](../activity_templates/Unit-R.D-Hypothesis-in-R.qmd) and open in R-studio.
+- Work through the following examples that we have discussed in the class - it is highly recommended you have your solved handouts with you or download the solved one from the Canvas.
+- Work in a group, share your thoughts.
+- I will be moving around, raise your hand if you have any question!
+
+
+
+
+# Group exercises
+
+Work in groups of two or three. Before running any code, agree on the population parameter, the hypotheses, and the direction of the test. Take turns writing the R code and checking the tail. Use the significance level given in each exercise, keep full precision when making your decision, and write a conclusion in context. Use the solutions at the end to check your work after your group finishes.
+
+## Exercise 1: Are the bottles filled to the target?
+
+A beverage company targets a mean fill volume of 500 mL. A quality engineer wants to know whether the population mean fill volume differs from the target. An independent random sample of 49 bottles has a mean fill volume of 496.2 mL. Assume fill volumes are normally distributed with a known population standard deviation of 12 mL. Use $\alpha=0.05$.
+
+1. Define the population parameter, state the hypotheses, and choose the test.
+
+
+2. Calculate the observed test statistic. Use R to find both critical values and the $p$-value. Do the two decision methods agree?
+
+
+3. Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.
+
+
+
+
+
+
+
+
+## Exercise 2: Is the mean processing time below 30 minutes?
+
+A lab wants to determine whether the mean processing time under a new procedure is below 30 minutes. An independent random sample of 16 jobs has a mean processing time of 28.6 minutes and a sample standard deviation of 3.6 minutes. Assume the population is normally distributed and its standard deviation is unknown. Use $\alpha=0.05$.
+
+1. Define the population parameter and state the hypotheses. Explain which reference distribution to use and give its degrees of freedom.
+
+
+2. Calculate the observed test statistic. Use R to find the critical value and the $p$-value. State your decision and conclusion.
+
+
+
+
+
+
+
+
+
+## Exercise 3: Does the new practice format increase completion?
+
+Historically, 60% of students who start a practice module finish it. An instructor wants to know whether a redesigned module has a higher completion rate. In an independent random sample, 68 of 100 students who started the redesigned module finished it. Use $\alpha=0.05$.
+
+1. Define the population proportion and state the hypotheses. Use the null proportion to check that the expected numbers of completions and noncompletions are each at least 15.
+
+
+
+
+2. Compute the sample proportion and the one-proportion $Z$ statistic. Find the critical value and the $p$-value in R, then state your conclusion.
+
+
+
+3. Suppose instead that 204 of 300 independently sampled students finished the redesigned module. Before running R, predict what will happen to the standard error and the $p$-value. Recalculate both and explain whether the decision changes.
+
+
+
+
+
+## Exercise 4: Has the machine become less consistent?
+
+A packaging machine is calibrated to produce packages with a weight variance of $1.00~\mathrm{g}^2$. An engineer suspects the variance has increased. An independent random sample of 25 packages has a mean weight of 250.3 g and a sample variance of $1.65~\mathrm{g}^2$. Assume that package weights are normally distributed. Use $\alpha=0.01$.
+
+1. Define the population parameter, state the hypotheses, and identify the appropriate test. Which sample summary is needed to compute the test statistic?
+
+
+
+2. Calculate the observed test statistic. Use R to find the critical value and the $p$-value. State your decision and conclusion.
+
+
+
+3. How would your decision change at $\alpha=0.05$? Explain why the same $p$-value applies at both significance levels.
+
+
+
+
+
+
+
+
+
+
+\
+\
+\
+\
+
+
+
+# Solutions
+
+## Solution 1: Two-sided Z-test for a mean
+
+Let $\mu$ be the population mean fill volume in mL. The hypotheses are $H_0:\mu=500$ and $H_a:\mu\ne500$. The independent observations come from a normal population with a known standard deviation, so a one-sample $Z$-test applies.
+
+```{r solution-fill}
+mu0 <- 500
+xbar <- 496.2
+sigma <- 12
+n <- 49
+alpha <- 0.05
+
+se <- sigma / sqrt(n)
+z_obs <- (xbar - mu0) / se
+z_crit <- qnorm(1 - alpha / 2)
+p_value <- 2 * pnorm(abs(z_obs), lower.tail = FALSE)
+
+c(z = z_obs, lower_critical = -z_crit,
+  upper_critical = z_crit, p_value = p_value)
+
+c(reject_by_cutoff = abs(z_obs) > z_crit,
+  reject_by_p_value = p_value <= alpha)
+
+margin <- z_crit * se
+ci <- c(lower = xbar - margin, upper = xbar + margin)
+ci
+```
+
+
+The observed statistic is $z\approx-2.217$, which is below the lower critical value of $-1.960$. The $p$-value is about $0.02665$, so both methods reject $H_0$. At the 5% significance level, the data provide evidence that the population mean fill volume differs from 500 mL.
+
+The 95% confidence interval is approximately $(492.84,499.56)$ mL. Since 500 mL falls outside the interval, the interval agrees with the two-sided test at $\alpha=0.05$.
+
+
+
+## Solution 2: Left-tailed t-test for a mean
+
+Let $\mu$ be the population mean processing time in minutes under the new procedure. Test $H_0:\mu=30$ against $H_a:\mu<30$. The population standard deviation is unknown. With independent observations from a normal population, the one-sample test statistic follows a $t$ distribution with $16-1=15$ degrees of freedom under $H_0$.
+
+```{r solution-lab}
+mu0 <- 30
+xbar <- 28.6
+s <- 3.6
+n <- 16
+alpha <- 0.05
+df <- n - 1
+
+t_obs <- (xbar - mu0) / (s / sqrt(n))
+t_crit <- qt(alpha, df = df)
+p_value <- pt(t_obs, df = df)
+
+c(df = df, t = t_obs, critical = t_crit, p_value = p_value)
+p_value <= alpha
+
+```
+
+
+The observed statistic is $t\approx-1.556$, above the left-tail cutoff of $-1.753$. The $p$-value is about $0.07033$, so we fail to reject $H_0$. At the 5% significance level, there is insufficient evidence that the population mean processing time is below 30 minutes.
+
+
+
+
+## Solution 3: Right-tailed Z-test for a proportion
+
+Let $p$ be the population proportion of students who finish the redesigned module among those who start it. Test $H_0:p=0.60$ against $H_a:p>0.60$.
+
+```{r solution-module}
+p0 <- 0.60
+alpha <- 0.05
+n <- c(100, 300)
+completed <- c(68, 204)
+
+expected_complete <- n * p0
+expected_incomplete <- n * (1 - p0)
+phat <- completed / n
+se <- sqrt(p0 * (1 - p0) / n)
+
+z_obs <- (phat - p0) / se
+z_crit <- qnorm(1 - alpha)
+p_value <- pnorm(z_obs, lower.tail = FALSE)
+
+z_crit
+data.frame(n, completed, expected_complete, expected_incomplete,
+           phat, se, z_obs, p_value, reject_H0 = p_value <= alpha)
+```
+
+
+- For $n=100$, the expected counts under $H_0$ are 60 and 40. Both meet the course cutoff of 15. The sample proportion is $0.68$, $z\approx1.633$, and the critical value is $1.645$. The $p$-value is about $0.05124$, so we fail to reject $H_0$. At the 5% significance level, there is insufficient evidence that the redesigned module has a completion rate above 60%.
+- For $n=300$, the expected counts are 180 and 120. The sample proportion is still $0.68$. The standard error falls from about $0.0490$ to $0.0283$, so the same difference from $0.60$ gives a larger statistic, $z\approx2.828$. The $p$-value falls to about $0.00234$, so we reject $H_0$. This larger sample provides evidence at the 5% level that the completion rate is above 60%.
+
+## Solution 4: Right-tailed chi-square test for a variance
+
+Let $\sigma^2$ be the population variance of package weights in $\mathrm{g}^2$. Test $H_0:\sigma^2=1.00$ against $H_a:\sigma^2>1.00$. Under $H_0$, the statistic $(n-1)S^2/\sigma_0^2$ follows a chi-square distribution with 24 degrees of freedom because the observations are independent and normally distributed. The calculation uses the sample variance and the sample size. The sample mean is irrelevant to this calculation.
+
+```{r solution-variance}
+sigma2_0 <- 1.00
+s2 <- 1.65
+n <- 25
+df <- n - 1
+alpha <- 0.01
+
+chisq_obs <- df * s2 / sigma2_0
+chisq_crit <- qchisq(1 - alpha, df = df)
+p_value <- pchisq(chisq_obs, df = df, lower.tail = FALSE)
+
+c(df = df, chi_square = chisq_obs, critical = chisq_crit,
+  p_value = p_value)
+
+alpha_levels <- c(0.01, 0.05)
+data.frame(alpha = alpha_levels, reject_H0 = p_value <= alpha_levels)
+```
+
+

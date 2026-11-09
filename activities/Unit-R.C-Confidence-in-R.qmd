@@ -861,12 +861,19 @@ Suppose a random sample of $n=64$ students gives a sample mean of $\overline{x}=
 (a) Find the critical Z-value for a 95% confidence interval using `qnorm()`.
 
 
+```{r}
+
+```
+
+
 
 (b) Calculate the standard error and margin of error.
 
 
 
+
 (c) Construct the 95% confidence interval for the population mean commuting time.
+
 
 
 
