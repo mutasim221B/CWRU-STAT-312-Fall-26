@@ -4187,10 +4187,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#unit-08-hypothesis-testing-in-r" id="toc-unit-08-hypothesis-testing-in-r" class="nav-link active" data-scroll-target="#unit-08-hypothesis-testing-in-r">Unit 08: Hypothesis Testing in R</a>
-  <ul class="collapse">
-  <li><a href="#important-r-functions" id="toc-important-r-functions" class="nav-link" data-scroll-target="#important-r-functions">Important R Functions</a></li>
-  </ul></li>
+  <li><a href="#important-r-functions" id="toc-important-r-functions" class="nav-link active" data-scroll-target="#important-r-functions">Important R Functions</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
   <ul class="collapse">
   <li><a href="#example-2-purchasing-shipments-of-iron-ore-pellets" id="toc-example-2-purchasing-shipments-of-iron-ore-pellets" class="nav-link" data-scroll-target="#example-2-purchasing-shipments-of-iron-ore-pellets">Example 2: Purchasing Shipments of Iron Ore Pellets</a>
@@ -4308,8 +4305,7 @@ window.Quarto = {
 </header>
 
 
-<section id="unit-08-hypothesis-testing-in-r" class="level1">
-<h1>Unit 08: Hypothesis Testing in R</h1>
+<p>You can download the .qmd file for this activity <a href="../activity_templates/Unit-R.D-Hypothesis-in-R.qmd">here</a>.</p>
 <p>In this unit, we will learn how to conduct hypothesis tests using R.</p>
 <p>Previously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly.</p>
 <section id="important-r-functions" class="level2">
@@ -4322,7 +4318,6 @@ window.Quarto = {
 <li><code>qt()</code> finds t critical values.</li>
 <li><code>pchisq()</code> computes probabilities under a chi-square distribution.</li>
 <li><code>qchisq()</code> finds chi-square critical values.</li>
-<li><code>dbinom()</code> computes binomial probabilities.</li>
 <li><code>sqrt()</code> calculates square roots.</li>
 <li><code>abs()</code> calculates absolute values.</li>
 </ul>
@@ -4343,7 +4338,6 @@ window.Quarto = {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 1.959964</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
-</section>
 </section>
 <section id="examples" class="level1">
 <h1>Examples</h1>
@@ -5523,10 +5517,21 @@ H_0:\mu=50,
 <h2 class="anchored" data-anchor-id="exercise-1-are-the-bottles-filled-to-the-target">Exercise 1: Are the bottles filled to the target?</h2>
 <p>A beverage company targets a mean fill volume of 500 mL. A quality engineer wants to know whether the population mean fill volume differs from the target. An independent random sample of 49 bottles has a mean fill volume of 496.2 mL. Assume fill volumes are normally distributed with a known population standard deviation of 12 mL. Use <span class="math inline">\(\alpha=0.05\)</span>.</p>
 <ol type="1">
-<li><p>Define the population parameter, state the hypotheses, and choose the test.</p></li>
-<li><p>Calculate the observed test statistic. Use R to find both critical values and the <span class="math inline">\(p\)</span>-value. Do the two decision methods agree?</p></li>
-<li><p>Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.</p></li>
+<li>Define the population parameter, state the hypotheses, and choose the test.</li>
 </ol>
+<p>$$ =?</p>
+<p>=?</p>
+<p>H_0:=?</p>
+<p>H_a:?.</p>
+<p>$$</p>
+<ol start="2" type="1">
+<li>Calculate the observed test statistic. Use R to find both critical values and the <span class="math inline">\(p\)</span>-value. Do the two decision methods agree?</li>
+</ol>
+<p>Hint: Create Chunk first for the codes</p>
+<ol start="3" type="1">
+<li>Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.</li>
+</ol>
+<p>Hint: Create Chunk first for the codes</p>
 </section>
 <section id="exercise-2-is-the-mean-processing-time-below-30-minutes" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2-is-the-mean-processing-time-below-30-minutes">Exercise 2: Is the mean processing time below 30 minutes?</h2>

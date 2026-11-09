@@ -1576,7 +1576,7 @@
     "href": "activities/Unit-R.D-Hypothesis-in-R.html",
     "title": "Unit R.D: Hypothesis Testing in R",
     "section": "",
-    "text": "In this unit, we will learn how to conduct hypothesis tests using R.\nPreviously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly.\n\n\nThe following base R functions will be useful:\n\npnorm() computes probabilities under a Normal distribution.\nqnorm() finds Normal critical values.\npt() computes probabilities under a t-distribution.\nqt() finds t critical values.\npchisq() computes probabilities under a chi-square distribution.\nqchisq() finds chi-square critical values.\ndbinom() computes binomial probabilities.\nsqrt() calculates square roots.\nabs() calculates absolute values.\n\nRemember:\nFunctions beginning with p calculate probabilities, while functions beginning with q calculate critical values or percentiles.\nFor example:\n\n# P(Z &lt; 1.96)\npnorm(1.96)\n## [1] 0.9750021\n\n# P(Z &gt; 1.96)\npnorm(1.96, lower.tail = FALSE)\n## [1] 0.0249979\n\n# Find z such that P(Z &lt; z) = 0.975\nqnorm(0.975)\n## [1] 1.959964",
+    "text": "You can download the .qmd file for this activity here.\nIn this unit, we will learn how to conduct hypothesis tests using R.\nPreviously, we used printed Z-, t-, and chi-square tables to find critical values and place bounds on p-values. R allows us to calculate these quantities directly.",
     "crumbs": [
       "Unit R.D: Hypothesis Testing in R"
     ]
@@ -1585,8 +1585,8 @@
     "objectID": "activities/Unit-R.D-Hypothesis-in-R.html#important-r-functions",
     "href": "activities/Unit-R.D-Hypothesis-in-R.html#important-r-functions",
     "title": "Unit R.D: Hypothesis Testing in R",
-    "section": "",
-    "text": "The following base R functions will be useful:\n\npnorm() computes probabilities under a Normal distribution.\nqnorm() finds Normal critical values.\npt() computes probabilities under a t-distribution.\nqt() finds t critical values.\npchisq() computes probabilities under a chi-square distribution.\nqchisq() finds chi-square critical values.\ndbinom() computes binomial probabilities.\nsqrt() calculates square roots.\nabs() calculates absolute values.\n\nRemember:\nFunctions beginning with p calculate probabilities, while functions beginning with q calculate critical values or percentiles.\nFor example:\n\n# P(Z &lt; 1.96)\npnorm(1.96)\n## [1] 0.9750021\n\n# P(Z &gt; 1.96)\npnorm(1.96, lower.tail = FALSE)\n## [1] 0.0249979\n\n# Find z such that P(Z &lt; z) = 0.975\nqnorm(0.975)\n## [1] 1.959964",
+    "section": "Important R Functions",
+    "text": "Important R Functions\nThe following base R functions will be useful:\n\npnorm() computes probabilities under a Normal distribution.\nqnorm() finds Normal critical values.\npt() computes probabilities under a t-distribution.\nqt() finds t critical values.\npchisq() computes probabilities under a chi-square distribution.\nqchisq() finds chi-square critical values.\nsqrt() calculates square roots.\nabs() calculates absolute values.\n\nRemember:\nFunctions beginning with p calculate probabilities, while functions beginning with q calculate critical values or percentiles.\nFor example:\n\n# P(Z &lt; 1.96)\npnorm(1.96)\n## [1] 0.9750021\n\n# P(Z &gt; 1.96)\npnorm(1.96, lower.tail = FALSE)\n## [1] 0.0249979\n\n# Find z such that P(Z &lt; z) = 0.975\nqnorm(0.975)\n## [1] 1.959964",
     "crumbs": [
       "Unit R.D: Hypothesis Testing in R"
     ]
@@ -1706,7 +1706,7 @@
     "href": "activities/Unit-R.D-Hypothesis-in-R.html#exercise-1-are-the-bottles-filled-to-the-target",
     "title": "Unit R.D: Hypothesis Testing in R",
     "section": "Exercise 1: Are the bottles filled to the target?",
-    "text": "Exercise 1: Are the bottles filled to the target?\nA beverage company targets a mean fill volume of 500 mL. A quality engineer wants to know whether the population mean fill volume differs from the target. An independent random sample of 49 bottles has a mean fill volume of 496.2 mL. Assume fill volumes are normally distributed with a known population standard deviation of 12 mL. Use \\(\\alpha=0.05\\).\n\nDefine the population parameter, state the hypotheses, and choose the test.\nCalculate the observed test statistic. Use R to find both critical values and the \\(p\\)-value. Do the two decision methods agree?\nConstruct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.",
+    "text": "Exercise 1: Are the bottles filled to the target?\nA beverage company targets a mean fill volume of 500 mL. A quality engineer wants to know whether the population mean fill volume differs from the target. An independent random sample of 49 bottles has a mean fill volume of 496.2 mL. Assume fill volumes are normally distributed with a known population standard deviation of 12 mL. Use \\(\\alpha=0.05\\).\n\nDefine the population parameter, state the hypotheses, and choose the test.\n\n$$ =?\n=?\nH_0:=?\nH_a:?.\n$$\n\nCalculate the observed test statistic. Use R to find both critical values and the \\(p\\)-value. Do the two decision methods agree?\n\nHint: Create Chunk first for the codes\n\nConstruct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.\n\nHint: Create Chunk first for the codes",
     "crumbs": [
       "Unit R.D: Hypothesis Testing in R"
     ]

@@ -27,11 +27,9 @@ knitr::opts_chunk$set(
 
 
 
+You can download the .qmd file for this activity [here](../activity_templates/Unit-R.D-Hypothesis-in-R.qmd).
 
 
-
-
-# Unit 08: Hypothesis Testing in R
 
 In this unit, we will learn how to conduct hypothesis tests using R.
 
@@ -48,7 +46,6 @@ The following base R functions will be useful:
 - `qt()` finds t critical values.
 - `pchisq()` computes probabilities under a chi-square distribution.
 - `qchisq()` finds chi-square critical values.
-- `dbinom()` computes binomial probabilities.
 - `sqrt()` calculates square roots.
 - `abs()` calculates absolute values.
 
@@ -1478,13 +1475,25 @@ A beverage company targets a mean fill volume of 500 mL. A quality engineer want
 
 1. Define the population parameter, state the hypotheses, and choose the test.
 
+$$
+\mu=?
+
+\sigma=?
+
+H_0:\mu=?
+
+H_a:\mu ?.
+
+$$
+
 
 2. Calculate the observed test statistic. Use R to find both critical values and the $p$-value. Do the two decision methods agree?
 
+Hint: Create Chunk first for the codes
 
 3. Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.
 
-
+Hint: Create Chunk first for the codes
 
 
 
@@ -1499,7 +1508,6 @@ A lab wants to determine whether the mean processing time under a new procedure 
 
 
 2. Calculate the observed test statistic. Use R to find the critical value and the $p$-value. State your decision and conclusion.
-
 
 
 
