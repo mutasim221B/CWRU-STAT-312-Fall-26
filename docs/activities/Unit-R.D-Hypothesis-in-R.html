@@ -4011,6 +4011,10 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
+    <a class="dropdown-item" href="../activities/Exam2.html">
+ <span class="dropdown-text">Midterm Exam 02</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../activities/Unit-R.D-Hypothesis-in-R.html">
  <span class="dropdown-text">Unit R.D: Hypothesis Testing in R</span></a>
   </li>  
@@ -4099,6 +4103,15 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Exam2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Exam 02</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">activities/Unit_C_Two_Sample_Inference.pdf</span>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/Unit-R.D-Hypothesis-in-R.html" class="sidebar-item-text sidebar-link active">
@@ -5519,15 +5532,35 @@ H_0:\mu=50,
 <ol type="1">
 <li>Define the population parameter, state the hypotheses, and choose the test.</li>
 </ol>
-<p>$$ =?</p>
-<p>=?</p>
-<p>H_0:=?</p>
-<p>H_a:?.</p>
-<p>$$</p>
+<p>$$ =? \</p>
+<p>=? \</p>
+<p>H_0:=? \</p>
+<p>H_a:? \</p>
+<p>$$ mu = ? sigma = ? H_0: mu =? H_a: mu &gt; or &lt; or NE ?</p>
 <ol start="2" type="1">
 <li>Calculate the observed test statistic. Use R to find both critical values and the <span class="math inline">\(p\)</span>-value. Do the two decision methods agree?</li>
 </ol>
 <p>Hint: Create Chunk first for the codes</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given information</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>mu0_iron <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>sigma_iron <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>n_iron <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>xbar_iron <span class="ot">&lt;-</span> <span class="dv">76</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>alpha_iron <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the standard error</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>SE_iron <span class="ot">&lt;-</span> sigma_iron <span class="sc">/</span> <span class="fu">sqrt</span>(n_iron)</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the Z-test statistic</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>z_iron <span class="ot">&lt;-</span> (xbar_iron <span class="sc">-</span> mu0_iron) <span class="sc">/</span> SE_iron</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>z_iron</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] -2.19089</span></span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] -2.19089</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol start="3" type="1">
 <li>Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.</li>
 </ol>
@@ -5571,32 +5604,32 @@ H_0:\mu=50,
 <h2 class="anchored" data-anchor-id="solution-1-two-sided-z-test-for-a-mean">Solution 1: Two-sided Z-test for a mean</h2>
 <p>Let <span class="math inline">\(\mu\)</span> be the population mean fill volume in mL. The hypotheses are <span class="math inline">\(H_0:\mu=500\)</span> and <span class="math inline">\(H_a:\mu\ne500\)</span>. The independent observations come from a normal population with a known standard deviation, so a one-sample <span class="math inline">\(Z\)</span>-test applies.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>mu0 <span class="ot">&lt;-</span> <span class="dv">500</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fl">496.2</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">12</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">49</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>z_obs <span class="ot">&lt;-</span> (xbar <span class="sc">-</span> mu0) <span class="sc">/</span> se</span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>z_crit <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span> <span class="sc">-</span> alpha <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(z_obs), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">z =</span> z_obs, <span class="at">lower_critical =</span> <span class="sc">-</span>z_crit,</span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">upper_critical =</span> z_crit, <span class="at">p_value =</span> p_value)</span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="do">##              z lower_critical upper_critical        p_value </span></span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="do">##    -2.21666667    -1.95996398     1.95996398     0.02664588</span></span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">reject_by_cutoff =</span> <span class="fu">abs</span>(z_obs) <span class="sc">&gt;</span> z_crit,</span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">reject_by_p_value =</span> p_value <span class="sc">&lt;=</span> alpha)</span>
-<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  reject_by_cutoff reject_by_p_value </span></span>
-<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="do">##              TRUE              TRUE</span></span>
-<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>margin <span class="ot">&lt;-</span> z_crit <span class="sc">*</span> se</span>
-<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">lower =</span> xbar <span class="sc">-</span> margin, <span class="at">upper =</span> xbar <span class="sc">+</span> margin)</span>
-<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a>ci</span>
-<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a><span class="do">##    lower    upper </span></span>
-<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a><span class="do">## 492.8401 499.5599</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>mu0 <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fl">496.2</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">49</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>z_obs <span class="ot">&lt;-</span> (xbar <span class="sc">-</span> mu0) <span class="sc">/</span> se</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>z_crit <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span> <span class="sc">-</span> alpha <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(z_obs), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">z =</span> z_obs, <span class="at">lower_critical =</span> <span class="sc">-</span>z_crit,</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">upper_critical =</span> z_crit, <span class="at">p_value =</span> p_value)</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="do">##              z lower_critical upper_critical        p_value </span></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="do">##    -2.21666667    -1.95996398     1.95996398     0.02664588</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">reject_by_cutoff =</span> <span class="fu">abs</span>(z_obs) <span class="sc">&gt;</span> z_crit,</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">reject_by_p_value =</span> p_value <span class="sc">&lt;=</span> alpha)</span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  reject_by_cutoff reject_by_p_value </span></span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a><span class="do">##              TRUE              TRUE</span></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>margin <span class="ot">&lt;-</span> z_crit <span class="sc">*</span> se</span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">lower =</span> xbar <span class="sc">-</span> margin, <span class="at">upper =</span> xbar <span class="sc">+</span> margin)</span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a>ci</span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a><span class="do">##    lower    upper </span></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="do">## 492.8401 499.5599</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The observed statistic is <span class="math inline">\(z\approx-2.217\)</span>, which is below the lower critical value of <span class="math inline">\(-1.960\)</span>. The <span class="math inline">\(p\)</span>-value is about <span class="math inline">\(0.02665\)</span>, so both methods reject <span class="math inline">\(H_0\)</span>. At the 5% significance level, the data provide evidence that the population mean fill volume differs from 500 mL.</p>
 <p>The 95% confidence interval is approximately <span class="math inline">\((492.84,499.56)\)</span> mL. Since 500 mL falls outside the interval, the interval agrees with the two-sided test at <span class="math inline">\(\alpha=0.05\)</span>.</p>
@@ -5605,22 +5638,22 @@ H_0:\mu=50,
 <h2 class="anchored" data-anchor-id="solution-2-left-tailed-t-test-for-a-mean">Solution 2: Left-tailed t-test for a mean</h2>
 <p>Let <span class="math inline">\(\mu\)</span> be the population mean processing time in minutes under the new procedure. Test <span class="math inline">\(H_0:\mu=30\)</span> against <span class="math inline">\(H_a:\mu&lt;30\)</span>. The population standard deviation is unknown. With independent observations from a normal population, the one-sample test statistic follows a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(16-1=15\)</span> degrees of freedom under <span class="math inline">\(H_0\)</span>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>mu0 <span class="ot">&lt;-</span> <span class="dv">30</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fl">28.6</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fl">3.6</span></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">16</span></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>t_obs <span class="ot">&lt;-</span> (xbar <span class="sc">-</span> mu0) <span class="sc">/</span> (s <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>t_crit <span class="ot">&lt;-</span> <span class="fu">qt</span>(alpha, <span class="at">df =</span> df)</span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pt</span>(t_obs, <span class="at">df =</span> df)</span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">df =</span> df, <span class="at">t =</span> t_obs, <span class="at">critical =</span> t_crit, <span class="at">p_value =</span> p_value)</span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="do">##         df          t   critical    p_value </span></span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 15.0000000 -1.5555556 -1.7530504  0.0703285</span></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>p_value <span class="sc">&lt;=</span> alpha</span>
-<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>mu0 <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fl">28.6</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fl">3.6</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">16</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>t_obs <span class="ot">&lt;-</span> (xbar <span class="sc">-</span> mu0) <span class="sc">/</span> (s <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>t_crit <span class="ot">&lt;-</span> <span class="fu">qt</span>(alpha, <span class="at">df =</span> df)</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pt</span>(t_obs, <span class="at">df =</span> df)</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">df =</span> df, <span class="at">t =</span> t_obs, <span class="at">critical =</span> t_crit, <span class="at">p_value =</span> p_value)</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="do">##         df          t   critical    p_value </span></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 15.0000000 -1.5555556 -1.7530504  0.0703285</span></span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>p_value <span class="sc">&lt;=</span> alpha</span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The observed statistic is <span class="math inline">\(t\approx-1.556\)</span>, above the left-tail cutoff of <span class="math inline">\(-1.753\)</span>. The <span class="math inline">\(p\)</span>-value is about <span class="math inline">\(0.07033\)</span>, so we fail to reject <span class="math inline">\(H_0\)</span>. At the 5% significance level, there is insufficient evidence that the population mean processing time is below 30 minutes.</p>
 </section>
@@ -5628,30 +5661,30 @@ H_0:\mu=50,
 <h2 class="anchored" data-anchor-id="solution-3-right-tailed-z-test-for-a-proportion">Solution 3: Right-tailed Z-test for a proportion</h2>
 <p>Let <span class="math inline">\(p\)</span> be the population proportion of students who finish the redesigned module among those who start it. Test <span class="math inline">\(H_0:p=0.60\)</span> against <span class="math inline">\(H_a:p&gt;0.60\)</span>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.60</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">300</span>)</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>completed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">204</span>)</span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>expected_complete <span class="ot">&lt;-</span> n <span class="sc">*</span> p0</span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>expected_incomplete <span class="ot">&lt;-</span> n <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0)</span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>phat <span class="ot">&lt;-</span> completed <span class="sc">/</span> n</span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>z_obs <span class="ot">&lt;-</span> (phat <span class="sc">-</span> p0) <span class="sc">/</span> se</span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>z_crit <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span> <span class="sc">-</span> alpha)</span>
-<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(z_obs, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>z_crit</span>
-<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 1.644854</span></span>
-<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(n, completed, expected_complete, expected_incomplete,</span>
-<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>           phat, se, z_obs, p_value, <span class="at">reject_H0 =</span> p_value <span class="sc">&lt;=</span> alpha)</span>
-<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a><span class="do">##     n completed expected_complete expected_incomplete phat         se    z_obs</span></span>
-<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 100        68                60                  40 0.68 0.04898979 1.632993</span></span>
-<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 300       204               180                 120 0.68 0.02828427 2.828427</span></span>
-<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a><span class="do">##       p_value reject_H0</span></span>
-<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 0.051235217     FALSE</span></span>
-<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 0.002338867      TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.60</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">300</span>)</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>completed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">204</span>)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>expected_complete <span class="ot">&lt;-</span> n <span class="sc">*</span> p0</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>expected_incomplete <span class="ot">&lt;-</span> n <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0)</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>phat <span class="ot">&lt;-</span> completed <span class="sc">/</span> n</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>z_obs <span class="ot">&lt;-</span> (phat <span class="sc">-</span> p0) <span class="sc">/</span> se</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>z_crit <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span> <span class="sc">-</span> alpha)</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(z_obs, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>z_crit</span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 1.644854</span></span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(n, completed, expected_complete, expected_incomplete,</span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>           phat, se, z_obs, p_value, <span class="at">reject_H0 =</span> p_value <span class="sc">&lt;=</span> alpha)</span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="do">##     n completed expected_complete expected_incomplete phat         se    z_obs</span></span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 100        68                60                  40 0.68 0.04898979 1.632993</span></span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 300       204               180                 120 0.68 0.02828427 2.828427</span></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="do">##       p_value reject_H0</span></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 0.051235217     FALSE</span></span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 0.002338867      TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>For <span class="math inline">\(n=100\)</span>, the expected counts under <span class="math inline">\(H_0\)</span> are 60 and 40. Both meet the course cutoff of 15. The sample proportion is <span class="math inline">\(0.68\)</span>, <span class="math inline">\(z\approx1.633\)</span>, and the critical value is <span class="math inline">\(1.645\)</span>. The <span class="math inline">\(p\)</span>-value is about <span class="math inline">\(0.05124\)</span>, so we fail to reject <span class="math inline">\(H_0\)</span>. At the 5% significance level, there is insufficient evidence that the redesigned module has a completion rate above 60%.</li>
@@ -5662,26 +5695,26 @@ H_0:\mu=50,
 <h2 class="anchored" data-anchor-id="solution-4-right-tailed-chi-square-test-for-a-variance">Solution 4: Right-tailed chi-square test for a variance</h2>
 <p>Let <span class="math inline">\(\sigma^2\)</span> be the population variance of package weights in <span class="math inline">\(\mathrm{g}^2\)</span>. Test <span class="math inline">\(H_0:\sigma^2=1.00\)</span> against <span class="math inline">\(H_a:\sigma^2&gt;1.00\)</span>. Under <span class="math inline">\(H_0\)</span>, the statistic <span class="math inline">\((n-1)S^2/\sigma_0^2\)</span> follows a chi-square distribution with 24 degrees of freedom because the observations are independent and normally distributed. The calculation uses the sample variance and the sample size. The sample mean is irrelevant to this calculation.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>sigma2_0 <span class="ot">&lt;-</span> <span class="fl">1.00</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fl">1.65</span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">25</span></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>chisq_obs <span class="ot">&lt;-</span> df <span class="sc">*</span> s2 <span class="sc">/</span> sigma2_0</span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>chisq_crit <span class="ot">&lt;-</span> <span class="fu">qchisq</span>(<span class="dv">1</span> <span class="sc">-</span> alpha, <span class="at">df =</span> df)</span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(chisq_obs, <span class="at">df =</span> df, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">df =</span> df, <span class="at">chi_square =</span> chisq_obs, <span class="at">critical =</span> chisq_crit,</span>
-<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_value =</span> p_value)</span>
-<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="do">##          df  chi_square    critical     p_value </span></span>
-<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 24.00000000 39.60000000 42.97982014  0.02359952</span></span>
-<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>alpha_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.05</span>)</span>
-<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">alpha =</span> alpha_levels, <span class="at">reject_H0 =</span> p_value <span class="sc">&lt;=</span> alpha_levels)</span>
-<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="do">##   alpha reject_H0</span></span>
-<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 1  0.01     FALSE</span></span>
-<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 2  0.05      TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>sigma2_0 <span class="ot">&lt;-</span> <span class="fl">1.00</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fl">1.65</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>chisq_obs <span class="ot">&lt;-</span> df <span class="sc">*</span> s2 <span class="sc">/</span> sigma2_0</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>chisq_crit <span class="ot">&lt;-</span> <span class="fu">qchisq</span>(<span class="dv">1</span> <span class="sc">-</span> alpha, <span class="at">df =</span> df)</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(chisq_obs, <span class="at">df =</span> df, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">df =</span> df, <span class="at">chi_square =</span> chisq_obs, <span class="at">critical =</span> chisq_crit,</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_value =</span> p_value)</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="do">##          df  chi_square    critical     p_value </span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 24.00000000 39.60000000 42.97982014  0.02359952</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>alpha_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.05</span>)</span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">alpha =</span> alpha_levels, <span class="at">reject_H0 =</span> p_value <span class="sc">&lt;=</span> alpha_levels)</span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a><span class="do">##   alpha reject_H0</span></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 1  0.01     FALSE</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 2  0.05      TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

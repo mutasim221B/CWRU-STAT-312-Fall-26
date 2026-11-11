@@ -1476,20 +1476,44 @@ A beverage company targets a mean fill volume of 500 mL. A quality engineer want
 1. Define the population parameter, state the hypotheses, and choose the test.
 
 $$
-\mu=?
+\mu=? \\
 
-\sigma=?
+\sigma=? \\
 
-H_0:\mu=?
+H_0:\mu=? \\
 
-H_a:\mu ?.
+H_a:\mu ? \\
 
 $$
+mu = ?
+sigma = ?
+H_0: mu =?
+H_a: mu > or < or NE ?
 
 
 2. Calculate the observed test statistic. Use R to find both critical values and the $p$-value. Do the two decision methods agree?
 
 Hint: Create Chunk first for the codes
+```{r}
+# Given information
+
+mu0_iron <- 80
+sigma_iron <- 10
+n_iron <- 30
+xbar_iron <- 76
+
+alpha_iron <- 0.05
+
+# Calculate the standard error
+SE_iron <- sigma_iron / sqrt(n_iron)
+
+# Calculate the Z-test statistic
+z_iron <- (xbar_iron - mu0_iron) / SE_iron
+
+z_iron
+## [1] -2.19089
+```
+
 
 3. Construct the corresponding 95% confidence interval in R (see Unit-R.C for references). Explain how it supports the same test decision.
 
