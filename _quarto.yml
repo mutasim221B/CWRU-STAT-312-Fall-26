@@ -43,7 +43,7 @@ website:
       title: "Activities"
       contents:
           - "activities/Exam2.qmd"
-          - "activities/Unit_C_Two_Sample_Inference.pdf"
+          - "activities/Unit-C-Two-Sample Inference.qmd"
           - "activities/Unit-R.D-Hypothesis-in-R.qmd"
           - "activities/Unit-R.C-Confidence-in-R.qmd"
           - "activities/Unit-R.B-Normal-CTL-in-R.qmd"
