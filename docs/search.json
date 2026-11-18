@@ -734,251 +734,203 @@
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html",
-    "href": "activities/Unit-08-Hypothesis.html",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-09-Linear-Regression.html",
+    "href": "activities/Unit-09-Linear-Regression.html",
+    "title": "Unit 09: Linear Regression",
     "section": "",
-    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\nMake sure you are synchronized in a group of at least two students and ready to start discussing.\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 2 different parameters (significance level, and sample size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nOptional: The effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_a\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.",
+    "text": "Unit 09 Handout: Linear Regression - I will be providing this last handout and bring it in the class as Thanks Giving gift!\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 09: Linear Regression – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems will be available in Practice Problems tab of the course website soon.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 09: Linear Regression"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#handouts",
-    "href": "activities/Unit-08-Hypothesis.html#handouts",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-09-Linear-Regression.html#handouts",
+    "href": "activities/Unit-09-Linear-Regression.html#handouts",
+    "title": "Unit 09: Linear Regression",
     "section": "",
-    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Unit 09 Handout: Linear Regression - I will be providing this last handout and bring it in the class as Thanks Giving gift!\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 09: Linear Regression"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#lecture-notes",
-    "href": "activities/Unit-08-Hypothesis.html#lecture-notes",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-09-Linear-Regression.html#lecture-notes",
+    "href": "activities/Unit-09-Linear-Regression.html#lecture-notes",
+    "title": "Unit 09: Linear Regression",
     "section": "",
-    "text": "Download the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "text": "Download the Lecture Notes Unit 09: Linear Regression – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 09: Linear Regression"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#practice-problems",
-    "href": "activities/Unit-08-Hypothesis.html#practice-problems",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-09-Linear-Regression.html#practice-problems",
+    "href": "activities/Unit-09-Linear-Regression.html#practice-problems",
+    "title": "Unit 09: Linear Regression",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems will be available in Practice Problems tab of the course website soon.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 09: Linear Regression"
     ]
   },
   {
-    "objectID": "activities/Unit-08-Hypothesis.html#power-group-work",
-    "href": "activities/Unit-08-Hypothesis.html#power-group-work",
-    "title": "Unit 08: Hypothesis Testing",
+    "objectID": "activities/Unit-07-Confidence-Interval.html",
+    "href": "activities/Unit-07-Confidence-Interval.html",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Make sure you are synchronized in a group of at least two students and ready to start discussing.\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 2 different parameters (significance level, and sample size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nOptional: The effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_a\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.",
+    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\n\nExplore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
     "crumbs": [
-      "Unit 08: Hypothesis Testing"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html",
-    "href": "activities/Unit-06-Normal-CTL.html",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#handouts",
+    "href": "activities/Unit-07-Confidence-Interval.html#handouts",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#handouts",
-    "href": "activities/Unit-06-Normal-CTL.html#handouts",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
+    "href": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#lecture-notes",
-    "href": "activities/Unit-06-Normal-CTL.html#lecture-notes",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#practice-problems",
+    "href": "activities/Unit-07-Confidence-Interval.html#practice-problems",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Download the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-06-Normal-CTL.html#practice-problems",
-    "href": "activities/Unit-06-Normal-CTL.html#practice-problems",
-    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
+    "objectID": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
+    "href": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
+    "title": "Unit 07: Confidence Interval",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Explore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
     "crumbs": [
-      "Unit 06: Normal Distribution & Central Limit Theorem"
+      "Unit 07: Confidence Interval"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html",
-    "href": "activities/Unit-03-Probability.html",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html",
+    "href": "activities/Unit-04-Discrete.html",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#handouts",
-    "href": "activities/Unit-03-Probability.html#handouts",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#handouts",
+    "href": "activities/Unit-04-Discrete.html#handouts",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#practice-problems",
-    "href": "activities/Unit-03-Probability.html#practice-problems",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
+    "href": "activities/Unit-04-Discrete.html#practice-problems",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#class-notes",
-    "href": "activities/Unit-03-Probability.html#class-notes",
-    "title": "Unit 03: Probability",
+    "objectID": "activities/Unit-04-Discrete.html#class-notes",
+    "href": "activities/Unit-04-Discrete.html#class-notes",
+    "title": "Unit 04: Discrete Random Variable",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
-    "title": "Unit 03: Probability",
-    "section": "Coin Toss Applet",
-    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
+    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Expected Value of Linear Transformation",
+    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Interpretation of Probability",
-    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
+    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Variance of a Discrete Random Variable",
+    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
-    "title": "Unit 03: Probability",
-    "section": "Axioms of Probability",
-    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
+    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Proof: Variance of a Linear Transformation",
+    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
     "crumbs": [
-      "Unit 03: Probability"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Exam2.html",
-    "href": "activities/Exam2.html",
-    "title": "Midterm Exam 02",
-    "section": "",
-    "text": "Download the Exam 2 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nExam 2 Review",
+    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Simulating Roulette!",
+    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
     "crumbs": [
-      "Midterm Exam 02"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Exam2.html#announcement",
-    "href": "activities/Exam2.html#announcement",
-    "title": "Midterm Exam 02",
-    "section": "",
-    "text": "Download the Exam 2 Announcement and carefully review the announcement.",
+    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Bernoulli Distribution",
+    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
     "crumbs": [
-      "Midterm Exam 02"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "activities/Exam2.html#review",
-    "href": "activities/Exam2.html#review",
-    "title": "Midterm Exam 02",
-    "section": "",
-    "text": "Exam 2 Review",
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Distribution",
+    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
     "crumbs": [
-      "Midterm Exam 02"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R & RStudio Resource",
-    "section": "",
-    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
-  },
-  {
-    "objectID": "R_Resources.html#installing-r-and-rstudio",
-    "href": "R_Resources.html#installing-r-and-rstudio",
-    "title": "R & RStudio Resource",
-    "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R & RStudio Resource",
-    "section": "Getting Help",
-    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
-  },
-  {
-    "objectID": "activities/Exam1.html",
-    "href": "activities/Exam1.html",
-    "title": "Midterm Exam 01",
-    "section": "",
-    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.",
+    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
+    "title": "Unit 04: Discrete Random Variable",
+    "section": "Hypergeometric Mean and Variance",
+    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
     "crumbs": [
-      "Midterm Exam 01"
-    ]
-  },
-  {
-    "objectID": "activities/Exam1.html#announcement",
-    "href": "activities/Exam1.html#announcement",
-    "title": "Midterm Exam 01",
-    "section": "",
-    "text": "Download the Exam 1 Announcement and carefully review the announcement.",
-    "crumbs": [
-      "Midterm Exam 01"
-    ]
-  },
-  {
-    "objectID": "activities/Exam1.html#review",
-    "href": "activities/Exam1.html#review",
-    "title": "Midterm Exam 01",
-    "section": "",
-    "text": "Download the Exam 1 Review before class and bring it with you.",
-    "crumbs": [
-      "Midterm Exam 01"
+      "Unit 04: Discrete Random Variable"
     ]
   },
   {
@@ -1152,163 +1104,804 @@
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html",
-    "href": "activities/Unit-04-Discrete.html",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Exam1.html",
+    "href": "activities/Exam1.html",
+    "title": "Midterm Exam 01",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Exam 1 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nDownload the Exam 1 Review before class and bring it with you.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Midterm Exam 01"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#handouts",
-    "href": "activities/Unit-04-Discrete.html#handouts",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Exam1.html#announcement",
+    "href": "activities/Exam1.html#announcement",
+    "title": "Midterm Exam 01",
     "section": "",
-    "text": "Download the Unit 04 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Exam 1 Announcement and carefully review the announcement.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Midterm Exam 01"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#practice-problems",
-    "href": "activities/Unit-04-Discrete.html#practice-problems",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/Exam1.html#review",
+    "href": "activities/Exam1.html#review",
+    "title": "Midterm Exam 01",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 04 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Download the Exam 1 Review before class and bring it with you.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Midterm Exam 01"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#class-notes",
-    "href": "activities/Unit-04-Discrete.html#class-notes",
-    "title": "Unit 04: Discrete Random Variable",
+    "objectID": "activities/09-mlr-principles.html",
+    "href": "activities/09-mlr-principles.html",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#learning-goals",
+    "href": "activities/09-mlr-principles.html#learning-goals",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Learning goals",
+    "text": "Learning goals\nWorking with multiple predictors in our plots and models can get complicated!\nThere are no recipes for this process.\nBUT there are some guiding principles that assist in long-term retention, deeper understanding, and the ability to generalize our tools in new settings.\nBy the end of this lesson, you should be familiar with some general principles for…\n\nincorporating additional quantitative or categorical predictors in a visualization\nhow additional quantitative or categorical predictors impact the physical representation of a model\ninterpreting quantitative or categorical coefficients in a multiple regression model"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#readings-and-videos",
+    "href": "activities/09-mlr-principles.html#readings-and-videos",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Readings and videos",
+    "text": "Readings and videos\nPlease watch the following video before class.\n\nMultivariate modeling principles (slides)\nInterpreting multivariate models (Part I) (slides)\n\nPlease watch the following video that include extra examples after class.\n\nInterpreting multivariate models (Part II (slides)"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-1-review-visualization",
+    "href": "activities/09-mlr-principles.html#exercise-1-review-visualization",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 1: Review visualization",
+    "text": "Exercise 1: Review visualization\nLet’s build a model of rides by windspeed (quantitative) and weekend status (categorical).\nPlot & describe, in words, the relationship between these 3 variables.\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = windspeed, color = weekend)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#live-note-taking",
+    "href": "activities/09-mlr-principles.html#live-note-taking",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Live-Note Taking!",
+    "text": "Live-Note Taking!"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-2-review-model",
+    "href": "activities/09-mlr-principles.html#exercise-2-review-model",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 2: Review model",
+    "text": "Exercise 2: Review model\nLet’s build the model. Run the following code:\n\nbike_model_1 &lt;- lm(rides ~ windspeed + weekend, data = bikes)\ncoef(summary(bike_model_1))\n##               Estimate Std. Error   t value      Pr(&gt;|t|)\n## (Intercept) 4738.38053  147.53653 32.116659 1.208405e-141\n## windspeed    -63.97072   10.45274 -6.119997  1.528443e-09\n## weekendTRUE -925.15701  119.86330 -7.718434  3.891082e-14\n\nThe estimated model formula is therefore:\nE[rides | windspeed, weekendTRUE] = 4738.38 - 63.97 * windspeed - 925.16 * weekendTRUE\nThis model formula is represented by 2 lines, one corresponding to weekends and the other to weekdays. Simplify the model formula above for weekdays and weekends:\nweekdays: rides = 4738.38 - 63.97 *windspeed\nweekends: rides = (4738.38- 925.16) - 63.97 *windspeed"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-3-review-coefficient-interpretation",
+    "href": "activities/09-mlr-principles.html#exercise-3-review-coefficient-interpretation",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 3: Review coefficient interpretation",
+    "text": "Exercise 3: Review coefficient interpretation\n\nThe intercept coefficient, 4738.38, represents the intercept of the sub-model for weekdays, the reference category. What’s its contextual interpretation?\nThe windspeed coefficient, -63.97, represents the shared slope of the weekend and weekday sub-models. What’s its contextual interpretation?\nThe weekendTRUE coefficient, -925.16, represents the change in intercept for the weekend vs weekday sub-model. What’s its contextual interpretation?"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-4-2-categorical-predictors-visualization",
+    "href": "activities/09-mlr-principles.html#exercise-4-2-categorical-predictors-visualization",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 4: 2 categorical predictors – visualization",
+    "text": "Exercise 4: 2 categorical predictors – visualization\nThus far, we’ve explored a couple examples of multiple regression models that have 2 predictors, 1 quantitative and 1 categorical.\nSo what happens when both predictors are categorical?!\nTo this end, let’s model rides by weekend status and season.\nThe below code plots rides vs season.\nWe can modify this code to also include information about weekend.\nHINT: Remember the visualization principle that additional categorical predictors require some sort of grouping mechanism / mechanism that distinguishes between the 2 groups.\n\n# rides vs season\nbikes %&gt;% \n  ggplot(aes(y = rides, x = season)) + \n  geom_boxplot()\n\n\n\n\n\n\n\n\n# rides vs season AND weekend\nbikes %&gt;%\n  ggplot(aes(y = rides, x = season, fill = weekend)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-5-follow-up",
+    "href": "activities/09-mlr-principles.html#exercise-5-follow-up",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 5: follow-up",
+    "text": "Exercise 5: follow-up\n\nDescribe (in words) the relationship of ridership with season & weekend status.\n\n\n\n\n\nA model of rides by season alone would be represented by only 4 expected outcomes, 1 for each season. Considering this and the plot above, how do you anticipate a model of rides by season and weekend status will be represented?\n\n2 lines, 1 for each weekend status\n8 lines, 1 for each possible combination of season & weekend\n2 expected outcomes, 1 for each weekend status\n8 expected outcomes, 1 for each possible combination of season & weekend"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-6-2-categorical-predictors-build-the-model",
+    "href": "activities/09-mlr-principles.html#exercise-6-2-categorical-predictors-build-the-model",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 6: 2 categorical predictors – build the model",
+    "text": "Exercise 6: 2 categorical predictors – build the model\nLet’s build the multiple regression model of rides vs season and weekend:\n\nbike_model_2 &lt;- lm(rides ~ weekend + season, bikes)\ncoef(summary(bike_model_2))\n##                Estimate Std. Error     t value      Pr(&gt;|t|)\n## (Intercept)   4260.4492   99.16363  42.9638294 1.384994e-201\n## weekendTRUE   -912.3324  103.23016  -8.8378473  7.298199e-18\n## seasonspring  -116.3824  132.76018  -0.8766364  3.809741e-01\n## seasonsummer   438.4424  132.06413   3.3199205  9.454177e-04\n## seasonwinter -1719.0572  133.30505 -12.8956646  2.081758e-34\n\nThus estimated model formula is given by:\nE[rides | weekend, season] = 4260.45 - 912.33 weekendTRUE - 116.38 seasonspring + 438.44 seasonsummer - 1719.06 seasonwinter\n\nUse this model to predict the ridership on the following days:\n\n\n# a fall weekday\n4260.45 - 912.33*0 - 116.38*0  + 438.44*0 - 1719.06*0\n## [1] 4260.45\n\n# a winter weekday    \n4260.45 - 912.33*0 - 116.38*0  + 438.44*0 - 1719.06*1\n## [1] 2541.39\n\n# a fall weekend day        \n4260.45 - 912.33*1 - 116.38*0  + 438.44*0 - 1719.06*0\n## [1] 3348.12\n\n# a winter weekend day\n4260.45 - 912.33*1 - 116.38*0  + 438.44*0 - 1719.06*1\n## [1] 1629.06\n\n\nWe only made 4 predictions here. How many possible predictions does this model produce? Is this consistent with your intuition in the previous exercise?"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-7-2-categorical-predictors-interpret-the-model",
+    "href": "activities/09-mlr-principles.html#exercise-7-2-categorical-predictors-interpret-the-model",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 7: 2 categorical predictors – interpret the model",
+    "text": "Exercise 7: 2 categorical predictors – interpret the model\nUse your above predictions and visualization to fill in the below interpretations of the model coefficients.\nHint: What is the consequence of plugging in 0 or 1 for the different weekend and season categories?\nRecall: Estimated model formula is given by:\nE[rides | weekend, season] = 4260.45 - 912.33 weekendTRUE - 116.38 seasonspring + 438.44 seasonsummer - 1719.06 seasonwinter\n\nInterpreting 4260: On average, we expect there to be 4260 riders on (weekdays/weekends) during the (fall/spring/summer/winter).\nInterpreting -912: On average, in any season, we expect there to be 912 (more/fewer) riders on weekends than on ___.\nInterpreting -1719: On average, on both weekdays and weekends, we expect there to be 1719 (more/fewer) riders in winter than in ___."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-8-2-quantitative-predictors-visualization",
+    "href": "activities/09-mlr-principles.html#exercise-8-2-quantitative-predictors-visualization",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 8: 2 quantitative predictors – visualization",
+    "text": "Exercise 8: 2 quantitative predictors – visualization\nNext, consider the relationship between rides and 2 quantitative predictors: windspeed and temp_feel. Check out the plot of this relationship below which reflects the visualization principle that quantitative variables require some sort of numerical scaling mechanism – rides and windspeed get numerical axes, and temp_feel gets a color scale:\n\nWe can modify the code below to recreate this plot.\n\nbikes %&gt;%\n  ggplot(aes(y = rides, x = windspeed, color = temp_feel)) +\n  geom_point() #color = temp_feel\n\n\n\n\n\n\n\n\nOPTIONAL: Check out this interactive plot which allows us to explore this point cloud in 3D.\n\n# Install the \"plotly\" package in R Console First!\nlibrary(plotly)\nbikes %&gt;% \n  plot_ly(x = ~windspeed, y = ~temp_feel, z = ~rides, \n          type = \"scatter3d\", \n          mode = \"markers\",\n          marker = list(size = 5, color = ~rides, colorscale = \"Viridis\"))"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-9-follow-up",
+    "href": "activities/09-mlr-principles.html#exercise-9-follow-up",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 9: follow-up",
+    "text": "Exercise 9: follow-up\nDescribe (in words) the relationship of ridership with windspeed & temperature."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-10-2-quantitative-predictors-modeling",
+    "href": "activities/09-mlr-principles.html#exercise-10-2-quantitative-predictors-modeling",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 10: 2 quantitative predictors – modeling",
+    "text": "Exercise 10: 2 quantitative predictors – modeling\nLet’s build the multiple regression model of rides vs windspeed and temp_feel:\n\nbike_model_3 &lt;- lm(rides ~ windspeed + temp_feel, data = bikes)\ncoef(summary(bike_model_3))\n##              Estimate Std. Error     t value     Pr(&gt;|t|)\n## (Intercept) -24.06464 299.303032 -0.08040225 9.359394e-01\n## windspeed   -36.54372   9.408116 -3.88427585 1.119805e-04\n## temp_feel    55.51648   3.330739 16.66791759 4.436963e-53\n\nThus estimated model formula is\nE[rides | windspeed, temp_feel] = -24.06 - 36.54 windspeed + 55.52 temp_feel\n\nInterpret the intercept coefficient, -24.06, in context. Is this a correct interpretation?\nInterpret the windspeed coefficient, -36.54, in context.\nInterpret the temp_feel coefficient, 55.52, in context."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-11-which-is-best",
+    "href": "activities/09-mlr-principles.html#exercise-11-which-is-best",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 11: Which is “best”?",
+    "text": "Exercise 11: Which is “best”?\nWe’ve now observed 3 different models of ridership, each having 2 predictors. The R-squared values of these models, along with those of the simple linear regression models with each predictor alone, are summarized below.\n\n\n\nmodel\npredictors\nR-squared\n\n\n\n\nbike_model_1\nwindspeed & weekend\n0.119\n\n\nbike_model_2\nweekend & season\n0.349\n\n\nbike_model_3\nwindspeed & temp_feel\n0.310\n\n\nbike_model_4\nwindspeed\n0.047\n\n\nbike_model_5\ntemp_feel\n0.296\n\n\nbike_model_6\nweekend\n0.074\n\n\nbike_model_7\nseason\n0.279\n\n\n\n\nWhich model does the best job of explaining the variability in ridership from day to day?\nIf you could only pick one predictor, which would it be?\nWhat happens to R-squared when we add a second predictor to our model, and why does this make sense? For example, how does the R-squared for model 1 (with both windspeed and weekend) compare to those of model 4 (only windspeed) and model 6 (only weekend)?\nAre 2 predictors always better than 1? Provide evidence and explain why this makes sense."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-13-practice-1",
+    "href": "activities/09-mlr-principles.html#exercise-13-practice-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 13: Practice 1",
+    "text": "Exercise 13: Practice 1\nConsider the relationship of rides vs weekend and weather_cat.\n\nConstruct a visualization of this relationship.\n\nConstruct a model of this relationship.\n\nInterpret the first 3 model coefficients."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-14-practice-2",
+    "href": "activities/09-mlr-principles.html#exercise-14-practice-2",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 14: Practice 2",
+    "text": "Exercise 14: Practice 2\nConsider the relationship of rides vs temp_feel and humidity.\n\nConstruct a visualization of this relationship.\n\nConstruct a model of this relationship.\n\nInterpret the first 3 model coefficients."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-15-practice-3",
+    "href": "activities/09-mlr-principles.html#exercise-15-practice-3",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 15: Practice 3",
+    "text": "Exercise 15: Practice 3\nConsider the relationship of rides vs temp_feel and weather_cat.\n\nConstruct a visualization of this relationship.\n\nConstruct a model of this relationship.\n\nInterpret the first 3 model coefficients."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-16-challenge",
+    "href": "activities/09-mlr-principles.html#exercise-16-challenge",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 16: CHALLENGE",
+    "text": "Exercise 16: CHALLENGE\nWe’ve explored models with 2 predictors. What about 3 predictors?! Consider the relationship of rides vs temp_feel, humidity, AND weekend.\n\nConstruct a visualization of this relationship.\n\nConstruct a model of this relationship.\n\nInterpret each model coefficient."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-1-review-visualization-1",
+    "href": "activities/09-mlr-principles.html#exercise-1-review-visualization-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 1: Review visualization",
+    "text": "Exercise 1: Review visualization\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = windspeed, color = weekend)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-2-review-model-1",
+    "href": "activities/09-mlr-principles.html#exercise-2-review-model-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 2: Review model",
+    "text": "Exercise 2: Review model\nweekdays: rides = 4738.38 - 63.97 windspeed\nweekends: rides = 4738.38 - 63.97 windspeed - 925.16 = 3813.22 - 63.97 windspeed"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-3-review-coefficient-interpretation-1",
+    "href": "activities/09-mlr-principles.html#exercise-3-review-coefficient-interpretation-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 3: Review coefficient interpretation",
+    "text": "Exercise 3: Review coefficient interpretation\n\nOn average, there are 4738 riders on weekdays with 0 windspeed.\nOn both weekends and weekdays, a 1mph increase in windspeed is associated with 64 fewer riders on average.\nAt any windspeed, the average ridership is 925 lower on weekends than week days."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-4-2-categorical-predictors-visualization-1",
+    "href": "activities/09-mlr-principles.html#exercise-4-2-categorical-predictors-visualization-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 4: 2 categorical predictors – visualization",
+    "text": "Exercise 4: 2 categorical predictors – visualization\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = season, fill = weekend)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-5-follow-up-1",
+    "href": "activities/09-mlr-principles.html#exercise-5-follow-up-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 5: follow-up",
+    "text": "Exercise 5: follow-up\n\nIn every season, ridership tends to be lower on weekends. Across weekend status, ridership tends to be highest in summer and lowest in winter.\n8 expected outcomes"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-6-2-categorical-predictors-build-the-model-1",
+    "href": "activities/09-mlr-principles.html#exercise-6-2-categorical-predictors-build-the-model-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 6: 2 categorical predictors – build the model",
+    "text": "Exercise 6: 2 categorical predictors – build the model\n\n\n\n\n#fall weekday:    \n4260.45 - 912.33*0 - 116.38*0 + 438.44*0 - 1719.06*0\n## [1] 4260.45\n\n#winter weekday:\n4260.45 - 912.33*0 - 116.38*0 + 438.44*0 - 1719.06*1\n## [1] 2541.39\n\n#fall weekend:    \n4260.45 - 912.33*1 - 116.38*0 + 438.44*0 - 1719.06*0\n## [1] 3348.12\n\n#winter weekend:\n4260.45 - 912.33*1 - 116.38*0 + 438.44*0 - 1719.06*1\n## [1] 1629.06\n\n\n8: 2 weekend categories * 4 season categories"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-7-2-categorical-predictors-interpret-the-model-1",
+    "href": "activities/09-mlr-principles.html#exercise-7-2-categorical-predictors-interpret-the-model-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 7: 2 categorical predictors – interpret the model",
+    "text": "Exercise 7: 2 categorical predictors – interpret the model\n\nWe expect there to be, on average, 4260 riders on weekdays during the fall.\nOn average, in any season, there are 912 fewer riders on weekends than on weekdays.\nOn average, on both weekdays and weekends, we expect there to be 1719 fewer riders in winter than in fall."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-8-2-quantitative-predictors-visualization-1",
+    "href": "activities/09-mlr-principles.html#exercise-8-2-quantitative-predictors-visualization-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 8: 2 quantitative predictors – visualization",
+    "text": "Exercise 8: 2 quantitative predictors – visualization\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = windspeed, color = temp_feel)) + \n  geom_point()"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-9-follow-up-1",
+    "href": "activities/09-mlr-principles.html#exercise-9-follow-up-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 9: follow-up",
+    "text": "Exercise 9: follow-up\nRidership tends to increase with temperature (no matter the windspeed) and decrease with windspeed (no matter the temperature)."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-10-2-quantitative-predictors-modeling-1",
+    "href": "activities/09-mlr-principles.html#exercise-10-2-quantitative-predictors-modeling-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 10: 2 quantitative predictors – modeling",
+    "text": "Exercise 10: 2 quantitative predictors – modeling\n\n-24.06 = average ridership on days with 0 windspeed and a 0 degree temperature. (Note: this is a correct interpretation, even though it doesn’t make conceptual sense! The model doesn’t know that ridership can’t be negative!)\nAt any temperature, a 1mph increase in windspeed is associated with a 37 rider decrease in average ridership.\nAt any windspeed, a 1 degree increase in temperature is associated with a 56 rider increase in average ridership."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-11-which-is-best-1",
+    "href": "activities/09-mlr-principles.html#exercise-11-which-is-best-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 11: Which is best?",
+    "text": "Exercise 11: Which is best?\n\nmodel 2\ntemperature\nR-squared increases (our model is stronger when we include another predictor)\nnope. model 1 (with windspeed and weekend) has a lower R-squared than model 5 (with only temperature)"
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-13-practice-1-1",
+    "href": "activities/09-mlr-principles.html#exercise-13-practice-1-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 13: Practice 1",
+    "text": "Exercise 13: Practice 1\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = weekend, fill = weather_cat)) + \n  geom_boxplot()\n\n\n\n\n\n\n\n\nnew_model_1 &lt;- lm(rides ~ weekend + weather_cat, bikes)\ncoef(summary(new_model_1))\n##                     Estimate Std. Error   t value      Pr(&gt;|t|)\n## (Intercept)        4211.8741   75.54724 55.751529 9.461947e-265\n## weekendTRUE        -982.2106  117.24719 -8.377264  2.786301e-16\n## weather_catcateg2  -608.8640  113.00211 -5.388077  9.628947e-08\n## weather_catcateg3 -2360.2049  319.71640 -7.382183  4.270163e-13\n\n\nThe average ridership on a weekday with nice weather (categ1) is 4212 rides.\nOn days with the same weather, the average ridership is 982 less on a weekend than on a weekday.\nOn any day of the week, the average ridership is 609 less on dreary days than on nice days."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-14-practice-2-1",
+    "href": "activities/09-mlr-principles.html#exercise-14-practice-2-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 14: Practice 2",
+    "text": "Exercise 14: Practice 2\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = temp_feel, color = humidity)) + \n    geom_point()\n\n\n\n\n\n\n\n\nnew_model_2 &lt;- lm(rides ~ temp_feel + humidity, bikes)\ncoef(summary(new_model_2))\n##                Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)   315.83704 303.777334  1.039699 2.988249e-01\n## temp_feel      60.43316   3.272315 18.468015 9.451345e-63\n## humidity    -1868.99356 336.963661 -5.546573 4.078901e-08\n\n\nOn average, there are 316 riders on days with 0 humidity that feel like 0 degrees.\nAt any humidity, a 1 degree increase in ridership is associated with a 60 ride increase in average ridership.\nAt any temperature, a 1 percentage point increase in humidity (i.e. a 0.1 increase in humidity) is associated with a 187 decrease in average ridership."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-15-practice-3-1",
+    "href": "activities/09-mlr-principles.html#exercise-15-practice-3-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 15: Practice 3",
+    "text": "Exercise 15: Practice 3\n\nnew_model_3 &lt;- lm(rides ~ temp_feel + weather_cat, bikes)\ncoef(summary(new_model_3))\n##                      Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)        -288.68840 251.264383 -1.148943 2.509574e-01\n## temp_feel            55.30133   3.215495 17.198387 7.082670e-56\n## weather_catcateg2  -386.42241 100.187725 -3.856984 1.249775e-04\n## weather_catcateg3 -1919.01375 283.022420 -6.780430 2.481218e-11\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = temp_feel, color = weather_cat)) + \n  geom_point() + \n  geom_line(aes(y = new_model_3$fitted.values), size = 1.5)\n\n\n\n\n\n\n\n\n\nOn average, there are -289 riders on nice weather days that feel like 0 degrees. (Note: this is a correct interpretation, even though it doesn’t make conceptual sense!)\nOn days with the same weather, a 1 degree increase in temperature is associated with a 55 ride increase in average ridership.\nOn days with the same temperature, average ridership is 386 rides lower on a dreary weather day than on a nice weather day."
+  },
+  {
+    "objectID": "activities/09-mlr-principles.html#exercise-16-challenge-1",
+    "href": "activities/09-mlr-principles.html#exercise-16-challenge-1",
+    "title": "Multiple Linear Regression - Principles",
+    "section": "Exercise 16: CHALLENGE",
+    "text": "Exercise 16: CHALLENGE\n\nbikes %&gt;% \n  ggplot(aes(y = rides, x = temp_feel, color = humidity, size = weekend)) + \n  geom_point()\n\n\n\n\n\n\n\n\nnew_model_4 &lt;- lm(rides ~ temp_feel + humidity + weekend, bikes)\ncoef(summary(new_model_4))\n##                Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)   668.60236 292.181063  2.288315 2.240530e-02\n## temp_feel      59.36751   3.119256 19.032585 7.626695e-66\n## humidity    -1906.43437 320.982938 -5.939364 4.433789e-09\n## weekendTRUE  -869.05771 100.057822 -8.685555 2.471050e-17\n\n\nOn average, there are 669 riders on weekdays that feel like 0 degrees and have no humidity.\nOn days with the same humidity levels and time of the week, a 1 degree increase in temperature is associated with a 59 ride increase in average ridership.\nOn days with the same temperature and time of the week, a 0.1 point increase in humidity levels (i.e. a 1 percentage point increase in humidity) is associated with a 190.6 ride decrease in average ridership.\nOn days with the same temperature and humidity, the average ridership is 869 rides lower on weekends compared to weekdays."
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R & RStudio Resource",
+    "section": "",
+    "text": "“Doing” statistical modeling and working with data in general requires statistical software – calculators, spreadsheet functionality, etc don’t cut it. We’ll exclusively use R and RStudio:\n\n\n\n\n\nFigure 1.1 from A ModernDive into R and the Tidyverse.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease download the latest versions of both R and RStudio. As of August 16, 2026, the latest versions are: R 4.6.1 and RStudio RStudio-2026.08.0-187."
+  },
+  {
+    "objectID": "R_Resources.html#installing-r-and-rstudio",
+    "href": "R_Resources.html#installing-r-and-rstudio",
+    "title": "R & RStudio Resource",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need both R and RStudio for this course.\n\nR is the software that performs the statistical computations.\nRStudio is the interface we will use to write and run R code.\n\nInstall R first, and then install RStudio.\n\nWindows\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for Windows.\nClick base.\nClick Download R for Windows and download the installer.\nOpen the downloaded .exe file.\nFollow the installation instructions. The default installation options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for Windows.\nOpen the downloaded .exe file.\nFollow the installation instructions.\nOpen RStudio after installation.\n\n\n\n\nmacOS\n\nStep 1: Install R\n\nGo to the CRAN website:\nhttps://cran.r-project.org/\nClick Download R for macOS.\nDownload the current R installer appropriate for your Mac.\n\nMost newer Macs use Apple Silicon processors (M1, M2, M3, M4, etc.).\nOlder Macs may use an Intel processor.\n\nOpen the downloaded .pkg file.\nFollow the installation instructions. The default options are appropriate for this course.\n\n\n\nStep 2: Install RStudio\n\nGo to the RStudio Desktop download page:\nhttps://posit.co/download/rstudio-desktop/\nDownload the free RStudio Desktop installer for macOS.\nOpen the downloaded .dmg file.\nDrag RStudio into the Applications folder.\nOpen RStudio from Applications.\n\n\n\n\nChoosing a CRAN mirror\nWhen you install an R package for the first time, R may ask you to select a CRAN mirror.\nChoose a mirror located reasonably close to Cleveland, Ohio. A nearby U.S. mirror is perfectly fine.\nIf you are unsure which mirror to choose, you may select:\n0-Cloud [https]\nThe Cloud CRAN mirror automatically directs you to an appropriate server, so you do not need to find a specific Ohio mirror.\n\n\nCheck your installation\nAfter installing both R and RStudio:\n\nOpen RStudio.\nFind the Console pane.\nType:\n\n\n2 + 2\n\n\nPress Enter.\n\nYou should see:\n[1] 4\nIf you see this result, R and RStudio are working correctly."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R & RStudio Resource",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about AI for code: AI tools can be useful for troubleshooting code, interpreting error messages, and improving your understanding of what a piece of code is doing. You may also use AI when provided course code unexpectedly stops working, for example, because an R package has been updated, a function has changed, or you encounter installation or compatibility issues. However, please avoid using AI as your first resort for writing R code or solving an assignment. Start with the lecture notes, class examples, provided code, and practice problems. AI tools may suggest unnecessarily complicated, unfamiliar, or even incorrect approaches that differ substantially from what we use in class. If you do use AI for coding assistance, make sure you understand every line of the resulting code and can explain what it does and why it works. AI should help you understand and troubleshoot your code, not replace your own statistical reasoning or problem-solving."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html",
+    "href": "activities/08-mlr-intro.html",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#learning-goals",
+    "href": "activities/08-mlr-intro.html#learning-goals",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of this lesson, you should be familiar with:\n\nsome limitations of simple linear regression\nthe general goals behind multiple linear regression\nstrategies for visualizing and interpreting multiple linear regression models of \\(Y\\) vs 2 predictors, 1 quantitative and 1 categorical"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#readings-and-videos",
+    "href": "activities/08-mlr-intro.html#readings-and-videos",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Readings and videos",
+    "text": "Readings and videos\nToday is a day to discover ideas, so no readings or videos to go through before class."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#motivation",
+    "href": "activities/08-mlr-intro.html#motivation",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Motivation",
+    "text": "Motivation\nEXAMPLE 1\nLet’s explore some data on penguins. First, enter install.packages(\"palmerpenguins\") in the console (not Qmd). Then load the penguins data. You can find a codebook for these data by typing ?penguins in your console (not qmd).\n\n# Load packages\nlibrary(tidyverse)\ndata(penguins)\npenguins &lt;- penguins %&gt;% \n  filter(species != \"Adelie\", bill_len &lt; 57)\n\n# Check it out\nhead(penguins)\n##   species island bill_len bill_dep flipper_len body_mass    sex year\n## 1  Gentoo Biscoe     46.1     13.2         211      4500 female 2007\n## 2  Gentoo Biscoe     50.0     16.3         230      5700   male 2007\n## 3  Gentoo Biscoe     48.7     14.1         210      4450 female 2007\n## 4  Gentoo Biscoe     50.0     15.2         218      5700   male 2007\n## 5  Gentoo Biscoe     47.6     14.5         215      5400   male 2007\n## 6  Gentoo Biscoe     46.5     13.5         210      4550 female 2007\n\nOur goal is to build a model that we can use to get good predictions of penguins’ flipper (“arm”) lengths.\nConsider 2 simple linear regression models of flipper_len by penguin sex and species:\n\n# Model 1: R-squared = 0.1205\nsummary(lm(flipper_len ~ sex, penguins))\n## \n## Call:\n## lm(formula = flipper_len ~ sex, data = penguins)\n## \n## Residuals:\n##    Min     1Q Median     3Q    Max \n## -27.22 -10.22   3.78   8.78  17.37 \n## \n## Coefficients:\n##             Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)  205.220      1.197 171.434  &lt; 2e-16 ***\n## sexmale        8.408      1.679   5.007  1.3e-06 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 11.42 on 183 degrees of freedom\n##   (4 observations deleted due to missingness)\n## Multiple R-squared:  0.1205, Adjusted R-squared:  0.1157 \n## F-statistic: 25.07 on 1 and 183 DF,  p-value: 1.297e-06\n\n# Model 2: R-squared = 0.7014\nsummary(lm(flipper_len ~ species, penguins))\n## \n## Call:\n## lm(formula = flipper_len ~ species, data = penguins)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -18.045  -5.045  -1.045   3.955  15.955 \n## \n## Coefficients:\n##               Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   196.0448     0.8065  243.07   &lt;2e-16 ***\n## speciesGentoo  21.0372     1.0039   20.96   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 6.602 on 187 degrees of freedom\n## Multiple R-squared:  0.7014, Adjusted R-squared:  0.6998 \n## F-statistic: 439.2 on 1 and 187 DF,  p-value: &lt; 2.2e-16\n\nHow might we improve our predictions of flipper_len using only these 2 predictors? What do you think is a reasonable range of possible values for the new R-squared?\nEXAMPLE 2\nConsider a simple linear regression model of flipper_len by bill_len:\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\nThoughts? What’s going on here? How does this highlight the limitations of a simple linear regression model?\nEXAMPLE 3\nThe cps dataset contains employment information collected by the U.S. Current Population Survey (CPS) in 2018. We can use these data to explore wages among 18-34 year olds. The original codebook is here.\n\n# Import data\ncps &lt;- read_csv(\"https://mac-stat.github.io/data/cps_2018.csv\") %&gt;% \n  select(-education, -hours) %&gt;% \n  filter(age &gt;= 18, age &lt;= 34) %&gt;% \n  filter(wage &lt; 250000)\n\n\n# Check it out\nhead(cps)\n## # A tibble: 6 × 6\n##    wage   age marital industry   health    education_level\n##   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;          \n## 1 75000    33 single  management fair      bachelors      \n## 2 33000    19 single  management very_good bachelors      \n## 3 43000    33 married management good      bachelors      \n## 4 50000    32 single  management excellent HS             \n## 5 14400    28 single  service    excellent HS             \n## 6 33000    31 married management very_good bachelors\n\nWe can use a simple linear regression model to summarize the relationship of wage with marital status:\n\n# Build the model\nwage_mod &lt;- lm(wage ~ marital, data = cps)\n\n# Summarize the model\ncoef(summary(wage_mod))\n##                Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept)    46145.23    921.062  50.10002 0.000000e+00\n## maritalsingle -17052.37   1127.177 -15.12839 5.636068e-50\n\nWhat do you / don’t you conclude from this model? How does it highlight the limitations of a simple linear regression model?\nReflection: Why are multiple regression models so useful?\nWe can put more than 1 predictor into a regression model! Adding predictors to models…\n\nPredictive viewpoint: Helps us better predict the response\nDescriptive viewpoint: Helps us better understand the isolated (causal) effect of a variable by holding constant confounders\n\nMultiple linear regression model formula\nIn general, a multiple linear regression model of \\(Y\\) with multiple predictors \\((X_1, X_2, ..., X_p)\\) is represented by the following formula:\n\\[E[Y \\mid X_1, X_2, ..., X_p] = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + ... + \\beta_p X_p\\]"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-1-visualizing-the-relationship",
+    "href": "activities/08-mlr-intro.html#exercise-1-visualizing-the-relationship",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 1: Visualizing the relationship",
+    "text": "Exercise 1: Visualizing the relationship\nWe’ve learned how to visualize the relationship of flipper_len by bill_len alone:\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\nHow might we change the scatterplot points to also indicate information about penguin species?\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, color = species)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, shape = species)) + \n  geom_point()"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-2-visualizing-the-model",
+    "href": "activities/08-mlr-intro.html#exercise-2-visualizing-the-model",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 2: Visualizing the model",
+    "text": "Exercise 2: Visualizing the model\nWe’ve also learned that a simple linear regression model of flipper_len by bill_len alone can be represented by a line:\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\nReflecting on your plot of flipper_len by bill_len and species in Exercise 1, how do you think a multiple regression model of flipper_len using both of these predictors would be represented? Check your intuition below by modifying the code below to include species in this plot, as you did in Exercise 1.\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, color = species)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-3-intuition",
+    "href": "activities/08-mlr-intro.html#exercise-3-intuition",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 3: Intuition",
+    "text": "Exercise 3: Intuition\nYour plot in Exercise 2 demonstrated that the multiple linear regression model of flipper_len by bill_len and species is represented by 2 lines.\nLet’s interpret the punchlines!\nFor each question, provide an answer along with evidence from the model lines that supports your answer.\n\nWhat’s the relationship between flipper_len and species, no matter a penguin’s bill_len?\n\n\nResponse: Put your response here.\n\n\nWhat’s the relationship between flipper_len and bill_len, no matter a penguin’s species?\n\n\nResponse: Put your response here.\n\n\nDoes the rate of increase in flipper_len with bill_len differ between the two species?\n\n\nResponse: Put your response here."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-4-model-formula",
+    "href": "activities/08-mlr-intro.html#exercise-4-model-formula",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 4: Model formula",
+    "text": "Exercise 4: Model formula\nOf course, there’s a formula behind the multiple regression model. We can obtain this using the usual lm() function.\n\n# Build the model\npenguin_mod &lt;- lm(flipper_len ~ bill_len + species, data = penguins)\n\n# Summarize the model\ncoef(summary(penguin_mod))\n##                 Estimate Std. Error  t value     Pr(&gt;|t|)\n## (Intercept)   127.753693  6.1174521 20.88348 1.194472e-50\n## bill_len        1.402367  0.1249665 11.22194 1.194932e-22\n## speciesGentoo  22.848036  0.7938292 28.78206 1.981732e-70\n\n\nIn the lm() function, how did we communicate that we wanted to model flipper_len by both bill_len and species? &gt; bill_len + species\nMLR model formula:\nE[flipper_len | bill_len, speciesGentoo] = 127.753693 + 1.402367 * bill_len + 22.848036 * speciesGentoo"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-5-sub-model-formulas",
+    "href": "activities/08-mlr-intro.html#exercise-5-sub-model-formulas",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 5: Sub-model formulas",
+    "text": "Exercise 5: Sub-model formulas\nOk. We now have a single formula for the model.\nAnd we observed earlier that this formula is represented by two lines: one describing the relationship between flipper_len and bill_len for Chinstrap penguins and the other for Gentoo penguins.\nLet’s bring these ideas together.\nWe can utilize the model formula to obtain the equations of these two lines, i.e. to obtain the sub-model formulas for the 2 species. Hint: Plug speciesGentoo = 1 and speciesGentoo = 0\nChinstrap: flipper_len = 127.753693 + 1.402367* bill_len\nGentoo: flipper_len = (127.753693 +22.848036) + 1.402367 * bill_len"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-6-coefficients-physical-interpretation",
+    "href": "activities/08-mlr-intro.html#exercise-6-coefficients-physical-interpretation",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 6: coefficients – physical interpretation",
+    "text": "Exercise 6: coefficients – physical interpretation\nReflecting on Exercise 5, let’s interpret what the model coefficients tell us about the physical properties of the two 2 sub-model lines. Choose the correct option given in parentheses:\n\nThe intercept coefficient, 127.75, is the intercept of the line for (Chinstrap / Gentoo) penguins.\nThe bill_len coefficient, 1.40, is the (intercept / slope) of both lines.\nThe speciesGentoo coefficient, 22.85, indicates that the (intercept / slope) of the line for Gentoo is 22.85mm higher than the (intercept / slope) of the line for Chinstrap. Similarly, since the lines are parallel, the line for Gentoo is 22.85mm higher than the line for Chinstrap at any bill_len."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-7-coefficients-contextual-interpretation",
+    "href": "activities/08-mlr-intro.html#exercise-7-coefficients-contextual-interpretation",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 7: coefficients – contextual interpretation",
+    "text": "Exercise 7: coefficients – contextual interpretation\nNext, interpret each coefficient in a contextually meaningful way. What do they tell us about penguin flipper lengths?!\n\nInterpret 127.75 (intercept of the Chinstrap line).\nInterpret 1.40 (slope of both lines). For both Chinstrap and Gentoo penguins, we expect…\nInterpret 22.85. At any bill_len, we expect…"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-8-prediction",
+    "href": "activities/08-mlr-intro.html#exercise-8-prediction",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 8: Prediction",
+    "text": "Exercise 8: Prediction\nNow that we better understand the model, let’s use it to predict flipper lengths! Recall the model summary and visualization:\n\ncoef(summary(penguin_mod))\n##                 Estimate Std. Error  t value     Pr(&gt;|t|)\n## (Intercept)   127.753693  6.1174521 20.88348 1.194472e-50\n## bill_len        1.402367  0.1249665 11.22194 1.194932e-22\n## speciesGentoo  22.848036  0.7938292 28.78206 1.981732e-70\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, color = species)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\nPredict the flipper length of a Chinstrap penguin with a 50mm long bill. Make sure your calculation is consistent with the plot.\n\n\n127.75 + 1.40*___ + 22.85*___\n## Error in parse(text = input): &lt;text&gt;:1:16: unexpected input\n## 1: 127.75 + 1.40*__\n##                    ^\n\n\nPredict the flipper length of a Gentoo penguin with a 50mm long bill. Make sure your calculation is consistent with the plot.\n\n\n127.75 + 1.40*___ + 22.85*___\n## Error in parse(text = input): &lt;text&gt;:1:16: unexpected input\n## 1: 127.75 + 1.40*__\n##                    ^\n\n\nUse the predict() function to confirm your predictions in parts a and b.\n\n\n# Confirm the calculation in part a\npredict(penguin_mod,\n        newdata = data.frame(bill_len = ___, species = \"___\"))\n\n# Confirm the calculation in part b\npredict(penguin_mod,\n        newdata = data.frame(bill_len = ___, species = \"___\"))\n## Error in parse(text = input): &lt;text&gt;:3:42: unexpected input\n## 2: predict(penguin_mod,\n## 3:         newdata = data.frame(bill_len = __\n##                                             ^"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-9-r-squared",
+    "href": "activities/08-mlr-intro.html#exercise-9-r-squared",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 9: R-squared",
+    "text": "Exercise 9: R-squared\nFinally, recall that improving our predictions was one motivation for multiple linear regression (using 2 predictors instead of 1). To this end, consider the R-squared values of the simple linear regression models that use just one predictor at a time:\n\nmod_bill &lt;- lm(flipper_len ~ bill_len, data = penguins)\nsummary(mod_bill)\n## \n## Call:\n## lm(formula = flipper_len ~ bill_len, data = penguins)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -30.441 -10.998   3.015   8.942  19.881 \n## \n## Coefficients:\n##             Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept) 177.4971    13.6676  12.987   &lt;2e-16 ***\n## bill_len      0.6712     0.2850   2.355   0.0195 *  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 11.91 on 187 degrees of freedom\n## Multiple R-squared:  0.02881,    Adjusted R-squared:  0.02362 \n## F-statistic: 5.548 on 1 and 187 DF,  p-value: 0.01954\n\nmod_species &lt;- lm(flipper_len ~ species, data = penguins)\nsummary(mod_species)\n## \n## Call:\n## lm(formula = flipper_len ~ species, data = penguins)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -18.045  -5.045  -1.045   3.955  15.955 \n## \n## Coefficients:\n##               Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   196.0448     0.8065  243.07   &lt;2e-16 ***\n## speciesGentoo  21.0372     1.0039   20.96   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 6.602 on 187 degrees of freedom\n## Multiple R-squared:  0.7014, Adjusted R-squared:  0.6998 \n## F-statistic: 439.2 on 1 and 187 DF,  p-value: &lt; 2.2e-16\n\n\nIf you had to use only 1 of our 2 predictors, which would give the better predictions of flipper_len?\nWhat do you guess is the R-squared of our multiple regression model that uses both of these predictors? Why?\nCheck your intuition. How does the R-squared of our multiple regression model compare to that of the 2 separate simple linear regression models?\n\n\nsummary(penguin_mod)\n## \n## Call:\n## lm(formula = flipper_len ~ bill_len + species, data = penguins)\n## \n## Residuals:\n##      Min       1Q   Median       3Q      Max \n## -15.4763  -3.2260  -0.1525   3.1581  15.5303 \n## \n## Coefficients:\n##               Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   127.7537     6.1175   20.88   &lt;2e-16 ***\n## bill_len        1.4024     0.1250   11.22   &lt;2e-16 ***\n## speciesGentoo  22.8480     0.7938   28.78   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 5.112 on 186 degrees of freedom\n## Multiple R-squared:  0.8219, Adjusted R-squared:   0.82 \n## F-statistic: 429.3 on 2 and 186 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-10-challenge-part-1",
+    "href": "activities/08-mlr-intro.html#exercise-10-challenge-part-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 10: Challenge Part 1",
+    "text": "Exercise 10: Challenge Part 1\nIn this activity, we explored the model of flipper_len by a quantitative predictor (bill_len) and a categorical predictor (species). Challenge yourself to anticipate what visualizations / models might be like with 2 quantitative predictors: bill_len and bill_dep.\n\nPart a\nFirst, let’s visualize the relationship of flipper_len with bill_len and bill_dep. To do so, start with the scatterplot of flipper_len and bill_len, and modify it. THINK: How might you change the points to reflect their corresponding bill_dep?\n\n# Do NOT include a geom_smooth (which wouldn't make sense here)\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\nPart b\nIn Part a, you represented a 3D point cloud in 2D. BONUS (just for fun & for better understanding that this is a 3D relationship): Visualize this same data in something more like 3D:\n\n# Don't worry about this code!\n# It's specialized to this exercise and we'll rarely use it\nlibrary(plotly)\npenguins %&gt;% \n  plot_ly(x = ~bill_len, y = ~bill_dep, z = ~flipper_len,\n          type = \"scatter3d\")\n\n\n\n\n\n\n\nPart c\nWe can think of your plot above as a 3D point cloud. And the estimated formula for the linear regression model is\nE[flipper_len | bill_len, bill_dep] = 179.2 + 2.38 bill_len - 5.15 bill_dep\n\nquant_model &lt;- lm(flipper_len ~ bill_len + bill_dep, penguins)\ncoef(summary(quant_model))\n##               Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept) 179.253095   9.429486  19.00985 1.819021e-45\n## bill_len      2.375849   0.229546  10.35021 4.071877e-20\n## bill_dep     -5.146782   0.357779 -14.38537 4.969102e-32\n\nQUESTION:\nThe model of flipper_len by bill_len and species is represented by 2 parallel lines. How would you draw / represent the model here?!\n\n\nPart d\nChallenge: Interpret the (Intercept) and bill_len coefficients. What physical meaning do they have, i.e. where do they come into the “drawing” of the model? What contextual meaning do they have?"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-11-challenge-part-2",
+    "href": "activities/08-mlr-intro.html#exercise-11-challenge-part-2",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 11: Challenge Part 2",
+    "text": "Exercise 11: Challenge Part 2\nNext, challenge yourself to anticipate what visualizations / models might be like with 2 categorical predictors: species and sex.\n\nPart a\nFirst, let’s visualize the relationship of flipper_len with species and sex. To do so, start with the side-by-side boxplots of flipper_len by species, and modify them.\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = species)) + \n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\nPart b\nThe estimated formula for the linear regression model is\nE[flipper_len | species, sex] = 191.8 + 21.07 speciesGentoo + 8.39 sexmale\n\ncat_model &lt;- lm(flipper_len ~ species + sex, penguins)\nsummary(cat_model)\n## \n## Call:\n## lm(formula = flipper_len ~ species + sex, data = penguins)\n## \n## Residuals:\n##      Min       1Q   Median       3Q      Max \n## -13.7881  -3.2501  -0.2501   3.2119  11.8237 \n## \n## Coefficients:\n##               Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   191.7881     0.7417  258.60   &lt;2e-16 ***\n## speciesGentoo  21.0739     0.7925   26.59   &lt;2e-16 ***\n## sexmale         8.3882     0.7619   11.01   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 5.181 on 182 degrees of freedom\n##   (4 observations deleted due to missingness)\n## Multiple R-squared:   0.82,  Adjusted R-squared:  0.818 \n## F-statistic: 414.5 on 2 and 182 DF,  p-value: &lt; 2.2e-16\n\nQUESTION:\nThe model of flipper_len by species alone would only produce 2 possible predictions, one for Chinstraps and one for Gentoos. What about the model here?! How many possible predictions would it make? HINT: Checking out the plot again might help.\n\n\nPart c\nChallenge: Interpret the (Intercept) and speciesGentoo coefficients. What physical meaning do they have, i.e. where do they come into the “drawing” of the model? What contextual meaning do they have?"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-1-visualizing-the-relationship-1",
+    "href": "activities/08-mlr-intro.html#exercise-1-visualizing-the-relationship-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 1: Visualizing the relationship",
+    "text": "Exercise 1: Visualizing the relationship\n\nThere are multiple options!\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, color = species)) + \n  geom_point()\n\n\n\n\n\n\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, shape = species)) + \n  geom_point()"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-2-visualizing-the-model-1",
+    "href": "activities/08-mlr-intro.html#exercise-2-visualizing-the-model-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 2: Visualizing the model",
+    "text": "Exercise 2: Visualizing the model\n\n\n\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len, color = species)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-3-intuition-1",
+    "href": "activities/08-mlr-intro.html#exercise-3-intuition-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 3: Intuition",
+    "text": "Exercise 3: Intuition\n\nGentoo tend to have longer flippers.\nFlipper length is positively associated with bill length.\nNo. the lines are parallel / have the same slopes."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-4-model-formula-1",
+    "href": "activities/08-mlr-intro.html#exercise-4-model-formula-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 4: Model formula",
+    "text": "Exercise 4: Model formula\n\nbill_len + species\nE[flipper_len | bill_len, speciesGentoo] = 127.75 + 1.40 * bill_len + 22.85 * speciesGentoo"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-5-sub-model-formulas-1",
+    "href": "activities/08-mlr-intro.html#exercise-5-sub-model-formulas-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 5: Sub-model formulas",
+    "text": "Exercise 5: Sub-model formulas\nChinstrap: flipper_len = 127.75 + 1.40 bill_len\nGentoo: flipper_len = (127.75 + 22.85) + 1.40 bill_len = 150.6 + 1.40 bill_len"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-6-coefficients-physical-interpretation-1",
+    "href": "activities/08-mlr-intro.html#exercise-6-coefficients-physical-interpretation-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 6: coefficients – physical interpretation",
+    "text": "Exercise 6: coefficients – physical interpretation\n\nThe intercept coefficient, 127.75, is the intercept of the line for Chinstrap penguins.\nThe bill_len coefficient, 1.40, is the slope of both lines.\nThe speciesGentoo coefficient, 22.85, indicates that the intercept of the line for Gentoo is 22.85mm higher than the intercept of the line for Chinstrap. Similarly, since the lines are parallel, the line for Gentoo is 22.85mm higher than the line for Chinstrap at any bill_len."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-7-coefficients-contextual-interpretation-1",
+    "href": "activities/08-mlr-intro.html#exercise-7-coefficients-contextual-interpretation-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 7: coefficients – contextual interpretation",
+    "text": "Exercise 7: coefficients – contextual interpretation\n\nFor both Chinstrap and Gentoo penguins, average flipper lengths increase by 1.40mm for every additional mm in bill length.\nAt any bill_len, the average flipper length for Gentoo penguins is 22.85mm longer than that for Chinstrap penguins."
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-8-prediction-1",
+    "href": "activities/08-mlr-intro.html#exercise-8-prediction-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 8: Prediction",
+    "text": "Exercise 8: Prediction\n\n# a\n127.75 + 1.40*50 + 22.85*0\n## [1] 197.75\n\n# b\n127.75 + 1.40*50 + 22.85*1\n## [1] 220.6\n\n# c\npredict(penguin_mod,\n        newdata = data.frame(bill_len = 50, \n                             species = \"Chinstrap\"))\n##       1 \n## 197.872\npredict(penguin_mod,\n        newdata = data.frame(bill_len = 50, \n                             species = \"Gentoo\"))\n##        1 \n## 220.7201"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-9-r-squared-1",
+    "href": "activities/08-mlr-intro.html#exercise-9-r-squared-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 9: R-squared",
+    "text": "Exercise 9: R-squared\n\nspecies\nno wrong answer\nIt’s higher than the R-squared when we use either predictor alone!"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-10-challenge-part-1-1",
+    "href": "activities/08-mlr-intro.html#exercise-10-challenge-part-1-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 10: Challenge Part 1",
+    "text": "Exercise 10: Challenge Part 1\nIn this activity, we explored the model of flipper_len by a quantitative predictor (bill_len) and a categorical predictor (species). Challenge yourself to anticipate what visualizations / models might be like with 2 quantitative predictors: bill_len and bill_dep.\n\nPart a\nFirst, let’s visualize the relationship of flipper_len with bill_len and bill_dep. To do so, start with the scatterplot of flipper_len and bill_len, and modify it. THINK: How might you change the points to reflect their corresponding bill_dep?\n\n# Do NOT include a geom_smooth (which wouldn't make sense here)\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = bill_len)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\nPart b\nIn Part a, you represented a 3D point cloud in 2D. BONUS (just for fun & for better understanding that this is a 3D relationship): Visualize this same data in something more like 3D:\n\n# Don't worry about this code!\n# It's specialized to this exercise and we'll rarely use it\nlibrary(plotly)\npenguins %&gt;% \n  plot_ly(x = ~bill_len, y = ~bill_dep, z = ~flipper_len,\n          type = \"scatter3d\")\n\n\n\n\n\n\n\nPart c\nWe can think of your plot above as a 3D point cloud. And the estimated formula for the linear regression model is\nE[flipper_len | bill_len, bill_dep] = 179.2 + 2.38 bill_len - 5.15 bill_dep\n\nquant_model &lt;- lm(flipper_len ~ bill_len + bill_dep, penguins)\ncoef(summary(quant_model))\n##               Estimate Std. Error   t value     Pr(&gt;|t|)\n## (Intercept) 179.253095   9.429486  19.00985 1.819021e-45\n## bill_len      2.375849   0.229546  10.35021 4.071877e-20\n## bill_dep     -5.146782   0.357779 -14.38537 4.969102e-32\n\nQUESTION:\nThe model of flipper_len by bill_len and species is represented by 2 parallel lines. How would you draw / represent the model here?!\n\n\nPart d\nChallenge: Interpret the (Intercept) and bill_len coefficients. What physical meaning do they have, i.e. where do they come into the “drawing” of the model? What contextual meaning do they have?"
+  },
+  {
+    "objectID": "activities/08-mlr-intro.html#exercise-11-challenge-part-2-1",
+    "href": "activities/08-mlr-intro.html#exercise-11-challenge-part-2-1",
+    "title": "Multiple Linear Regression - Intro",
+    "section": "Exercise 11: Challenge Part 2",
+    "text": "Exercise 11: Challenge Part 2\nNext, challenge yourself to anticipate what visualizations / models might be like with 2 categorical predictors: species and sex.\n\nPart a\nFirst, let’s visualize the relationship of flipper_len with species and sex. To do so, start with the side-by-side boxplots of flipper_len by species, and modify them.\n\npenguins %&gt;% \n  ggplot(aes(y = flipper_len, x = species)) + \n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\nPart b\nThe estimated formula for the linear regression model is\nE[flipper_len | species, sex] = 191.8 + 21.07 speciesGentoo + 8.39 sexmale\n\ncat_model &lt;- lm(flipper_len ~ species + sex, penguins)\nsummary(cat_model)\n## \n## Call:\n## lm(formula = flipper_len ~ species + sex, data = penguins)\n## \n## Residuals:\n##      Min       1Q   Median       3Q      Max \n## -13.7881  -3.2501  -0.2501   3.2119  11.8237 \n## \n## Coefficients:\n##               Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)   191.7881     0.7417  258.60   &lt;2e-16 ***\n## speciesGentoo  21.0739     0.7925   26.59   &lt;2e-16 ***\n## sexmale         8.3882     0.7619   11.01   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 5.181 on 182 degrees of freedom\n##   (4 observations deleted due to missingness)\n## Multiple R-squared:   0.82,  Adjusted R-squared:  0.818 \n## F-statistic: 414.5 on 2 and 182 DF,  p-value: &lt; 2.2e-16\n\nQUESTION:\nThe model of flipper_len by species alone would only produce 2 possible predictions, one for Chinstraps and one for Gentoos. What about the model here?! How many possible predictions would it make? HINT: Checking out the plot again might help.\n\n\nPart c\nChallenge: Interpret the (Intercept) and speciesGentoo coefficients. What physical meaning do they have, i.e. where do they come into the “drawing” of the model? What contextual meaning do they have?"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html",
+    "href": "activities/13+14-mlr-model-building.html",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#learning-goals",
+    "href": "activities/13+14-mlr-model-building.html#learning-goals",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of this lesson, you should be able to:\n\nExplain when variables are redundant or multicollinear.\nRelate redundancy and multicollinearity to coefficient estimates and \\(R^2\\).\nExplain why adjusted \\(R^2\\) is preferable to multiple \\(R^2\\) when comparing models with different numbers of predictors."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#readings-and-videos",
+    "href": "activities/13+14-mlr-model-building.html#readings-and-videos",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Readings and videos",
+    "text": "Readings and videos\nToday is a day to discover ideas, so no readings or videos to go through before class, but if you want to see today’s ideas presented in a different way, you can take a look at the following after class:\n\nReading: Section 3.9.5 in the STAT 155 Notes\nVideo: Redundancy and Multicollinearity\n\nFile organization: Save this file in the “Activities” subfolder of your “STAT155” folder."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-1-modeling-bill-length-by-flipper-length",
+    "href": "activities/13+14-mlr-model-building.html#exercise-1-modeling-bill-length-by-flipper-length",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 1: Modeling bill length by flipper length",
+    "text": "Exercise 1: Modeling bill length by flipper length\nWhat can a penguin’s flipper (arm) length tell us about their bill length? To answer this question, we’ll consider 3 of our models:\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_2\nflipper_len_cm\n\n\npenguin_model_3\nflipper_len + flipper_len_cm\n\n\n\nPlots of the first two models are below:\n\nlibrary(ggplot2)\nggplot(penguins, aes(y = bill_len, x = flipper_len)) + \n    geom_point() +\n    geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\nggplot(penguins, aes(y = bill_len, x = flipper_len_cm)) + \n    geom_point() +\n    geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\nBefore examining the model summaries, check your intuition. Do you think the penguin_model_2 R-squared will be less than, equal to, or more than that of penguin_model_1? Similarly, how do you think the penguin_model_3 R-squared will compare to that of penguin_model_1?\nCheck your intuition: Examine the R-squared values for the three penguin models and summarize how these compare.\n\n\nsummary(penguin_model_1)$r.squared\n## [1] 0.430574\nsummary(penguin_model_2)$r.squared\n## [1] 0.430574\nsummary(penguin_model_3)$r.squared\n## [1] 0.430574\n\n\nExplain why your observation in part b makes sense. Support your reasoning with a plot of just the 2 predictors: flipper_len vs flipper_len.\n\n\nggplot(penguins, aes(x = flipper_len, y = flipper_len_cm)) +\n    geom_point()\n\n\n\n\n\n\n\n\n\nOPTIONAL challenge: In summary(penguin_model_3), the flipper_len coefficient is NA. Explain why this makes sense. HINT: Thinking about what you learned about controlling for covariates, why wouldn’t it make sense to interpret this coefficient? BONUS: For those of you that have taken MATH 236, this has to do with matrices that are not of full rank!"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-2-incorporating-body_mass",
+    "href": "activities/13+14-mlr-model-building.html#exercise-2-incorporating-body_mass",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 2: Incorporating body_mass",
+    "text": "Exercise 2: Incorporating body_mass\nIn this exercise you’ll consider 3 models of bill_len:\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_4\nbody_mass\n\n\npenguin_model_5\nflipper_len + body_mass\n\n\n\n\nsummary(penguin_model_1)$r.squared\n## [1] 0.430574\nsummary(penguin_model_4)$r.squared\n## [1] 0.3541557\n\n\nWhich is the better predictor of bill_len: flipper_len or body_mass? Provide some numerical evidence.\npenguin_model_5 incorporates both flipper_len and body_mass as predictors. Before examining a model summary, ask your gut: Will the penguin_model_5 R-squared be close to 0.35, close to 0.43, or greater than 0.6?\nCheck your intuition. Report the penguin_model_5 R-squared and summarize how this compares to that of penguin_model_1 and penguin_model_4.\n\n\nsummary(penguin_model_5)$r.squared\n## [1] 0.4328544\n\n\nExplain why your observation in part c makes sense. Support your reasoning with a plot of the 2 predictors: flipper_len vs body_mass.\n\n\nggplot(penguins, aes(x = flipper_len, y = body_mass)) +\n    geom_point()"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-3-redundancy-and-multicollinearity",
+    "href": "activities/13+14-mlr-model-building.html#exercise-3-redundancy-and-multicollinearity",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 3: Redundancy and Multicollinearity",
+    "text": "Exercise 3: Redundancy and Multicollinearity\nThe exercises above have illustrated special phenomena in multivariate modeling:\n\ntwo predictors are redundant if they contain the same exact information\ntwo predictors are multicollinear if they are strongly associated (they contain very similar information) but are not completely redundant.\n\nRecall that we examined 5 models:\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_2\nflipper_len_cm\n\n\npenguin_model_3\nflipper_len + flipper_len_cm\n\n\npenguin_model_4\nbody_mass\n\n\npenguin_model_5\nflipper_len + body_mass\n\n\n\n\nWhich model had redundant predictors and which predictors were these?\nWhich model had multicollinear predictors and which predictors were these?\nIn general, what happens to the R-squared value if we add a redundant predictor to a model: will it decrease, stay the same, increase by a small amount, or increase by a significant amount?\nSimilarly, what happens to the R-squared value if we add a multicollinear predictor to a model: will it decrease, stay the same, increase by a small amount, or increase by a significant amount?"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-4-considerations-for-strong-models",
+    "href": "activities/13+14-mlr-model-building.html#exercise-4-considerations-for-strong-models",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 4: Considerations for strong models",
+    "text": "Exercise 4: Considerations for strong models\nLet’s dive deeper into important considerations when building a strong model. We’ll use a subset of the penguins data for exploring these ideas.\n\n# For illustration purposes only, take a sample of 10 penguins.\n# We'll discuss this code later in the course!\nset.seed(155)\npenguins_small &lt;- sample_n(penguins, size = 10) %&gt;%\n  mutate(flipper_len = jitter(flipper_len))\n\nConsider 3 models of bill length:\n\n# A model with one predictor (flipper_len)\npoly_mod_1 &lt;- lm(bill_len ~ flipper_len, penguins_small)\n\n# A model with two predictors (flipper_len and flipper_len^2)\npoly_mod_2 &lt;- lm(bill_len ~ poly(flipper_len, 2), penguins_small)\n\n# A model with nine predictors (flipper_len, flipper_len^2, ... on up to flipper_len^9)\npoly_mod_9 &lt;- lm(bill_len ~ poly(flipper_len, 9), penguins_small)\n\n\nBefore doing any analysis, which of the three models do you think will be best?\nCalculate the R-squared values of these 3 models. Which model do you think is best?\n\n\nsummary(poly_mod_1)$r.squared\n## [1] 0.7341412\nsummary(poly_mod_2)$r.squared\n## [1] 0.7630516\nsummary(poly_mod_9)$r.squared\n## [1] 1\n\n\nCheck out plots depicting the relationship estimated by these 3 models. Which model do you think is best?\n\n\n# A plot of model 1\nggplot(penguins_small, aes(y = bill_len, x = flipper_len)) + \n    geom_point() + \n    geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\n# A plot of model 2\nggplot(penguins_small, aes(y = bill_len, x = flipper_len)) + \n    geom_point() + \n    geom_smooth(method = \"lm\", formula = y ~ poly(x, 2), se = FALSE)\n\n\n\n\n\n\n\n\n\n# A plot of model 9\nggplot(penguins_small, aes(y = bill_len, x = flipper_len)) + \n    geom_point() + \n    geom_smooth(method = \"lm\", formula = y ~ poly(x, 9), se = FALSE)"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-5-reflecting-on-these-investigations",
+    "href": "activities/13+14-mlr-model-building.html#exercise-5-reflecting-on-these-investigations",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 5: Reflecting on these investigations",
+    "text": "Exercise 5: Reflecting on these investigations\n\nList 3 of your favorite foods. Now imagine making a dish that combines all of these foods. Do you think it would taste good?\nToo many good things doesn’t make necessarily make a better thing. Model 9 demonstrates that it’s always possible to get a perfect R-squared of 1, but there are drawbacks to putting more and more predictors into our model. Answer the following about model 9:\n\nHow easy would it be to interpret this model?\nWould you say that this model captures the general trend of the relationship between bill_len and flipper_len?\nHow well do you think this model would generalize to penguins that were not included in the penguins_small sample? For example, would you expect these new penguins to fall on the wiggly model 9 curve?"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-6-overfitting",
+    "href": "activities/13+14-mlr-model-building.html#exercise-6-overfitting",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 6: Overfitting",
+    "text": "Exercise 6: Overfitting\nModel 9 provides an example of a model that is overfit to our sample data. That is, it picks up the tiny details of our data at the cost of losing the more general trends of the relationship of interest. Check out the following xkcd comic. Which plot pokes fun at overfitting?\n\nSome other goodies:"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-7-questioning-r-squared",
+    "href": "activities/13+14-mlr-model-building.html#exercise-7-questioning-r-squared",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 7: Questioning R-squared",
+    "text": "Exercise 7: Questioning R-squared\nZooming out, explain some limitations of relying on R-squared to measure the strength / usefulness of a model."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-8-adjusted-r-squared",
+    "href": "activities/13+14-mlr-model-building.html#exercise-8-adjusted-r-squared",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 8: Adjusted R-squared",
+    "text": "Exercise 8: Adjusted R-squared\nWe’ve seen that, unless a predictor is redundant with another, R-squared will increase. Even if that predictor is strongly multicollinear with another. Even if that predictor isn’t a good predictor! Thus if we only look at R-squared we might get overly greedy. We can check our greedy impulses a few ways. We take a more in depth approach in STAT 253, but one quick alternative is reported right in our model summary() tables. Adjusted R-squared includes a penalty for incorporating more and more predictors. Mathematically (where \\(n\\) is the sample size and \\(p\\) is the number of non-intercept coefficients):\n\\[\n\\text{Adjusted } R^2 = 1 - (1 - R^2) \\left( \\frac{n-1}{n-p-1} \\right)\n\\]\nThus unlike R-squared, Adjusted R-squared can decrease when the information that a predictor contributes to a model isn’t enough to offset the complexity it adds to that model. Consider two models:\n\nexample_1 &lt;- lm(bill_len ~ species, penguins)\nexample_2 &lt;- lm(bill_len ~ species + island, penguins)\nsummary(example_1)\n## \n## Call:\n## lm(formula = bill_len ~ species, data = penguins)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -7.9338 -2.2049  0.0086  2.0662 12.0951 \n## \n## Coefficients:\n##                  Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)       38.7914     0.2409  161.05   &lt;2e-16 ***\n## speciesChinstrap  10.0424     0.4323   23.23   &lt;2e-16 ***\n## speciesGentoo      8.7135     0.3595   24.24   &lt;2e-16 ***\n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 2.96 on 339 degrees of freedom\n##   (2 observations deleted due to missingness)\n## Multiple R-squared:  0.7078, Adjusted R-squared:  0.7061 \n## F-statistic: 410.6 on 2 and 339 DF,  p-value: &lt; 2.2e-16\nsummary(example_2)\n## \n## Call:\n## lm(formula = bill_len ~ species + island, data = penguins)\n## \n## Residuals:\n##     Min      1Q  Median      3Q     Max \n## -7.9338 -2.2049 -0.0049  2.0951 12.0951 \n## \n## Coefficients:\n##                  Estimate Std. Error t value Pr(&gt;|t|)    \n## (Intercept)      38.97500    0.44697  87.198   &lt;2e-16 ***\n## speciesChinstrap 10.33204    0.53502  19.312   &lt;2e-16 ***\n## speciesGentoo     8.52988    0.52082  16.378   &lt;2e-16 ***\n## islandDream      -0.47321    0.59729  -0.792    0.429    \n## islandTorgersen  -0.02402    0.61004  -0.039    0.969    \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 2.965 on 337 degrees of freedom\n##   (2 observations deleted due to missingness)\n## Multiple R-squared:  0.7085, Adjusted R-squared:  0.7051 \n## F-statistic: 204.8 on 4 and 337 DF,  p-value: &lt; 2.2e-16\n\n\nCheck out the summaries for the 2 example models. In general, how does a model’s Adjusted R-squared compare to the R-squared? Is it greater, less than, or equal to the R-squared?\nHow did the R-squared change from example model 1 to model 2? How did the Adjusted R-squared change?\nExplain what it is about island that resulted in a decreased Adjusted R-squared. Note: it’s not necessarily the case that island is a bad predictor on its own!"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-1-modeling-bill-length-by-flipper-length-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-1-modeling-bill-length-by-flipper-length-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 1: Modeling bill length by flipper length",
+    "text": "Exercise 1: Modeling bill length by flipper length\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_2\nflipper_len\n\n\npenguin_model_3\nflipper_len + flipper_len\n\n\n\nPlots of the first two models are below:\n\nggplot(penguins, aes(y = bill_len, x = flipper_len)) + \n    geom_point() +\n    geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\nggplot(penguins, aes(y = bill_len, x = flipper_len)) + \n    geom_point() +\n    geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\nYour intuition–answers will vary\nThe R-squared values are all the same!\n\n\nsummary(penguin_model_1)$r.squared\n## [1] 0.430574\nsummary(penguin_model_2)$r.squared\n## [1] 0.430574\nsummary(penguin_model_3)$r.squared\n## [1] 0.430574\n\n\nThe two variables are perfectly linearly correlated—they contain exactly the same information!\n\n\nggplot(penguins, aes(x = flipper_len, y = flipper_len)) +\n    geom_point()\n\n\n\n\n\n\n\n\n\nAn NA means that the coefficient couldn’t be estimated. In penguin_model_3, the interpretation of the flipper_len coefficient is the average change in bill length per centimeter change in flipper length, while holding flipper length in millimeters constant…this is impossible! We can’t hold flipper length in millimeters fixed while varying flipper length in centimeters—if one changes the other must. (In linear algebra terms, the matrix underlying our data is not of full rank.)"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-2-incorporating-body_mass-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-2-incorporating-body_mass-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 2: Incorporating body_mass",
+    "text": "Exercise 2: Incorporating body_mass\nIn this exercise you’ll consider 3 models of bill_len:\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_4\nbody_mass\n\n\npenguin_model_5\nflipper_len + body_mass\n\n\n\n\nflipper_len is a better predictor than body_mass because penguin_model_1 has an R-squared value of 0.4306 vs 0.3542 for penguin_model_4.\nIntuition check–answers will vary\nR-squared is for penguin_model_5 which is slightly higher than that of penguin_model_1 and penguin_model_4.\n\nd.flipper_len and body_mass are positively correlated and thus contain related information, but not completely redundant information. There’s some information in flipper length in explaining bill length that isn’t captured by body mass, and vice-versa.\n\nggplot(penguins, aes(x = flipper_len, y = body_mass)) +\n    geom_point()"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-3-redundancy-and-multicollinearity-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-3-redundancy-and-multicollinearity-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 3: Redundancy and Multicollinearity",
+    "text": "Exercise 3: Redundancy and Multicollinearity\n\n\n\nmodel\npredictors\n\n\n\n\npenguin_model_1\nflipper_len\n\n\npenguin_model_2\nflipper_len\n\n\npenguin_model_3\nflipper_len + flipper_len\n\n\npenguin_model_4\nbody_mass\n\n\npenguin_model_5\nflipper_len + body_mass\n\n\n\n\npenguin_model_3 had redundant predictors: `flipper_len and flipper_len\npenguin_model_5 had multicollinear predictors: flipper_len and body_mass were related but not redundant\nR-squared will stay the same if we add a redundant predictor to a model.\nR-squared will increase by a small amount if we add a multicollinear predictor to a model."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-4-considerations-for-strong-models-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-4-considerations-for-strong-models-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 4: Considerations for strong models",
+    "text": "Exercise 4: Considerations for strong models\n\nA gut check! Answers will vary\nBased on R-squared: recall that R-squared is interpreted as the proportion of variation in the outcome that our model explains. It would seem that higher is better, so poly_mod_9 might seem to be the best. BUT we’ll see where this reasoning is flawed soon!\nBased on the plots: Answers will vary"
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-5-reflecting-on-these-investigations-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-5-reflecting-on-these-investigations-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 5: Reflecting on these investigations",
+    "text": "Exercise 5: Reflecting on these investigations\n\nsalmon, chocolate, samosas. Together? Yuck!\nRegarding model 9:\n\nNOT easy to interpret.\nNO. It’s much more wiggly than the general trend.\nNOT WELL. It is too tailored to our data."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-6-overfitting-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-6-overfitting-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 6: Overfitting",
+    "text": "Exercise 6: Overfitting\nThe bottom left plot pokes fun at overfitting."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-7-questioning-r-squared-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-7-questioning-r-squared-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 7: Questioning R-squared",
+    "text": "Exercise 7: Questioning R-squared\nIt measures how well our model explains / predicts our sample data, not how well it explains / predicts the broader population. It also has the feature that any non-redundant predictor added to a model will increase the R-squared."
+  },
+  {
+    "objectID": "activities/13+14-mlr-model-building.html#exercise-8-adjusted-r-squared-1",
+    "href": "activities/13+14-mlr-model-building.html#exercise-8-adjusted-r-squared-1",
+    "title": "Multiple Linear Regression - Model Building",
+    "section": "Exercise 8: Adjusted R-squared",
+    "text": "Exercise 8: Adjusted R-squared\n\nAdjusted R-squared is less than the R-squared\nFrom model 1 to 2, R-squared increased and Adjusted R-squared decreased.\nisland didn’t provide useful information about bill length beyond what was already provided by species."
+  },
+  {
+    "objectID": "activities/Exam2.html",
+    "href": "activities/Exam2.html",
+    "title": "Midterm Exam 02",
+    "section": "",
+    "text": "Download the Exam 2 Announcement and carefully review the announcement.\n\n\n\n\n\n\n\nExam 2 Review",
+    "crumbs": [
+      "Midterm Exam 02"
+    ]
+  },
+  {
+    "objectID": "activities/Exam2.html#announcement",
+    "href": "activities/Exam2.html#announcement",
+    "title": "Midterm Exam 02",
+    "section": "",
+    "text": "Download the Exam 2 Announcement and carefully review the announcement.",
+    "crumbs": [
+      "Midterm Exam 02"
+    ]
+  },
+  {
+    "objectID": "activities/Exam2.html#review",
+    "href": "activities/Exam2.html#review",
+    "title": "Midterm Exam 02",
+    "section": "",
+    "text": "Exam 2 Review",
+    "crumbs": [
+      "Midterm Exam 02"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html",
+    "href": "activities/Unit-03-Probability.html",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#handouts",
+    "href": "activities/Unit-03-Probability.html#handouts",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Download the Unit 03 Handout: Probability before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#practice-problems",
+    "href": "activities/Unit-03-Probability.html#practice-problems",
+    "title": "Unit 03: Probability",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 03 Practice Problems are available under the Practice Problems tab on the course website. The solutions are provided in Canvas.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 03: Probability"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-03-Probability.html#class-notes",
+    "href": "activities/Unit-03-Probability.html#class-notes",
+    "title": "Unit 03: Probability",
     "section": "Class Notes",
     "text": "Class Notes\n\nLive class lecture notes\nI usually post the class notes on Canvas by the end of the day. If you don’t see it, shoot me an email next day!",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-expected-value-of-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Expected Value of Linear Transformation",
-    "text": "Proof: Expected Value of Linear Transformation\n\n\nLet \\(a\\) and \\(b\\) be constants.\nWe want to show that\n\n\\[\nE(aX+b)=aE(X)+b.\n\\]\n\nStart from the definition of expected value:\n\n\\[\nE(aX+b)\n=\n\\sum (ax+b)p(x).\n\\]\n\nDistribute inside the summation:\n\n\\[\nE(aX+b)\n=\n\\sum axp(x)\n+\n\\sum bp(x).\n\\]\n\nSince \\(a\\) and \\(b\\) are constants, they can be taken outside the summations:\n\n\\[\nE(aX+b)\n=\na\\sum xp(x)\n+\nb\\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum xp(x)=E(X)\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nE(aX+b)\n=\naE(X)+b(1).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nE(aX+b)=aE(X)+b\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "href": "activities/Unit-03-Probability.html#coin-toss-applet",
+    "title": "Unit 03: Probability",
+    "section": "Coin Toss Applet",
+    "text": "Coin Toss Applet\n\nRossman/Chance Coin Tossing Simulation",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "href": "activities/Unit-04-Discrete.html#variance-of-a-discrete-random-variable",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Variance of a Discrete Random Variable",
-    "text": "Variance of a Discrete Random Variable\n\n\nRecall that the variance of a discrete random variable \\(X\\) is\n\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 P(X=x).\n\\]\n\nSince\n\n\\[\nP(X=x)=p(x),\n\\]\nwe can write\n\\[\nV(X)\n=\n\\sum (x-\\mu)^2 p(x).\n\\]\n\nExpand the squared term:\n\n\\[\nV(X)\n=\n\\sum (x^2-2\\mu x+\\mu^2)p(x).\n\\]\n\nDistribute \\(f(x)\\):\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu \\sum x p(x)\n+\n\\mu^2 \\sum p(x).\n\\]\n\nRecall that\n\n\\[\n\\sum x p(x)=E(X)=\\mu\n\\]\nand\n\\[\n\\sum p(x)=1.\n\\]\n\nTherefore,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)\n-\n2\\mu(\\mu)\n+\n\\mu^2(1).\n\\]\n\nHence,\n\n\\[\nV(X)\n=\n\\sum x^2 p(x)-\\mu^2.\n\\]\n\nSince\n\n\\[\nE(X^2)=\\sum x^2 p(x),\n\\]\nwe obtain the useful variance formula\n\\[\n\\boxed{\nV(X)=E(X^2)-[E(X)]^2\n}\n\\]",
+    "objectID": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "href": "activities/Unit-03-Probability.html#interpretation-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Interpretation of Probability",
+    "text": "Interpretation of Probability\n\n\nExamples:\n\n“The chance of getting 1 when rolling a die is \\(1/6 = 16.7\\%\\).”\nMeaning: If we roll a die many times under the same conditions, we would get 1 roughly \\(16.7\\%\\) of the time.\n“The chance that a light bulb lasts longer than 2 years is \\(72\\%\\).”\nMeaning: If we turn on many light bulbs under the same conditions, about \\(72\\%\\) of them would last longer than 2 years.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "href": "activities/Unit-04-Discrete.html#proof-variance-of-a-linear-transformation",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Proof: Variance of a Linear Transformation",
-    "text": "Proof: Variance of a Linear Transformation\n\n\nWe want to show that\n\n\\[\nV(aX+b)=a^2V(X).\n\\]\n\nBy the definition of variance,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\n(ax+b)-E(aX+b)\n\\right]^2\np(x).\n\\]\n\nUsing\n\n\\[\nE(aX+b)=aE(X)+b,\n\\]\nwe get\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax+b-aE(X)-b\n\\right]^2\np(x).\n\\]\n\nSimplifying,\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\nax-aE(X)\n\\right]^2\np(x).\n\\]\n\nFactor out \\(a\\):\n\n\\[\nV(aX+b)\n=\n\\sum\n\\left[\na(x-E(X))\n\\right]^2\np(x).\n\\]\n\nTherefore,\n\n\\[\nV(aX+b)\n=\n\\sum\na^2\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nSince \\(a^2\\) is a constant,\n\n\\[\nV(aX+b)\n=\na^2\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x).\n\\]\n\nBut\n\n\\[\n\\sum\n\\left[\nx-E(X)\n\\right]^2\np(x)\n=\nV(X).\n\\]\n\nHence,\n\n\\[\n\\boxed{\nV(aX+b)=a^2V(X)\n}\n\\]\n\nThe other two properties are special cases:\n\n\\[\nV(aX)=a^2V(X)\n\\]\nwhen \\(b=0\\), and\n\\[\nV(X+b)=V(X)\n\\]\nwhen \\(a=1\\).",
+    "objectID": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "href": "activities/Unit-03-Probability.html#axioms-of-probability",
+    "title": "Unit 03: Probability",
+    "section": "Axioms of Probability",
+    "text": "Axioms of Probability\n\n\nThe axioms of probability are properties that we intuitively expect a probability to have.\nAll probability theory is built on these axioms.\nThe mathematical foundations of probability, including these axioms, were laid out by Andrey Kolmogorov in 1933.",
     "crumbs": [
-      "Unit 04: Discrete Random Variable"
+      "Unit 03: Probability"
     ]
   },
   {
-    "objectID": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "href": "activities/Unit-04-Discrete.html#simulating-roulette",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Simulating Roulette!",
-    "text": "Simulating Roulette!\n\n\n\n\n\nOne Player - 250 Games.\n\n\n\n\n\n\n\n\n\nTen Players - 250 Games.",
-    "crumbs": [
-      "Unit 04: Discrete Random Variable"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "href": "activities/Unit-04-Discrete.html#bernoulli-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Bernoulli Distribution",
-    "text": "Bernoulli Distribution\n\nIdea\n\n\nA Bernoulli experiment has exactly two possible outcomes.\nOne outcome is called success, and the other is called failure.\n\nFor example, we can define “rolling a six” as a success.\nWe can define “an item is defective” as a success.\n\nLet \\(p\\) be the probability that the experiment results in a success.\nDefine the discrete random variable\n\n\\[\nX=\n\\begin{cases}\n1, & \\text{if the experiment is a success},\\\\\n0, & \\text{if the experiment is a failure}.\n\\end{cases}\n\\]\n\nThen\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nTherefore, the probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\n\n\nFormula\n\n\nA discrete random variable \\(X\\) has the Bernoulli distribution with parameter \\(p\\) (A parameter is a fixed number that describes or controls a probability distribution) if\n\n\\[\nP(X=1)=p\n\\]\nand\n\\[\nP(X=0)=1-p.\n\\]\n\nThe probability mass function (PMF) of \\(X\\) is\n\n\\[\np(x)=\n\\begin{cases}\np, & x=1,\\\\\n1-p, & x=0.\n\\end{cases}\n\\]\n\nEquivalently,\n\n\\[\np(x)=p^x(1-p)^{1-x},\n\\qquad x=0,1.\n\\]\n\nThe parameter \\(p\\) can be any number between \\(0\\) and \\(1\\).\nThe mean and variance are\n\n\\[\nE(X)=p\n\\]\nand\n\\[\nV(X)=p(1-p).\n\\]\n\n\n\nBernoulli Trials\n\n\nA sequence of independent Bernoulli experiments with the same probability of success \\(p\\) is called a sequence of Bernoulli trials.\nExamples:\n\nTossing a coin 10 times.\nRolling a die 8 times and recording each time whether we get a six.\nInspecting 50 manufactured items for defects.\n\nWith Bernoulli trials, we are usually interested in the total number of successes.\nFor example:\n\nOut of 10 tosses, how many heads did we get?\nHow many sixes did we get in 8 rolls of a die?\nOut of 50 manufactured items, how many are defective?\n\n\n\n\n\nBernoulli Trials: Example\n\n\nSuppose \\(n=5\\) items are manufactured independently of each other.\nDefine:\n\n\\(B=\\) success (defect)\n\\(A=\\) failure (no defect)\n\nSuppose the probability of a defect is\n\n\\[\np=0.05.\n\\]\n\nLet\n\n\\[\nX_i=\n\\begin{cases}\n1, & \\text{if the }i\\text{th item is defective},\\\\\n0, & \\text{otherwise}.\n\\end{cases}\n\\]\n\nLet\n\n\\[\nY=\\text{total number of defects}.\n\\]\n\nTherefore,\n\n\\[\nY=X_1+X_2+X_3+X_4+X_5.\n\\]\n\nThe possible values of \\(Y\\) are\n\n\\[\nY=\\{0,1,2,3,4,5\\}.\n\\]\n\n\n\nBernoulli Trials: Possible Outcomes\n\n\nThe table below shows all possible outcomes of the five Bernoulli trials and the corresponding value of \\(Y\\).\n\n\n\n\nOutcome\n\\(Y\\)\nOutcome\n\\(Y\\)\n\n\n\n\nAAAAA\n0\nAAAAB\n1\n\n\nBAAAA\n1\nBAAAB\n2\n\n\nABAAA\n1\nABAAB\n2\n\n\nBBAAA\n2\nBBAAB\n3\n\n\nAABAA\n1\nAABAB\n2\n\n\nBABAA\n2\nBABAB\n3\n\n\nABBAA\n2\nABBAB\n3\n\n\nBBBAA\n3\nBBBAB\n4\n\n\nAAABA\n1\nAAABB\n2\n\n\nBAABA\n2\nBAABB\n3\n\n\nABABA\n2\nABABB\n3\n\n\nBBABA\n3\nBBABB\n4\n\n\nAABBA\n2\nAABBB\n3\n\n\nBABBA\n3\nBABBB\n4\n\n\nABBBA\n3\nABBBB\n4\n\n\nBBBBA\n4\nBBBBB\n5\n\n\n\n\n\n\nBernoulli Trials: Probability of an Outcome\n\n\nThe Bernoulli random variables \\(X_i\\) are independent.\nTherefore, using basic probability rules we get,\n\n\\[\n\\begin{aligned}\nP(AABAB)\n&= P(X_1=0 \\text{ and } X_2=0 \\text{ and } X_3=1 \\text{ and } X_4=0 \\text{ and } X_5=1) \\\\\n&= P(X_1=0)P(X_2=0)P(X_3=1)P(X_4=0)P(X_5=1) \\\\\n&= (0.95)(0.95)(0.05)(0.95)(0.05) \\\\\n&= 0.05^2(0.95)^3.\n\\end{aligned}\n\\]\n\nSimilarly,\n\n\\[\nP(BAAAB)=0.05^2(0.95)^3.\n\\]\n\nThus, the probability of each particular outcome containing exactly 2 defects is\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials: Number of Outcomes\n\n\nWe want to find\n\n\\[\nP(Y=2).\n\\]\n\nEach particular outcome containing exactly 2 defects has probability\n\n\\[\n0.05^2(0.95)^3.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n(\\text{number of outcomes with 2 defects})\n\\times\n0.05^2(0.95)^3.\n\\]\n\nHow many different outcomes of 5 items contain exactly 2 defects?\n\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n10.\n\\]\n\nTherefore,\n\n\\[\nP(Y=2)\n=\n\\binom{5}{2}(0.05)^2(0.95)^3.\n\\]\n\n\n\nBernoulli Trials Leading to ?\n\n\nWe can group all possible outcomes of the Bernoulli trials according to the value of \\(Y\\).\nThe probability mass function of \\(Y\\) is\n\n\\[\nP(Y=0)\n=\n1(0.05)^0(0.95)^5,\n\\]\n\\[\nP(Y=1)\n=\n5(0.05)^1(0.95)^4,\n\\]\n\\[\nP(Y=2)\n=\n10(0.05)^2(0.95)^3,\n\\]\n\\[\nP(Y=3)\n=\n10(0.05)^3(0.95)^2,\n\\]\n\\[\nP(Y=4)\n=\n5(0.05)^4(0.95)^1,\n\\]\nand\n\\[\nP(Y=5)\n=\n1(0.05)^5(0.95)^0.\n\\]\n\nTherefore, the PMF of \\(Y\\) can be written as\n\n\\[\nP(Y=x)\n=\n\\binom{5}{x}\n(0.05)^x\n(0.95)^{5-x},\n\\qquad\nx=0,1,\\ldots,5.\n\\]\n\nThe distribution of \\(Y\\) is called the Binomial distribution.",
-    "crumbs": [
-      "Unit 04: Discrete Random Variable"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-distribution",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Distribution",
-    "text": "Hypergeometric Distribution\n\n\nA set of \\(N\\) objects contains:\n\n\\(K\\) objects classified as successes\n\\(N-K\\) objects classified as failures\n\nA sample of size \\(n\\) is selected randomly without replacement from the \\(N\\) objects, where \\(K\\leq N\\) and \\(n\\leq N\\).\nLet the random variable \\(X\\) denote the number of successes in the sample.\nThen \\(X\\) is a hypergeometric random variable with probability mass function\n\n\\[\nP(X=x)\n=\n\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}\n{\\binom{N}{n}},\n\\]\nwhere\n\\[\nx=\\max(0,n+K-N),\\ldots,\\min(K,n).\n\\]",
-    "crumbs": [
-      "Unit 04: Discrete Random Variable"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "href": "activities/Unit-04-Discrete.html#hypergeometric-mean-and-variance",
-    "title": "Unit 04: Discrete Random Variable",
-    "section": "Hypergeometric Mean and Variance",
-    "text": "Hypergeometric Mean and Variance\n\n\nIf \\(X\\) is a hypergeometric random variable with parameters \\(N\\), \\(K\\), and \\(n\\), then\n\n\\[\n\\mu=E(X)=np,\n\\]\nand\n\\[\n\\sigma^2=V(X)\n=\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right),\n\\]\nwhere\n\\[\np=\\frac{K}{N}.\n\\]\n\nThe quantity\n\n\\[\n\\frac{N-n}{N-1}\n\\]\nis called the finite population correction factor.\n\nTherefore,\n\n\\[\n\\sigma\n=\n\\sqrt{\nnp(1-p)\n\\left(\n\\frac{N-n}{N-1}\n\\right)\n}.\n\\]\n\nAs the sampling fraction \\(n/N\\) becomes small, the hypergeometric variance approaches the corresponding binomial variance.",
-    "crumbs": [
-      "Unit 04: Discrete Random Variable"
-    ]
-  },
-  {
-    "objectID": "activities/Unit-07-Confidence-Interval.html",
-    "href": "activities/Unit-07-Confidence-Interval.html",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-06-Normal-CTL.html",
+    "href": "activities/Unit-06-Normal-CTL.html",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\n\nExplore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
+    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#handouts",
-    "href": "activities/Unit-07-Confidence-Interval.html#handouts",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-06-Normal-CTL.html#handouts",
+    "href": "activities/Unit-06-Normal-CTL.html#handouts",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Unit 07 Handout: Confidence Interval before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "text": "Download the Unit 06 Handout: Normal Distribution & CTL before class and bring it with you.\nIn the class I have provided a copy of Tables 1. If you have missed the class, meet me after the class or in mu OH to get a copy of the tables.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
-    "href": "activities/Unit-07-Confidence-Interval.html#lecture-notes",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "href": "activities/Unit-06-Normal-CTL.html#lecture-notes",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Download the Lecture Notes Unit 07: Confidence Interval – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "text": "Download the Lecture Notes Unit 06A: Normal Distribution and Lecture Notes Unit 06B: Central Limit Theorem – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#practice-problems",
-    "href": "activities/Unit-07-Confidence-Interval.html#practice-problems",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-06-Normal-CTL.html#practice-problems",
+    "href": "activities/Unit-06-Normal-CTL.html#practice-problems",
+    "title": "Unit 06: Normal Distribution & Central Limit Theorem",
     "section": "",
-    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 07 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 06 Practice Problems will be posted soon\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 06: Normal Distribution & Central Limit Theorem"
     ]
   },
   {
-    "objectID": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
-    "href": "activities/Unit-07-Confidence-Interval.html#confidence-interval-simulation-applet",
-    "title": "Unit 07: Confidence Interval",
+    "objectID": "activities/Unit-08-Hypothesis.html",
+    "href": "activities/Unit-08-Hypothesis.html",
+    "title": "Unit 08: Hypothesis Testing",
     "section": "",
-    "text": "Explore confidence intervals using the Confidence Interval Simulation Applet.\nPay attention to which intervals capture the true population parameter and which do not.\nWhat happens to the interval when you increae or decrease the sample size?",
+    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.\n\n\n\n\n\n\n\nDownload the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.\n\n\n\n\n\n\nPractice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.\n\n\n\n\n\n\nMake sure you are synchronized in a group of at least two students and ready to start discussing.\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 2 different parameters (significance level, and sample size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nOptional: The effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_a\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.",
     "crumbs": [
-      "Unit 07: Confidence Interval"
+      "Unit 08: Hypothesis Testing"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08-Hypothesis.html#handouts",
+    "href": "activities/Unit-08-Hypothesis.html#handouts",
+    "title": "Unit 08: Hypothesis Testing",
+    "section": "",
+    "text": "Download the Unit 08 Handout: Hypothesis Testing before class and bring it with you.\nI will continue to post additional handouts as we progress through the course. Please watch for Canvas Announcements when a new handout becomes available.\nIt is very important that you bring the appropriate handout to class regularly, either as a printed copy or on your writing device.",
+    "crumbs": [
+      "Unit 08: Hypothesis Testing"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08-Hypothesis.html#lecture-notes",
+    "href": "activities/Unit-08-Hypothesis.html#lecture-notes",
+    "title": "Unit 08: Hypothesis Testing",
+    "section": "",
+    "text": "Download the Lecture Notes Unit 08: Hypothesis Testing – review the covered topics thoroughly after class. These lecture notes provide a more detailed and elaborated version of the material covered during class.\nFor units where Lecture Notes are provided, they should serve as one of your core course resources. Together with your Class Notes, handouts, practice problems, and activity materials available on the course website, they provide a comprehensive foundation for preparing for quizzes, homework assignments, and exams.\nYou do not need to print the lecture notes or bring a printed copy to class. Save the printing money and buy yourself a treat instead! :)\n\n-When lecture notes are available, please follow this order when studying:\n\nClass Notes/Handouts: Your primary resource. These reflect exactly what we discuss, emphasize, and use in class.\nLecture Notes/Activities in course website: Your main supplementary (required) resource. Use these for additional explanations, details, examples, and review after class.\nTextbook: Use it when you would like to deepen your understanding or go through some additional (optional) resource.\n\nAlways prioritize the Class Notes (+Handouts) if you notice any difference in notation, terminology, approach, or emphasis between the Class Notes and the Lecture Notes. Occasionally, I may present a concept or use notation slightly differently in class. I will also do my best to point out any important discrepancies as we move through the semester.",
+    "crumbs": [
+      "Unit 08: Hypothesis Testing"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08-Hypothesis.html#practice-problems",
+    "href": "activities/Unit-08-Hypothesis.html#practice-problems",
+    "title": "Unit 08: Hypothesis Testing",
+    "section": "",
+    "text": "Practice Problems (PP) are essential for strengthening your understanding, building confidence, and exploring the concepts covered in class.\nThe Unit 08 Practice Problems are available in Practice Problems tab of the course website.\nComplete the relevant Practice Problems as we progress through the unit.\nMake sure you have completed and reviewed the Practice Problems before attempting the corresponding HW assignment.",
+    "crumbs": [
+      "Unit 08: Hypothesis Testing"
+    ]
+  },
+  {
+    "objectID": "activities/Unit-08-Hypothesis.html#power-group-work",
+    "href": "activities/Unit-08-Hypothesis.html#power-group-work",
+    "title": "Unit 08: Hypothesis Testing",
+    "section": "",
+    "text": "Make sure you are synchronized in a group of at least two students and ready to start discussing.\n\nRecall: Via our chosen significance level (typically 0.05), we control the Type I error rate:\nP(Type I error) = P(reject \\(H_0\\) | \\(H_0\\) is actually true) = 0.05\nWe have less control over the Type II error rate:\nP(Type II error) = P(fail to reject \\(H_0\\) | \\(H_0\\) actually false) = ???\nAn important related concept is that of statistical power, the true positive rate. Specifically, power is the probability of (correctly!) rejecting \\(H_0\\) when \\(H_0\\) is actually false:\npower = P(reject \\(H_0\\) | \\(H_0\\) actually false) = 1 - P(Type II error)\nLess formally, statistical power is the probability of detecting a relationship when there truly is a relationship. Thus power is a good thing!! We want it to be as high as possible!! Mainly, if an effect exists, we want there to be a high chance that we detect it.\nUnfortunately, we can’t control power. It’s influenced by various factors. Navigate to this page to check out an interactive visualization of the factors that influence statistical power.\nUnder “Settings”, next to the “Solve for?” text, click “Power”. You will vary the 2 different parameters (significance level, and sample size) one at a time to understand how these factors affect power.\nSome context behind this interactive visualization:\n\nVisualization is based on a one sample Z-test:\nThis is a test for whether the true population mean equals a particular value. (e.g., true mean = 30)\nOptional: The effect size slider is measured with a metric called Cohen’s d:\n\nCohen’s d = magnitude of effect/standard deviation of response variable\nHere: how far is the true mean from the null value in units of SD?\ne.g., If the null value is 30, true mean is 40, and the true population SD of the quantity is 5, the Cohen’s d effect size is (40-30)/5 = 2.\n\n\nOverall notes about the power investigations:\n\nBecause power is the probability of correctly rejecting the null hypothesis (rejecting the null when the alternative hypothesis is true), parameter changes that increase the frequency of rejecting the null hypothesis will increase power. Keep this in mind as you work through. Visually, power corresponds to the light blue area under the distribution on the right. The distribution on the left is our familiar sampling distribution of the test statistic (here called \\(Z_{\\text{crit}}\\)) under the null. The distribution on the right is very closely related but is the sampling distribution of the test statistics under the alternative hypothesis (which is why the \\(H_a\\) label is above it). Power corresponds to the light blue area under the \\(H_A\\) distribution because this area actually corresponds to the test statistics for which we would reject the null. The area represents the probability that we would obtain such test statistics if indeed the alternative were true. That is, the area represents the percentage of samples that would generate test statistics large enough to reject the null (if the alternative hypothesis were true).\n\n\nWhat is your intuition about how changing the significance level will change power? Check your intuition with the visualization and explain why this happens.\n\n\nIf the significance level increases, there is a “less stringent” threshold for rejecting the null (p-value only has to be less than some higher threshold). Increasing the significance level will result in more frequent rejections of the null, and thus higher power (but at the price of a higher type 1 error rate).\n\n\nRepeat Part a for the sample size.\n\n\nIf sample size increases, power should increase because higher sample size will decrease standard error, which will increase the test statistic, which more likely leads to rejecting the null.",
+    "crumbs": [
+      "Unit 08: Hypothesis Testing"
     ]
   },
   {

@@ -42,6 +42,7 @@ website:
     - id: activities
       title: "Activities"
       contents:
+          - "activities/Unit-09-Linear-Regression.qmd"
           - "activities/Exam2.qmd"
           - "activities/Unit-C-Two-Sample Inference.qmd"
           - "activities/Unit-R.D-Hypothesis-in-R.qmd"

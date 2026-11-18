@@ -1,0 +1,175 @@
+---
+title: "STAT 312: R Homework"
+author: "STUDENT NAME"
+date: now
+date-format: "YYYY-MM-DDTHH:mm:ssZ"
+format:
+  html:
+    embed-resources: true
+    code-tools: true
+---
+
+```{r}
+#| include: false
+
+# Do NOT modify this chunk
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.height = 2.75,
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+# Purpose
+
+The goal of this homework is to practice the following skills:
+
+- Exploring and summarizing a real dataset using R.
+- Wrangling data with `dplyr` and constructing an informative visualization with `ggplot2`.
+- Constructing and interpreting confidence intervals for a population mean or proportion.
+- Conducting and interpreting a hypothesis test using R.
+
+# Directions
+
+1. **Before you begin:** In the RStudio **Console**, install the packages `ggplot2`, `dplyr`, and `fivethirtyeight` if necessary, using `install.packages()`. **Do not put installation commands in this `.qmd` file** because they may interfere with rendering.
+2. Change `STUDENT NAME` in the YAML header to your name. In the code chunk below, load `ggplot2`, `dplyr`, and `fivethirtyeight` using `library()`.
+3. Complete all five problems. Write and run R code in the provided chunks. Show your calculations through R output. For written answers, **replace the text in the blockquotes** with your own interpretation in complete sentences. For example:
+
+   > Your explanation goes here.
+
+4. Round numerical answers to **two or three decimal places** unless otherwise requested. Use the procedures and R functions discussed in Units R.A, R.C, and R.D.
+5. **Submit only the rendered HTML file on Canvas (not the `.qmd` file).** Click **Render** in RStudio, inspect the resulting HTML to ensure that the code, outputs, figures, and responses appear correctly, and upload that HTML file to Canvas.
+
+```{r}
+# Load ggplot2, dplyr, and fivethirtyeight here.
+
+```
+
+---
+
+# Problem 1: Exploring Candy Preferences (20 points)
+
+The `candy_rankings` dataset in the `fivethirtyeight` package reports characteristics and head-to-head popularity results for 85 entries in a candy-ranking project. Two entries are non-candy controls. The variable `chocolate` indicates whether an entry contains chocolate, and `winpercent` is its percentage of head-to-head matchups won.
+
+**(a)** Create an object named `candy` from `candy_rankings`. Use R to display its dimensions and first six rows. How many entries and variables are there? What does one row represent?
+
+```{r}
+# Your code for Problem 1(a)
+
+```
+
+> Your response to Problem 1(a).
+
+**(b)** Use `mutate()` to create a variable named `chocolate_group` with the labels `"Chocolate"` and `"No chocolate"`. Use `count()` to find the number of entries in each group. Then make a **side-by-side boxplot** of `winpercent` for these two groups using `ggplot2`. Include informative axis labels.
+
+```{r}
+# Your code for Problem 1(b)
+
+```
+
+**(c)** Use `group_by()` and `summarize()` to calculate the **mean** and **median** of `winpercent` for each group. Which group has the higher mean winning percentage? Interpret the comparison briefly. Does this descriptive comparison prove that chocolate causes greater popularity?
+
+```{r}
+# Your code for Problem 1(c)
+
+```
+
+> Your response to Problem 1(c).
+
+---
+
+# Problem 2: Estimating Average Commute Time (20 points)
+
+A transportation researcher randomly samples **64 students** and obtains an average commute time of **21.8 minutes**. Assume that the population standard deviation is **known to be 9 minutes**, observations are independent, and the normal approximation is adequate.
+
+**(a)** Using `qnorm()`, find the positive critical value for a **95% confidence interval**. Calculate the standard error.
+
+```{r}
+# Your code for Problem 2(a)
+
+```
+
+**(b)** Calculate the margin of error and construct the **95% confidence interval** for the population mean commute time.
+
+```{r}
+# Your code for Problem 2(b)
+
+```
+
+**(c)** Interpret your interval in the context of commuting time.
+
+> Your response to Problem 2(c).
+
+---
+
+# Problem 3: Estimating Speaker Battery Life (20 points)
+
+A company randomly tests **16 portable speakers**. Their mean battery life is **10.4 hours**, with sample standard deviation **1.8 hours**. The population standard deviation is unknown. Assume the population distribution of battery life is approximately Normal.
+
+**(a)** Explain whether a $z$- or $t$-based confidence interval is appropriate, and report the degrees of freedom.
+
+> Your response to Problem 3(a).
+
+**(b)** Use `qt()` to find the positive critical value, then calculate the standard error and construct a **90% confidence interval** for the population mean battery life.
+
+```{r}
+# Your code for Problem 3(b)
+
+```
+
+**(c)** Interpret your interval in hours.
+
+> Your response to Problem 3(c).
+
+---
+
+# Problem 4: Quality-Control Inspection (20 points)
+
+A manufacturer randomly and independently inspects **160 products**, and **128 pass** the initial quality check. Let $p$ be the true proportion of products that pass inspection.
+
+**(a)** Calculate the sample proportion $\widehat p$. Check the two normal-approximation conditions from class: $n\widehat p\geq 15$ and $n(1-\widehat p)\geq 15$.
+
+```{r}
+# Your code for Problem 4(a)
+
+```
+
+**(b)** Using `qnorm()` and the **normal-approximation (Wald) method from class**, construct a **95% confidence interval** for $p$. Show the R code for the standard error and margin of error. *Do not use `prop.test()` for this problem because it uses a different method by default.*
+
+```{r}
+# Your code for Problem 4(b)
+
+```
+
+**(c)** A manager claims that **more than 75%** of all products pass inspection. Does your 95% confidence interval provide convincing support for this claim? Explain using the interval.
+
+> Your response to Problem 4(c).
+
+---
+
+# Problem 5: Are Packages Underfilled? (20 points)
+
+A packaging machine is supposed to fill bags with an average of **500 grams**. A random sample of **16 bags** has mean weight **495 grams** and sample standard deviation **8 grams**. The population standard deviation is unknown. Assume independent observations from an approximately Normal population. Test whether the average bag weight is **less than 500 grams** at $\alpha = 0.05$.
+
+**(a)** State the null and alternative hypotheses in terms of the population mean $\mu$, and identify the appropriate test.
+
+> Your response to Problem 5(a).
+
+**(b)** Calculate the observed test statistic and its degrees of freedom. Use `pt()` to calculate the appropriate **one-sided p-value**.
+
+```{r}
+# Your code for Problem 5(b)
+
+```
+
+**(c)** State your decision at $\alpha = 0.05$ and interpret the result for the packaging machine.
+
+> Your response to Problem 5(c).
+
+---
+
+**Before submitting:** Confirm that all five problems contain your R code and written responses, the boxplot appears, and your HTML file opens correctly. **Upload the HTML file only to Canvas.**
